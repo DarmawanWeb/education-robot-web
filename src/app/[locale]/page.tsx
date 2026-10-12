@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { Bench } from '@/components/home/bench';
+import { Faq } from '@/components/home/faq';
 import { Hero } from '@/components/home/hero';
 import { KitShelf } from '@/components/home/kit-shelf';
 import { PathSection } from '@/components/home/path-section';
@@ -27,6 +28,7 @@ export default async function HomePage({ params }: Props) {
       <Bench locale={locale} />
       <UpgradesSection locale={locale} />
       <PilotSection />
+      <Faq locale={locale} />
     </>
   );
 }
