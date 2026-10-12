@@ -26,7 +26,7 @@ export async function SiteFooter() {
   ];
 
   return (
-    <footer className="border-edge mt-24 border-t-2">
+    <footer className="border-edge border-t-2">
       <Container className="grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div className="flex flex-col gap-4">
           <Wordmark />
