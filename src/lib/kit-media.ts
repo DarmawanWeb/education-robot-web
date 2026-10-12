@@ -49,10 +49,10 @@ export const kitHero: Record<LevelSlug, KitImage> = {
 
 export const kitGallery: Partial<Record<LevelSlug, KitImage[]>> = {
   sd: [
-    { src: sdFront, alt: l('Tampak depan', 'Front') },
-    { src: sdSide, alt: l('Tampak samping', 'Side') },
-    { src: sdBack, alt: l('Tampak belakang', 'Back') },
-    { src: sdTop, alt: l('Tampak atas', 'Top') },
+    { src: sdFront, fit: 'cover', alt: l('Tampak depan', 'Front') },
+    { src: sdSide, fit: 'cover', alt: l('Tampak samping', 'Side') },
+    { src: sdBack, fit: 'cover', alt: l('Tampak belakang', 'Back') },
+    { src: sdTop, fit: 'cover', alt: l('Tampak atas', 'Top') },
   ],
   smp: [
     { src: smpLine, alt: l('Line follower', 'Line follower') },

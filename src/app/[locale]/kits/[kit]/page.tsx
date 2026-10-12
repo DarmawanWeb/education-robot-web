@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { KitContents } from '@/components/kits/kit-contents';
 import { KitHero } from '@/components/kits/kit-hero';
+import { KitMedia } from '@/components/kits/kit-media';
 import { KitSpecs } from '@/components/kits/kit-specs';
 import { CtaBand } from '@/components/shared/cta-band';
 import { localeFromParams, resolveLocale } from '@/lib/locale';
@@ -38,6 +39,7 @@ export default async function KitPage({ params }: Props) {
       <KitHero level={level} locale={locale} />
       <KitSpecs level={level} locale={locale} />
       <KitContents level={level} locale={locale} />
+      <KitMedia level={level} locale={locale} />
       <CtaBand locale={locale} />
     </>
   );
