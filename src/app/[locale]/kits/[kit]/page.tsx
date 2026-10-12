@@ -9,6 +9,7 @@ import { KitContents } from '@/components/kits/kit-contents';
 import { KitHero } from '@/components/kits/kit-hero';
 import { KitMedia } from '@/components/kits/kit-media';
 import { KitSpecs } from '@/components/kits/kit-specs';
+import { OtherKits } from '@/components/kits/other-kits';
 import { CtaBand } from '@/components/shared/cta-band';
 import { Container } from '@/components/ui/container';
 import { localeFromParams, resolveLocale } from '@/lib/locale';
@@ -65,6 +66,7 @@ export default async function KitPage({ params }: Props) {
           </Container>
         </section>
       ) : null}
+      <OtherKits level={level} locale={locale} />
       <CtaBand locale={locale} />
     </>
   );
