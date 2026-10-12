@@ -242,6 +242,19 @@
     "note": "Note",
     "related": "More guides"
   },
+  "Blog": {
+    "metaTitle": "Blog: notes from robotics classes",
+    "metaDescription": "Notes from our team on teaching robotics in schools: the simulator, sensor calibration, kit design decisions, and the KKA subject.",
+    "title": "Notes from the classroom and the workshop",
+    "intro": "Short pieces from our team about teaching robotics in schools. What works in class, what does not yet, and the reasons behind the kit design.",
+    "readingTime": "{count} min read",
+    "team": "The {brand} team",
+    "more": "More posts",
+    "rss": "Follow via RSS",
+    "feedTitle": "{brand} blog",
+    "mission": "Simulator mission",
+    "openMission": "Open this mission in the simulator"
+  },
   "Simulator": {
     "metaTitle": "Free robot simulator",
     "metaDescription": "Try SD v1 and SMP v1 missions in the browser: motion, line sensors, distance, servo radar, temperature, and sound, with a C++ preview.",

@@ -242,6 +242,19 @@
     "note": "Catatan",
     "related": "Panduan lain"
   },
+  "Blog": {
+    "metaTitle": "Blog: catatan dari kelas robotik",
+    "metaDescription": "Catatan tim kami tentang mengajar robotik di sekolah: simulator, kalibrasi sensor, keputusan desain kit, dan mapel KKA.",
+    "title": "Catatan dari kelas dan bengkel",
+    "intro": "Tulisan pendek dari tim kami tentang mengajar robotik di sekolah. Apa yang berhasil di kelas, apa yang belum, dan alasan di balik desain kit.",
+    "readingTime": "{count} menit baca",
+    "team": "Tim {brand}",
+    "more": "Tulisan lain",
+    "rss": "Ikuti lewat RSS",
+    "feedTitle": "Blog {brand}",
+    "mission": "Misi simulator",
+    "openMission": "Buka misi ini di simulator"
+  },
   "Simulator": {
     "metaTitle": "Simulator robot gratis",
     "metaDescription": "Coba misi SD v1 dan SMP v1 di browser: gerak, sensor garis, sensor jarak, radar servo, suhu, dan suara, dengan pratinjau kode C++.",
