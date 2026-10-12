@@ -8,7 +8,7 @@ import { levelTone } from '../ui/level-chip';
 export async function FitMatrix() {
   const t = await getTranslations('Upgrades');
   return (
-    <div className="border-edge overflow-x-auto rounded-lg border-2">
+    <div className="border-edge relative overflow-x-auto rounded-lg border-2">
       <table className="w-full min-w-[34rem] border-collapse text-left">
         <caption className="sr-only">{t('matrixTitle')}</caption>
         <thead>

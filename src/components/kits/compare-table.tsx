@@ -41,7 +41,7 @@ export async function CompareTable({ locale }: { locale: Locale }) {
   ];
 
   return (
-    <div className="border-edge overflow-x-auto rounded-lg border-2">
+    <div className="border-edge relative overflow-x-auto rounded-lg border-2">
       <table className="w-full min-w-[46rem] border-collapse text-left">
         <caption className="sr-only">{kits('compareTitle')}</caption>
         <thead>
