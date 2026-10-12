@@ -1,0 +1,85 @@
+import { type CurriculumModule, getSimMission, type Locale, pick } from '@taksu/content';
+import { getTranslations } from 'next-intl/server';
+import { simulatorUrl } from '@/lib/links';
+import { moduleColour } from '@/lib/module-colours';
+
+/** One module of the syllabus: what it is for, how learning shows, and every meeting. */
+export async function ModuleCard({
+  module,
+  index,
+  total,
+  firstMeeting,
+  locale,
+}: {
+  module: CurriculumModule;
+  index: number;
+  total: number;
+  firstMeeting: number;
+  locale: Locale;
+}) {
+  const [t, common] = await Promise.all([getTranslations('Curriculum'), getTranslations('Common')]);
+  const mission = module.simMission ? getSimMission(module.simMission) : undefined;
+
+  return (
+    <article
+      id={module.id}
+      className="border-edge bg-surface scroll-mt-24 overflow-hidden rounded-lg border-2"
+    >
+      <header className="border-edge grid gap-6 border-b-2 p-6 lg:grid-cols-2 lg:gap-10">
+        <div>
+          <p className="text-muted-foreground flex items-center gap-2 font-semibold">
+            <span
+              aria-hidden
+              className="size-3.5 rounded-[3px] border border-black"
+              style={{ backgroundColor: moduleColour(index) }}
+            />
+            {t('module', { n: index + 1, total })}
+          </p>
+          <h2 className="type-label mt-2 text-[1.9rem]">{pick(module.title, locale)}</h2>
+          <p className="mt-3">
+            <span className="font-bold">{t('goal')}: </span>
+            {pick(module.goal, locale)}
+          </p>
+        </div>
+        <div className="flex flex-col gap-3">
+          <p>
+            <span className="font-bold">{t('concepts')}: </span>
+            {module.concepts.map((concept) => pick(concept, locale)).join(', ')}
+          </p>
+          <p>
+            <span className="font-bold">{t('evidence')}: </span>
+            {pick(module.evidence, locale)}
+          </p>
+          {mission ? (
+            <p>
+              <span className="font-bold">{t('simMission')}: </span>
+              <a
+                href={simulatorUrl(locale, mission.robot, mission.id)}
+                target="_blank"
+                rel="noopener"
+                className="decoration-primary font-semibold underline decoration-2 underline-offset-4 hover:decoration-[3px]"
+              >
+                {pick(mission.title, locale)}
+                <span className="sr-only"> {common('newTab')}</span>
+              </a>
+            </p>
+          ) : null}
+        </div>
+      </header>
+      <ol>
+        {module.meetings.map((meeting, meetingIndex) => (
+          <li
+            key={meeting.title.en}
+            className="border-border grid gap-1 border-t px-6 py-3.5 first:border-t-0 sm:grid-cols-[8.5rem_minmax(0,1fr)_minmax(0,1.3fr)] sm:gap-5"
+          >
+            <span className="text-muted-foreground font-semibold tabular-nums">
+              {t('meeting', { n: firstMeeting + meetingIndex })}
+            </span>
+            <span className="font-bold">{pick(meeting.title, locale)}</span>
+            <span className="text-muted-foreground">{pick(meeting.activity, locale)}</span>
+          </li>
+        ))}
+      </ol>
+    </article>
+  );
+}
