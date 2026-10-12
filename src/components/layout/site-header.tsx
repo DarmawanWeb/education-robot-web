@@ -26,11 +26,14 @@ export async function SiteHeader() {
         <Link href="/" className="shrink-0 rounded-sm" aria-label={`${names.edu}, ${t('home')}`}>
           <Wordmark />
         </Link>
-        <NavLinks items={items} className="ml-4 hidden lg:block" />
+        <NavLinks items={items} className="hidden min-[1100px]:ml-1 min-[1100px]:block xl:ml-4" />
         <div className="ml-auto flex items-center gap-2">
           <LocaleSwitcher label={t('language')} />
           <ThemeToggle label={t('theme')} className="hidden sm:inline-flex" />
-          <ActionLink href="/contact" className="hidden min-h-10 px-4 text-sm md:inline-flex">
+          <ActionLink
+            href="/contact"
+            className="hidden min-h-10 px-4 text-sm whitespace-nowrap md:inline-flex"
+          >
             {t('cta')}
           </ActionLink>
           <MobileNav

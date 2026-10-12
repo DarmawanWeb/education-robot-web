@@ -33,8 +33,8 @@ export function NavLinks({
                 onClick={onNavigate}
                 aria-current={active ? 'page' : undefined}
                 className={cn(
-                  'decoration-primary block rounded-sm px-3 py-2 font-semibold underline-offset-[7px] transition-colors hover:underline',
-                  vertical ? 'text-xl' : 'text-[0.95rem]',
+                  'decoration-primary block rounded-sm py-2 font-semibold whitespace-nowrap underline-offset-[7px] transition-colors hover:underline',
+                  vertical ? 'px-3 text-xl' : 'px-2 text-[0.95rem] xl:px-3',
                   active ? 'underline decoration-[3px]' : 'decoration-2',
                 )}
               >

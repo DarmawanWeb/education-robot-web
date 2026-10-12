@@ -24,7 +24,7 @@ export function MobileNav({
         <button
           type="button"
           aria-label={labels.menu}
-          className="border-edge flex size-11 items-center justify-center rounded-md border-2 lg:hidden"
+          className="border-edge flex size-11 items-center justify-center rounded-md border-2 min-[1100px]:hidden"
         >
           <Menu className="size-5" aria-hidden />
         </button>
