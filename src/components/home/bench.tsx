@@ -1,13 +1,8 @@
-import {
-  curricula,
-  educationLevels,
-  type Locale,
-  pick,
-  type SimRobot,
-  simMissions,
-} from '@taksu/content';
+import { curricula, educationLevels, type Locale, type SimRobot } from '@taksu/content';
 import { getTranslations } from 'next-intl/server';
 import { simulatorUrl } from '@/lib/links';
+import { MissionLinks } from '../shared/mission-links';
+import { SimShot } from '../shared/sim-shot';
 import { ExternalAction } from '../ui/action-link';
 import { Container } from '../ui/container';
 import { TextLink } from '../ui/text-link';
@@ -21,11 +16,7 @@ const kitName = (slug: string) => educationLevels.find((level) => level.slug ===
  * because that is where a lesson is planned and tried before the robot leaves the box.
  */
 export async function Bench({ locale }: { locale: Locale }) {
-  const [t, simT, common] = await Promise.all([
-    getTranslations('Home'),
-    getTranslations('Simulator'),
-    getTranslations('Common'),
-  ]);
+  const [t, common] = await Promise.all([getTranslations('Home'), getTranslations('Common')]);
   const rows = educationLevels.map((level) => ({
     kit: level.kit,
     curriculum: curricula[level.slug],
@@ -35,7 +26,7 @@ export async function Bench({ locale }: { locale: Locale }) {
     <section className="bg-mat text-mat-foreground">
       <div aria-hidden className="ruler h-4 text-white/45" />
       <Container className="py-16 lg:py-24">
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:items-center lg:gap-14">
           <div>
             <h2 className="type-label text-[clamp(1.9rem,3.8vw,3rem)]">{t('sim.title')}</h2>
             <p className="mt-4 max-w-[52ch] text-lg leading-relaxed text-white/90">
@@ -50,38 +41,18 @@ export async function Bench({ locale }: { locale: Locale }) {
               {common('openSimulator')}
             </ExternalAction>
           </div>
-          <div>
-            <h3 className="text-xl font-bold">{t('sim.missions')}</h3>
-            <div className="mt-5 grid gap-6 sm:grid-cols-2">
-              {simRobots.map((robot) => (
-                <div key={robot}>
-                  <p className="type-label text-lg">{kitName(robot)}</p>
-                  <ol className="mt-3 flex flex-col gap-2">
-                    {simMissions
-                      .filter((mission) => mission.robot === robot)
-                      .map((mission) => (
-                        <li key={mission.id}>
-                          <a
-                            href={simulatorUrl(locale, mission.robot, mission.id)}
-                            target="_blank"
-                            rel="noopener"
-                            className="group flex items-baseline gap-3 rounded-sm py-0.5"
-                          >
-                            <span className="text-sm whitespace-nowrap text-white/70 tabular-nums">
-                              {simT('module', { n: mission.module })}
-                            </span>
-                            <span className="font-semibold underline decoration-white/35 underline-offset-4 group-hover:decoration-white">
-                              {pick(mission.title, locale)}
-                            </span>
-                            <span className="sr-only">{common('newTab')}</span>
-                          </a>
-                        </li>
-                      ))}
-                  </ol>
-                </div>
-              ))}
+          <SimShot locale={locale} alt={t('sim.imageAlt')} />
+        </div>
+        <h3 className="mt-14 text-xl font-bold">{t('sim.missions')}</h3>
+        <div className="mt-5 grid gap-8 md:grid-cols-2">
+          {simRobots.map((robot) => (
+            <div key={robot}>
+              <p className="type-label text-lg">{kitName(robot)}</p>
+              <div className="mt-3">
+                <MissionLinks robot={robot} locale={locale} />
+              </div>
             </div>
-          </div>
+          ))}
         </div>
 
         <div aria-hidden className="ruler my-16 h-4 text-white/45 lg:my-20" />
