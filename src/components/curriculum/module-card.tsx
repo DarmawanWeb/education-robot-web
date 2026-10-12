@@ -1,4 +1,10 @@
-import { type CurriculumModule, getSimMission, type Locale, pick } from '@taksu/content';
+import {
+  type CurriculumModule,
+  getSimMission,
+  type Locale,
+  pick,
+  type SimMissionInfo,
+} from '@taksu/content';
 import { getTranslations } from 'next-intl/server';
 import { simulatorUrl } from '@/lib/links';
 import { moduleColour } from '@/lib/module-colours';
@@ -18,7 +24,9 @@ export async function ModuleCard({
   locale: Locale;
 }) {
   const [t, common] = await Promise.all([getTranslations('Curriculum'), getTranslations('Common')]);
-  const mission = module.simMission ? getSimMission(module.simMission) : undefined;
+  const missions = [...new Set(module.meetings.map((meeting) => meeting.sim))]
+    .map((id) => (id ? getSimMission(id) : undefined))
+    .filter((mission): mission is SimMissionInfo => mission !== undefined);
 
   return (
     <article
@@ -50,18 +58,23 @@ export async function ModuleCard({
             <span className="font-bold">{t('evidence')}: </span>
             {pick(module.evidence, locale)}
           </p>
-          {mission ? (
+          {missions.length > 0 ? (
             <p>
               <span className="font-bold">{t('simMission')}: </span>
-              <a
-                href={simulatorUrl(locale, mission.robot, mission.id)}
-                target="_blank"
-                rel="noopener"
-                className="decoration-primary font-semibold underline decoration-2 underline-offset-4 hover:decoration-[3px]"
-              >
-                {pick(mission.title, locale)}
-                <span className="sr-only"> {common('newTab')}</span>
-              </a>
+              {missions.map((mission, position) => (
+                <span key={mission.id}>
+                  {position > 0 ? ', ' : null}
+                  <a
+                    href={simulatorUrl(locale, mission.robot, mission.id)}
+                    target="_blank"
+                    rel="noopener"
+                    className="decoration-primary font-semibold underline decoration-2 underline-offset-4 hover:decoration-[3px]"
+                  >
+                    {pick(mission.title, locale)}
+                    <span className="sr-only"> {common('newTab')}</span>
+                  </a>
+                </span>
+              ))}
             </p>
           ) : null}
         </div>

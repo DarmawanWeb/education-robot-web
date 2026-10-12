@@ -1,4 +1,4 @@
-import { type Locale, pick, type SimRobot, simMissions } from '@taksu/content';
+import { type Locale, missionPlace, pick, type SimRobot, simMissions } from '@taksu/content';
 import { getTranslations } from 'next-intl/server';
 import { simulatorUrl } from '@/lib/links';
 
@@ -21,7 +21,7 @@ export async function MissionLinks({ robot, locale }: { robot: SimRobot; locale:
               className="group flex items-baseline gap-3 rounded-sm py-0.5"
             >
               <span className="text-sm whitespace-nowrap text-white/70 tabular-nums">
-                {simT('module', { n: mission.module })}
+                {simT('module', { n: missionPlace(mission)?.module ?? 0 })}
               </span>
               <span className="font-semibold underline decoration-white/35 underline-offset-4 group-hover:decoration-white">
                 {pick(mission.title, locale)}
