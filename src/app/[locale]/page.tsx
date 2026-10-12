@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { Hero } from '@/components/home/hero';
 import { KitShelf } from '@/components/home/kit-shelf';
+import { PathSection } from '@/components/home/path-section';
 import { localeFromParams, resolveLocale } from '@/lib/locale';
 import { pageMetadata } from '@/lib/metadata';
 
@@ -19,6 +20,7 @@ export default async function HomePage({ params }: Props) {
     <>
       <Hero locale={locale} />
       <KitShelf locale={locale} />
+      <PathSection />
     </>
   );
 }
