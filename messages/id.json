@@ -45,7 +45,7 @@
     "right": "Sensor kanan",
     "onLine": "melihat garis",
     "offLine": "lantai putih",
-    "caption": "Dua sensor di bawah robot membaca garis hitam. Saat satu sensor menyentuh garis, robot berbelok ke arah itu. Begitulah SD v1 belajar mengikuti lintasan."
+    "caption": "Dua sensor di bawah robot membaca garis hitam. Saat satu sensor menyentuh garis, robot berbelok ke arah itu. Aturan inilah yang dipakai SD v1 di misi garis."
   },
   "Home": {
     "hero": {
@@ -54,13 +54,13 @@
       "note": "Simulator jalan di browser, tanpa daftar."
     },
     "kits": {
-      "title": "Tiga kit, satu cara belajar",
-      "intro": "Dari SD sampai SMA, siswa belajar dengan cara yang sama: simulasi, rakit, program, uji. Yang naik adalah tantangannya.",
+      "title": "Satu kit untuk setiap jenjang",
+      "intro": "SD v1 datang sudah dirakit. SMP v1 dirakit siswa dari modul tanpa solder. SMA v1 memakai komputer onboard dan ROS 2.",
       "compare": "Bandingkan ketiganya"
     },
     "path": {
       "title": "Satu pertemuan, empat langkah",
-      "intro": "Setiap misi dicoba di simulator, lalu dibawa ke robot sungguhan. Kalau robot gagal di langkah keempat, itu bukan akhir. Itu data untuk perbaikan berikutnya.",
+      "intro": "Setiap misi dicoba dulu di simulator, lalu dibawa ke robot sungguhan. Robot yang gagal di langkah keempat itu biasa. Siswa mencatat penyebabnya, lalu memperbaiki programnya.",
       "steps": {
         "simulate": {
           "title": "Coba di simulator",
@@ -81,8 +81,8 @@
       }
     },
     "upgrades": {
-      "title": "Robotnya ikut naik level",
-      "intro": "Upgrade pack menambah kemampuan baru, sekaligus proyek baru, ke robot yang sudah dimiliki sekolah. Tidak perlu membeli robot dari awal.",
+      "title": "Robot yang sama, kemampuan baru",
+      "intro": "Upgrade pack menambah sensor, aktuator, atau komputasi ke robot yang sudah dimiliki sekolah, lengkap dengan proyeknya. Robot lamanya tetap terpakai.",
       "cta": "Lihat semua upgrade dan aksesori"
     },
     "sim": {
@@ -92,7 +92,7 @@
       "imageAlt": "Tampilan simulator: blok program di kiri, arena robot dan panel sensor di kanan"
     },
     "curriculum": {
-      "title": "Kurikulum per pertemuan, siap dibawa ke kelas",
+      "title": "Kurikulum yang dirinci per pertemuan",
       "intro": "Setiap kotak adalah satu pertemuan, dan warnanya menandai modul. Arahkan kursor atau ketuk kotak untuk melihat judulnya.",
       "kka": "Materi dipetakan ke mata pelajaran pilihan Koding dan Kecerdasan Artifisial.",
       "cta": "Lihat kurikulum lengkap"
@@ -176,7 +176,7 @@
     "metaTitle": "Upgrade pack dan aksesori",
     "metaDescription": "Upgrade pack menambah kemampuan dan proyek baru ke kit robotik sekolah: remote, sensor, capit, kamera, arena, dan persiapan lomba.",
     "title": "Upgrade pack dan aksesori",
-    "intro": "Robot sekolah bisa terus dikembangkan. Upgrade pack menambah kemampuan dan proyek baru; aksesori membuat kelas berjalan lancar.",
+    "intro": "Upgrade pack menambah sensor, aktuator, atau komputasi ke robot yang sudah ada. Aksesori mengurus kebutuhan kelas sehari-hari, seperti baterai cadangan, pengisian daya, dan tempat penyimpanan.",
     "note": "Upgrade pack dan aksesori masih dalam pengembangan. Isi dan ketersediaannya bisa berubah.",
     "packs": "Upgrade pack",
     "includes": "Isi paket",
@@ -213,10 +213,10 @@
     "kkaTitle": "Pemetaan mapel KKA",
     "kkaIntro": "Elemen mapel pilihan Koding dan Kecerdasan Artifisial yang dikerjakan di silabus ini.",
     "tiersTitle": "Jenjang tantangan di SD",
-    "tiersIntro": "Variasi kegiatan pada robot yang sama, bukan tiga perangkat berbeda.",
+    "tiersIntro": "Tiga tingkat kegiatan untuk robot yang sama. Guru memilih yang cocok untuk kelasnya.",
     "target": "Target",
     "rubricTitle": "Rubrik penilaian",
-    "rubricIntro": "Nilai prosesnya, bukan hanya apakah program pertama langsung berhasil.",
+    "rubricIntro": "Program yang langsung jalan di percobaan pertama tidak otomatis dapat nilai tertinggi. Rubrik ini juga menilai prediksi, uji coba, dan perbaikan.",
     "criteria": "Kriteria",
     "open": "Buka silabus {kit}",
     "allLevels": "Semua jenjang",
@@ -263,11 +263,11 @@
     "intro": "Sekolah bisa mencoba seluruh misi sebelum membeli robot. Simulator meniru sensor, motor, dan layar robot sungguhan.",
     "featuresTitle": "Yang ikut disimulasikan",
     "features": {
-      "physics": "Gerak dua roda: kecepatan, belokan, dan beda kekuatan motor kiri dan kanan",
+      "physics": "Gerak dua roda seperti kit aslinya, termasuk beda kekuatan motor kiri dan kanan",
       "line": "Sensor garis dua titik di SD v1 dan lima titik di SMP v1",
       "distance": "Sensor jarak ultrasonik, termasuk yang diputar servo",
       "outputs": "Wajah dan teks di layar OLED, serta bunyi buzzer",
-      "env": "Suhu, kelembapan, dan tepuk tangan untuk misi SMP v1",
+      "env": "Suhu, kelembapan, tepuk tangan, dan Wi-Fi kelas untuk misi SMP v1",
       "code": "Pratinjau kode C++ dari blok yang disusun"
     },
     "missionsTitle": "Misi yang mengikuti kurikulum",
@@ -280,9 +280,9 @@
     "metaTitle": "Program untuk sekolah",
     "metaDescription": "Program pilot, paket kelas, pelatihan guru, dukungan purnajual, kit kustom, dan persiapan lomba robotik untuk sekolah.",
     "title": "Program untuk sekolah",
-    "intro": "Kami tidak hanya mengirim kit. Kami menyiapkan cara mengajarnya, melatih gurunya, dan mendampingi kelasnya.",
+    "intro": "Selain kit, sekolah mendapat silabus per pertemuan, pelatihan guru, dan pendampingan selama pilot.",
     "pilotTitle": "Program pilot",
-    "pilotIntro": "Cara paling aman untuk memulai: satu kelas, satu semester, hasil yang bisa dinilai bersama.",
+    "pilotIntro": "Pilot berjalan di satu kelas selama satu semester. Di akhir semester, hasil belajarnya kita nilai bersama sebelum menambah kelas.",
     "classTitle": "Berapa robot untuk satu kelas",
     "classBody": "Kami menyarankan satu robot untuk dua sampai tiga siswa, dengan peran bergilir: programmer, penguji, dan pencatat. Kelas berisi 30 siswa cukup dengan 10 sampai 15 robot.",
     "supportTitle": "Pendampingan setelah membeli",

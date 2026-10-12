@@ -45,7 +45,7 @@
     "right": "Right sensor",
     "onLine": "sees the line",
     "offLine": "white floor",
-    "caption": "Two sensors under the robot read the black line. When one sensor touches it, the robot turns that way. That is how SD v1 learns to follow a track."
+    "caption": "Two sensors under the robot read the black line. When one sensor touches it, the robot turns that way. SD v1 uses exactly this rule in the line mission."
   },
   "Home": {
     "hero": {
@@ -54,13 +54,13 @@
       "note": "The simulator runs in the browser, no sign-up."
     },
     "kits": {
-      "title": "Three kits, one way of learning",
-      "intro": "From primary to senior high, students learn the same way: simulate, build, program, test. The challenge is what grows.",
+      "title": "One kit for each level",
+      "intro": "SD v1 arrives assembled. Students build SMP v1 from modules, with no soldering. SMA v1 runs an onboard computer and ROS 2.",
       "compare": "Compare all three"
     },
     "path": {
       "title": "One meeting, four steps",
-      "intro": "Every mission is tried in the simulator, then taken to the real robot. If the robot fails at step four, that is not the end. It is data for the next fix.",
+      "intro": "Every mission is tried in the simulator first, then taken to the real robot. Robots fail at step four all the time. Students write down why, then fix the program.",
       "steps": {
         "simulate": {
           "title": "Try it in the simulator",
@@ -81,8 +81,8 @@
       }
     },
     "upgrades": {
-      "title": "The robot levels up too",
-      "intro": "Upgrade packs add new abilities, and new projects, to the robots a school already owns. No need to start again with a new robot.",
+      "title": "Same robot, new abilities",
+      "intro": "Upgrade packs add sensors, actuators, or compute to the robots a school already owns, with projects to go with them. The old robots stay in use.",
       "cta": "See every upgrade and accessory"
     },
     "sim": {
@@ -92,7 +92,7 @@
       "imageAlt": "The simulator: program blocks on the left, the robot arena and sensor panel on the right"
     },
     "curriculum": {
-      "title": "A meeting-by-meeting curriculum, ready for class",
+      "title": "A curriculum planned meeting by meeting",
       "intro": "Each square is one meeting, and its colour marks the module. Hover or tap a square to see its title.",
       "kka": "Lessons map to the elective Coding and Artificial Intelligence subject.",
       "cta": "See the full curriculum"
@@ -176,7 +176,7 @@
     "metaTitle": "Upgrade packs and accessories",
     "metaDescription": "Upgrade packs add new abilities and projects to school robotics kits: remote control, sensors, gripper, camera, arena, and competition prep.",
     "title": "Upgrade packs and accessories",
-    "intro": "School robots can keep growing. Upgrade packs add abilities and projects; accessories keep the class running smoothly.",
+    "intro": "Upgrade packs add sensors, actuators, or compute to the robots you already have. Accessories cover everyday class needs such as spare batteries, charging, and storage.",
     "note": "Upgrade packs and accessories are still in development. Contents and availability may change.",
     "packs": "Upgrade packs",
     "includes": "In the pack",
@@ -213,10 +213,10 @@
     "kkaTitle": "KKA subject mapping",
     "kkaIntro": "Elements of the elective Coding and Artificial Intelligence subject that this syllabus works on.",
     "tiersTitle": "Challenge tiers in primary",
-    "tiersIntro": "Variations of activity on the same robot, not three different devices.",
+    "tiersIntro": "Three levels of activity on the same robot. Teachers pick the one that suits the class.",
     "target": "Target",
     "rubricTitle": "Assessment rubric",
-    "rubricIntro": "Assess the process, not only whether the first program worked.",
+    "rubricIntro": "A program that works on the first try does not automatically get the top mark. This rubric also scores predictions, testing, and fixes.",
     "criteria": "Criteria",
     "open": "Open the {kit} syllabus",
     "allLevels": "All levels",
@@ -263,11 +263,11 @@
     "intro": "Schools can try every mission before buying a robot. The simulator mimics the real robot’s sensors, motors, and screen.",
     "featuresTitle": "What it simulates",
     "features": {
-      "physics": "Two-wheel motion: speed, turning, and the difference between left and right motors",
+      "physics": "Two-wheel motion like the real kits, including the left and right motors not being equal",
       "line": "Two-point line sensing on SD v1 and five-point on SMP v1",
       "distance": "Ultrasonic distance, including on a servo",
       "outputs": "Faces and text on the OLED screen, and the buzzer",
-      "env": "Temperature, humidity, and claps for SMP v1 missions",
+      "env": "Temperature, humidity, claps, and the class Wi-Fi for SMP v1 missions",
       "code": "A C++ preview of the blocks you build"
     },
     "missionsTitle": "Missions that follow the curriculum",
@@ -280,9 +280,9 @@
     "metaTitle": "The programme for schools",
     "metaDescription": "Pilot programmes, classroom sets, teacher training, after-sales support, custom kits, and robotics competition prep for schools.",
     "title": "The programme for schools",
-    "intro": "We do not just ship kits. We prepare how to teach with them, train the teachers, and support the class.",
+    "intro": "Along with the kits, schools get a meeting-by-meeting syllabus, teacher training, and support through the pilot.",
     "pilotTitle": "Pilot programme",
-    "pilotIntro": "The safest way to start: one class, one semester, results you can assess together.",
+    "pilotIntro": "A pilot runs in one class for one semester. At the end, we review the learning results together before adding more classes.",
     "classTitle": "How many robots a class needs",
     "classBody": "We suggest one robot for two to three students, rotating roles: programmer, tester, and recorder. A class of 30 needs 10 to 15 robots.",
     "supportTitle": "Support after purchase",
