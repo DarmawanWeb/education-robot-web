@@ -1,0 +1,48 @@
+export const meta = {
+  title: 'Lantai kelas tidak pernah putih bersih',
+  summary:
+    'Sensor garis membaca pantulan cahaya. Ubin mengilap, nat yang gelap, dan sinar matahari dari jendela bisa mengacaukannya. Begini cara mengkalibrasinya sebelum misi garis.',
+  date: '2026-09-30',
+  minutes: 5,
+  tags: ['sensor', 'kalibrasi'],
+};
+
+Misi mengikuti garis hampir selalu berhasil di simulator, lalu gagal di percobaan pertama dengan robot sungguhan. Penyebabnya jarang programnya. Biasanya lantainya.
+
+## Cara sensor garis melihat
+
+Sensor garis di SD v1 dan SMP v1 adalah sensor inframerah. Ia menyinari lantai dan mengukur berapa banyak cahaya yang kembali. Permukaan putih memantulkan banyak, lakban hitam memantulkan sedikit. Program hanya menerima angka, lalu memutuskan angka itu termasuk garis atau lantai.
+
+Di simulator, lantai putih terbaca sekitar 80 dan lakban hitam sekitar 1000. Ambangnya kami taruh di tengah, 500. Di kelas, angkanya jarang serapi itu.
+
+## Tiga pengganggu yang paling sering
+
+**Ubin mengilap.** Keramik yang baru dipel memantulkan cahaya seperti cermin. Di beberapa titik, pantulannya masuk ke sensor dari sudut yang salah dan angkanya melonjak.
+
+**Nat ubin.** Nat yang gelap dan lebarnya mirip lakban bisa dikira lintasan. Robot yang tiba-tiba berbelok tanpa sebab sering sedang mengikuti nat.
+
+**Sinar matahari.** Cahaya dari jendela ikut membawa inframerah. Sensor yang terkena sinar langsung bisa membaca lantai putih sebagai sesuatu yang lain sama sekali.
+
+## Kalibrasi lima menit sebelum misi
+
+Langkah ini ada di pertemuan kalibrasi pada modul garis. Ulangi setiap kali robot pindah ruangan.
+
+1. Letakkan robot di lantai putih, catat angka sensornya.
+2. Geser robot sampai sensor tepat di atas lakban, catat lagi.
+3. Ambil angka di tengah keduanya sebagai ambang.
+4. Uji di tiga titik lintasan: dekat jendela, di tengah kelas, dan di sudut paling gelap.
+
+Kalau selisih angka putih dan hitam kurang dari sepertiga rentangnya, yang perlu diganti adalah lintasannya. Program sebagus apa pun akan kesulitan membedakan dua warna yang terbaca hampir sama.
+
+<Note>
+  Minta satu siswa jadi pencatat angka. Daftar angka itu berguna lagi di pertemuan debugging, saat
+  robot gagal di titik yang sama berkali-kali.
+</Note>
+
+## Lakban dan alas yang kami sarankan
+
+Pakai lakban hitam doff selebar 18 sampai 20 mm. Lakban listrik yang mengilap kadang terbaca lebih terang dari seharusnya. Untuk alas, karton putih atau banner vinyl doff jauh lebih ramah sensor dibanding keramik.
+
+Kalau ruang kelasnya sulit, satu lembar banner lintasan bisa menyelamatkan banyak pertemuan. Arena Pack yang sedang kami siapkan berisi matras dengan lintasan yang sama persis dengan arena di simulator, jadi angka ambangnya bisa langsung dibandingkan.
+
+<SimMission id="sd-garis" />

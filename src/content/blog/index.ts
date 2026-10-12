@@ -1,5 +1,7 @@
 import type { Locale } from '@taksu/content';
 import type { MDXContent } from 'mdx/types';
+import * as floorEn from './lantai-kelas/en.mdx';
+import * as floorId from './lantai-kelas/id.mdx';
 import * as simulatorEn from './simulator-dulu/en.mdx';
 import * as simulatorId from './simulator-dulu/id.mdx';
 import type { PostMeta } from './types';
@@ -24,9 +26,10 @@ const post = (slug: string, id: PostModule, en: PostModule): Post => ({
  * Every post, newest first. To add one: create src/content/blog/<slug>/id.mdx and en.mdx,
  * each exporting `meta`, then list it here.
  */
-export const posts: readonly Post[] = [post('simulator-dulu', simulatorId, simulatorEn)].sort(
-  (a, b) => b.meta.id.date.localeCompare(a.meta.id.date),
-);
+export const posts: readonly Post[] = [
+  post('simulator-dulu', simulatorId, simulatorEn),
+  post('lantai-kelas', floorId, floorEn),
+].sort((a, b) => b.meta.id.date.localeCompare(a.meta.id.date));
 
 export function getPost(slug: string): Post | undefined {
   return posts.find((entry) => entry.slug === slug);
