@@ -98,11 +98,14 @@ export default async function SyllabusPage({ params }: Props) {
         >
           <div>
             <h2 className="type-label text-3xl">{t('kkaTitle')}</h2>
-            <p className="text-muted-foreground mt-2">{t('kkaIntro')}</p>
-            <ul className="mt-6 flex flex-col gap-3">
+            <p className="text-muted-foreground mt-2">
+              {t('kkaIntro')} {pick(curriculum.kkaPhase, locale)}
+            </p>
+            <ul className="mt-6 flex flex-col gap-4">
               {curriculum.kka.map((item) => (
-                <li key={item.en} className="border-edge border-l-4 pl-4 text-lg font-semibold">
-                  {pick(item, locale)}
+                <li key={item.element.en} className="border-edge border-l-4 pl-4">
+                  <p className="text-lg font-semibold">{pick(item.element, locale)}</p>
+                  <p className="text-muted-foreground">{pick(item.how, locale)}</p>
                 </li>
               ))}
             </ul>
