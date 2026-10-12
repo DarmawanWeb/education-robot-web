@@ -80,18 +80,39 @@ export async function ModuleCard({
         </div>
       </header>
       <ol>
-        {module.meetings.map((meeting, meetingIndex) => (
-          <li
-            key={meeting.title.en}
-            className="border-border grid gap-1 border-t px-6 py-3.5 first:border-t-0 sm:grid-cols-[8.5rem_minmax(0,1fr)_minmax(0,1.3fr)] sm:gap-5"
-          >
-            <span className="text-muted-foreground font-semibold tabular-nums">
-              {t('meeting', { n: firstMeeting + meetingIndex })}
-            </span>
-            <span className="font-bold">{pick(meeting.title, locale)}</span>
-            <span className="text-muted-foreground">{pick(meeting.activity, locale)}</span>
-          </li>
-        ))}
+        {module.meetings.map((meeting, meetingIndex) => {
+          const mission = meeting.sim ? getSimMission(meeting.sim) : undefined;
+          return (
+            <li
+              key={meeting.title.en}
+              className="border-border grid gap-1 border-t px-6 py-3.5 first:border-t-0 sm:grid-cols-[8.5rem_minmax(0,1fr)_minmax(0,1.3fr)] sm:gap-5"
+            >
+              <span className="text-muted-foreground font-semibold tabular-nums">
+                {t('meeting', { n: firstMeeting + meetingIndex })}
+              </span>
+              <span className="font-bold">{pick(meeting.title, locale)}</span>
+              <span className="text-muted-foreground">
+                {pick(meeting.activity, locale)}
+                {mission ? (
+                  <>
+                    {' '}
+                    <a
+                      href={simulatorUrl(locale, mission.robot, mission.id)}
+                      target="_blank"
+                      rel="noopener"
+                      className="text-foreground decoration-primary font-semibold whitespace-nowrap underline decoration-2 underline-offset-4 hover:decoration-[3px]"
+                    >
+                      {t('tryMission')}
+                      <span className="sr-only">
+                        : {pick(mission.title, locale)} {common('newTab')}
+                      </span>
+                    </a>
+                  </>
+                ) : null}
+              </span>
+            </li>
+          );
+        })}
       </ol>
     </article>
   );

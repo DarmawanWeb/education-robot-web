@@ -199,6 +199,7 @@
     "concepts": "Concepts",
     "evidence": "Evidence of learning",
     "simMission": "Simulator mission",
+    "tryMission": "Try it in the simulator",
     "meeting": "Meeting {n}",
     "module": "Module {n} of {total}",
     "kkaTitle": "KKA subject mapping",
