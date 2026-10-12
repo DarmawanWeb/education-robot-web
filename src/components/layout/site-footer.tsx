@@ -27,8 +27,8 @@ export async function SiteFooter() {
 
   return (
     <footer className="border-edge border-t-2">
-      <Container className="grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
-        <div className="flex flex-col gap-4">
+      <Container className="grid grid-cols-2 gap-x-6 gap-y-10 py-14 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+        <div className="col-span-2 flex flex-col gap-4 md:col-span-1">
           <Wordmark />
           <p className="text-muted-foreground max-w-xs">{t('tagline')}</p>
         </div>
@@ -52,7 +52,7 @@ export async function SiteFooter() {
             </ul>
           </nav>
         ))}
-        <div className="flex flex-col gap-2">
+        <div className="col-span-2 flex flex-col gap-2 md:col-span-1">
           <a
             href={`mailto:${siteConfig.email}`}
             className="decoration-primary break-all underline-offset-4 hover:underline"

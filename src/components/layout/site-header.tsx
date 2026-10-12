@@ -32,7 +32,10 @@ export async function SiteHeader() {
           <ActionLink href="/contact" className="hidden min-h-10 px-4 text-sm md:inline-flex">
             {t('cta')}
           </ActionLink>
-          <MobileNav items={items} labels={{ menu: t('menu'), close: t('close'), cta: t('cta') }} />
+          <MobileNav
+            items={items}
+            labels={{ menu: t('menu'), close: t('close'), cta: t('cta'), theme: t('theme') }}
+          />
         </div>
       </div>
     </header>

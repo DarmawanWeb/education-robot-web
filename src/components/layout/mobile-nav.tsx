@@ -1,5 +1,6 @@
 'use client';
 
+import { ThemeToggle } from '@taksu/ui/brand/theme-toggle';
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@taksu/ui/components/sheet';
 import { Menu } from 'lucide-react';
 import { useState } from 'react';
@@ -13,7 +14,7 @@ export function MobileNav({
   labels,
 }: {
   items: NavItem[];
-  labels: { menu: string; close: string; cta: string };
+  labels: { menu: string; close: string; cta: string; theme: string };
 }) {
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
@@ -35,9 +36,12 @@ export function MobileNav({
           </div>
         </SheetTitle>
         <NavLinks items={items} onNavigate={close} vertical />
-        <Link href="/contact" onClick={close} className={actionClass('signal', 'mt-auto')}>
-          {labels.cta}
-        </Link>
+        <div className="mt-auto flex items-center gap-3">
+          <ThemeToggle label={labels.theme} className="border-edge size-12 shrink-0 border-2" />
+          <Link href="/contact" onClick={close} className={actionClass('signal', 'flex-1')}>
+            {labels.cta}
+          </Link>
+        </div>
       </SheetContent>
     </Sheet>
   );
