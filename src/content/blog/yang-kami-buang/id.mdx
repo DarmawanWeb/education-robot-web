@@ -1,0 +1,40 @@
+import sdHero from '@/assets/kits/sd-hero.webp';
+
+export const meta = {
+  title: 'Yang kami buang dari SD v1',
+  summary:
+    'Gambar konsep pertama punya lampu status, tombol, dan sensor cahaya. Versi yang sekarang tidak. Ini alasannya, dan apa yang masih kami uji.',
+  date: '2026-09-16',
+  minutes: 4,
+  tags: ['desain', 'SD v1'],
+};
+
+Gambar konsep pertama SD v1 penuh hal menarik: dua lampu status, tombol biru, wajah OLED, sensor jarak, dan buzzer. Di poster semuanya terlihat bagus. Saat modul pembelajarannya kami tulis satu per satu, sebagian ternyata tidak punya pekerjaan.
+
+<Photo
+  src={sdHero}
+  alt="Render konsep SD v1 dengan wajah OLED, sensor jarak di atasnya, dan dua sensor garis di bawah"
+  caption="Render konsep SD v1. Lampu status dan tombol di bagian belakang sudah tidak ada di versi sekarang."
+/>
+
+## Setiap komponen harus punya pertemuan
+
+Aturan kami sederhana: komponen masuk kotak kalau ada pertemuan yang benar-benar memakainya.
+
+Lampu status kalah oleh wajah OLED. Wajah itu bisa menampilkan senang, bingung, waspada, dan berhasil, dan anak SD lebih cepat paham robot yang "waspada" daripada robot yang lampu kuningnya menyala.
+
+Tombol juga kami lepas. Program di SD v1 dimulai dari blok saat mulai, dan tombol tambahan berarti satu hal lagi yang harus dijelaskan sebelum anak bisa mencoba. Sensor cahaya sempat masuk daftar, lalu keluar lagi karena belum ada proyek yang cukup kuat untuknya di jenjang SD.
+
+Yang tersisa dua masukan dan dua keluaran. Sensor garis dan sensor jarak untuk membaca keadaan, wajah OLED dan buzzer untuk menjawabnya. Empat bagian itu sudah cukup untuk enam modul dan 32 pertemuan.
+
+## Baterai yang tidak dibuka siswa
+
+Keputusan paling serius ada di baterai. Siswa SD tidak pernah memegang sel baterai lepas. Baterainya tertutup, punya proteksi, dan hanya diisi dengan charger yang ditentukan. Yang mengisi daya adalah guru.
+
+Bagian ini masih kami uji di prototipe: suhu setelah dipakai lama, berapa lama robot bertahan dalam satu pertemuan, dan apa yang terjadi saat baterai mulai lemah. Sampai hasilnya keluar, spesifikasi daya di situs ini kami tulis apa adanya sebagai rancangan.
+
+## Mudah diservis
+
+Arduino Nano di SD v1 duduk di carrier yang terlindung dan bisa dicabut. Kalau rusak, guru tinggal menggantinya tanpa menyolder. Robot sekolah dipakai bertahun-tahun oleh banyak angkatan, jadi kemudahan servis sama pentingnya dengan fitur.
+
+Kalau SD v1 terlihat lebih sederhana dibanding kit lain di pasaran, itu disengaja. Setiap komponen di dalam kotak dipilih karena ada pertemuan yang memakainya.

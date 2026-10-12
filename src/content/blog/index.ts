@@ -5,6 +5,8 @@ import * as floorId from './lantai-kelas/id.mdx';
 import * as simulatorEn from './simulator-dulu/en.mdx';
 import * as simulatorId from './simulator-dulu/id.mdx';
 import type { PostMeta } from './types';
+import * as leftOutEn from './yang-kami-buang/en.mdx';
+import * as leftOutId from './yang-kami-buang/id.mdx';
 
 export type { PostMeta } from './types';
 
@@ -29,6 +31,7 @@ const post = (slug: string, id: PostModule, en: PostModule): Post => ({
 export const posts: readonly Post[] = [
   post('simulator-dulu', simulatorId, simulatorEn),
   post('lantai-kelas', floorId, floorEn),
+  post('yang-kami-buang', leftOutId, leftOutEn),
 ].sort((a, b) => b.meta.id.date.localeCompare(a.meta.id.date));
 
 export function getPost(slug: string): Post | undefined {
