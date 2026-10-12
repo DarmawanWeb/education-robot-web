@@ -49,8 +49,8 @@
   },
   "Home": {
     "hero": {
-      "title": "<line>Build the robot.</line> <line>Teach it to think.</line>",
-      "body": "Robotics kits for primary, junior high, and senior high, with a free simulator and a meeting-by-meeting curriculum. Students build, program, test, and fix real robots.",
+      "title": "<line>From black tape</line> <line>to robot arms</line>",
+      "body": "Robot kits for primary, junior high, and senior high, a free simulator in the browser, and a curriculum planned meeting by meeting. Students program the robot, test it on the classroom floor, and fix it themselves.",
       "note": "The simulator runs in the browser, no sign-up."
     },
     "kits": {
