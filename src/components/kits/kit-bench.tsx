@@ -9,15 +9,15 @@ import {
 import { getTranslations } from 'next-intl/server';
 import { simulatorUrl } from '@/lib/links';
 import { MeetingStrip } from '../home/meeting-strip';
+import { MissionLinks } from '../shared/mission-links';
 import { ExternalAction } from '../ui/action-link';
 import { Container } from '../ui/container';
 import { TextLink } from '../ui/text-link';
 
 /** One kit's simulator missions and syllabus, on the same mat as the home page bench. */
 export async function KitBench({ level, locale }: { level: EducationLevel; locale: Locale }) {
-  const [t, simT, common, curriculumT] = await Promise.all([
+  const [t, common, curriculumT] = await Promise.all([
     getTranslations('Kit'),
-    getTranslations('Simulator'),
     getTranslations('Common'),
     getTranslations('Curriculum'),
   ]);
@@ -36,26 +36,9 @@ export async function KitBench({ level, locale }: { level: EducationLevel; local
           {missions.length > 0 && level.simTrack ? (
             <>
               <h3 className="mt-8 text-lg font-bold">{t('missions', { kit: level.kit })}</h3>
-              <ol className="mt-3 flex flex-col gap-2">
-                {missions.map((mission) => (
-                  <li key={mission.id}>
-                    <a
-                      href={simulatorUrl(locale, mission.robot, mission.id)}
-                      target="_blank"
-                      rel="noopener"
-                      className="group flex items-baseline gap-3"
-                    >
-                      <span className="text-sm whitespace-nowrap text-white/70 tabular-nums">
-                        {simT('module', { n: mission.module })}
-                      </span>
-                      <span className="font-semibold underline decoration-white/35 underline-offset-4 group-hover:decoration-white">
-                        {pick(mission.title, locale)}
-                      </span>
-                      <span className="sr-only">{common('newTab')}</span>
-                    </a>
-                  </li>
-                ))}
-              </ol>
+              <div className="mt-3">
+                <MissionLinks robot={level.simTrack} locale={locale} />
+              </div>
               <ExternalAction
                 href={simulatorUrl(locale, level.simTrack)}
                 variant="onMat"
