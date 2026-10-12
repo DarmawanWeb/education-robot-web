@@ -30,6 +30,8 @@ export function pageMetadata({
       siteName: siteConfig.name,
       locale: locale === 'id' ? 'id_ID' : 'en_US',
       type: 'website',
+      images: [{ url: `/og/${locale}.png`, width: 1200, height: 630 }],
     },
+    twitter: { card: 'summary_large_image', images: [`/og/${locale}.png`] },
   };
 }
