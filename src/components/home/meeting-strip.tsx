@@ -4,18 +4,7 @@ import { type Curriculum, type Locale, pick } from '@taksu/content';
 import { cn } from '@taksu/ui/lib/utils';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
-
-/** Module colours: distinct hues that still read on the cutting mat. */
-const MODULE_COLOURS = [
-  '#ffd23f',
-  '#ff5a1f',
-  '#ffffff',
-  '#7fd6ff',
-  '#a797ff',
-  '#19b48a',
-  '#ff9ec0',
-  '#c8f169',
-];
+import { moduleColour } from '@/lib/module-colours';
 
 interface Row {
   kit: string;
@@ -98,7 +87,7 @@ export function MeetingStrip({
                           active && 'scale-125 outline-2 outline-white',
                         )}
                         style={{
-                          backgroundColor: MODULE_COLOURS[moduleIndex % MODULE_COLOURS.length],
+                          backgroundColor: moduleColour(moduleIndex),
                         }}
                       />
                     );

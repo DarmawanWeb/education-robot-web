@@ -211,7 +211,12 @@
     "criteria": "Criteria",
     "open": "Open the {kit} syllabus",
     "allLevels": "All levels",
-    "teacherGuide": "Read the teacher guide"
+    "teacherGuide": "Read the teacher guide",
+    "syllabus": "{kit} syllabus",
+    "modulesCount": "{count} modules",
+    "overviewTitle": "Every meeting at a glance",
+    "scale": "Rating scale",
+    "levelsTitle": "Choose a level"
   },
   "Guides": {
     "metaTitle": "Teacher, assembly, and safety guides",

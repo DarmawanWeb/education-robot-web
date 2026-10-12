@@ -211,7 +211,12 @@
     "criteria": "Kriteria",
     "open": "Buka silabus {kit}",
     "allLevels": "Semua jenjang",
-    "teacherGuide": "Baca panduan guru"
+    "teacherGuide": "Baca panduan guru",
+    "syllabus": "Silabus {kit}",
+    "modulesCount": "{count} modul",
+    "overviewTitle": "Semua pertemuan dalam satu pandangan",
+    "scale": "Skala penilaian",
+    "levelsTitle": "Pilih jenjang"
   },
   "Guides": {
     "metaTitle": "Panduan guru, perakitan, dan keselamatan",
