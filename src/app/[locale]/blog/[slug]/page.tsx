@@ -31,6 +31,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
   return {
     ...metadata,
+    alternates: {
+      ...metadata.alternates,
+      types: { 'application/rss+xml': `/${locale}/blog/feed.xml` },
+    },
     openGraph: { ...metadata.openGraph, type: 'article', publishedTime: meta.date },
   };
 }

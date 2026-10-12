@@ -12,12 +12,19 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const locale = await localeFromParams(params);
   const t = await getTranslations({ locale, namespace: 'Blog' });
-  return pageMetadata({
+  const metadata = pageMetadata({
     locale,
     path: '/blog',
     title: t('metaTitle'),
     description: t('metaDescription'),
   });
+  return {
+    ...metadata,
+    alternates: {
+      ...metadata.alternates,
+      types: { 'application/rss+xml': `/${locale}/blog/feed.xml` },
+    },
+  };
 }
 
 export default async function BlogPage({ params }: Props) {
@@ -69,6 +76,12 @@ export default async function BlogPage({ params }: Props) {
               );
             })}
           </ol>
+          <a
+            href={`/${locale}/blog/feed.xml`}
+            className="decoration-primary mt-8 inline-block font-semibold underline decoration-2 underline-offset-4 hover:decoration-[3px]"
+          >
+            {t('rss')}
+          </a>
         </Container>
       </section>
       <CtaBand locale={locale} />

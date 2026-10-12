@@ -1,5 +1,6 @@
 import { educationLevels, guides } from '@taksu/content';
 import type { MetadataRoute } from 'next';
+import { posts } from '@/content/blog';
 import { routing } from '@/i18n/routing';
 import { siteConfig } from '@/lib/site-config';
 
@@ -11,6 +12,7 @@ const staticPaths = [
   '/simulator',
   '/schools',
   '/guides',
+  '/blog',
   '/contact',
 ];
 
@@ -19,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticPaths,
     ...educationLevels.flatMap((level) => [`/kits/${level.slug}`, `/curriculum/${level.slug}`]),
     ...guides.map((guide) => `/guides/${guide.slug}`),
+    ...posts.map((post) => `/blog/${post.slug}`),
   ];
   return paths.flatMap((path) =>
     routing.locales.map((locale) => ({
