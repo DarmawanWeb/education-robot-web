@@ -200,6 +200,13 @@
     "evidence": "Evidence of learning",
     "simMission": "Simulator mission",
     "tryMission": "Try it in the simulator",
+    "video": "Video",
+    "videoLang": {
+      "id": "in Indonesian",
+      "en": "in English"
+    },
+    "playVideo": "Play the video",
+    "watchVideo": "Watch on YouTube",
     "meeting": "Meeting {n}",
     "module": "Module {n} of {total}",
     "kkaTitle": "KKA subject mapping",

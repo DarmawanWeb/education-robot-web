@@ -8,6 +8,7 @@ import {
 import { getTranslations } from 'next-intl/server';
 import { simulatorUrl } from '@/lib/links';
 import { moduleColour } from '@/lib/module-colours';
+import { ModuleVideo } from './module-video';
 
 /** One module of the syllabus: what it is for, how learning shows, and every meeting. */
 export async function ModuleCard({
@@ -79,6 +80,27 @@ export async function ModuleCard({
           ) : null}
         </div>
       </header>
+      {module.video ? (
+        <div className="border-edge border-b-2 px-6 py-5">
+          <ModuleVideo
+            youtube={module.video.youtube}
+            title={module.video.title}
+            meta={[
+              module.video.channel,
+              t(`videoLang.${module.video.lang}`),
+              ...(module.video.minutes ? [common('minutes', { count: module.video.minutes })] : []),
+            ].join(', ')}
+            note={pick(module.video.note, locale)}
+            locale={locale}
+            labels={{
+              video: t('video'),
+              play: t('playVideo'),
+              watch: t('watchVideo'),
+              newTab: common('newTab'),
+            }}
+          />
+        </div>
+      ) : null}
       <ol>
         {module.meetings.map((meeting, meetingIndex) => {
           const mission = meeting.sim ? getSimMission(meeting.sim) : undefined;

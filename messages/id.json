@@ -200,6 +200,13 @@
     "evidence": "Bukti belajar",
     "simMission": "Misi simulator",
     "tryMission": "Coba di simulator",
+    "video": "Video",
+    "videoLang": {
+      "id": "bahasa Indonesia",
+      "en": "bahasa Inggris"
+    },
+    "playVideo": "Putar video",
+    "watchVideo": "Tonton di YouTube",
     "meeting": "Pertemuan {n}",
     "module": "Modul {n} dari {total}",
     "kkaTitle": "Pemetaan mapel KKA",
