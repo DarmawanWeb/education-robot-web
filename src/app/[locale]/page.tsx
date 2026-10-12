@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { Hero } from '@/components/home/hero';
+import { KitShelf } from '@/components/home/kit-shelf';
 import { localeFromParams, resolveLocale } from '@/lib/locale';
 import { pageMetadata } from '@/lib/metadata';
 
@@ -14,5 +15,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function HomePage({ params }: Props) {
   const locale = await resolveLocale(params);
-  return <Hero locale={locale} />;
+  return (
+    <>
+      <Hero locale={locale} />
+      <KitShelf locale={locale} />
+    </>
+  );
 }
