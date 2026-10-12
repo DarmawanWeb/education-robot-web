@@ -4,6 +4,7 @@ import { Bench } from '@/components/home/bench';
 import { Hero } from '@/components/home/hero';
 import { KitShelf } from '@/components/home/kit-shelf';
 import { PathSection } from '@/components/home/path-section';
+import { PilotSection } from '@/components/home/pilot-section';
 import { UpgradesSection } from '@/components/home/upgrades-section';
 import { localeFromParams, resolveLocale } from '@/lib/locale';
 import { pageMetadata } from '@/lib/metadata';
@@ -25,6 +26,7 @@ export default async function HomePage({ params }: Props) {
       <PathSection />
       <Bench locale={locale} />
       <UpgradesSection locale={locale} />
+      <PilotSection />
     </>
   );
 }
