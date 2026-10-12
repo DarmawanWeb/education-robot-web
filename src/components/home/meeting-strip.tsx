@@ -26,7 +26,16 @@ interface Row {
  * Every meeting of every level as a square, coloured by module, like ticks on a ruler.
  * Selecting a square names the meeting below, so it works with touch as well as a mouse.
  */
-export function MeetingStrip({ rows, locale }: { rows: Row[]; locale: Locale }) {
+export function MeetingStrip({
+  rows,
+  locale,
+  compact = false,
+}: {
+  rows: Row[];
+  locale: Locale;
+  /** Hide the kit labels when the strip shows a single kit's page. */
+  compact?: boolean;
+}) {
   const t = useTranslations('Curriculum');
   const common = useTranslations('Common');
   const [selected, setSelected] = useState<{ row: number; meeting: number } | null>({
@@ -58,11 +67,16 @@ export function MeetingStrip({ rows, locale }: { rows: Row[]; locale: Locale }) 
           0,
         );
         return (
-          <div key={row.kit} className="grid gap-3 md:grid-cols-[8.5rem_1fr] md:items-center">
-            <p className="flex items-baseline gap-3 md:flex-col md:gap-0">
-              <span className="type-label text-2xl">{row.kit}</span>
-              <span className="text-sm opacity-80">{common('meetings', { count: total })}</span>
-            </p>
+          <div
+            key={row.kit}
+            className={cn('grid gap-3', !compact && 'md:grid-cols-[8.5rem_1fr] md:items-center')}
+          >
+            {compact ? null : (
+              <p className="flex items-baseline gap-3 md:flex-col md:gap-0">
+                <span className="type-label text-2xl">{row.kit}</span>
+                <span className="text-sm opacity-80">{common('meetings', { count: total })}</span>
+              </p>
+            )}
             <div className="flex flex-wrap gap-x-3 gap-y-2">
               {row.curriculum.modules.map((module, moduleIndex) => (
                 <div key={module.id} className="flex gap-1">
