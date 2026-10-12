@@ -165,7 +165,11 @@
     "modular": "Satu robot, empat konfigurasi",
     "modularBody": "Modul dipasang dan dilepas lewat konektor berkunci, jadi robot yang sama bisa menjadi line follower, penghindar rintangan, robot kendali suara, atau stasiun pemantau.",
     "parts": "Komponen modular",
-    "pcb": "PCB kustom tempat semua modul terhubung"
+    "pcb": "PCB kustom tempat semua modul terhubung",
+    "breadcrumb": "Posisi halaman",
+    "developmentNote": "{kit} masih dalam pengembangan. Spesifikasi dan isi kotak bisa berubah sebelum dijual.",
+    "missions": "Misi {kit} di simulator",
+    "accessories": "Aksesori untuk {kit}"
   },
   "Upgrades": {
     "metaTitle": "Upgrade pack dan aksesori",

@@ -165,7 +165,11 @@
     "modular": "One robot, four configurations",
     "modularBody": "Modules plug in and out through keyed connectors, so the same robot becomes a line follower, an obstacle avoider, a voice-controlled robot, or a monitoring station.",
     "parts": "Modular parts",
-    "pcb": "The custom PCB every module connects to"
+    "pcb": "The custom PCB every module connects to",
+    "breadcrumb": "You are here",
+    "developmentNote": "{kit} is still in development. The specification and box contents may change before it goes on sale.",
+    "missions": "{kit} missions in the simulator",
+    "accessories": "Accessories for {kit}"
   },
   "Upgrades": {
     "metaTitle": "Upgrade packs and accessories",
