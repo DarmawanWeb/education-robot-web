@@ -184,7 +184,10 @@
     "pack": "Pack",
     "fitsYes": "Fits",
     "fitsNo": "Does not fit",
-    "accessories": "Classroom accessories"
+    "accessories": "Classroom accessories",
+    "pathTitle": "Level up without starting over",
+    "pathIntro": "Schools can grow step by step: start with one kit, add sensors, upgrade the compute, then move into AI and system integration.",
+    "matrixIntro": "A tick means the pack fits that kit without extra tools."
   },
   "Curriculum": {
     "metaTitle": "Meeting-by-meeting robotics curriculum",

@@ -184,7 +184,10 @@
     "pack": "Paket",
     "fitsYes": "Cocok",
     "fitsNo": "Tidak cocok",
-    "accessories": "Aksesori kelas"
+    "accessories": "Aksesori kelas",
+    "pathTitle": "Naik level tanpa mulai dari nol",
+    "pathIntro": "Sekolah bisa berkembang bertahap: mulai dari satu kit, tambah sensor, naikkan komputasi, lalu masuk ke AI dan integrasi sistem.",
+    "matrixIntro": "Centang berarti paket bisa dipasang di kit itu tanpa alat tambahan."
   },
   "Curriculum": {
     "metaTitle": "Kurikulum robotik per pertemuan",
