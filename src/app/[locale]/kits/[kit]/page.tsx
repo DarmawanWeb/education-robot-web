@@ -1,6 +1,7 @@
 import { educationLevels, getLevel, pick } from '@taksu/content';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { KitAddons } from '@/components/kits/kit-addons';
 import { KitBench } from '@/components/kits/kit-bench';
 import { KitContents } from '@/components/kits/kit-contents';
 import { KitHero } from '@/components/kits/kit-hero';
@@ -42,6 +43,7 @@ export default async function KitPage({ params }: Props) {
       <KitContents level={level} locale={locale} />
       <KitMedia level={level} locale={locale} />
       <KitBench level={level} locale={locale} />
+      <KitAddons level={level} locale={locale} />
       <CtaBand locale={locale} />
     </>
   );
