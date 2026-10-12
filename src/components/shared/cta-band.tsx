@@ -8,7 +8,7 @@ import { Container } from '../ui/container';
 export async function CtaBand({ locale }: { locale: Locale }) {
   const [t, common] = await Promise.all([getTranslations('Schools'), getTranslations('Common')]);
   return (
-    <section className="bg-ink text-ink-foreground">
+    <section className="bg-ink text-ink-foreground print:hidden">
       <Container className="flex flex-col gap-8 py-16 lg:flex-row lg:items-end lg:justify-between lg:py-20">
         <div className="max-w-2xl">
           <h2 className="type-label text-[clamp(2.2rem,4.6vw,3.6rem)]">{t('ctaTitle')}</h2>

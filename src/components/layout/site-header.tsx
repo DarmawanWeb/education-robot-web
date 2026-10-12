@@ -20,7 +20,7 @@ export async function SiteHeader() {
   ];
 
   return (
-    <header className="border-edge bg-background/95 sticky top-0 z-40 border-b-2 backdrop-blur">
+    <header className="border-edge bg-background/95 sticky top-0 z-40 border-b-2 backdrop-blur print:hidden">
       <div className="mx-auto flex h-[4.25rem] w-full max-w-[76rem] items-center gap-4 px-5 sm:px-8">
         <Link href="/" className="shrink-0 rounded-sm" aria-label={`${names.edu}, ${t('home')}`}>
           <Wordmark />

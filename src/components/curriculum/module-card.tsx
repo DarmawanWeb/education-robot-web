@@ -34,7 +34,7 @@ export async function ModuleCard({
       id={module.id}
       className="border-edge bg-surface scroll-mt-24 overflow-hidden rounded-lg border-2"
     >
-      <header className="border-edge grid gap-6 border-b-2 p-6 lg:grid-cols-2 lg:gap-10">
+      <header className="border-edge grid gap-6 border-b-2 p-6 lg:grid-cols-2 lg:gap-10 print:break-inside-avoid">
         <div>
           <p className="text-muted-foreground flex items-center gap-2 font-semibold">
             <span
@@ -107,7 +107,7 @@ export async function ModuleCard({
           return (
             <li
               key={meeting.title.en}
-              className="border-border grid gap-1 border-t px-6 py-3.5 first:border-t-0 sm:grid-cols-[8.5rem_minmax(0,1fr)_minmax(0,1.3fr)] sm:gap-5"
+              className="border-border grid gap-1 border-t px-6 py-3.5 first:border-t-0 sm:grid-cols-[8.5rem_minmax(0,1fr)_minmax(0,1.3fr)] sm:gap-5 print:break-inside-avoid"
             >
               <span className="text-muted-foreground font-semibold tabular-nums">
                 {t('meeting', { n: firstMeeting + meetingIndex })}
@@ -122,7 +122,7 @@ export async function ModuleCard({
                       href={simulatorUrl(locale, mission.robot, mission.id)}
                       target="_blank"
                       rel="noopener"
-                      className="text-foreground decoration-primary font-semibold whitespace-nowrap underline decoration-2 underline-offset-4 hover:decoration-[3px]"
+                      className="text-foreground decoration-primary font-semibold whitespace-nowrap underline decoration-2 underline-offset-4 hover:decoration-[3px] print:hidden"
                     >
                       {t('tryMission')}
                       <span className="sr-only">

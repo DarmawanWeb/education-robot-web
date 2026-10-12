@@ -30,7 +30,7 @@ export function ModuleVideo({
   if (locale === 'id') query.set('cc_lang_pref', 'id');
 
   return (
-    <div className="grid gap-4 sm:grid-cols-[minmax(0,15rem)_minmax(0,1fr)] sm:items-start sm:gap-6">
+    <div className="grid gap-4 sm:grid-cols-[minmax(0,15rem)_minmax(0,1fr)] sm:items-start sm:gap-6 print:block">
       {playing ? (
         <iframe
           src={`https://www.youtube-nocookie.com/embed/${youtube}?${query.toString()}`}
@@ -38,13 +38,13 @@ export function ModuleVideo({
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
-          className="border-edge aspect-video w-full rounded-md border-2 sm:col-span-2"
+          className="border-edge aspect-video w-full rounded-md border-2 sm:col-span-2 print:hidden"
         />
       ) : (
         <button
           type="button"
           onClick={() => setPlaying(true)}
-          className="group border-edge relative block aspect-video w-full overflow-hidden rounded-md border-2 bg-black"
+          className="group border-edge relative block aspect-video w-full overflow-hidden rounded-md border-2 bg-black print:hidden"
         >
           {thumbnail ? (
             <Image
@@ -78,7 +78,7 @@ export function ModuleVideo({
           href={`https://www.youtube.com/watch?v=${youtube}`}
           target="_blank"
           rel="noopener"
-          className="decoration-primary mt-2 inline-block text-sm font-semibold underline decoration-2 underline-offset-4 hover:decoration-[3px]"
+          className="decoration-primary mt-2 inline-block text-sm font-semibold underline decoration-2 underline-offset-4 hover:decoration-[3px] print:hidden"
         >
           {labels.watch}
           <span className="sr-only"> {labels.newTab}</span>

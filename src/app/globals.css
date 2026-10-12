@@ -2,3 +2,27 @@
 @import '@taksu/ui/edu.css';
 
 @source '../../../../packages/ui/src';
+
+/* A printed syllabus is always black on white paper, whatever theme is on screen. */
+@media print {
+  @page {
+    margin: 14mm 12mm;
+  }
+  :root,
+  .dark {
+    --background: #ffffff;
+    --foreground: #000000;
+    --surface: #ffffff;
+    --surface-muted: #eef1ec;
+    --muted-foreground: #3b413d;
+    --border: #c9cec6;
+    --edge: #000000;
+    color-scheme: light;
+  }
+  html {
+    font-size: 11pt;
+    background: #ffffff;
+    /* biome-ignore lint/complexity/noImportantStyles: next-themes sets color-scheme inline on <html>, and dark paper margins waste ink. */
+    color-scheme: light !important;
+  }
+}

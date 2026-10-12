@@ -1,8 +1,9 @@
-import { curricula, educationLevels, getLevel, meetingCount, pick } from '@taksu/content';
+import { curricula, educationLevels, getLevel, meetingCount, names, pick } from '@taksu/content';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
 import { ModuleCard } from '@/components/curriculum/module-card';
+import { PrintButton } from '@/components/curriculum/print-button';
 import { Rubric } from '@/components/curriculum/rubric';
 import { SdTiers } from '@/components/curriculum/sd-tiers';
 import { MeetingStrip } from '@/components/home/meeting-strip';
@@ -13,6 +14,7 @@ import { TextLink } from '@/components/ui/text-link';
 import { Link } from '@/i18n/navigation';
 import { localeFromParams, resolveLocale } from '@/lib/locale';
 import { pageMetadata } from '@/lib/metadata';
+import { siteConfig } from '@/lib/site-config';
 
 type Props = { params: Promise<{ locale: string; level: string }> };
 
@@ -54,7 +56,10 @@ export default async function SyllabusPage({ params }: Props) {
     <>
       <section className="pt-8 pb-14 sm:pt-10">
         <Container>
-          <nav aria-label={kitT('breadcrumb')}>
+          <p className="hidden text-sm print:block">
+            {names.edu}, {siteConfig.url}/{locale}/curriculum/{level.slug}
+          </p>
+          <nav aria-label={kitT('breadcrumb')} className="print:hidden">
             <ol className="text-muted-foreground flex flex-wrap gap-2 text-[0.95rem] font-semibold">
               <li>
                 <Link
@@ -81,10 +86,11 @@ export default async function SyllabusPage({ params }: Props) {
               {t('modulesCount', { count: curriculum.modules.length })}
             </span>
           </p>
+          <PrintButton label={t('print')} className="mt-6 print:hidden" />
         </Container>
       </section>
 
-      <section className="bg-mat text-mat-foreground">
+      <section className="bg-mat text-mat-foreground print:hidden">
         <div aria-hidden className="ruler h-4 text-white/45" />
         <Container className="py-12">
           <MeetingStrip rows={[{ kit: level.kit, curriculum }]} locale={locale} compact />
@@ -132,7 +138,7 @@ export default async function SyllabusPage({ params }: Props) {
       <section className="pb-16 lg:pb-24">
         <Container>
           <Rubric locale={locale} />
-          <div className="mt-12 flex flex-wrap gap-x-10 gap-y-4">
+          <div className="mt-12 flex flex-wrap gap-x-10 gap-y-4 print:hidden">
             <TextLink href="/guides/panduan-guru">{t('teacherGuide')}</TextLink>
             <TextLink href={`/kits/${level.slug}`}>
               {common('viewKit', { kit: level.kit })}
