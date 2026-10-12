@@ -1,0 +1,307 @@
+{
+  "Meta": {
+    "title": "{brand}: kit robotik untuk SD, SMP, dan SMA",
+    "description": "Kit robotik yang dirakit dan diprogram siswa, simulator gratis di browser, kurikulum per pertemuan, dan pendampingan guru untuk sekolah di seluruh Indonesia."
+  },
+  "Nav": {
+    "skip": "Langsung ke konten",
+    "home": "Beranda",
+    "kits": "Kit",
+    "upgrades": "Upgrade",
+    "curriculum": "Kurikulum",
+    "simulator": "Simulator",
+    "schools": "Untuk sekolah",
+    "guides": "Panduan",
+    "contact": "Kontak",
+    "cta": "Minta proposal",
+    "menu": "Buka menu",
+    "close": "Tutup",
+    "language": "Bahasa",
+    "theme": "Ganti tema terang atau gelap"
+  },
+  "Common": {
+    "newTab": "(terbuka di tab baru)",
+    "meetings": "{count} pertemuan",
+    "minutes": "{count} menit",
+    "status": {
+      "pilot": "Program pilot",
+      "development": "Dalam pengembangan",
+      "available": "Tersedia",
+      "soon": "Segera"
+    },
+    "fits": "Cocok untuk",
+    "requestProposal": "Minta proposal sekolah",
+    "trySimulator": "Coba simulator gratis",
+    "openSimulator": "Buka simulator",
+    "conceptNote": "Gambar adalah render konsep. Produk akhir bisa berbeda.",
+    "viewKit": "Lihat {kit}"
+  },
+  "Arena": {
+    "label": "Animasi robot yang mengikuti garis hitam dengan dua sensor",
+    "pause": "Jeda",
+    "play": "Jalankan",
+    "left": "Sensor kiri",
+    "right": "Sensor kanan",
+    "onLine": "melihat garis",
+    "offLine": "lantai putih",
+    "caption": "Dua sensor di bawah robot membaca garis hitam. Saat satu sensor menyentuh garis, robot berbelok ke arah itu. Begitulah SD v1 belajar mengikuti lintasan."
+  },
+  "Home": {
+    "hero": {
+      "title": "Bangun robotnya. Ajari ia berpikir.",
+      "body": "Kit robotik untuk SD, SMP, dan SMA, lengkap dengan simulator gratis dan kurikulum per pertemuan. Siswa merakit, memprogram, menguji, lalu memperbaiki robot sungguhan.",
+      "note": "Simulator jalan di browser, tanpa daftar."
+    },
+    "kits": {
+      "title": "Tiga kit, satu cara belajar",
+      "intro": "Dari SD sampai SMA, siswa belajar dengan cara yang sama: simulasi, rakit, program, uji. Yang naik adalah tantangannya.",
+      "compare": "Bandingkan ketiganya"
+    },
+    "path": {
+      "title": "Satu pertemuan, empat langkah",
+      "intro": "Setiap misi dicoba di simulator, lalu dibawa ke robot sungguhan. Kalau robot gagal di langkah keempat, itu bukan akhir. Itu data untuk perbaikan berikutnya.",
+      "steps": {
+        "simulate": {
+          "title": "Coba di simulator",
+          "body": "Susun blok dan jalankan misi di browser. Salah di sini tidak merusak apa pun."
+        },
+        "build": {
+          "title": "Siapkan robotnya",
+          "body": "SD v1 datang siap pakai. SMP v1 dan SMA v1 dirakit siswa dari modul, tanpa solder."
+        },
+        "program": {
+          "title": "Pindahkan programnya",
+          "body": "Blok untuk SD, blok lalu C++ untuk SMP, Python dan ROS 2 untuk SMA."
+        },
+        "test": {
+          "title": "Uji, ukur, perbaiki",
+          "body": "Lantai kelas tidak sama dengan simulator. Siswa mencatat hasil, mencari penyebab, lalu mencoba lagi."
+        }
+      }
+    },
+    "upgrades": {
+      "title": "Robotnya ikut naik level",
+      "intro": "Upgrade pack menambah kemampuan baru, sekaligus proyek baru, ke robot yang sudah dimiliki sekolah. Tidak perlu membeli robot dari awal.",
+      "cta": "Lihat semua upgrade dan aksesori"
+    },
+    "sim": {
+      "title": "Coba dulu di browser, gratis",
+      "body": "Simulator meniru sensor dan motor robot sungguhan. Dua belas misi mengikuti modul kurikulum SD dan SMP, dan setiap program bisa dilihat versi C++-nya.",
+      "missions": "Misi yang bisa dicoba sekarang",
+      "imageAlt": "Tampilan simulator: blok program di kiri, arena robot dan panel sensor di kanan"
+    },
+    "curriculum": {
+      "title": "Kurikulum per pertemuan, siap dibawa ke kelas",
+      "intro": "Setiap kotak adalah satu pertemuan, dan warnanya menandai modul. Arahkan kursor atau ketuk kotak untuk melihat judulnya.",
+      "kka": "Materi dipetakan ke mata pelajaran pilihan Koding dan Kecerdasan Artifisial.",
+      "cta": "Lihat kurikulum lengkap"
+    },
+    "schools": {
+      "title": "Mulai dari satu kelas",
+      "intro": "Program pilot membantu sekolah mencoba robot, kurikulum, dan pelatihan guru di satu kelas sebelum dipakai lebih luas.",
+      "more": "Lihat program untuk sekolah"
+    },
+    "faq": {
+      "title": "Pertanyaan yang sering diajukan sekolah"
+    }
+  },
+  "Pilot": {
+    "steps": {
+      "trial": {
+        "title": "Coba simulator bersama guru",
+        "body": "Kami menemani guru mencoba misi di lab komputer sekolah."
+      },
+      "training": {
+        "title": "Pelatihan guru",
+        "body": "Satu sesi praktik: menyiapkan robot, menjalankan pertemuan, dan menilai hasil siswa."
+      },
+      "class": {
+        "title": "Pilot di satu kelas",
+        "body": "Robot, panduan, dan pendampingan untuk satu kelas selama beberapa pertemuan."
+      },
+      "review": {
+        "title": "Evaluasi lalu perluas",
+        "body": "Kita lihat hasil belajar bersama, lalu sepakati jumlah robot dan jadwal untuk kelas lain."
+      }
+    }
+  },
+  "Kits": {
+    "metaTitle": "Kit robotik SD v1, SMP v1, dan SMA v1",
+    "metaDescription": "Bandingkan kit robotik untuk SD, SMP, dan SMA: cara dirakit, pengendali, cara memprogram, kurikulum, dan status.",
+    "title": "Kit robotik untuk setiap jenjang",
+    "intro": "Setiap kit punya robot, misi simulator, dan kurikulum sendiri. Nama kit memakai nomor versi, jadi kit berikutnya mudah dikenali.",
+    "compareTitle": "Perbandingan kit",
+    "rows": {
+      "level": "Jenjang",
+      "grades": "Kelas",
+      "age": "Usia",
+      "build": "Cara dirakit",
+      "controller": "Pengendali",
+      "programming": "Cara memprogram",
+      "curriculum": "Kurikulum",
+      "simulator": "Simulator",
+      "status": "Status"
+    },
+    "simulatorBrowser": "Gratis di browser",
+    "simulatorGazebo": "Gazebo dan RViz"
+  },
+  "Kit": {
+    "back": "Semua kit",
+    "for": "Untuk {level}",
+    "build": "Cara dirakit",
+    "controller": "Pengendali",
+    "inBox": "Di dalam kotak",
+    "learns": "Yang dipelajari siswa",
+    "programming": "Cara memprogram",
+    "simulator": "Simulator",
+    "curriculumTitle": "Kurikulum {count} pertemuan",
+    "curriculumCta": "Buka silabus {kit}",
+    "trySim": "Coba {kit} di simulator",
+    "upgrades": "Upgrade yang cocok dengan {kit}",
+    "noUpgrades": "Upgrade untuk kit ini sedang disiapkan.",
+    "guides": "Panduan untuk {kit}",
+    "gallery": "Dari berbagai sisi",
+    "others": "Kit lain",
+    "modular": "Satu robot, empat konfigurasi",
+    "modularBody": "Modul dipasang dan dilepas lewat konektor berkunci, jadi robot yang sama bisa menjadi line follower, penghindar rintangan, robot kendali suara, atau stasiun pemantau.",
+    "parts": "Komponen modular",
+    "pcb": "PCB kustom tempat semua modul terhubung"
+  },
+  "Upgrades": {
+    "metaTitle": "Upgrade pack dan aksesori",
+    "metaDescription": "Upgrade pack menambah kemampuan dan proyek baru ke kit robotik sekolah: remote, sensor, capit, kamera, arena, dan persiapan lomba.",
+    "title": "Upgrade pack dan aksesori",
+    "intro": "Robot sekolah bisa terus dikembangkan. Upgrade pack menambah kemampuan dan proyek baru; aksesori membuat kelas berjalan lancar.",
+    "note": "Upgrade pack dan aksesori masih dalam pengembangan. Isi dan ketersediaannya bisa berubah.",
+    "packs": "Upgrade pack",
+    "includes": "Isi paket",
+    "projects": "Proyek yang bisa dibuat",
+    "matrixTitle": "Mana yang cocok dengan kit Anda",
+    "pack": "Paket",
+    "fitsYes": "Cocok",
+    "fitsNo": "Tidak cocok",
+    "accessories": "Aksesori kelas"
+  },
+  "Curriculum": {
+    "metaTitle": "Kurikulum robotik per pertemuan",
+    "metaDescription": "Silabus robotik SD 32 pertemuan, SMP dan SMA 36 pertemuan, lengkap dengan tujuan, bukti belajar, rubrik, dan pemetaan mapel KKA.",
+    "title": "Kurikulum dan silabus",
+    "intro": "Setiap jenjang punya modul, rincian per pertemuan, bukti belajar, dan rubrik penilaian.",
+    "perMeeting": "{count} menit per pertemuan",
+    "goal": "Tujuan",
+    "concepts": "Konsep",
+    "evidence": "Bukti belajar",
+    "simMission": "Misi simulator",
+    "meeting": "Pertemuan {n}",
+    "module": "Modul {n} dari {total}",
+    "kkaTitle": "Pemetaan mapel KKA",
+    "kkaIntro": "Elemen Koding dan Kecerdasan Artifisial yang paling dikuatkan di jenjang ini.",
+    "tiersTitle": "Jenjang tantangan di SD",
+    "tiersIntro": "Variasi kegiatan pada robot yang sama, bukan tiga perangkat berbeda.",
+    "target": "Target",
+    "rubricTitle": "Rubrik penilaian",
+    "rubricIntro": "Nilai prosesnya, bukan hanya apakah program pertama langsung berhasil.",
+    "criteria": "Kriteria",
+    "open": "Buka silabus {kit}",
+    "allLevels": "Semua jenjang",
+    "teacherGuide": "Baca panduan guru"
+  },
+  "Guides": {
+    "metaTitle": "Panduan guru, perakitan, dan keselamatan",
+    "metaDescription": "Panduan memulai kit, mengelola kelas robotik, merakit SMP v1, keselamatan baterai, dan memakai simulator.",
+    "title": "Panduan",
+    "intro": "Langkah praktis untuk guru, siswa, dan sekolah.",
+    "audience": {
+      "teacher": "Untuk guru",
+      "student": "Untuk siswa",
+      "school": "Untuk sekolah"
+    },
+    "back": "Semua panduan",
+    "read": "Baca panduan, {count} menit",
+    "note": "Catatan"
+  },
+  "Simulator": {
+    "metaTitle": "Simulator robot gratis",
+    "metaDescription": "Coba misi SD v1 dan SMP v1 di browser: gerak, sensor garis, sensor jarak, radar servo, suhu, dan suara, dengan pratinjau kode C++.",
+    "title": "Simulator robot, gratis di browser",
+    "intro": "Sekolah bisa mencoba seluruh misi sebelum membeli robot. Simulator meniru sensor, motor, dan layar robot sungguhan.",
+    "featuresTitle": "Yang ikut disimulasikan",
+    "features": {
+      "physics": "Gerak dua roda: kecepatan, belokan, dan beda kekuatan motor kiri dan kanan",
+      "line": "Sensor garis dua titik di SD v1 dan lima titik di SMP v1",
+      "distance": "Sensor jarak ultrasonik, termasuk yang diputar servo",
+      "outputs": "Wajah dan teks di layar OLED, serta bunyi buzzer",
+      "env": "Suhu, kelembapan, dan tepuk tangan untuk misi SMP v1",
+      "code": "Pratinjau kode C++ dari blok yang disusun"
+    },
+    "missionsTitle": "Misi yang mengikuti kurikulum",
+    "module": "Modul {n}",
+    "trialTitle": "Akses uji coba untuk lab komputer",
+    "trialBody": "Ingin memakai simulator di lab komputer dengan misi khusus sekolah? Kami siapkan aksesnya dan pelatihan singkat untuk guru.",
+    "trialCta": "Minta akses uji coba"
+  },
+  "Schools": {
+    "metaTitle": "Program untuk sekolah",
+    "metaDescription": "Program pilot, paket kelas, pelatihan guru, dukungan purnajual, kit kustom, dan persiapan lomba robotik untuk sekolah.",
+    "title": "Program untuk sekolah",
+    "intro": "Kami tidak hanya mengirim kit. Kami menyiapkan cara mengajarnya, melatih gurunya, dan mendampingi kelasnya.",
+    "pilotTitle": "Program pilot",
+    "pilotIntro": "Cara paling aman untuk memulai: satu kelas, satu semester, hasil yang bisa dinilai bersama.",
+    "classTitle": "Berapa robot untuk satu kelas",
+    "classBody": "Kami menyarankan satu robot untuk dua sampai tiga siswa, dengan peran bergilir: programmer, penguji, dan pencatat. Kelas berisi 30 siswa cukup dengan 10 sampai 15 robot.",
+    "supportTitle": "Pendampingan setelah membeli",
+    "customTitle": "Bisa disesuaikan",
+    "customIntro": "Kit, kurikulum, dan misi simulator bisa menyesuaikan kebutuhan sekolah atau lembaga Anda.",
+    "programsTitle": "Program kustom",
+    "competitionsTitle": "Siap lomba",
+    "competitionsBody": "Materi lanjutan dan Competition Pack disiapkan untuk tim yang menuju {list}.",
+    "ctaTitle": "Ceritakan sekolah Anda",
+    "ctaBody": "Jumlah siswa, jenjang, dan jadwal pelajaran membantu kami menyusun proposal yang pas."
+  },
+  "Contact": {
+    "metaTitle": "Minta proposal sekolah",
+    "metaDescription": "Minta proposal kit robotik, program pilot, atau akses uji coba simulator untuk sekolah Anda.",
+    "title": "Minta proposal sekolah",
+    "intro": "Isi formulir ini, lalu kirim lewat WhatsApp atau email. Kami membalas dengan proposal dan jadwal demo.",
+    "form": {
+      "name": "Nama",
+      "school": "Sekolah atau lembaga",
+      "role": "Peran Anda",
+      "roles": {
+        "teacher": "Guru",
+        "principal": "Kepala sekolah",
+        "foundation": "Yayasan atau dinas",
+        "other": "Lainnya"
+      },
+      "kit": "Kit yang diminati",
+      "kitUnsure": "Belum tahu",
+      "students": "Perkiraan jumlah siswa",
+      "message": "Pesan",
+      "messagePlaceholder": "Contoh: SMP dengan 3 kelas robotik, ingin mulai semester depan.",
+      "sendWhatsapp": "Kirim lewat WhatsApp",
+      "sendEmail": "Kirim lewat email",
+      "whatsappMissing": "Nomor WhatsApp belum diatur. Gunakan email untuk sementara.",
+      "required": "Isi nama, sekolah, dan pesan terlebih dahulu.",
+      "subject": "Permintaan proposal sekolah",
+      "template": "Halo, saya {name} ({role}) dari {school}.\nKit yang diminati: {kit}\nPerkiraan jumlah siswa: {students}\n\n{message}"
+    },
+    "direct": {
+      "title": "Kontak langsung",
+      "email": "Email",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "Footer": {
+    "tagline": "Kit robotik, simulator, dan kurikulum untuk sekolah di seluruh Indonesia.",
+    "explore": "Jelajahi",
+    "support": "Bantuan",
+    "partOf": "Bagian dari {parent}",
+    "company": "Tentang perusahaan",
+    "rights": "© {year} {brand}. Hak cipta dilindungi."
+  },
+  "NotFound": {
+    "title": "Halaman tidak ditemukan",
+    "body": "Alamat ini tidak ada atau sudah dipindahkan.",
+    "back": "Kembali ke beranda"
+  }
+}

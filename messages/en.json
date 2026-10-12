@@ -1,0 +1,307 @@
+{
+  "Meta": {
+    "title": "{brand}: robotics kits for primary to senior high",
+    "description": "Robotics kits that students build and program, a free in-browser simulator, a meeting-by-meeting curriculum, and teacher support for schools across Indonesia."
+  },
+  "Nav": {
+    "skip": "Skip to content",
+    "home": "Home",
+    "kits": "Kits",
+    "upgrades": "Upgrades",
+    "curriculum": "Curriculum",
+    "simulator": "Simulator",
+    "schools": "For schools",
+    "guides": "Guides",
+    "contact": "Contact",
+    "cta": "Request a proposal",
+    "menu": "Open menu",
+    "close": "Close",
+    "language": "Language",
+    "theme": "Switch light or dark theme"
+  },
+  "Common": {
+    "newTab": "(opens in a new tab)",
+    "meetings": "{count} meetings",
+    "minutes": "{count} minutes",
+    "status": {
+      "pilot": "Pilot programme",
+      "development": "In development",
+      "available": "Available",
+      "soon": "Coming soon"
+    },
+    "fits": "Fits",
+    "requestProposal": "Request a school proposal",
+    "trySimulator": "Try the free simulator",
+    "openSimulator": "Open the simulator",
+    "conceptNote": "Images are concept renders. The final product may differ.",
+    "viewKit": "See {kit}"
+  },
+  "Arena": {
+    "label": "Animation of a robot following a black line with two sensors",
+    "pause": "Pause",
+    "play": "Play",
+    "left": "Left sensor",
+    "right": "Right sensor",
+    "onLine": "sees the line",
+    "offLine": "white floor",
+    "caption": "Two sensors under the robot read the black line. When one sensor touches it, the robot turns that way. That is how SD v1 learns to follow a track."
+  },
+  "Home": {
+    "hero": {
+      "title": "Build the robot. Teach it to think.",
+      "body": "Robotics kits for primary, junior high, and senior high, with a free simulator and a meeting-by-meeting curriculum. Students build, program, test, and fix real robots.",
+      "note": "The simulator runs in the browser, no sign-up."
+    },
+    "kits": {
+      "title": "Three kits, one way of learning",
+      "intro": "From primary to senior high, students learn the same way: simulate, build, program, test. The challenge is what grows.",
+      "compare": "Compare all three"
+    },
+    "path": {
+      "title": "One meeting, four steps",
+      "intro": "Every mission is tried in the simulator, then taken to the real robot. If the robot fails at step four, that is not the end. It is data for the next fix.",
+      "steps": {
+        "simulate": {
+          "title": "Try it in the simulator",
+          "body": "Snap blocks together and run the mission in the browser. Mistakes here break nothing."
+        },
+        "build": {
+          "title": "Get the robot ready",
+          "body": "SD v1 arrives ready to use. Students build SMP v1 and SMA v1 from modules, with no soldering."
+        },
+        "program": {
+          "title": "Move the program over",
+          "body": "Blocks for primary, blocks then C++ for junior high, Python and ROS 2 for senior high."
+        },
+        "test": {
+          "title": "Test, measure, fix",
+          "body": "A classroom floor is not the simulator. Students record results, find the cause, and try again."
+        }
+      }
+    },
+    "upgrades": {
+      "title": "The robot levels up too",
+      "intro": "Upgrade packs add new abilities, and new projects, to the robots a school already owns. No need to start again with a new robot.",
+      "cta": "See every upgrade and accessory"
+    },
+    "sim": {
+      "title": "Try it in the browser first, for free",
+      "body": "The simulator mimics the real robot’s sensors and motors. Twelve missions follow the primary and junior high curriculum modules, and every program has a C++ view.",
+      "missions": "Missions you can try now",
+      "imageAlt": "The simulator: program blocks on the left, the robot arena and sensor panel on the right"
+    },
+    "curriculum": {
+      "title": "A meeting-by-meeting curriculum, ready for class",
+      "intro": "Each square is one meeting, and its colour marks the module. Hover or tap a square to see its title.",
+      "kka": "Lessons map to the elective Coding and Artificial Intelligence subject.",
+      "cta": "See the full curriculum"
+    },
+    "schools": {
+      "title": "Start with one class",
+      "intro": "A pilot lets a school try the robots, the curriculum, and teacher training in one class before rolling out further.",
+      "more": "See the programme for schools"
+    },
+    "faq": {
+      "title": "Questions schools ask"
+    }
+  },
+  "Pilot": {
+    "steps": {
+      "trial": {
+        "title": "Try the simulator with teachers",
+        "body": "We sit with your teachers as they try missions in the school computer lab."
+      },
+      "training": {
+        "title": "Teacher training",
+        "body": "One hands-on session: preparing robots, running a meeting, and assessing student work."
+      },
+      "class": {
+        "title": "Pilot in one class",
+        "body": "Robots, guides, and support for one class over several meetings."
+      },
+      "review": {
+        "title": "Review, then expand",
+        "body": "We review the learning results together, then agree on robots and schedules for other classes."
+      }
+    }
+  },
+  "Kits": {
+    "metaTitle": "SD v1, SMP v1, and SMA v1 robotics kits",
+    "metaDescription": "Compare the robotics kits for primary, junior high, and senior high: how they are built, controllers, programming, curriculum, and status.",
+    "title": "A robotics kit for every level",
+    "intro": "Each kit comes with its own robot, simulator missions, and curriculum. Kit names carry a version number, so the next kit is easy to tell apart.",
+    "compareTitle": "Kit comparison",
+    "rows": {
+      "level": "Level",
+      "grades": "Grades",
+      "age": "Age",
+      "build": "How it is built",
+      "controller": "Controller",
+      "programming": "How students program",
+      "curriculum": "Curriculum",
+      "simulator": "Simulator",
+      "status": "Status"
+    },
+    "simulatorBrowser": "Free in the browser",
+    "simulatorGazebo": "Gazebo and RViz"
+  },
+  "Kit": {
+    "back": "All kits",
+    "for": "For {level}",
+    "build": "How it is built",
+    "controller": "Controller",
+    "inBox": "In the box",
+    "learns": "What students learn",
+    "programming": "How students program",
+    "simulator": "Simulator",
+    "curriculumTitle": "{count}-meeting curriculum",
+    "curriculumCta": "Open the {kit} syllabus",
+    "trySim": "Try {kit} in the simulator",
+    "upgrades": "Upgrades that fit {kit}",
+    "noUpgrades": "Upgrades for this kit are being prepared.",
+    "guides": "Guides for {kit}",
+    "gallery": "From every side",
+    "others": "Other kits",
+    "modular": "One robot, four configurations",
+    "modularBody": "Modules plug in and out through keyed connectors, so the same robot becomes a line follower, an obstacle avoider, a voice-controlled robot, or a monitoring station.",
+    "parts": "Modular parts",
+    "pcb": "The custom PCB every module connects to"
+  },
+  "Upgrades": {
+    "metaTitle": "Upgrade packs and accessories",
+    "metaDescription": "Upgrade packs add new abilities and projects to school robotics kits: remote control, sensors, gripper, camera, arena, and competition prep.",
+    "title": "Upgrade packs and accessories",
+    "intro": "School robots can keep growing. Upgrade packs add abilities and projects; accessories keep the class running smoothly.",
+    "note": "Upgrade packs and accessories are still in development. Contents and availability may change.",
+    "packs": "Upgrade packs",
+    "includes": "In the pack",
+    "projects": "Projects to build",
+    "matrixTitle": "Which ones fit your kit",
+    "pack": "Pack",
+    "fitsYes": "Fits",
+    "fitsNo": "Does not fit",
+    "accessories": "Classroom accessories"
+  },
+  "Curriculum": {
+    "metaTitle": "Meeting-by-meeting robotics curriculum",
+    "metaDescription": "A 32-meeting primary robotics syllabus and 36-meeting junior and senior high syllabi, with goals, evidence of learning, rubrics, and KKA mapping.",
+    "title": "Curriculum and syllabus",
+    "intro": "Every level has modules, a per-meeting plan, evidence of learning, and an assessment rubric.",
+    "perMeeting": "{count} minutes per meeting",
+    "goal": "Goal",
+    "concepts": "Concepts",
+    "evidence": "Evidence of learning",
+    "simMission": "Simulator mission",
+    "meeting": "Meeting {n}",
+    "module": "Module {n} of {total}",
+    "kkaTitle": "KKA subject mapping",
+    "kkaIntro": "The Coding and Artificial Intelligence elements this level strengthens most.",
+    "tiersTitle": "Challenge tiers in primary",
+    "tiersIntro": "Variations of activity on the same robot, not three different devices.",
+    "target": "Target",
+    "rubricTitle": "Assessment rubric",
+    "rubricIntro": "Assess the process, not only whether the first program worked.",
+    "criteria": "Criteria",
+    "open": "Open the {kit} syllabus",
+    "allLevels": "All levels",
+    "teacherGuide": "Read the teacher guide"
+  },
+  "Guides": {
+    "metaTitle": "Teacher, assembly, and safety guides",
+    "metaDescription": "Guides to start a kit, run a robotics class, assemble SMP v1, stay safe with batteries, and use the simulator.",
+    "title": "Guides",
+    "intro": "Practical steps for teachers, students, and schools.",
+    "audience": {
+      "teacher": "For teachers",
+      "student": "For students",
+      "school": "For schools"
+    },
+    "back": "All guides",
+    "read": "Read the guide, {count} minutes",
+    "note": "Note"
+  },
+  "Simulator": {
+    "metaTitle": "Free robot simulator",
+    "metaDescription": "Try SD v1 and SMP v1 missions in the browser: motion, line sensors, distance, servo radar, temperature, and sound, with a C++ preview.",
+    "title": "A robot simulator, free in the browser",
+    "intro": "Schools can try every mission before buying a robot. The simulator mimics the real robot’s sensors, motors, and screen.",
+    "featuresTitle": "What it simulates",
+    "features": {
+      "physics": "Two-wheel motion: speed, turning, and the difference between left and right motors",
+      "line": "Two-point line sensing on SD v1 and five-point on SMP v1",
+      "distance": "Ultrasonic distance, including on a servo",
+      "outputs": "Faces and text on the OLED screen, and the buzzer",
+      "env": "Temperature, humidity, and claps for SMP v1 missions",
+      "code": "A C++ preview of the blocks you build"
+    },
+    "missionsTitle": "Missions that follow the curriculum",
+    "module": "Module {n}",
+    "trialTitle": "Trial access for computer labs",
+    "trialBody": "Want the simulator in your computer lab with missions made for your school? We set up access and a short training for teachers.",
+    "trialCta": "Request trial access"
+  },
+  "Schools": {
+    "metaTitle": "The programme for schools",
+    "metaDescription": "Pilot programmes, classroom sets, teacher training, after-sales support, custom kits, and robotics competition prep for schools.",
+    "title": "The programme for schools",
+    "intro": "We do not just ship kits. We prepare how to teach with them, train the teachers, and support the class.",
+    "pilotTitle": "Pilot programme",
+    "pilotIntro": "The safest way to start: one class, one semester, results you can assess together.",
+    "classTitle": "How many robots a class needs",
+    "classBody": "We suggest one robot for two to three students, rotating roles: programmer, tester, and recorder. A class of 30 needs 10 to 15 robots.",
+    "supportTitle": "Support after purchase",
+    "customTitle": "Made to fit",
+    "customIntro": "Kits, curriculum, and simulator missions can be tailored to your school or organisation.",
+    "programsTitle": "Custom programmes",
+    "competitionsTitle": "Competition ready",
+    "competitionsBody": "Advanced material and the Competition Pack are prepared for teams heading to {list}.",
+    "ctaTitle": "Tell us about your school",
+    "ctaBody": "Student numbers, levels, and the lesson timetable help us put together the right proposal."
+  },
+  "Contact": {
+    "metaTitle": "Request a school proposal",
+    "metaDescription": "Request a proposal for robotics kits, a pilot programme, or simulator trial access for your school.",
+    "title": "Request a school proposal",
+    "intro": "Fill in the form, then send it by WhatsApp or email. We reply with a proposal and a demo schedule.",
+    "form": {
+      "name": "Name",
+      "school": "School or organisation",
+      "role": "Your role",
+      "roles": {
+        "teacher": "Teacher",
+        "principal": "Principal",
+        "foundation": "Foundation or education office",
+        "other": "Other"
+      },
+      "kit": "Kit of interest",
+      "kitUnsure": "Not sure yet",
+      "students": "Approximate number of students",
+      "message": "Message",
+      "messagePlaceholder": "For example: a junior high with three robotics classes, starting next semester.",
+      "sendWhatsapp": "Send via WhatsApp",
+      "sendEmail": "Send via email",
+      "whatsappMissing": "No WhatsApp number is configured yet. Please use email for now.",
+      "required": "Fill in your name, school, and message first.",
+      "subject": "School proposal request",
+      "template": "Hello, I am {name} ({role}) from {school}.\nKit of interest: {kit}\nApproximate students: {students}\n\n{message}"
+    },
+    "direct": {
+      "title": "Direct contact",
+      "email": "Email",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "Footer": {
+    "tagline": "Robotics kits, a simulator, and a curriculum for schools across Indonesia.",
+    "explore": "Explore",
+    "support": "Help",
+    "partOf": "Part of {parent}",
+    "company": "About the company",
+    "rights": "© {year} {brand}. All rights reserved."
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "body": "This address does not exist or has moved.",
+    "back": "Back to home"
+  }
+}
