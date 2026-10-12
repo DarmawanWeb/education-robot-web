@@ -6,6 +6,7 @@ import { Link } from '@/i18n/navigation';
 import { kitHero } from '@/lib/kit-media';
 import { LevelChip, levelTone } from '../ui/level-chip';
 import { StatusTag } from '../ui/status-tag';
+import { TextLink } from '../ui/text-link';
 
 /** A kit drawn as its box: level-coloured lid, product shot, and the label facts. */
 export async function KitBox({ level, locale }: { level: EducationLevel; locale: Locale }) {
@@ -58,12 +59,9 @@ export async function KitBox({ level, locale }: { level: EducationLevel; locale:
           <dt className="text-muted-foreground">{t('curriculum')}</dt>
           <dd className="font-semibold">{common('meetings', { count: level.meetings })}</dd>
         </dl>
-        <Link
-          href={`/kits/${level.slug}`}
-          className="decoration-primary mt-6 self-start text-lg font-bold underline decoration-[3px] underline-offset-[6px] hover:decoration-[5px]"
-        >
+        <TextLink href={`/kits/${level.slug}`} className="mt-6 self-start">
           {common('viewKit', { kit: level.kit })}
-        </Link>
+        </TextLink>
       </div>
     </article>
   );

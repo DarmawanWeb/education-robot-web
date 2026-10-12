@@ -1,9 +1,9 @@
 import { educationLevels, type Locale } from '@taksu/content';
 import { getTranslations } from 'next-intl/server';
-import { Link } from '@/i18n/navigation';
 import { KitBox } from '../kits/kit-box';
 import { Container } from '../ui/container';
 import { SectionTitle } from '../ui/section-title';
+import { TextLink } from '../ui/text-link';
 
 export async function KitShelf({ locale }: { locale: Locale }) {
   const t = await getTranslations('Home.kits');
@@ -12,12 +12,7 @@ export async function KitShelf({ locale }: { locale: Locale }) {
       <Container>
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionTitle title={t('title')} intro={t('intro')} />
-          <Link
-            href="/kits#compare"
-            className="decoration-primary text-lg font-bold underline decoration-[3px] underline-offset-[6px] hover:decoration-[5px]"
-          >
-            {t('compare')}
-          </Link>
+          <TextLink href="/kits#compare">{t('compare')}</TextLink>
         </div>
         <ul className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {educationLevels.map((level) => (

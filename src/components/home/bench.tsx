@@ -7,10 +7,10 @@ import {
   simMissions,
 } from '@taksu/content';
 import { getTranslations } from 'next-intl/server';
-import { Link } from '@/i18n/navigation';
 import { simulatorUrl } from '@/lib/links';
 import { ExternalAction } from '../ui/action-link';
 import { Container } from '../ui/container';
+import { TextLink } from '../ui/text-link';
 import { MeetingStrip } from './meeting-strip';
 
 const simRobots: SimRobot[] = ['sd', 'smp'];
@@ -97,12 +97,9 @@ export async function Bench({ locale }: { locale: Locale }) {
         </div>
         <div className="mt-8 flex flex-wrap items-baseline justify-between gap-x-10 gap-y-4">
           <p className="max-w-[62ch] text-white/80">{t('curriculum.kka')}</p>
-          <Link
-            href="/curriculum"
-            className="text-lg font-bold underline decoration-[#ffd23f] decoration-[3px] underline-offset-[6px] hover:decoration-[5px]"
-          >
+          <TextLink href="/curriculum" tone="tape">
             {t('curriculum.cta')}
-          </Link>
+          </TextLink>
         </div>
       </Container>
       <div aria-hidden className="ruler h-4 rotate-180 text-white/45" />
