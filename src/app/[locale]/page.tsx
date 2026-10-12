@@ -7,6 +7,7 @@ import { KitShelf } from '@/components/home/kit-shelf';
 import { PathSection } from '@/components/home/path-section';
 import { PilotSection } from '@/components/home/pilot-section';
 import { UpgradesSection } from '@/components/home/upgrades-section';
+import { CtaBand } from '@/components/shared/cta-band';
 import { localeFromParams, resolveLocale } from '@/lib/locale';
 import { pageMetadata } from '@/lib/metadata';
 
@@ -29,6 +30,7 @@ export default async function HomePage({ params }: Props) {
       <UpgradesSection locale={locale} />
       <PilotSection />
       <Faq locale={locale} />
+      <CtaBand locale={locale} />
     </>
   );
 }

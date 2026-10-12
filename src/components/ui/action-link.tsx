@@ -2,7 +2,7 @@ import { cn } from '@taksu/ui/lib/utils';
 import type * as React from 'react';
 import { Link } from '@/i18n/navigation';
 
-type Variant = 'signal' | 'plain' | 'onMat';
+type Variant = 'signal' | 'plain' | 'onMat' | 'outline';
 
 const variants: Record<Variant, string> = {
   signal:
@@ -10,6 +10,7 @@ const variants: Record<Variant, string> = {
   plain: 'border-edge bg-surface text-foreground hover:bg-surface-muted',
   onMat:
     'border-black bg-accent text-black shadow-[3px_3px_0_0_#000] hover:translate-x-px hover:translate-y-px hover:shadow-[2px_2px_0_0_#000]',
+  outline: 'border-current bg-transparent hover:bg-current/10',
 };
 
 const base =
