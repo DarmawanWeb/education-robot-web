@@ -22,6 +22,7 @@ export async function SiteFooter() {
   const support = [
     { href: '/schools', label: nav('schools') },
     { href: '/guides', label: nav('guides') },
+    { href: '/blog', label: nav('blog') },
     { href: '/contact', label: nav('contact') },
   ];
 
