@@ -48,7 +48,7 @@
   },
   "Home": {
     "hero": {
-      "title": "Bangun robotnya. Ajari ia berpikir.",
+      "title": "<line>Bangun robotnya.</line> <line>Ajari ia berpikir.</line>",
       "body": "Kit robotik untuk SD, SMP, dan SMA, lengkap dengan simulator gratis dan kurikulum per pertemuan. Siswa merakit, memprogram, menguji, lalu memperbaiki robot sungguhan.",
       "note": "Simulator jalan di browser, tanpa daftar."
     },
