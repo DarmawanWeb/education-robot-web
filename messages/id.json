@@ -230,7 +230,8 @@
     },
     "back": "Semua panduan",
     "read": "Baca panduan, {count} menit",
-    "note": "Catatan"
+    "note": "Catatan",
+    "related": "Panduan lain"
   },
   "Simulator": {
     "metaTitle": "Simulator robot gratis",

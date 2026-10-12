@@ -230,7 +230,8 @@
     },
     "back": "All guides",
     "read": "Read the guide, {count} minutes",
-    "note": "Note"
+    "note": "Note",
+    "related": "More guides"
   },
   "Simulator": {
     "metaTitle": "Free robot simulator",
