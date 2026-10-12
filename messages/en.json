@@ -269,7 +269,14 @@
     "competitionsTitle": "Competition ready",
     "competitionsBody": "Advanced material and the Competition Pack are prepared for teams heading to {list}.",
     "ctaTitle": "Tell us about your school",
-    "ctaBody": "Student numbers, levels, and the lesson timetable help us put together the right proposal."
+    "ctaBody": "Student numbers, levels, and the lesson timetable help us put together the right proposal.",
+    "roles": {
+      "programmer": "Programmer",
+      "tester": "Tester",
+      "recorder": "Recorder"
+    },
+    "classCaption": "Example class of 30: 10 groups, one robot per group, roles rotating every meeting.",
+    "optionsTitle": "What you can tailor"
   },
   "Contact": {
     "metaTitle": "Request a school proposal",

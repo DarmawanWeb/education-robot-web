@@ -269,7 +269,14 @@
     "competitionsTitle": "Siap lomba",
     "competitionsBody": "Materi lanjutan dan Competition Pack disiapkan untuk tim yang menuju {list}.",
     "ctaTitle": "Ceritakan sekolah Anda",
-    "ctaBody": "Jumlah siswa, jenjang, dan jadwal pelajaran membantu kami menyusun proposal yang pas."
+    "ctaBody": "Jumlah siswa, jenjang, dan jadwal pelajaran membantu kami menyusun proposal yang pas.",
+    "roles": {
+      "programmer": "Programmer",
+      "tester": "Penguji",
+      "recorder": "Pencatat"
+    },
+    "classCaption": "Contoh kelas 30 siswa: 10 kelompok, satu robot per kelompok, peran bergilir setiap pertemuan.",
+    "optionsTitle": "Yang bisa disesuaikan"
   },
   "Contact": {
     "metaTitle": "Minta proposal sekolah",
