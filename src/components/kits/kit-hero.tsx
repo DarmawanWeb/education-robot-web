@@ -8,6 +8,7 @@ import { simulatorUrl } from '@/lib/links';
 import { ActionLink, ExternalAction } from '../ui/action-link';
 import { Container } from '../ui/container';
 import { LevelChip, levelTone } from '../ui/level-chip';
+import { Note } from '../ui/note';
 import { StatusTag } from '../ui/status-tag';
 
 export async function KitHero({ level, locale }: { level: EducationLevel; locale: Locale }) {
@@ -68,9 +69,7 @@ export async function KitHero({ level, locale }: { level: EducationLevel; locale
               ) : null}
             </div>
             {level.status === 'development' ? (
-              <p className="bg-accent-soft mt-8 max-w-[56ch] rounded-md border-l-4 border-[#ffd23f] px-4 py-3">
-                {t('developmentNote', { kit: level.kit })}
-              </p>
+              <Note className="mt-8">{t('developmentNote', { kit: level.kit })}</Note>
             ) : null}
           </div>
           <figure className="box-ink overflow-hidden rounded-lg bg-white">
