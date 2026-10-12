@@ -86,7 +86,7 @@
     },
     "sim": {
       "title": "Try it in the browser first, for free",
-      "body": "The simulator mimics the real robot’s sensors and motors. Twelve missions follow the primary and junior high curriculum modules, and every program has a C++ view.",
+      "body": "The simulator mimics the real robot’s sensors and motors. {count} missions follow the primary and junior high curriculum modules, and every program has a C++ view.",
       "missions": "Missions you can try now",
       "imageAlt": "The simulator: program blocks on the left, the robot arena and sensor panel on the right"
     },

@@ -1,4 +1,10 @@
-import { curricula, educationLevels, type Locale, type SimRobot } from '@taksu/content';
+import {
+  curricula,
+  educationLevels,
+  type Locale,
+  type SimRobot,
+  simMissions,
+} from '@taksu/content';
 import { getTranslations } from 'next-intl/server';
 import { simulatorUrl } from '@/lib/links';
 import { MissionLinks } from '../shared/mission-links';
@@ -30,7 +36,7 @@ export async function Bench({ locale }: { locale: Locale }) {
           <div>
             <h2 className="type-label text-[clamp(1.9rem,3.8vw,3rem)]">{t('sim.title')}</h2>
             <p className="mt-4 max-w-[52ch] text-lg leading-relaxed text-white/90">
-              {t('sim.body')}
+              {t('sim.body', { count: simMissions.length })}
             </p>
             <ExternalAction
               href={simulatorUrl(locale)}

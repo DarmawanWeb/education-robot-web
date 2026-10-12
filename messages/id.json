@@ -86,7 +86,7 @@
     },
     "sim": {
       "title": "Coba dulu di browser, gratis",
-      "body": "Simulator meniru sensor dan motor robot sungguhan. Dua belas misi mengikuti modul kurikulum SD dan SMP, dan setiap program bisa dilihat versi C++-nya.",
+      "body": "Simulator meniru sensor dan motor robot sungguhan. Ada {count} misi yang mengikuti modul kurikulum SD dan SMP, dan setiap program bisa dilihat versi C++-nya.",
       "missions": "Misi yang bisa dicoba sekarang",
       "imageAlt": "Tampilan simulator: blok program di kiri, arena robot dan panel sensor di kanan"
     },
