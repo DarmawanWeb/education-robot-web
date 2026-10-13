@@ -24,7 +24,8 @@ export function readLabConfig(env: Record<string, string | undefined> = process.
       .update(`taksu-lab:${adminPassword ?? 'locked'}`)
       .digest('hex');
   return {
-    dataDir: path.resolve(blank(env.LAB_DATA_DIR) ?? '.lab-data'),
+    // Resolved at run time; the ignore hint keeps the build from bundling the data folder.
+    dataDir: path.resolve(/* turbopackIgnore: true */ blank(env.LAB_DATA_DIR) ?? '.lab-data'),
     adminPassword,
     secret,
     notifyUrl: blank(env.LAB_NOTIFY_URL),
