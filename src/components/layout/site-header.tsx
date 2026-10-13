@@ -2,7 +2,6 @@ import { names } from '@taksu/content';
 import { ThemeToggle } from '@taksu/ui/brand/theme-toggle';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { ActionLink } from '../ui/action-link';
 import { LocaleSwitcher } from './locale-switcher';
 import { MobileNav } from './mobile-nav';
 import { NavLinks } from './nav-links';
@@ -18,6 +17,7 @@ export async function SiteHeader() {
     { href: '/schools', label: t('schools') },
     { href: '/guides', label: t('guides') },
     { href: '/lab', label: t('lab') },
+    { href: '/contact', label: t('contact') },
   ];
 
   return (
@@ -30,15 +30,9 @@ export async function SiteHeader() {
         <div className="ml-auto flex items-center gap-2">
           <LocaleSwitcher label={t('language')} />
           <ThemeToggle label={t('theme')} className="hidden sm:inline-flex" />
-          <ActionLink
-            href="/contact"
-            className="hidden min-h-10 px-4 text-sm whitespace-nowrap md:inline-flex"
-          >
-            {t('cta')}
-          </ActionLink>
           <MobileNav
             items={items}
-            labels={{ menu: t('menu'), close: t('close'), cta: t('cta'), theme: t('theme') }}
+            labels={{ menu: t('menu'), close: t('close'), theme: t('theme') }}
           />
         </div>
       </div>
