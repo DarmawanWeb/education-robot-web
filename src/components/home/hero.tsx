@@ -16,8 +16,8 @@ export async function Hero({ locale }: { locale: Locale }) {
             line: (chunks) => <span className="block text-balance">{chunks}</span>,
           })}
         </h1>
-        <div className="mt-10 grid gap-12 lg:mt-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:items-start">
-          <div className="flex flex-col gap-7 lg:pt-2">
+        <div className="mt-10 grid gap-12 lg:mt-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:items-center">
+          <div className="flex flex-col gap-7">
             <p className="max-w-[46ch] text-xl leading-relaxed">{t('body')}</p>
             <div className="flex flex-wrap gap-3">
               <ActionLink href="/contact">{common('requestProposal')}</ActionLink>
