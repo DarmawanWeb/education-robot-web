@@ -54,6 +54,7 @@ export async function SiteFooter() {
           </nav>
         ))}
         <div className="col-span-2 flex flex-col gap-2 md:col-span-1">
+          <h2 className="mb-1 text-base font-bold">{nav('contact')}</h2>
           <a
             href={`mailto:${siteConfig.email}`}
             className="decoration-primary break-all underline-offset-4 hover:underline"
@@ -65,12 +66,11 @@ export async function SiteFooter() {
               WhatsApp
             </a>
           ) : null}
-          <p className="text-muted-foreground mt-2">{t('partOf', { parent: names.parent })}</p>
           <a
             href={companyUrl(locale)}
-            className="decoration-primary underline-offset-4 hover:underline"
+            className="decoration-primary mt-3 font-bold underline-offset-4 hover:underline"
           >
-            {t('company')}
+            {t('partOf', { parent: names.company })}
           </a>
           <a
             href={companyUrl(locale, '/blog')}
