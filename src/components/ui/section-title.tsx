@@ -6,10 +6,13 @@ export function SectionTitle({
   title,
   intro,
   as: Tag = 'h2',
+  id,
   className,
   children,
 }: {
   title: string;
+  /** For `aria-labelledby` on the section. */
+  id?: string;
   intro?: string;
   as?: 'h1' | 'h2';
   className?: string;
@@ -18,6 +21,7 @@ export function SectionTitle({
   return (
     <div className={cn('max-w-3xl', className)}>
       <Tag
+        id={id}
         className={cn(
           'type-label text-balance',
           Tag === 'h1' ? 'text-[clamp(2.4rem,5.6vw,4.4rem)]' : 'text-[clamp(1.9rem,3.8vw,3rem)]',
