@@ -15,9 +15,6 @@
     "@fontsource-variable/archivo": "^5.3.0",
     "@fontsource-variable/atkinson-hyperlegible-mono": "^5.3.0",
     "@fontsource-variable/atkinson-hyperlegible-next": "^5.3.0",
-    "@mdx-js/loader": "^3.1.1",
-    "@mdx-js/react": "^3.1.1",
-    "@next/mdx": "^16.3.8",
     "@taksu/content": "workspace:*",
     "@taksu/ui": "workspace:*",
     "lucide-react": "^1.52.0",
@@ -30,7 +27,6 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",
     "@taksu/typescript-config": "workspace:*",
-    "@types/mdx": "^2.0.14",
     "@types/node": "^22.20.5",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",

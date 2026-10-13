@@ -22,7 +22,6 @@ export async function SiteFooter() {
   const support = [
     { href: '/schools', label: nav('schools') },
     { href: '/guides', label: nav('guides') },
-    { href: '/blog', label: nav('blog') },
     { href: '/contact', label: nav('contact') },
   ];
 
@@ -71,6 +70,12 @@ export async function SiteFooter() {
             className="decoration-primary underline-offset-4 hover:underline"
           >
             {t('company')}
+          </a>
+          <a
+            href={companyUrl(locale, '/blog')}
+            className="decoration-primary underline-offset-4 hover:underline"
+          >
+            {t('blog')}
           </a>
         </div>
       </Container>

@@ -17,7 +17,6 @@ export async function SiteHeader() {
     { href: '/simulator', label: t('simulator') },
     { href: '/schools', label: t('schools') },
     { href: '/guides', label: t('guides') },
-    { href: '/blog', label: t('blog') },
   ];
 
   return (
