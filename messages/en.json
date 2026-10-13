@@ -57,6 +57,51 @@
       "intro": "SD v1 arrives assembled. Students build SMP v1 from modules, with no soldering. SMA v1 runs an onboard computer and ROS 2.",
       "compare": "Compare all three"
     },
+    "why": {
+      "title": "More than a box of robots",
+      "intro": "A robot alone does not run a class. This is what comes with our kits, next to what schools often get.",
+      "caption": "How our kits compare with what schools often get",
+      "topic": "Topic",
+      "often": "What schools often get",
+      "rows": {
+        "curriculum": {
+          "topic": "Lesson material",
+          "often": "An assembly manual. The lessons are left to the teacher.",
+          "us": "A curriculum of 32 to 36 meetings per level. Every meeting has a goal, activity steps, and evidence of learning, mapped to the Coding and Artificial Intelligence subject.",
+          "link": "See the curriculum"
+        },
+        "teachers": {
+          "topic": "Teachers",
+          "often": "Left to learn from videos, since training is not included.",
+          "us": "Teacher training at the start and support through the pilot. Teachers who have never taught robotics can still start.",
+          "link": "Read the teacher guide"
+        },
+        "bench": {
+          "topic": "On the classroom bench",
+          "often": "Soldering, and loose wires that are easy to mix up.",
+          "us": "SD v1 arrives ready to use. SMP v1 is built by students from modules with keyed connectors, no soldering.",
+          "link": "See the kits"
+        },
+        "try": {
+          "topic": "Before buying",
+          "often": "You only find out whether it fits after buying the kit.",
+          "us": "A free browser simulator with {count} missions, then a pilot in one class before going wider.",
+          "link": "About the simulator"
+        },
+        "levels": {
+          "topic": "Moving up a level",
+          "often": "A new kit, while the old one goes into the cupboard.",
+          "us": "Upgrade packs add sensors, actuators, or compute to the robots the school already owns, with projects to match.",
+          "link": "See the upgrades"
+        },
+        "support": {
+          "topic": "After the purchase",
+          "often": "A shipping warranty, then spare parts that are hard to find.",
+          "us": "Teachers can ask over WhatsApp or email. Repairs and spare parts are available, and new missions and lessons are added through the year.",
+          "link": "Programmes for schools"
+        }
+      }
+    },
     "path": {
       "title": "One meeting, four steps",
       "intro": "Every mission is tried in the simulator first, then taken to the real robot. Robots fail at step four all the time. Students write down why, then fix the program.",

@@ -57,6 +57,51 @@
       "intro": "SD v1 datang sudah dirakit. SMP v1 dirakit siswa dari modul tanpa solder. SMA v1 memakai komputer onboard dan ROS 2.",
       "compare": "Bandingkan ketiganya"
     },
+    "why": {
+      "title": "Bukan sekadar kotak robot",
+      "intro": "Robot saja tidak membuat kelas berjalan. Ini yang ikut datang bersama kit kami, di samping yang sering diterima sekolah.",
+      "caption": "Perbandingan kit kami dengan yang sering diterima sekolah",
+      "topic": "Hal",
+      "often": "Yang sering diterima sekolah",
+      "rows": {
+        "curriculum": {
+          "topic": "Materi ajar",
+          "often": "Buku panduan perakitan. Materi pelajarannya disusun guru sendiri.",
+          "us": "Kurikulum 32 sampai 36 pertemuan per jenjang. Setiap pertemuan punya tujuan, langkah kegiatan, dan bukti belajar, dipetakan ke mapel Koding dan Kecerdasan Artifisial.",
+          "link": "Lihat kurikulum"
+        },
+        "teachers": {
+          "topic": "Guru",
+          "often": "Belajar sendiri dari video, karena pelatihan tidak termasuk.",
+          "us": "Pelatihan guru di awal dan pendampingan selama program pilot. Guru yang belum pernah mengajar robotik tetap bisa memulai.",
+          "link": "Baca panduan guru"
+        },
+        "bench": {
+          "topic": "Di meja kelas",
+          "often": "Harus menyolder, dan kabel lepasnya mudah tertukar.",
+          "us": "SD v1 datang siap pakai. SMP v1 dirakit siswa dari modul dengan konektor berkunci, tanpa solder.",
+          "link": "Lihat kitnya"
+        },
+        "try": {
+          "topic": "Sebelum membeli",
+          "often": "Baru tahu cocok atau tidak setelah kitnya dibeli.",
+          "us": "Simulator gratis di browser dengan {count} misi, lalu program pilot di satu kelas sebelum dipakai lebih luas.",
+          "link": "Tentang simulator"
+        },
+        "levels": {
+          "topic": "Naik jenjang",
+          "often": "Beli kit baru, dan kit lama tersimpan di lemari.",
+          "us": "Upgrade pack menambah sensor, aktuator, atau komputasi ke robot yang sudah dimiliki sekolah, lengkap dengan proyeknya.",
+          "link": "Lihat upgrade"
+        },
+        "support": {
+          "topic": "Setelah dibeli",
+          "often": "Garansi pengiriman, lalu suku cadang sulit dicari.",
+          "us": "Guru bisa bertanya lewat WhatsApp atau email. Servis dan suku cadang tersedia, dan misi serta materi baru ditambahkan sepanjang tahun.",
+          "link": "Program untuk sekolah"
+        }
+      }
+    },
     "path": {
       "title": "Satu pertemuan, empat langkah",
       "intro": "Setiap misi dicoba dulu di simulator, lalu dibawa ke robot sungguhan. Robot yang gagal di langkah keempat itu biasa. Siswa mencatat penyebabnya, lalu memperbaiki programnya.",

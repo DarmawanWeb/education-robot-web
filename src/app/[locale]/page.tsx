@@ -7,6 +7,7 @@ import { KitShelf } from '@/components/home/kit-shelf';
 import { PathSection } from '@/components/home/path-section';
 import { PilotSection } from '@/components/home/pilot-section';
 import { UpgradesSection } from '@/components/home/upgrades-section';
+import { WhySchools } from '@/components/home/why-schools';
 import { CtaBand } from '@/components/shared/cta-band';
 import { localeFromParams, resolveLocale } from '@/lib/locale';
 import { pageMetadata } from '@/lib/metadata';
@@ -25,6 +26,7 @@ export default async function HomePage({ params }: Props) {
     <>
       <Hero locale={locale} />
       <KitShelf locale={locale} />
+      <WhySchools />
       <PathSection />
       <Bench locale={locale} />
       <UpgradesSection locale={locale} />
