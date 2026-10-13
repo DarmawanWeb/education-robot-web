@@ -12,6 +12,7 @@
     "simulator": "Simulator",
     "schools": "For schools",
     "guides": "Guides",
+    "lab": "Lab",
     "contact": "Contact",
     "cta": "Request a proposal",
     "menu": "Open menu",
@@ -241,6 +242,255 @@
     "read": "Read the guide, {count} minutes",
     "note": "Note",
     "related": "More guides"
+  },
+  "Lab": {
+    "metaTitle": "Lab: builds and forum for school robotics",
+    "metaDescription": "See robots built by other classes, try our challenges, submit your class’s build, and ask in the forum.",
+    "hero": {
+      "title": "Show us what your class built",
+      "body": "Send in the robots your class has built and changed, try our challenges, or ask anything in the forum. We check every submission before it goes up.",
+      "submit": "Submit a build",
+      "forum": "Open the forum"
+    },
+    "steps": {
+      "title": "How it works",
+      "make": {
+        "title": "Build and change",
+        "body": "Finish a module or a challenge, then add your class’s own idea."
+      },
+      "send": {
+        "title": "Photograph and send",
+        "body": "One to four photos, a short story, and a video if you have one."
+      },
+      "show": {
+        "title": "Shown in the Lab",
+        "body": "We check it first. The best ones become featured builds."
+      }
+    },
+    "featured": {
+      "title": "Featured builds",
+      "intro": "Robots from classrooms using our kits, picked by the team to show here.",
+      "all": "See all builds",
+      "examplesTitle": "Examples from our team",
+      "examplesNote": "No submitted builds are published yet. In the meantime, here are four SMP v1 setups we built ourselves."
+    },
+    "examples": {
+      "line": {
+        "title": "Five-sensor line follower",
+        "body": "The 5-in-1 IR sensor at the front reads black tape and the motors follow the track."
+      },
+      "obstacle": {
+        "title": "Obstacle avoider",
+        "body": "An ultrasonic sensor on a servo looks left and right before the robot turns."
+      },
+      "voice": {
+        "title": "Clap control",
+        "body": "The microphone counts claps, and the robot drives or stops depending on how many."
+      },
+      "monitor": {
+        "title": "Monitoring station",
+        "body": "A temperature and humidity sensor sends readings over Wi-Fi to a classroom dashboard."
+      }
+    },
+    "team": "The {brand} team",
+    "challenges": {
+      "title": "Challenges",
+      "intro": "Ideas for changing the robot once a module is done. All of them use parts from the box. Send in the result and we will feature the best above.",
+      "doneWhen": "Done when",
+      "tryInSim": "Try it in the simulator",
+      "submit": "Submit the result"
+    },
+    "forum": {
+      "title": "Forum",
+      "intro": "Questions and answers for teachers, students, and parents: kits, curriculum, the simulator, and competitions.",
+      "ask": "Ask in the forum",
+      "latest": "Latest discussions",
+      "open": "Open the forum",
+      "empty": "No discussions yet. The first question could come from your class."
+    },
+    "rules": {
+      "title": "House rules",
+      "review": "Every build, question, and reply appears after we check it.",
+      "faces": "Do not show students’ faces or full names without their parents’ permission. A class name such as Class 7B is enough.",
+      "contact": "The contact details you give are for us only and never appear on the site.",
+      "removal": "Want something taken down? Reach us through the contact page."
+    },
+    "kits": {
+      "sd": "SD v1",
+      "smp": "SMP v1",
+      "sma": "SMA v1",
+      "other": "Another kit"
+    },
+    "roles": {
+      "teacher": "Teacher",
+      "student": "Student",
+      "parent": "Parent",
+      "other": "Other"
+    },
+    "byline": "{author}, {role}",
+    "challengeTag": "Challenge: {title}",
+    "builds": {
+      "metaTitle": "Builds from classrooms",
+      "metaDescription": "Robots built and changed by students with the SD v1 and SMP v1 kits.",
+      "title": "Builds from classrooms",
+      "intro": "Robots that students assembled, changed, and programmed. We check every build before it appears.",
+      "filter": "Filter by kit",
+      "all": "All",
+      "empty": "No builds for this kit yet.",
+      "submit": "Submit your class’s build"
+    },
+    "build": {
+      "breadcrumb": "Breadcrumb",
+      "does": "What this robot does",
+      "changed": "What was changed or added",
+      "video": "Video",
+      "play": "Play video",
+      "watch": "Watch on YouTube",
+      "published": "Published {date}",
+      "photo": "Photo {n}",
+      "showPhoto": "Show photo {n}",
+      "seeChallenge": "See the challenge",
+      "another": "Did your class build something too?",
+      "anotherBody": "Send us the photos. We check them first, then the build appears in the Lab."
+    },
+    "submit": {
+      "metaTitle": "Submit a build",
+      "metaDescription": "Send your class’s robot to the Lab. Builds appear after our team checks them.",
+      "title": "Submit a build",
+      "intro": "Tell us about the robot your class made and add photos. We check it before it appears in the Lab.",
+      "aboutBuild": "About the build",
+      "aboutYou": "About you",
+      "title_label": "Build title",
+      "title_placeholder": "For example: Letter carrier robot",
+      "kit": "Kit used",
+      "challenge": "Challenge",
+      "challengeNone": "Not from a challenge",
+      "summary": "What does this robot do?",
+      "summary_hint": "Two or three sentences are enough.",
+      "changes": "What did you change or add?",
+      "changes_hint": "Optional. For example, body parts, extra sensors, or ideas in the program.",
+      "photos": "Photos",
+      "photos_hint": "One to four JPG, PNG, or WebP photos, up to 8 MB each. Location and camera data are removed automatically.",
+      "photos_add": "Choose photos",
+      "photos_remove": "Remove photo {n}",
+      "video": "YouTube video link",
+      "video_hint": "Optional. A video of the robot moving helps a lot.",
+      "author": "Display name",
+      "author_placeholder": "For example: Class 7B",
+      "author_hint": "Use a class name or a first name only.",
+      "role": "You are",
+      "school": "School",
+      "city": "City",
+      "contact": "Email or WhatsApp",
+      "contact_hint": "Optional, only for us in case we have questions. Never shown on the site.",
+      "consent": "I am the teacher or supervisor, or have their permission, and these photos do not show students’ faces or full names without their parents’ permission.",
+      "send": "Send for review",
+      "sending": "Sending…",
+      "doneTitle": "Thank you, we have your build",
+      "doneBody": "Your submission is in the queue and will appear in the Lab once we have checked it.",
+      "again": "Submit another build",
+      "back": "Back to the Lab"
+    },
+    "forumPage": {
+      "metaTitle": "Lab forum",
+      "metaDescription": "Questions and answers about robot kits, curriculum, the simulator, and school robotics competitions.",
+      "title": "Forum",
+      "intro": "Ask anything about the kits, the curriculum, the simulator, or competitions. Questions and replies appear after we check them.",
+      "categories": "Categories",
+      "all": "All topics",
+      "empty": "No discussions in this category yet.",
+      "replies": "{count, plural, =0 {no replies yet} one {# reply} other {# replies}}",
+      "pinned": "Pinned",
+      "staff": "Team",
+      "lastActivity": "Active {date}"
+    },
+    "thread": {
+      "breadcrumb": "Breadcrumb",
+      "repliesTitle": "Replies",
+      "noReplies": "No published replies yet.",
+      "replyTitle": "Write a reply",
+      "reply": "Reply",
+      "send": "Send reply",
+      "sending": "Sending…",
+      "doneTitle": "Reply sent",
+      "doneBody": "Your reply appears once we have checked it.",
+      "again": "Write another reply"
+    },
+    "newThread": {
+      "metaTitle": "Ask in the forum",
+      "title": "Ask in the forum",
+      "intro": "Give as much detail as you can: the kit, what you tried, and what happened. Do not include phone numbers or addresses in the question.",
+      "category": "Category",
+      "title_label": "Question title",
+      "title_placeholder": "For example: The robot follows the tile grout",
+      "body": "Question",
+      "send": "Send question",
+      "sending": "Sending…",
+      "doneTitle": "Question sent",
+      "doneBody": "Your question appears in the forum once we have checked it.",
+      "again": "Ask another question",
+      "back": "Back to the forum"
+    },
+    "errors": {
+      "required": "Required.",
+      "tooShort": "Too short.",
+      "tooLong": "Too long.",
+      "tooManyLinks": "Two links at most.",
+      "invalid": "This value cannot be used.",
+      "invalidVideo": "Use a YouTube video link.",
+      "consent": "Tick this statement to submit.",
+      "tooMany": "Four photos at most.",
+      "photo-type": "Use JPG, PNG, or WebP photos.",
+      "photo-size": "Each photo can be 8 MB at most.",
+      "photo-unreadable": "One of the photos could not be read. Try another one.",
+      "rateLimited": "Too many submissions from this network. Please try again later.",
+      "tooLarge": "The submission is too large. Use fewer or smaller photos.",
+      "network": "The submission did not go through. Check the connection and try again.",
+      "summary": "Some fields need fixing."
+    },
+    "optional": "optional",
+    "honeypot": "Leave this field empty",
+    "admin": {
+      "metaTitle": "Lab moderation",
+      "title": "Lab moderation",
+      "locked": "Moderation is not switched on. Set LAB_ADMIN_PASSWORD on the server to open it.",
+      "password": "Password",
+      "login": "Sign in",
+      "wrong": "Wrong password.",
+      "rateLimited": "Too many attempts. Wait a few minutes.",
+      "logout": "Sign out",
+      "tabs": {
+        "queue": "Queue",
+        "builds": "Published builds",
+        "forum": "Forum"
+      },
+      "queueEmpty": "Nothing is waiting. Every submission has been checked.",
+      "pendingBuilds": "Builds waiting",
+      "pendingThreads": "Questions waiting",
+      "pendingReplies": "Replies waiting",
+      "inThread": "In: {title}",
+      "contact": "Contact (private)",
+      "noContact": "No contact given",
+      "submitted": "Received {date}",
+      "publish": "Publish",
+      "reject": "Reject and delete",
+      "delete": "Delete",
+      "feature": "Feature",
+      "unfeature": "Unfeature",
+      "unpublish": "Back to queue",
+      "pin": "Pin",
+      "unpin": "Unpin",
+      "featured": "Featured",
+      "view": "View",
+      "noBuilds": "No published builds yet.",
+      "noThreads": "No published topics yet.",
+      "teamReply": "Reply as the team",
+      "teamReplySend": "Send team reply",
+      "newTeamThread": "Post a topic as the team",
+      "newTeamThreadHint": "Published straight away with the Team badge. Good for forum rules or announcements.",
+      "teamThreadSend": "Publish topic",
+      "confirmDelete": "Delete for good?"
+    }
   },
   "Simulator": {
     "metaTitle": "Free robot simulator",
