@@ -26,7 +26,8 @@ function wrapAngle(angle: number) {
 
 /**
  * The page's one moment of motion: a top-down robot following tape, with its two line
- * sensors lighting up as the track bends. Starts paused for people who prefer less motion.
+ * sensors lighting up as the track bends. It wears SD v1's white stripe and visor eyes.
+ * Starts paused for people who prefer less motion.
  */
 export function ArenaDemo() {
   const t = useTranslations('Arena');
@@ -116,6 +117,7 @@ export function ArenaDemo() {
                 stroke="#000"
                 strokeWidth="2.5"
               />
+              <rect x="-22.75" y="-4" width="41.5" height="8" fill="#ffffff" />
               <rect x="2" y="-10" width="12" height="20" rx="2" fill="#0d1b2a" />
               <circle cx="8" cy="-4.5" r="2" fill="#7ff3ff" />
               <circle cx="8" cy="4.5" r="2" fill="#7ff3ff" />
