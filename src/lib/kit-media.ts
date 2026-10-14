@@ -1,11 +1,7 @@
 import type { LevelSlug, Localized } from '@taksu/content';
 import type { StaticImageData } from 'next/image';
 import pcb from '@/assets/kits/pcb.webp';
-import sdBack from '@/assets/kits/sd-back.webp';
-import sdFront from '@/assets/kits/sd-front.webp';
 import sdHero from '@/assets/kits/sd-hero.webp';
-import sdSide from '@/assets/kits/sd-side.webp';
-import sdTop from '@/assets/kits/sd-top.webp';
 import smaHero from '@/assets/kits/sma-hero.webp';
 import smpHero from '@/assets/kits/smp-hero.webp';
 import smpLine from '@/assets/kits/smp-line.webp';
@@ -28,8 +24,8 @@ export const kitHero: Record<LevelSlug, KitImage> = {
   sd: {
     src: sdHero,
     alt: l(
-      'SD v1: robot 2WD dengan wajah OLED dan sensor jarak',
-      'SD v1: a 2WD robot with an OLED face and a distance sensor',
+      'SD v1: robot 2WD merah bergaris putih dengan wajah OLED, sensor jarak di depan, dan dua lampu sein',
+      'SD v1: a red, white-striped 2WD robot with an OLED face, a front distance sensor, and two turn signals',
     ),
   },
   smp: {
@@ -47,13 +43,11 @@ export const kitHero: Record<LevelSlug, KitImage> = {
   },
 };
 
+/**
+ * Extra views per kit. SD v1 has a new body and only one render so far; its side views come
+ * back here (front, side, back, top) once they are made.
+ */
 export const kitGallery: Partial<Record<LevelSlug, KitImage[]>> = {
-  sd: [
-    { src: sdFront, fit: 'cover', alt: l('Tampak depan', 'Front') },
-    { src: sdSide, fit: 'cover', alt: l('Tampak samping', 'Side') },
-    { src: sdBack, fit: 'cover', alt: l('Tampak belakang', 'Back') },
-    { src: sdTop, fit: 'cover', alt: l('Tampak atas', 'Top') },
-  ],
   smp: [
     { src: smpLine, alt: l('Line follower', 'Line follower') },
     { src: smpObstacle, alt: l('Penghindar rintangan', 'Obstacle avoider') },

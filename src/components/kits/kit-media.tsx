@@ -6,8 +6,8 @@ import { customPcb, kitGallery, smpParts } from '@/lib/kit-media';
 import { Container } from '../ui/container';
 
 /**
- * Product views. SD v1 is one finished robot, so it is shown from every side; SMP v1 is
- * modular, so it is shown as its configurations, its parts, and the board they plug into.
+ * Product views. A finished robot such as SD v1 is shown from every side when those views
+ * exist; SMP v1 is modular, so it is shown as its configurations, its parts, and its board.
  */
 export async function KitMedia({ level, locale }: { level: EducationLevel; locale: Locale }) {
   const t = await getTranslations('Kit');
