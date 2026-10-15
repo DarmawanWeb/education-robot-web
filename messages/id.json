@@ -130,6 +130,57 @@
       "all": "Semua pertanyaan"
     }
   },
+  "Catalog": {
+    "title": "Pilih robotmu",
+    "intro": "Setiap robot punya nomor, usia mulai, dan jalur belajarnya sendiri. Saring menurut tujuanmu, lalu buka robotnya untuk melihat isi kotak dan cara memahaminya.",
+    "filter": "Saring menurut tujuan",
+    "all": "Semua",
+    "see": "Lihat {robot}",
+    "notify": "Kabari saya",
+    "notifyMessage": "Halo ULIK, kabari saya saat {robot} bisa dipesan.",
+    "notifySubject": "Kabari saya: {robot}"
+  },
+  "RobotPage": {
+    "breadcrumb": "Jejak halaman",
+    "allRobots": "Semua robot",
+    "number": "Nomor {n}",
+    "notifyMessage": "Halo ULIK, kabari saya saat {robot} bisa dipesan.",
+    "notifySubject": "Kabari saya: {robot}",
+    "preorderNote": "Pre-order: robot dirakit dan diuji per batch. Perkiraan tanggal kirim kami sampaikan saat konfirmasi pesanan.",
+    "soonNote": "Belum bisa dipesan. Tekan Kabari saya, dan kami hubungi saat harga dan jadwalnya sudah pasti.",
+    "abilities": "Yang bisa dilakukan {robot}",
+    "programming": "Cara memprogram",
+    "competition": "Untuk lomba",
+    "momo": {
+      "title": "Satu robot, empat bentuk",
+      "intro": "Modul Momo bisa dirakit ulang menjadi pengikut garis, penghindar rintangan, robot kendali suara, atau stasiun pemantau."
+    },
+    "learn": {
+      "title": "Jalur belajar {robot}",
+      "path": "Buka jalur belajar",
+      "simulator": "Coba di simulator",
+      "more": "dan {count} langkah lagi"
+    },
+    "inBox": "Isi kotak",
+    "specs": "Spesifikasi",
+    "parts": "Daftar komponen",
+    "addOns": "Tambahan untuk {robot}",
+    "allAddOns": "Semua aksesori",
+    "bulk": {
+      "title": "Butuh banyak unit?",
+      "body": "Untuk sekolah, kursus, dan tim lomba, {robot} tersedia dengan harga bertingkat dan pelatihan untuk pengajar. Mau dengan merek sendiri? Kami juga melayani OEM.",
+      "action": "Minta penawaran",
+      "oem": "Pilihan OEM"
+    },
+    "guides": "Panduan terkait"
+  },
+  "Buy": {
+    "package": "Pilih paket",
+    "whatsapp": "Pesan lewat WhatsApp",
+    "whatsappMessage": "Halo ULIK, saya mau pesan {item} ({price}).",
+    "notify": "Kabari saya",
+    "alsoOn": "Juga di"
+  },
   "Cart": {
     "add": "Masukkan keranjang",
     "added": "Masuk keranjang",

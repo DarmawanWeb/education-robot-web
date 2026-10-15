@@ -130,6 +130,57 @@
       "all": "All questions"
     }
   },
+  "Catalog": {
+    "title": "Choose your robot",
+    "intro": "Every robot has a number, a starting age, and its own learning path. Filter by what you want to do, then open a robot to see what is in the box and how to understand it.",
+    "filter": "Filter by goal",
+    "all": "All",
+    "see": "See {robot}",
+    "notify": "Let me know",
+    "notifyMessage": "Hi ULIK, let me know when {robot} can be ordered.",
+    "notifySubject": "Let me know: {robot}"
+  },
+  "RobotPage": {
+    "breadcrumb": "Breadcrumb",
+    "allRobots": "All robots",
+    "number": "Number {n}",
+    "notifyMessage": "Hi ULIK, let me know when {robot} can be ordered.",
+    "notifySubject": "Let me know: {robot}",
+    "preorderNote": "Pre-order: robots are built and tested in batches. We tell you the expected shipping date when we confirm your order.",
+    "soonNote": "Not on sale yet. Tap Let me know, and we will get in touch once the price and dates are set.",
+    "abilities": "What {robot} can do",
+    "programming": "How you program it",
+    "competition": "For competitions",
+    "momo": {
+      "title": "One robot, four builds",
+      "intro": "Momo’s modules rebuild into a line follower, an obstacle avoider, a sound-controlled robot, or a monitoring station."
+    },
+    "learn": {
+      "title": "{robot}’s learning path",
+      "path": "Open the learning path",
+      "simulator": "Try it in the simulator",
+      "more": "and {count, plural, one {# more step} other {# more steps}}"
+    },
+    "inBox": "In the box",
+    "specs": "Specifications",
+    "parts": "Parts list",
+    "addOns": "Add-ons for {robot}",
+    "allAddOns": "All accessories",
+    "bulk": {
+      "title": "Need several units?",
+      "body": "For schools, courses, and competition teams, {robot} comes with tiered pricing and training for instructors. Want it under your own brand? We do OEM too.",
+      "action": "Ask for a quote",
+      "oem": "OEM options"
+    },
+    "guides": "Related guides"
+  },
+  "Buy": {
+    "package": "Choose a package",
+    "whatsapp": "Order on WhatsApp",
+    "whatsappMessage": "Hi ULIK, I would like to order {item} ({price}).",
+    "notify": "Let me know",
+    "alsoOn": "Also on"
+  },
   "Cart": {
     "add": "Add to cart",
     "added": "Added to cart",
