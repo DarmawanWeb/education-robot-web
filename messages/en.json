@@ -48,5 +48,86 @@
     "notify": "Let me know",
     "notifyMessage": "Hi ULIK, let me know when {name} comes out.",
     "notifySubject": "Let me know: {name}"
+  },
+  "Home": {
+    "hero": {
+      "title": "Robots made for tinkering.",
+      "body": "Every robot has a name, a number, and its own learning path. Pick by age and goal: starting from zero, training for a contest, or digging deeper.",
+      "pick": "Choose a robot",
+      "simulator": "Try the free simulator",
+      "gridLabel": "ULIK robots by release number",
+      "number": "Number {n}",
+      "dropName": "Drop #{n}",
+      "dropBody": "The next R&D robot. Its name and shape are still under wraps.",
+      "dropLink": "See how Drops work"
+    },
+    "ages": {
+      "title": "Which robot fits?",
+      "intro": "Each robot stands at the age it is designed to start from. The ages are a guide, not a rule.",
+      "axis": "Age (years)",
+      "age": "Ages {age}+",
+      "ageShort": "{age}+",
+      "see": "See {robot}"
+    },
+    "comesWith": {
+      "title": "Not just owning a robot, but understanding it",
+      "intro": "Every ULIK robot comes with a way to understand it, free and online. No classes: follow it at home, at your own pace.",
+      "path": {
+        "title": "A learning path for each robot",
+        "body": "Step by step from unboxing to contest-ready, with videos and guides.",
+        "link": "See the learning paths"
+      },
+      "sim": {
+        "title": "A simulator in the browser",
+        "body": "Build programs with blocks and test them in a virtual arena before the robot arrives.",
+        "link": "Open the simulator"
+      },
+      "code": {
+        "title": "Code you can take with you",
+        "body": "Every block program has an Arduino C++ version. When you are ready, carry on in the Arduino IDE."
+      },
+      "imageAlt": "The ULIK simulator: program blocks on the left, Ciko following a line in the arena on the right",
+      "caption": "Ciko’s Follow the line mission, step 9 on its learning path."
+    },
+    "addOns": {
+      "title": "Add abilities",
+      "intro": "Upgrade packs add sensors and new projects to the robot you have. Arenas use the same tracks as the simulator.",
+      "all": "All accessories"
+    },
+    "buy": {
+      "title": "How to buy",
+      "intro": "One or many, through whichever channel suits you.",
+      "direct": {
+        "title": "Order directly",
+        "body": "Add to the cart, then send the order over WhatsApp or email. We reply with the total, shipping, and how to pay.",
+        "action": "Choose a robot"
+      },
+      "market": {
+        "title": "Marketplaces",
+        "body": "Buy from our store on a marketplace, with the usual payment and tracking.",
+        "soon": "Our Tokopedia and Shopee stores are on the way. Until then, order directly through the cart."
+      },
+      "bulk": {
+        "title": "Buy in bulk",
+        "body": "For schools, courses, and competition teams: tiered pricing and training for instructors.",
+        "action": "See the offer"
+      }
+    },
+    "business": {
+      "bulk": {
+        "title": "Schools, courses, and competition teams",
+        "body": "The same robot for every student, with tiered pricing and support.",
+        "action": "Ask for a quote"
+      },
+      "oem": {
+        "title": "OEM: our robots, your brand",
+        "body": "Use ULIK robots with your name, logo, and packaging, or have us design a new one.",
+        "action": "See OEM options"
+      }
+    },
+    "faq": {
+      "title": "Common questions",
+      "all": "All questions"
+    }
   }
 }

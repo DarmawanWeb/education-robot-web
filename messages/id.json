@@ -48,5 +48,86 @@
     "notify": "Kabari saya",
     "notifyMessage": "Halo ULIK, kabari saya saat {name} dirilis.",
     "notifySubject": "Kabari saya: {name}"
+  },
+  "Home": {
+    "hero": {
+      "title": "Robot untuk diulik.",
+      "body": "Setiap robot punya nama, nomor, dan jalur belajarnya sendiri. Pilih dari usia dan tujuanmu: mulai dari nol, latihan lomba, atau ngulik lebih dalam.",
+      "pick": "Pilih robot",
+      "simulator": "Coba simulator gratis",
+      "gridLabel": "Robot ULIK menurut nomor rilis",
+      "number": "Nomor {n}",
+      "dropName": "Drop #{n}",
+      "dropBody": "Robot R&D berikutnya. Nama dan bentuknya masih rahasia.",
+      "dropLink": "Lihat cara kerja Drop"
+    },
+    "ages": {
+      "title": "Robot mana yang cocok?",
+      "intro": "Setiap robot berdiri di usia yang kami rancang sebagai titik mulainya. Usia ini saran, bukan aturan.",
+      "axis": "Usia (tahun)",
+      "age": "Usia {age}+",
+      "ageShort": "{age}+",
+      "see": "Lihat {robot}"
+    },
+    "comesWith": {
+      "title": "Bukan cuma punya robot, tapi paham cara kerjanya",
+      "intro": "Setiap robot ULIK datang dengan cara memahaminya, gratis dan online. Bukan kelas: ikuti sendiri dari rumah, sesuai kecepatanmu.",
+      "path": {
+        "title": "Jalur belajar per robot",
+        "body": "Langkah demi langkah dari buka kotak sampai siap lomba, dengan video dan panduan.",
+        "link": "Lihat jalur belajar"
+      },
+      "sim": {
+        "title": "Simulator di browser",
+        "body": "Susun program dengan blok dan uji di arena virtual sebelum robotnya datang.",
+        "link": "Buka simulator"
+      },
+      "code": {
+        "title": "Kode yang bisa dibawa",
+        "body": "Setiap program blok punya versi Arduino C++. Saat siap, lanjutkan di Arduino IDE."
+      },
+      "imageAlt": "Simulator ULIK: blok program di kiri, Ciko mengikuti garis di arena di kanan",
+      "caption": "Misi Ikuti garis untuk Ciko, langkah 9 di jalur belajarnya."
+    },
+    "addOns": {
+      "title": "Tambah kemampuan",
+      "intro": "Upgrade pack menambah sensor dan proyek baru ke robot yang sudah ada. Arena memakai lintasan yang sama dengan simulator.",
+      "all": "Semua aksesori"
+    },
+    "buy": {
+      "title": "Cara membeli",
+      "intro": "Satuan atau banyak, lewat jalur yang paling nyaman.",
+      "direct": {
+        "title": "Pesan langsung",
+        "body": "Masukkan ke keranjang, lalu kirim pesanan lewat WhatsApp atau email. Kami balas dengan total, ongkos kirim, dan cara bayar.",
+        "action": "Pilih robot"
+      },
+      "market": {
+        "title": "Marketplace",
+        "body": "Beli di toko kami di marketplace, dengan pembayaran dan pelacakan kiriman seperti biasa.",
+        "soon": "Toko kami di Tokopedia dan Shopee sedang disiapkan. Sementara itu, pesan langsung lewat keranjang."
+      },
+      "bulk": {
+        "title": "Beli banyak",
+        "body": "Untuk sekolah, kursus, dan tim lomba: harga bertingkat dan pelatihan untuk pengajar.",
+        "action": "Lihat penawaran"
+      }
+    },
+    "business": {
+      "bulk": {
+        "title": "Sekolah, kursus, dan tim lomba",
+        "body": "Robot yang sama untuk semua peserta, dengan harga bertingkat dan pendampingan.",
+        "action": "Minta penawaran"
+      },
+      "oem": {
+        "title": "OEM: robot kami, merek Anda",
+        "body": "Pakai robot ULIK dengan nama, logo, dan kemasan Anda, atau kami rancang yang baru.",
+        "action": "Lihat pilihan OEM"
+      }
+    },
+    "faq": {
+      "title": "Yang sering ditanyakan",
+      "all": "Semua pertanyaan"
+    }
   }
 }
