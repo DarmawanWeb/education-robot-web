@@ -1,0 +1,52 @@
+{
+  "Meta": {
+    "title": "{brand}: robot untuk diulik",
+    "description": "Robot bernama untuk anak, remaja, dan tim lomba: Ciko, Momo, dan Garu. Lengkap dengan jalur belajar online gratis, simulator di browser, upgrade pack, dan arena. Melayani satuan, grosir sekolah, dan OEM."
+  },
+  "Nav": {
+    "robots": "Robot",
+    "drop": "Drop",
+    "accessories": "Aksesori",
+    "learn": "Belajar",
+    "business": "Bisnis",
+    "simulator": "Simulator",
+    "cart": "Keranjang",
+    "cartCount": "Keranjang, {count} barang",
+    "language": "Bahasa",
+    "menu": "Buka menu",
+    "close": "Tutup menu",
+    "skip": "Langsung ke isi"
+  },
+  "Footer": {
+    "shop": "Belanja",
+    "path": "Ngulik {robot}",
+    "guides": "Panduan",
+    "bulk": "Beli banyak",
+    "oem": "OEM dan merek sendiri",
+    "inquiry": "Minta penawaran",
+    "help": "Bantuan",
+    "faq": "Pertanyaan umum",
+    "email": "Email",
+    "whatsappHello": "Halo ULIK, saya mau bertanya.",
+    "copyright": "© {year} {brand}. Semua hak dilindungi."
+  },
+  "Price": {
+    "soon": "Harga segera",
+    "from": "Mulai {amount}"
+  },
+  "Robot": {
+    "age": "Usia {age}+"
+  },
+  "Shop": {
+    "fits": "Untuk {fits}"
+  },
+  "Drop": {
+    "title": "Drop: robot baru dari meja R&D",
+    "intro": "Selain robot utama, kami merilis robot kecil hasil R&D satu per satu. Setiap Drop melanjutkan nomor seri ULIK.",
+    "name": "Drop #{n}",
+    "more": "Cara kerja Drop",
+    "notify": "Kabari saya",
+    "notifyMessage": "Halo ULIK, kabari saya saat {name} dirilis.",
+    "notifySubject": "Kabari saya: {name}"
+  }
+}

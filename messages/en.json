@@ -1,0 +1,52 @@
+{
+  "Meta": {
+    "title": "{brand}: robots made for tinkering",
+    "description": "Named robots for children, teenagers, and competition teams: Ciko, Momo, and Garu. Each comes with a free online learning path, a browser simulator, upgrade packs, and arenas. We sell single units, school bulk orders, and OEM."
+  },
+  "Nav": {
+    "robots": "Robots",
+    "drop": "Drops",
+    "accessories": "Accessories",
+    "learn": "Learn",
+    "business": "Business",
+    "simulator": "Simulator",
+    "cart": "Cart",
+    "cartCount": "Cart, {count, plural, one {# item} other {# items}}",
+    "language": "Language",
+    "menu": "Open menu",
+    "close": "Close menu",
+    "skip": "Skip to content"
+  },
+  "Footer": {
+    "shop": "Shop",
+    "path": "{robot}’s path",
+    "guides": "Guides",
+    "bulk": "Bulk orders",
+    "oem": "OEM and your own brand",
+    "inquiry": "Ask for a quote",
+    "help": "Help",
+    "faq": "Questions",
+    "email": "Email",
+    "whatsappHello": "Hi ULIK, I have a question.",
+    "copyright": "© {year} {brand}. All rights reserved."
+  },
+  "Price": {
+    "soon": "Price soon",
+    "from": "From {amount}"
+  },
+  "Robot": {
+    "age": "Ages {age}+"
+  },
+  "Shop": {
+    "fits": "For {fits}"
+  },
+  "Drop": {
+    "title": "Drops: new robots from our R&D bench",
+    "intro": "Besides the main robots, we release small robots from our R&D bench one at a time. Each Drop continues the ULIK number series.",
+    "name": "Drop #{n}",
+    "more": "How Drops work",
+    "notify": "Let me know",
+    "notifyMessage": "Hi ULIK, let me know when {name} comes out.",
+    "notifySubject": "Let me know: {name}"
+  }
+}

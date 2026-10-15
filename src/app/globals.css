@@ -1,0 +1,4 @@
+@import 'tailwindcss';
+@import '@ulik/ui/ulik.css';
+
+@source '../../../../packages/ui/src';
