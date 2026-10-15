@@ -129,5 +129,67 @@
       "title": "Common questions",
       "all": "All questions"
     }
+  },
+  "Cart": {
+    "add": "Add to cart",
+    "added": "Added to cart",
+    "view": "View cart",
+    "meta": "Your ULIK cart. Orders go out over WhatsApp or email, and we reply with the total, shipping, and how to pay.",
+    "title": "Cart",
+    "loading": "Opening your cart",
+    "items": "Items in your cart",
+    "each": "{price} each",
+    "qty": "Quantity of {item}",
+    "decrease": "One fewer {item}",
+    "increase": "One more {item}",
+    "remove": "Remove",
+    "removeLabel": "Remove {item} from the cart",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "shippingValue": "Worked out when we confirm",
+    "bulk": "Ordering for a class, a course, or a team? Tiered pricing is on the Business page.",
+    "bulkLink": "Ask for a quote",
+    "how": {
+      "title": "After you send the order",
+      "send": "The order opens in WhatsApp or email with the items and address filled in. Just send it.",
+      "reply": "We reply with the total, shipping, the expected shipping date, and how to pay.",
+      "ship": "Once you have paid, the robot ships with a tracking number. Pre-orders ship with their batch."
+    },
+    "form": {
+      "title": "Delivery details",
+      "intro": "This site stores none of it. It goes straight into the WhatsApp message or email you send.",
+      "name": "Name",
+      "phone": "WhatsApp number",
+      "city": "City or regency",
+      "address": "Full address",
+      "note": "Note (optional)",
+      "whatsapp": "Send the order on WhatsApp",
+      "email": "Send by email",
+      "emailOnly": "Send the order by email"
+    },
+    "order": {
+      "greeting": "Hi ULIK, I would like to order:",
+      "line": "{n}. {item} × {qty} = {total}",
+      "subtotal": "Subtotal: {amount}",
+      "name": "Name: {value}",
+      "phone": "WhatsApp: {value}",
+      "city": "City: {value}",
+      "address": "Address: {value}",
+      "note": "Note: {value}",
+      "closing": "Please let me know the shipping cost and how to pay. Thank you.",
+      "subject": "ULIK order from {name}"
+    },
+    "sent": {
+      "title": "Your order is open",
+      "body": "Send the message in the app that opened. Once it is sent, you can empty this cart.",
+      "clear": "Empty the cart"
+    },
+    "empty": {
+      "title": "Your cart is empty",
+      "body": "Choose a robot or an accessory, then come back here to send your order.",
+      "robots": "Choose a robot",
+      "accessories": "See accessories"
+    },
+    "market": "Prefer a marketplace?"
   }
 }

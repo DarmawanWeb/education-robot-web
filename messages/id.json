@@ -129,5 +129,67 @@
       "title": "Yang sering ditanyakan",
       "all": "Semua pertanyaan"
     }
+  },
+  "Cart": {
+    "add": "Masukkan keranjang",
+    "added": "Masuk keranjang",
+    "view": "Lihat keranjang",
+    "meta": "Keranjang belanja ULIK. Pesanan dikirim lewat WhatsApp atau email, lalu kami balas dengan total, ongkos kirim, dan cara bayar.",
+    "title": "Keranjang",
+    "loading": "Membuka keranjang",
+    "items": "Barang di keranjang",
+    "each": "{price} per unit",
+    "qty": "Jumlah {item}",
+    "decrease": "Kurangi satu {item}",
+    "increase": "Tambah satu {item}",
+    "remove": "Hapus",
+    "removeLabel": "Hapus {item} dari keranjang",
+    "subtotal": "Subtotal",
+    "shipping": "Ongkos kirim",
+    "shippingValue": "Dihitung saat konfirmasi",
+    "bulk": "Memesan untuk kelas, kursus, atau tim? Harga bertingkat ada di halaman Bisnis.",
+    "bulkLink": "Minta penawaran",
+    "how": {
+      "title": "Setelah pesanan dikirim",
+      "send": "Pesanan terbuka di WhatsApp atau email dengan daftar barang dan alamat yang sudah terisi. Tinggal kirim.",
+      "reply": "Kami balas dengan total, ongkos kirim, perkiraan tanggal kirim, dan cara bayar.",
+      "ship": "Setelah pembayaran, robot dikirim dengan nomor resi. Pre-order dikirim sesuai batch-nya."
+    },
+    "form": {
+      "title": "Data pengiriman",
+      "intro": "Situs ini tidak menyimpan data Anda. Isinya langsung masuk ke pesan WhatsApp atau email yang Anda kirim.",
+      "name": "Nama",
+      "phone": "Nomor WhatsApp",
+      "city": "Kota atau kabupaten",
+      "address": "Alamat lengkap",
+      "note": "Catatan (opsional)",
+      "whatsapp": "Kirim pesanan lewat WhatsApp",
+      "email": "Kirim lewat email",
+      "emailOnly": "Kirim pesanan lewat email"
+    },
+    "order": {
+      "greeting": "Halo ULIK, saya mau pesan:",
+      "line": "{n}. {item} × {qty} = {total}",
+      "subtotal": "Subtotal: {amount}",
+      "name": "Nama: {value}",
+      "phone": "WhatsApp: {value}",
+      "city": "Kota: {value}",
+      "address": "Alamat: {value}",
+      "note": "Catatan: {value}",
+      "closing": "Mohon info ongkos kirim dan cara bayarnya. Terima kasih.",
+      "subject": "Pesanan ULIK dari {name}"
+    },
+    "sent": {
+      "title": "Pesanan Anda sudah dibuka",
+      "body": "Kirim pesannya di aplikasi yang terbuka. Kalau sudah terkirim, keranjang ini boleh dikosongkan.",
+      "clear": "Kosongkan keranjang"
+    },
+    "empty": {
+      "title": "Keranjangmu masih kosong",
+      "body": "Pilih robot atau aksesori, lalu kembali ke sini untuk mengirim pesanan.",
+      "robots": "Pilih robot",
+      "accessories": "Lihat aksesori"
+    },
+    "market": "Lebih suka marketplace?"
   }
 }
