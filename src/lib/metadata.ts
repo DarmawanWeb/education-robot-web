@@ -22,7 +22,7 @@ export function pageMetadata({
   const languages = Object.fromEntries(
     routing.locales.map((entry) => [entry, `/${entry}${suffix}`]),
   );
-  const card = `/og/${image ?? 'site'}-${locale}.png`;
+  const card = `/og/${image ?? 'site'}-${locale}.jpg`;
   return {
     title,
     description,
