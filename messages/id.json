@@ -233,7 +233,8 @@
     "sent": {
       "title": "Pesanan Anda sudah dibuka",
       "body": "Kirim pesannya di aplikasi yang terbuka. Kalau sudah terkirim, keranjang ini boleh dikosongkan.",
-      "clear": "Kosongkan keranjang"
+      "clear": "Kosongkan keranjang",
+      "again": "Ubah atau kirim lagi"
     },
     "empty": {
       "title": "Keranjangmu masih kosong",
@@ -242,5 +243,40 @@
       "accessories": "Lihat aksesori"
     },
     "market": "Lebih suka marketplace?"
+  },
+  "Accessories": {
+    "title": "Aksesori dan upgrade",
+    "intro": "Upgrade pack menambah sensor dan proyek baru ke robot yang sudah ada. Arena memakai lintasan yang sama dengan simulator. Sisanya untuk merawat robot dan menyiapkan kelas.",
+    "jump": "Langsung ke bagian",
+    "kinds": {
+      "upgrade": "Tambah sensor, capit, atau kamera ke robotmu, lengkap dengan proyek dan misi baru.",
+      "arena": "Lintasan cetak yang sama dengan arena di simulator, jadi program yang lulus di layar langsung bisa diuji di lantai.",
+      "aksesori": "Baterai cadangan dan suku cadang untuk servis ringan sendiri.",
+      "sekolah": "Untuk kelas dan kursus: isi daya banyak robot sekaligus, simpan dengan rapi, dan mengajar dengan kit pengajar."
+    },
+    "school": "Pembelian untuk sekolah",
+    "soon": {
+      "title": "Semua aksesori sedang disiapkan",
+      "body": "Harga dan jadwalnya kami umumkan satu per satu. Mau dikabari lebih dulu?",
+      "action": "Kabari saya",
+      "message": "Halo ULIK, kabari saya saat aksesori dan upgrade pack mulai dijual.",
+      "subject": "Kabari saya: aksesori ULIK"
+    }
+  },
+  "Product": {
+    "breadcrumb": "Jejak halaman",
+    "all": "Aksesori",
+    "fits": "Cocok untuk",
+    "includes": "Isi paket",
+    "projects": "Yang bisa dibuat",
+    "robots": "Robot yang cocok",
+    "see": "Lihat {robot}",
+    "related": "Lihat juga",
+    "notifyMessage": "Halo ULIK, kabari saya saat {item} bisa dipesan.",
+    "notifySubject": "Kabari saya: {item}",
+    "preorderNote": "Pre-order: dibuat per batch. Perkiraan tanggal kirim kami sampaikan saat konfirmasi pesanan.",
+    "soonNote": "Belum bisa dipesan. Tekan Kabari saya, dan kami hubungi saat harga dan jadwalnya sudah pasti.",
+    "school": "Butuh banyak untuk kelas? Kami kirim penawaran sesuai jumlah.",
+    "schoolAction": "Minta penawaran"
   }
 }

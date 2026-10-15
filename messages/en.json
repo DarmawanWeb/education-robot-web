@@ -233,7 +233,8 @@
     "sent": {
       "title": "Your order is open",
       "body": "Send the message in the app that opened. Once it is sent, you can empty this cart.",
-      "clear": "Empty the cart"
+      "clear": "Empty the cart",
+      "again": "Edit or send again"
     },
     "empty": {
       "title": "Your cart is empty",
@@ -242,5 +243,40 @@
       "accessories": "See accessories"
     },
     "market": "Prefer a marketplace?"
+  },
+  "Accessories": {
+    "title": "Accessories and upgrades",
+    "intro": "Upgrade packs add sensors and new projects to the robot you already have. Arenas use the same tracks as the simulator. The rest keeps robots running and classrooms ready.",
+    "jump": "Jump to a section",
+    "kinds": {
+      "upgrade": "Add sensors, a gripper, or a camera to your robot, with new projects and missions.",
+      "arena": "Printed tracks that match the simulator’s arenas, so a program that passes on screen can go straight to the floor.",
+      "aksesori": "Spare batteries and parts for simple repairs at home.",
+      "sekolah": "For classes and courses: charge many robots at once, store them tidily, and teach with the instructor kit."
+    },
+    "school": "Buying for a school",
+    "soon": {
+      "title": "Every accessory is on its way",
+      "body": "We announce prices and dates one at a time. Want to hear first?",
+      "action": "Let me know",
+      "message": "Hi ULIK, let me know when the accessories and upgrade packs go on sale.",
+      "subject": "Let me know: ULIK accessories"
+    }
+  },
+  "Product": {
+    "breadcrumb": "Breadcrumb",
+    "all": "Accessories",
+    "fits": "Works with",
+    "includes": "In the pack",
+    "projects": "What you can build",
+    "robots": "Robots it works with",
+    "see": "See {robot}",
+    "related": "See also",
+    "notifyMessage": "Hi ULIK, let me know when {item} can be ordered.",
+    "notifySubject": "Let me know: {item}",
+    "preorderNote": "Pre-order: made in batches. We tell you the expected shipping date when we confirm your order.",
+    "soonNote": "Not on sale yet. Tap Let me know, and we will get in touch once the price and dates are set.",
+    "school": "Need several for a class? We send a quote for your quantity.",
+    "schoolAction": "Ask for a quote"
   }
 }
