@@ -278,5 +278,191 @@
     "soonNote": "Not on sale yet. Tap Let me know, and we will get in touch once the price and dates are set.",
     "school": "Need several for a class? We send a quote for your quantity.",
     "schoolAction": "Ask for a quote"
+  },
+  "Learn": {
+    "title": "Understand your robot, one step at a time",
+    "meta": "A free learning path for every ULIK robot: short videos, guides, and simulator missions you can follow at home.",
+    "intro": "Not a class and not a course. Every ULIK robot has a free learning path: short videos, guides, and simulator missions you can follow at home, at your own pace.",
+    "parts": {
+      "title": "Every step has three parts",
+      "understand": {
+        "title": "Understand",
+        "body": "One idea in a sentence or two, often with a short video."
+      },
+      "try": {
+        "title": "Try",
+        "body": "Build a block program, then test it in the simulator arena until it passes."
+      },
+      "run": {
+        "title": "Run",
+        "body": "Upload the same program to the robot and watch it on the floor."
+      }
+    },
+    "paths": "Pick a path",
+    "steps": "{count, plural, one {# step} other {# steps}}",
+    "start": "Start {robot}’s path",
+    "soon": "The full path arrives with the robot.",
+    "sim": {
+      "title": "No robot yet? Start in the simulator",
+      "body": "The simulator runs in the browser, free, with no account. Its missions are the steps on the learning paths, so nothing is wasted when the robot arrives.",
+      "action": "Open the simulator",
+      "imageAlt": "The ULIK simulator: program blocks on the left, the arena with Ciko on the right"
+    },
+    "guides": {
+      "title": "Guides",
+      "intro": "Step-by-step instructions for unboxing, building, charging, and moving programs from the simulator to the robot.",
+      "owner": "For robot owners",
+      "instructor": "For instructors",
+      "minutes": "{minutes} min"
+    },
+    "notService": "ULIK sells robots, not courses. These learning paths come with every robot and are free for anyone."
+  },
+  "Path": {
+    "title": "{robot}’s learning path",
+    "meta": "{count, plural, one {# free step} other {# free steps}} to understand {robot}: short videos, guides, and simulator missions.",
+    "breadcrumb": "Breadcrumb",
+    "learn": "Learn",
+    "steps": "{count, plural, one {# step} other {# steps}}",
+    "contents": "Steps on this path",
+    "robot": "See {robot}",
+    "simulator": "Open the simulator",
+    "mission": "Open the mission in the simulator",
+    "guide": "Read the guide: {title}",
+    "newTab": "(opens in a new tab)",
+    "stepLabel": "Step {n}",
+    "video": {
+      "play": "Play the video",
+      "watch": "Watch on YouTube",
+      "by": "{channel}, in {language}",
+      "languages": {
+        "id": "Indonesian",
+        "en": "English"
+      }
+    },
+    "end": {
+      "title": "Reached the end of the path?",
+      "body": "Add new abilities with an upgrade pack, or meet the next robot.",
+      "addOns": "Upgrades for {robot}",
+      "next": "Meet {robot}"
+    }
+  },
+  "Guide": {
+    "breadcrumb": "Breadcrumb",
+    "learn": "Learn",
+    "guides": "Guides",
+    "minutes": "{minutes} min",
+    "audience": {
+      "owner": "For robot owners",
+      "instructor": "For instructors"
+    },
+    "note": "Note",
+    "inPath": "Part of a learning path",
+    "step": "Step {n} on {robot}’s path",
+    "more": "More guides"
+  },
+  "DropPage": {
+    "title": "Drops: R&D robots, one at a time",
+    "intro": "Besides the main robots, we keep testing new ideas on our R&D bench. The ones that pass are released as Drops: the next number in the ULIK series, made in limited batches.",
+    "series": {
+      "title": "The ULIK series",
+      "intro": "Main robots and Drops share one run of numbers. The next number always goes to the next release.",
+      "number": "Number {n}",
+      "mystery": "Drop #{n}, not revealed yet",
+      "open": "Number {n} waits for the release after that"
+    },
+    "how": "How Drops work",
+    "notify": {
+      "title": "Want to hear first?",
+      "body": "Tap Let me know, and we will get in touch when the next Drop opens."
+    }
+  },
+  "Business": {
+    "title": "For schools, courses, and brands",
+    "intro": "Buy in bulk with tiered pricing and training for instructors, or sell our robots under your own name and brand.",
+    "jump": "Jump to a section",
+    "bulk": {
+      "title": "Bulk orders",
+      "intro": "The same robot for everyone, with a unit price that drops as the quantity rises.",
+      "who": "Who it is for",
+      "includes": "What you get",
+      "products": "For the classroom",
+      "notService": "We provide the robots, the materials, and training for your instructors. The classes stay yours: we are not a course provider.",
+      "action": "Ask for a quote"
+    },
+    "oem": {
+      "title": "OEM: our robots, your brand",
+      "nav": "OEM and your own brand",
+      "intro": "From just a logo to a redesigned robot. Choose how much changes, and we build it.",
+      "depth": "How much changes: {n} of 3",
+      "fits": "Suits",
+      "software": "The software can carry your brand too",
+      "process": "How it runs",
+      "action": "Talk to us about OEM"
+    },
+    "form": {
+      "title": "Ask for a quote",
+      "intro": "Tell us what you need. It opens as a WhatsApp message or an email, and we reply with a quote.",
+      "kind": "What you need",
+      "kinds": {
+        "bulk": "A bulk order",
+        "oem": "OEM or your own brand",
+        "other": "Something else"
+      },
+      "org": "Organisation or company",
+      "name": "Your name",
+      "phone": "WhatsApp number",
+      "city": "City",
+      "robots": "Robots you are interested in",
+      "unsure": "Not sure yet",
+      "quantity": "Rough quantity",
+      "quantities": {
+        "small": "Fewer than 10",
+        "medium": "10 to 30",
+        "large": "31 to 100",
+        "xl": "More than 100"
+      },
+      "message": "Message (optional)",
+      "messageHint": "For example your timeline, budget, or competition category.",
+      "whatsapp": "Send on WhatsApp",
+      "email": "Send by email",
+      "sent": "Your message is open. Send it in the app that opened, and we will reply with a quote."
+    },
+    "quote": {
+      "greeting": "Hi ULIK, I would like a quote.",
+      "kind": "Need: {value}",
+      "org": "Organisation: {value}",
+      "name": "Name: {value}",
+      "phone": "WhatsApp: {value}",
+      "city": "City: {value}",
+      "robots": "Robots: {value}",
+      "quantity": "Quantity: {value}",
+      "message": "Message: {value}",
+      "subject": "Quote request from {name}"
+    },
+    "faq": "Business questions"
+  },
+  "Help": {
+    "title": "Help",
+    "intro": "How to buy, shipping, and what to have ready. Still stuck? Just ask.",
+    "faq": "Common questions",
+    "contact": {
+      "title": "Ask us directly",
+      "body": "Over WhatsApp or email. If something is wrong, include the robot’s name and a photo or video.",
+      "whatsapp": "Chat on WhatsApp",
+      "email": "Send an email",
+      "message": "Hi ULIK, I have a question.",
+      "subject": "A question for ULIK",
+      "from": "Shipped from {location}"
+    },
+    "guides": {
+      "title": "Guides",
+      "all": "All guides"
+    }
+  },
+  "NotFound": {
+    "title": "This page does not exist",
+    "body": "The link may be old or mistyped. Try starting from the robots.",
+    "home": "Go to the home page",
+    "robots": "Choose a robot"
   }
 }

@@ -278,5 +278,191 @@
     "soonNote": "Belum bisa dipesan. Tekan Kabari saya, dan kami hubungi saat harga dan jadwalnya sudah pasti.",
     "school": "Butuh banyak untuk kelas? Kami kirim penawaran sesuai jumlah.",
     "schoolAction": "Minta penawaran"
+  },
+  "Learn": {
+    "title": "Pahami robotmu, langkah demi langkah",
+    "meta": "Jalur belajar gratis untuk setiap robot ULIK: video pendek, panduan, dan misi simulator yang bisa diikuti sendiri dari rumah.",
+    "intro": "Bukan kelas dan bukan kursus. Setiap robot ULIK punya jalur belajar gratis: video pendek, panduan, dan misi simulator yang bisa diikuti sendiri dari rumah, sesuai kecepatanmu.",
+    "parts": {
+      "title": "Setiap langkah punya tiga bagian",
+      "understand": {
+        "title": "Pahami",
+        "body": "Satu ide dalam satu atau dua kalimat, sering dengan video pendek."
+      },
+      "try": {
+        "title": "Coba",
+        "body": "Susun program blok, lalu uji di arena simulator sampai lulus."
+      },
+      "run": {
+        "title": "Jalankan",
+        "body": "Unggah program yang sama ke robot dan lihat hasilnya di lantai."
+      }
+    },
+    "paths": "Pilih jalurnya",
+    "steps": "{count} langkah",
+    "start": "Mulai jalur {robot}",
+    "soon": "Jalur lengkap terbit bersama robotnya.",
+    "sim": {
+      "title": "Belum punya robot? Mulai dari simulator",
+      "body": "Simulator berjalan di browser, gratis, tanpa daftar akun. Misinya sama dengan langkah di jalur belajar, jadi tidak ada yang terbuang saat robotnya datang.",
+      "action": "Buka simulator",
+      "imageAlt": "Simulator ULIK: blok program di kiri, arena dengan Ciko di kanan"
+    },
+    "guides": {
+      "title": "Panduan",
+      "intro": "Petunjuk langkah demi langkah untuk membuka kotak, merakit, mengisi daya, dan memindahkan program dari simulator ke robot.",
+      "owner": "Untuk pemilik robot",
+      "instructor": "Untuk pengajar",
+      "minutes": "{minutes} menit"
+    },
+    "notService": "ULIK menjual robot, bukan kursus. Jalur belajar ini ikut bersama setiap robot dan terbuka gratis untuk siapa saja."
+  },
+  "Path": {
+    "title": "Jalur belajar {robot}",
+    "meta": "{count} langkah gratis untuk memahami {robot}: video pendek, panduan, dan misi simulator.",
+    "breadcrumb": "Jejak halaman",
+    "learn": "Belajar",
+    "steps": "{count} langkah",
+    "contents": "Langkah di jalur ini",
+    "robot": "Lihat {robot}",
+    "simulator": "Buka simulator",
+    "mission": "Buka misi di simulator",
+    "guide": "Baca panduan: {title}",
+    "newTab": "(tab baru)",
+    "stepLabel": "Langkah {n}",
+    "video": {
+      "play": "Putar video",
+      "watch": "Tonton di YouTube",
+      "by": "{channel}, bahasa {language}",
+      "languages": {
+        "id": "Indonesia",
+        "en": "Inggris"
+      }
+    },
+    "end": {
+      "title": "Sudah sampai ujung jalur?",
+      "body": "Tambah kemampuan baru dengan upgrade pack, atau kenalan dengan robot berikutnya.",
+      "addOns": "Upgrade untuk {robot}",
+      "next": "Kenalan dengan {robot}"
+    }
+  },
+  "Guide": {
+    "breadcrumb": "Jejak halaman",
+    "learn": "Belajar",
+    "guides": "Panduan",
+    "minutes": "{minutes} menit",
+    "audience": {
+      "owner": "Untuk pemilik robot",
+      "instructor": "Untuk pengajar"
+    },
+    "note": "Catatan",
+    "inPath": "Bagian dari jalur belajar",
+    "step": "Langkah {n} di jalur {robot}",
+    "more": "Panduan lain"
+  },
+  "DropPage": {
+    "title": "Drop: robot R&D, satu per satu",
+    "intro": "Selain robot utama, kami terus menguji ide baru di meja R&D. Yang lolos uji dirilis sebagai Drop: nomor berikutnya di seri ULIK, dibuat terbatas per batch.",
+    "series": {
+      "title": "Seri ULIK",
+      "intro": "Robot utama dan Drop berbagi satu urutan nomor. Nomor berikutnya selalu milik rilisan berikutnya.",
+      "number": "Nomor {n}",
+      "mystery": "Drop #{n}, belum dibuka",
+      "open": "Nomor {n} menunggu rilisan setelahnya"
+    },
+    "how": "Cara kerja Drop",
+    "notify": {
+      "title": "Mau tahu lebih dulu?",
+      "body": "Tekan Kabari saya, dan kami hubungi saat Drop berikutnya dibuka."
+    }
+  },
+  "Business": {
+    "title": "Untuk sekolah, kursus, dan merek",
+    "intro": "Beli banyak dengan harga bertingkat dan pelatihan untuk pengajar, atau jual robot kami dengan nama dan merek Anda sendiri.",
+    "jump": "Langsung ke bagian",
+    "bulk": {
+      "title": "Beli banyak",
+      "intro": "Robot yang sama untuk semua peserta, dengan harga per unit yang turun seiring jumlahnya.",
+      "who": "Untuk siapa",
+      "includes": "Yang Anda dapat",
+      "products": "Perlengkapan kelas",
+      "notService": "Kami menyediakan robot, materi, dan pelatihan untuk pengajar Anda. Kelasnya tetap milik Anda: kami bukan lembaga kursus.",
+      "action": "Minta penawaran"
+    },
+    "oem": {
+      "title": "OEM: robot kami, merek Anda",
+      "nav": "OEM dan merek sendiri",
+      "intro": "Dari sekadar logo sampai robot yang dirancang ulang. Pilih seberapa banyak yang berubah, dan kami yang membuatnya.",
+      "depth": "Seberapa banyak yang berubah: {n} dari 3",
+      "fits": "Cocok untuk",
+      "software": "Perangkat lunaknya juga bisa memakai merek Anda",
+      "process": "Alur kerja",
+      "action": "Diskusikan OEM"
+    },
+    "form": {
+      "title": "Minta penawaran",
+      "intro": "Ceritakan kebutuhan Anda. Isinya terbuka sebagai pesan WhatsApp atau email, dan kami balas dengan penawaran.",
+      "kind": "Kebutuhan",
+      "kinds": {
+        "bulk": "Beli banyak",
+        "oem": "OEM atau merek sendiri",
+        "other": "Lainnya"
+      },
+      "org": "Nama lembaga atau perusahaan",
+      "name": "Nama Anda",
+      "phone": "Nomor WhatsApp",
+      "city": "Kota",
+      "robots": "Robot yang diminati",
+      "unsure": "Belum tahu",
+      "quantity": "Perkiraan jumlah",
+      "quantities": {
+        "small": "Kurang dari 10",
+        "medium": "10 sampai 30",
+        "large": "31 sampai 100",
+        "xl": "Lebih dari 100"
+      },
+      "message": "Pesan (opsional)",
+      "messageHint": "Misalnya jadwal, anggaran, atau kategori lomba.",
+      "whatsapp": "Kirim lewat WhatsApp",
+      "email": "Kirim lewat email",
+      "sent": "Pesan Anda sudah dibuka. Kirim di aplikasi yang terbuka, dan kami balas dengan penawaran."
+    },
+    "quote": {
+      "greeting": "Halo ULIK, saya ingin minta penawaran.",
+      "kind": "Kebutuhan: {value}",
+      "org": "Lembaga: {value}",
+      "name": "Nama: {value}",
+      "phone": "WhatsApp: {value}",
+      "city": "Kota: {value}",
+      "robots": "Robot: {value}",
+      "quantity": "Jumlah: {value}",
+      "message": "Pesan: {value}",
+      "subject": "Permintaan penawaran dari {name}"
+    },
+    "faq": "Pertanyaan bisnis"
+  },
+  "Help": {
+    "title": "Bantuan",
+    "intro": "Cara membeli, pengiriman, dan yang perlu disiapkan. Belum terjawab? Tanya langsung saja.",
+    "faq": "Pertanyaan umum",
+    "contact": {
+      "title": "Tanya langsung",
+      "body": "Lewat WhatsApp atau email. Kalau ada kendala, sertakan nama robot dan foto atau videonya.",
+      "whatsapp": "Chat lewat WhatsApp",
+      "email": "Kirim email",
+      "message": "Halo ULIK, saya mau bertanya.",
+      "subject": "Pertanyaan untuk ULIK",
+      "from": "Dikirim dari {location}"
+    },
+    "guides": {
+      "title": "Panduan",
+      "all": "Semua panduan"
+    }
+  },
+  "NotFound": {
+    "title": "Halaman ini tidak ada",
+    "body": "Mungkin tautannya lama atau ada salah ketik. Coba mulai dari daftar robot.",
+    "home": "Ke beranda",
+    "robots": "Pilih robot"
   }
 }
