@@ -332,20 +332,22 @@ export default async function RobotPage({ params }: Props) {
       ) : null}
 
       <section className="py-16 lg:py-20">
-        <Container className="flex flex-col gap-6 rounded-xl border p-7 sm:p-10 lg:flex-row lg:items-center lg:justify-between">
-          <div className="max-w-[44rem]">
-            <h2 className="type-display text-[clamp(1.5rem,2.6vw,2rem)]">{t('bulk.title')}</h2>
-            <p className="text-muted-foreground mt-2 leading-relaxed">
-              {t('bulk.body', { robot: robot.name })}
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            <Button asChild variant="ink" size="lg">
-              <Link href="/bisnis#beli-banyak">{t('bulk.action')}</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/bisnis#oem">{t('bulk.oem')}</Link>
-            </Button>
+        <Container>
+          <div className="flex flex-col gap-6 rounded-xl border p-7 sm:p-10 lg:flex-row lg:items-center lg:justify-between">
+            <div className="max-w-[44rem]">
+              <h2 className="type-display text-[clamp(1.5rem,2.6vw,2rem)]">{t('bulk.title')}</h2>
+              <p className="text-muted-foreground mt-2 leading-relaxed">
+                {t('bulk.body', { robot: robot.name })}
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Button asChild variant="ink" size="lg">
+                <Link href="/bisnis#beli-banyak">{t('bulk.action')}</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link href="/bisnis#oem">{t('bulk.oem')}</Link>
+              </Button>
+            </div>
           </div>
         </Container>
         {guides.length > 0 ? (
