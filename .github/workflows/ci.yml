@@ -1,7 +1,7 @@
 name: CI
 
-# This app builds inside the education-robot workspace, which holds the shared packages and the
-# lockfile. CI checks out the workspace, puts the commit under test at apps/web, and checks it.
+# This app builds inside the TaksuTech workspace, which holds the shared packages and the
+# lockfile. CI checks out the workspace, puts the commit under test at apps/edu, and checks it.
 on:
   push:
     branches: [main]
@@ -20,17 +20,17 @@ jobs:
     name: Biome, typecheck, test, build
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the education-robot workspace
+      - name: Check out the TaksuTech workspace
         uses: actions/checkout@v5
         with:
-          repository: DarmawanWeb/education-robot
-          submodules: recursive
+          repository: DarmawanWeb/TaksuTech
+          submodules: true
       - name: Check out the commit under test
         uses: actions/checkout@v5
         with:
           path: under-test
           fetch-depth: 0
-      - run: rm -rf apps/web && mv under-test apps/web
+      - run: rm -rf apps/edu && mv under-test apps/edu
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v5
         with:
@@ -40,7 +40,7 @@ jobs:
       - run: pnpm install --no-frozen-lockfile
       - name: Conventional commits
         if: github.event_name == 'pull_request'
-        working-directory: apps/web
+        working-directory: apps/edu
         run: pnpm commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
-      - run: pnpm biome ci apps/web
-      - run: pnpm turbo run typecheck test build --filter=@taksu/web
+      - run: pnpm biome ci apps/edu
+      - run: pnpm turbo run typecheck test build --filter=@taksu/edu
