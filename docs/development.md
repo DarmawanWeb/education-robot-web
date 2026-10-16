@@ -2,17 +2,17 @@
 
 ## Setup
 
-The web app builds inside the [education-robot](https://github.com/DarmawanWeb/education-robot)
-workspace, which holds the lockfile and the shared packages (`@taksu/catalog`, `@taksu/ui`,
+The web app builds inside the [TaksuTech](https://github.com/DarmawanWeb/TaksuTech)
+workspace, which holds the lockfile and the shared packages (`@taksu/catalog`, `@taksu/edu-ui`,
 `@taksu/typescript-config`).
 
 ```bash
-git clone --recursive https://github.com/DarmawanWeb/education-robot.git && cd education-robot
+git clone --recursive https://github.com/DarmawanWeb/TaksuTech.git && cd TaksuTech
 corepack enable                 # pnpm 10, Node 22.12 or newer
 pnpm install                    # also points this submodule's git hooks at the workspace's
 cp apps/web/.env.example apps/web/.env.local
-pnpm dev:web                    # http://localhost:3100/id
-pnpm dev:sim                    # http://localhost:3102/id, for the mission links
+pnpm dev:edu                    # http://localhost:3003/id
+pnpm dev:sim                    # http://localhost:3002/id, for the mission links
 ```
 
 Set `NEXT_PUBLIC_WHATSAPP_NUMBER` in `.env.local` to try the WhatsApp order and quote flows; with
@@ -20,11 +20,11 @@ it empty they fall back to email.
 
 ## Scripts
 
-Run from the workspace root (`pnpm --filter @taksu/web <script>`) or from `apps/web`.
+Run from the workspace root (`pnpm --filter @taksu/edu <script>`) or from `apps/edu`.
 
 | Script | Does |
 |---|---|
-| `dev` | Next.js dev server on port 3100 |
+| `dev` | Next.js dev server on port 3003 |
 | `build`, `start` | Production build (standalone) and server |
 | `typecheck` | `next typegen`, then `tsc --noEmit` |
 | `test` | Vitest: messages, cart lines, order and quote messages |
@@ -34,8 +34,8 @@ Run from the workspace root (`pnpm --filter @taksu/web <script>`) or from `apps/
 
 ## Commits
 
-This is its own repository: commit inside `apps/web` and push it, then record the new commit in
-the workspace (`git add apps/web`, `chore: update web`). The workspace's hooks run here too:
+This is its own repository: commit inside `apps/edu` and push it, then record the new commit in
+the workspace (`git add apps/edu`, `chore: update edu`). The workspace's hooks run here too:
 lint-staged formats the staged files with Biome, and commitlint checks the message (Conventional
 Commits, lower-case subject).
 
@@ -63,14 +63,14 @@ release.
 ## Design rules
 
 - Tokens, not hex codes: `bg-primary`, `bg-ink`, `asphalt`, `bg-robot-ciko`, `type-display`,
-  `type-number` from `@taksu/ui/taksu.css`. Raw colours only inside illustrations.
+  `type-number` from `@taksu/edu-ui/taksu.css`. Raw colours only inside illustrations.
 - Keyboard focus stays visible; motion respects `prefers-reduced-motion`; every image has an alt
   text in both languages or `alt=""` when it is decorative; check 360 px wide.
 - Honest copy: robots, not classes. Anything in development says so.
 
 ## CI
 
-[ci.yml](../.github/workflows/ci.yml) checks out the education-robot workspace with its
-submodules, replaces `apps/web` with the commit under test, installs, and runs Biome, the
-typecheck, the tests, and the build for `@taksu/web`. On pull requests it also runs commitlint.
+[ci.yml](../.github/workflows/ci.yml) checks out the TaksuTech workspace with its
+submodules, replaces `apps/edu` with the commit under test, installs, and runs Biome, the
+typecheck, the tests, and the build for `@taksu/edu`. On pull requests it also runs commitlint.
 Images are published by the workspace repository.

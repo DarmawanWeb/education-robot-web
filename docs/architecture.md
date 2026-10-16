@@ -1,8 +1,8 @@
 # Architecture
 
 The web app is the store for Taksu's education robots and the home of every robot's learning
-path. It is a Next.js app that lives at `apps/web` in the
-[education-robot](https://github.com/DarmawanWeb/education-robot) workspace and reads all of its
+path. It is a Next.js app that lives at `apps/edu` in the
+[TaksuTech](https://github.com/DarmawanWeb/TaksuTech) workspace and reads all of its
 product facts from `@taksu/catalog`.
 
 ## Stack
@@ -10,7 +10,7 @@ product facts from `@taksu/catalog`.
 | Part | Choice |
 |---|---|
 | Framework | Next.js 16, App Router, Turbopack, `output: 'standalone'` |
-| UI | React 19, Tailwind CSS 4, the theme and components from `@taksu/ui` |
+| UI | React 19, Tailwind CSS 4, the theme and components from `@taksu/edu-ui` |
 | Languages | next-intl 4, `/id` (default) and `/en`, prefix always present |
 | Data | `@taksu/catalog`: TypeScript objects, no database and no API |
 | Fonts | Anybody (headlines, race numbers) and Atkinson Hyperlegible Next (text), self-hosted |

@@ -24,10 +24,10 @@ page for bulk orders and OEM, in Indonesian and English.**
 
 ---
 
-Part of [Taksu Education Robots](https://github.com/DarmawanWeb/education-robot), which deploys it
-as `web` next to the [simulator](https://github.com/DarmawanWeb/education-robot-sim). Next.js 16
+Part of [Taksu Tech](https://github.com/DarmawanWeb/TaksuTech), which deploys it as `edu`
+ next to the [simulator](https://github.com/DarmawanWeb/education-robot-sim). Next.js 16
 (App Router), React 19, Tailwind 4 and next-intl. Every name, price, age, and learning step comes
-from `@taksu/catalog` in the workspace, so this repository builds inside it, as `apps/web`.
+from `@taksu/catalog` in the workspace, so this repository builds inside it, as `apps/edu`.
 
 There is no payment on the site. The cart turns an order into one WhatsApp message (or an email),
 and Taksu replies with the total, shipping, and how to pay.
@@ -76,7 +76,7 @@ messages/              id.json and en.json; a test keeps their keys equal
 public/og/             social cards, 1200 x 630
 ```
 
-Colours, type, and the wordmark come from `@taksu/ui` (`taksu.css`): the page is chalk white, dark
+Colours, type, and the wordmark come from `@taksu/edu-ui` (`taksu.css`): the page is chalk white, dark
 bands are asphalt, actions are red, Drops and "coming soon" are signal amber, and each robot owns a
 colour.
 
@@ -90,15 +90,15 @@ colour.
 ## Develop
 
 ```bash
-git clone --recursive https://github.com/DarmawanWeb/education-robot.git && cd education-robot
+git clone --recursive https://github.com/DarmawanWeb/TaksuTech.git && cd TaksuTech
 pnpm install                    # the workspace, plus the commit hooks in each submodule
-pnpm dev:web                    # http://localhost:3100/id
-pnpm --filter @taksu/web test
+pnpm dev:edu                    # http://localhost:3003/id
+pnpm --filter @taksu/edu test
 ```
 
 Copy `.env.example` to `.env.local` to order through a WhatsApp number. CI
-([ci.yml](.github/workflows/ci.yml)) checks out the education-robot workspace, puts this commit at
-`apps/web`, and runs Biome, the typecheck, the tests, and the build. The images are built by the
-[education-robot](https://github.com/DarmawanWeb/education-robot) repository.
+([ci.yml](.github/workflows/ci.yml)) checks out the TaksuTech workspace, puts this commit at
+`apps/edu`, and runs Biome, the typecheck, the tests, and the build. The images are built by the
+[TaksuTech](https://github.com/DarmawanWeb/TaksuTech) repository.
 
 Proprietary. Copyright (c) 2026 Taksu Tech, part of Ezra Robotics. All rights reserved.
