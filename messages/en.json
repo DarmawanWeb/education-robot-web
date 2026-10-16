@@ -27,7 +27,7 @@
     "help": "Help",
     "faq": "Questions",
     "email": "Email",
-    "whatsappHello": "Hi ULIK, I have a question.",
+    "whatsappHello": "Hi Taksu, I have a question.",
     "copyright": "© {year} {brand}. All rights reserved."
   },
   "Price": {
@@ -42,11 +42,11 @@
   },
   "Drop": {
     "title": "Drops: new robots from our R&D bench",
-    "intro": "Besides the main robots, we release small robots from our R&D bench one at a time. Each Drop continues the ULIK number series.",
+    "intro": "Besides the main robots, we release small robots from our R&D bench one at a time. Each Drop continues the Taksu number series.",
     "name": "Drop #{n}",
     "more": "How Drops work",
     "notify": "Let me know",
-    "notifyMessage": "Hi ULIK, let me know when {name} comes out.",
+    "notifyMessage": "Hi Taksu, let me know when {name} comes out.",
     "notifySubject": "Let me know: {name}"
   },
   "Home": {
@@ -55,7 +55,7 @@
       "body": "Every robot has a name, a number, and its own learning path. Pick by age and goal: starting from zero, training for a contest, or digging deeper.",
       "pick": "Choose a robot",
       "simulator": "Try the free simulator",
-      "gridLabel": "ULIK robots by release number",
+      "gridLabel": "Taksu robots by release number",
       "number": "Number {n}",
       "dropName": "Drop #{n}",
       "dropBody": "The next R&D robot. Its name and shape are still under wraps.",
@@ -71,7 +71,7 @@
     },
     "comesWith": {
       "title": "Not just owning a robot, but understanding it",
-      "intro": "Every ULIK robot comes with a way to understand it, free and online. No classes: follow it at home, at your own pace.",
+      "intro": "Every Taksu robot comes with a way to understand it, free and online. No classes: follow it at home, at your own pace.",
       "path": {
         "title": "A learning path for each robot",
         "body": "Step by step from unboxing to contest-ready, with videos and guides.",
@@ -86,7 +86,7 @@
         "title": "Code you can take with you",
         "body": "Every block program has an Arduino C++ version. When you are ready, carry on in the Arduino IDE."
       },
-      "imageAlt": "The ULIK simulator: program blocks on the left, Ciko following a line in the arena on the right",
+      "imageAlt": "The Taksu simulator: program blocks on the left, Ciko following a line in the arena on the right",
       "caption": "Ciko’s Follow the line mission, step 9 on its learning path."
     },
     "addOns": {
@@ -121,7 +121,7 @@
       },
       "oem": {
         "title": "OEM: our robots, your brand",
-        "body": "Use ULIK robots with your name, logo, and packaging, or have us design a new one.",
+        "body": "Use Taksu robots with your name, logo, and packaging, or have us design a new one.",
         "action": "See OEM options"
       }
     },
@@ -137,14 +137,14 @@
     "all": "All",
     "see": "See {robot}",
     "notify": "Let me know",
-    "notifyMessage": "Hi ULIK, let me know when {robot} can be ordered.",
+    "notifyMessage": "Hi Taksu, let me know when {robot} can be ordered.",
     "notifySubject": "Let me know: {robot}"
   },
   "RobotPage": {
     "breadcrumb": "Breadcrumb",
     "allRobots": "All robots",
     "number": "Number {n}",
-    "notifyMessage": "Hi ULIK, let me know when {robot} can be ordered.",
+    "notifyMessage": "Hi Taksu, let me know when {robot} can be ordered.",
     "notifySubject": "Let me know: {robot}",
     "preorderNote": "Pre-order: robots are built and tested in batches. We tell you the expected shipping date when we confirm your order.",
     "soonNote": "Not on sale yet. Tap Let me know, and we will get in touch once the price and dates are set.",
@@ -177,7 +177,7 @@
   "Buy": {
     "package": "Choose a package",
     "whatsapp": "Order on WhatsApp",
-    "whatsappMessage": "Hi ULIK, I would like to order {item} ({price}).",
+    "whatsappMessage": "Hi Taksu, I would like to order {item} ({price}).",
     "notify": "Let me know",
     "alsoOn": "Also on"
   },
@@ -185,7 +185,7 @@
     "add": "Add to cart",
     "added": "Added to cart",
     "view": "View cart",
-    "meta": "Your ULIK cart. Orders go out over WhatsApp or email, and we reply with the total, shipping, and how to pay.",
+    "meta": "Your Taksu cart. Orders go out over WhatsApp or email, and we reply with the total, shipping, and how to pay.",
     "title": "Cart",
     "loading": "Opening your cart",
     "items": "Items in your cart",
@@ -219,7 +219,7 @@
       "emailOnly": "Send the order by email"
     },
     "order": {
-      "greeting": "Hi ULIK, I would like to order:",
+      "greeting": "Hi Taksu, I would like to order:",
       "line": "{n}. {item} × {qty} = {total}",
       "subtotal": "Subtotal: {amount}",
       "name": "Name: {value}",
@@ -228,7 +228,7 @@
       "address": "Address: {value}",
       "note": "Note: {value}",
       "closing": "Please let me know the shipping cost and how to pay. Thank you.",
-      "subject": "ULIK order from {name}"
+      "subject": "Taksu order from {name}"
     },
     "sent": {
       "title": "Your order is open",
@@ -259,8 +259,8 @@
       "title": "Every accessory is on its way",
       "body": "We announce prices and dates one at a time. Want to hear first?",
       "action": "Let me know",
-      "message": "Hi ULIK, let me know when the accessories and upgrade packs go on sale.",
-      "subject": "Let me know: ULIK accessories"
+      "message": "Hi Taksu, let me know when the accessories and upgrade packs go on sale.",
+      "subject": "Let me know: Taksu accessories"
     }
   },
   "Product": {
@@ -272,7 +272,7 @@
     "robots": "Robots it works with",
     "see": "See {robot}",
     "related": "See also",
-    "notifyMessage": "Hi ULIK, let me know when {item} can be ordered.",
+    "notifyMessage": "Hi Taksu, let me know when {item} can be ordered.",
     "notifySubject": "Let me know: {item}",
     "preorderNote": "Pre-order: made in batches. We tell you the expected shipping date when we confirm your order.",
     "soonNote": "Not on sale yet. Tap Let me know, and we will get in touch once the price and dates are set.",
@@ -281,8 +281,8 @@
   },
   "Learn": {
     "title": "Understand your robot, one step at a time",
-    "meta": "A free learning path for every ULIK robot: short videos, guides, and simulator missions you can follow at home.",
-    "intro": "Not a class and not a course. Every ULIK robot has a free learning path: short videos, guides, and simulator missions you can follow at home, at your own pace.",
+    "meta": "A free learning path for every Taksu robot: short videos, guides, and simulator missions you can follow at home.",
+    "intro": "Not a class and not a course. Every Taksu robot has a free learning path: short videos, guides, and simulator missions you can follow at home, at your own pace.",
     "parts": {
       "title": "Every step has three parts",
       "understand": {
@@ -306,7 +306,7 @@
       "title": "No robot yet? Start in the simulator",
       "body": "The simulator runs in the browser, free, with no account. Its missions are the steps on the learning paths, so nothing is wasted when the robot arrives.",
       "action": "Open the simulator",
-      "imageAlt": "The ULIK simulator: program blocks on the left, the arena with Ciko on the right"
+      "imageAlt": "The Taksu simulator: program blocks on the left, the arena with Ciko on the right"
     },
     "guides": {
       "title": "Guides",
@@ -315,7 +315,7 @@
       "instructor": "For instructors",
       "minutes": "{minutes} min"
     },
-    "notService": "ULIK sells robots, not courses. These learning paths come with every robot and are free for anyone."
+    "notService": "Taksu sells robots, not courses. These learning paths come with every robot and are free for anyone."
   },
   "Path": {
     "title": "{robot}’s learning path",
@@ -362,9 +362,9 @@
   },
   "DropPage": {
     "title": "Drops: R&D robots, one at a time",
-    "intro": "Besides the main robots, we keep testing new ideas on our R&D bench. The ones that pass are released as Drops: the next number in the ULIK series, made in limited batches.",
+    "intro": "Besides the main robots, we keep testing new ideas on our R&D bench. The ones that pass are released as Drops: the next number in the Taksu series, made in limited batches.",
     "series": {
-      "title": "The ULIK series",
+      "title": "The Taksu series",
       "intro": "Main robots and Drops share one run of numbers. The next number always goes to the next release.",
       "number": "Number {n}",
       "mystery": "Drop #{n}, not revealed yet",
@@ -428,7 +428,7 @@
       "sent": "Your message is open. Send it in the app that opened, and we will reply with a quote."
     },
     "quote": {
-      "greeting": "Hi ULIK, I would like a quote.",
+      "greeting": "Hi Taksu, I would like a quote.",
       "kind": "Need: {value}",
       "org": "Organisation: {value}",
       "name": "Name: {value}",
@@ -450,8 +450,8 @@
       "body": "Over WhatsApp or email. If something is wrong, include the robot’s name and a photo or video.",
       "whatsapp": "Chat on WhatsApp",
       "email": "Send an email",
-      "message": "Hi ULIK, I have a question.",
-      "subject": "A question for ULIK",
+      "message": "Hi Taksu, I have a question.",
+      "subject": "A question for Taksu",
       "from": "Shipped from {location}"
     },
     "guides": {

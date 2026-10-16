@@ -1,4 +1,4 @@
-import { getProduct, getRobot, type Localized } from '@ulik/catalog';
+import { getProduct, getRobot, type Localized } from '@taksu/catalog';
 import type { CartLine } from './cart';
 
 /** A cart line with its name, price, and page, read from the catalogue. */

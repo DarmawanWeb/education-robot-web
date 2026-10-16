@@ -8,10 +8,10 @@ import {
   type Robot,
   robots,
   stepTitle,
-} from '@ulik/catalog';
-import { RaceNumber } from '@ulik/ui/brand/race-number';
-import { Button } from '@ulik/ui/components/button';
-import { cn } from '@ulik/ui/lib/utils';
+} from '@taksu/catalog';
+import { RaceNumber } from '@taksu/ui/brand/race-number';
+import { Button } from '@taksu/ui/components/button';
+import { cn } from '@taksu/ui/lib/utils';
 import { Check, Gamepad2 } from 'lucide-react';
 import type { Metadata } from 'next';
 import Image from 'next/image';

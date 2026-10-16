@@ -1,6 +1,6 @@
-import { drops, nextReleaseNumber, pick, robots } from '@ulik/catalog';
-import { RaceNumber } from '@ulik/ui/brand/race-number';
-import { cn } from '@ulik/ui/lib/utils';
+import { drops, nextReleaseNumber, pick, robots } from '@taksu/catalog';
+import { RaceNumber } from '@taksu/ui/brand/race-number';
+import { cn } from '@taksu/ui/lib/utils';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { DropSteps, NextDropCard, nextDrop, padNumber } from '@/components/shared/drop-band';

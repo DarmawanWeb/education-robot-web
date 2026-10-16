@@ -1,6 +1,6 @@
 'use client';
 
-import { cn } from '@ulik/ui/lib/utils';
+import { cn } from '@taksu/ui/lib/utils';
 import { Children, type ReactNode, useState } from 'react';
 
 /**

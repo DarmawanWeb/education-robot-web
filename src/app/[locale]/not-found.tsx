@@ -1,5 +1,5 @@
-import { RaceNumber } from '@ulik/ui/brand/race-number';
-import { Button } from '@ulik/ui/components/button';
+import { RaceNumber } from '@taksu/ui/brand/race-number';
+import { Button } from '@taksu/ui/components/button';
 import { getTranslations } from 'next-intl/server';
 import { Container } from '@/components/ui/container';
 import { Link } from '@/i18n/navigation';

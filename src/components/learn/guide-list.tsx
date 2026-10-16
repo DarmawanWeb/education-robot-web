@@ -1,5 +1,5 @@
-import { type Guide, getRobot, type Locale, pick } from '@ulik/catalog';
-import { cn } from '@ulik/ui/lib/utils';
+import { type Guide, getRobot, type Locale, pick } from '@taksu/catalog';
+import { cn } from '@taksu/ui/lib/utils';
 import { Clock } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';

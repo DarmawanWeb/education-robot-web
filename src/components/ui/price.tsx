@@ -6,8 +6,8 @@ import {
   pick,
   type Robot,
   startingPrice,
-} from '@ulik/catalog';
-import { cn } from '@ulik/ui/lib/utils';
+} from '@taksu/catalog';
+import { cn } from '@taksu/ui/lib/utils';
 import { getTranslations } from 'next-intl/server';
 
 /** A robot's price: the unit price, "from" for packages, or "price soon". */

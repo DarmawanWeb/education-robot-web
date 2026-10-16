@@ -1,5 +1,5 @@
-import { getGuide, getRobot, guides, learnPaths, pick } from '@ulik/catalog';
-import { cn } from '@ulik/ui/lib/utils';
+import { getGuide, getRobot, guides, learnPaths, pick } from '@taksu/catalog';
+import { cn } from '@taksu/ui/lib/utils';
 import { Clock } from 'lucide-react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';

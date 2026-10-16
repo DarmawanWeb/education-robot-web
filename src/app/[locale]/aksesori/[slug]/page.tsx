@@ -8,9 +8,9 @@ import {
   productKindLabels,
   products,
   type Robot,
-} from '@ulik/catalog';
-import { RaceNumber } from '@ulik/ui/brand/race-number';
-import { cn } from '@ulik/ui/lib/utils';
+} from '@taksu/catalog';
+import { RaceNumber } from '@taksu/ui/brand/race-number';
+import { cn } from '@taksu/ui/lib/utils';
 import { Check } from 'lucide-react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';

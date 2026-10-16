@@ -3,7 +3,7 @@ import '@fontsource-variable/anybody/wdth-italic.css';
 import '@fontsource-variable/atkinson-hyperlegible-next';
 import '../globals.css';
 
-import { brand } from '@ulik/catalog';
+import { brand } from '@taksu/catalog';
 import type { Metadata, Viewport } from 'next';
 import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';

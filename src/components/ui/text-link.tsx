@@ -1,4 +1,4 @@
-import { cn } from '@ulik/ui/lib/utils';
+import { cn } from '@taksu/ui/lib/utils';
 import { ArrowRight } from 'lucide-react';
 import type { ComponentProps } from 'react';
 import { Link } from '@/i18n/navigation';

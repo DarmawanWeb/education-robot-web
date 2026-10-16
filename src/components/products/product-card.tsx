@@ -1,4 +1,4 @@
-import { getRobot, type Locale, type Product, pick } from '@ulik/catalog';
+import { getRobot, type Locale, type Product, pick } from '@taksu/catalog';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { AvailabilityBadge, productPrice } from '../ui/price';

@@ -1,4 +1,4 @@
-import type { RobotSlug } from '@ulik/catalog';
+import type { RobotSlug } from '@taksu/catalog';
 
 /** Each robot's own colour, as Tailwind classes: Ciko red, Momo yellow, Garu steel blue. */
 export const robotStyle: Record<RobotSlug, { fill: string; text: string; border: string }> = {

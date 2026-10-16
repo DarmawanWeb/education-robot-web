@@ -10,7 +10,7 @@ export interface CartLine {
   qty: number;
 }
 
-const KEY = 'ulik-cart';
+const KEY = 'taksu-cart';
 export const MAX_QTY = 50;
 const EMPTY: CartLine[] = [];
 

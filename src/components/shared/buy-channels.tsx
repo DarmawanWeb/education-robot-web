@@ -1,5 +1,5 @@
-import { marketplaceNames } from '@ulik/catalog';
-import { Button } from '@ulik/ui/components/button';
+import { marketplaceNames } from '@taksu/catalog';
+import { Button } from '@taksu/ui/components/button';
 import { Building2, ShoppingBag, Store } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';

@@ -1,4 +1,4 @@
-import { guides, learnPaths, products, robots } from '@ulik/catalog';
+import { guides, learnPaths, products, robots } from '@taksu/catalog';
 import type { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
 import { siteConfig } from '@/lib/site-config';

@@ -1,7 +1,7 @@
 'use client';
 
-import { Wordmark } from '@ulik/ui/brand/wordmark';
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@ulik/ui/components/sheet';
+import { Wordmark } from '@taksu/ui/brand/wordmark';
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@taksu/ui/components/sheet';
 import { Gamepad2, Menu } from 'lucide-react';
 import { useState } from 'react';
 import { LocaleSwitcher } from './locale-switcher';

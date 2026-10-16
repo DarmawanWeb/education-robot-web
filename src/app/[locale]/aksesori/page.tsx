@@ -1,5 +1,5 @@
-import { type ProductKind, pick, productKindLabels, products } from '@ulik/catalog';
-import { Button } from '@ulik/ui/components/button';
+import { type ProductKind, pick, productKindLabels, products } from '@taksu/catalog';
+import { Button } from '@taksu/ui/components/button';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { ProductCard } from '@/components/products/product-card';

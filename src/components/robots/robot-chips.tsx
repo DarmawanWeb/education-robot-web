@@ -1,5 +1,5 @@
-import { type Locale, levelLabels, pick, type Robot } from '@ulik/catalog';
-import { cn } from '@ulik/ui/lib/utils';
+import { type Locale, levelLabels, pick, type Robot } from '@taksu/catalog';
+import { cn } from '@taksu/ui/lib/utils';
 import { getTranslations } from 'next-intl/server';
 
 /** Age and level, the two things a buyer checks first. */

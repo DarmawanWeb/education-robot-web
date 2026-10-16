@@ -8,11 +8,11 @@ import {
   type Marketplace,
   marketplaceNames,
   pick,
-} from '@ulik/catalog';
-import { Button } from '@ulik/ui/components/button';
-import { Input } from '@ulik/ui/components/input';
-import { Label } from '@ulik/ui/components/label';
-import { Textarea } from '@ulik/ui/components/textarea';
+} from '@taksu/catalog';
+import { Button } from '@taksu/ui/components/button';
+import { Input } from '@taksu/ui/components/input';
+import { Label } from '@taksu/ui/components/label';
+import { Textarea } from '@taksu/ui/components/textarea';
 import { CheckCircle2, Mail, MessageCircle, Minus, Plus, ShoppingBag, Trash2 } from 'lucide-react';
 import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';

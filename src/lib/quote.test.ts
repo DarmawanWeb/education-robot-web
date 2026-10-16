@@ -22,7 +22,7 @@ describe('quote request', () => {
     );
     expect(text).toBe(
       [
-        'Hi ULIK, I would like a quote.',
+        'Hi Taksu, I would like a quote.',
         '',
         'Need: A bulk order',
         'Organisation: SD Harapan',

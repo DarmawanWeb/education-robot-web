@@ -1,8 +1,8 @@
 'use client';
 
-import { formatRupiah, type Locale, type Marketplace, marketplaceNames } from '@ulik/catalog';
-import { Button } from '@ulik/ui/components/button';
-import { cn } from '@ulik/ui/lib/utils';
+import { formatRupiah, type Locale, type Marketplace, marketplaceNames } from '@taksu/catalog';
+import { Button } from '@taksu/ui/components/button';
+import { cn } from '@taksu/ui/lib/utils';
 import { MessageCircle } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { useState } from 'react';

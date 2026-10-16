@@ -1,4 +1,4 @@
-import { brand } from '@ulik/catalog';
+import { brand } from '@taksu/catalog';
 
 /** Public configuration, inlined at build time from NEXT_PUBLIC_* variables. */
 export const siteConfig = {

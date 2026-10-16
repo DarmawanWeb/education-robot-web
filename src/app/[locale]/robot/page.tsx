@@ -1,4 +1,4 @@
-import { goalLabels, pick, robots } from '@ulik/catalog';
+import { goalLabels, pick, robots } from '@taksu/catalog';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { GoalFilter } from '@/components/robots/goal-filter';

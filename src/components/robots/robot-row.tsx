@@ -1,7 +1,7 @@
-import { type Locale, pick, type Robot } from '@ulik/catalog';
-import { RaceNumber } from '@ulik/ui/brand/race-number';
-import { Button } from '@ulik/ui/components/button';
-import { cn } from '@ulik/ui/lib/utils';
+import { type Locale, pick, type Robot } from '@taksu/catalog';
+import { RaceNumber } from '@taksu/ui/brand/race-number';
+import { Button } from '@taksu/ui/components/button';
+import { cn } from '@taksu/ui/lib/utils';
 import { Check } from 'lucide-react';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';

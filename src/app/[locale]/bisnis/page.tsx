@@ -9,9 +9,9 @@ import {
   pick,
   products,
   robots,
-} from '@ulik/catalog';
-import { Button } from '@ulik/ui/components/button';
-import { cn } from '@ulik/ui/lib/utils';
+} from '@taksu/catalog';
+import { Button } from '@taksu/ui/components/button';
+import { cn } from '@taksu/ui/lib/utils';
 import {
   BadgePercent,
   BookOpen,

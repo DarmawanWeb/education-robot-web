@@ -1,10 +1,10 @@
 'use client';
 
-import { Button } from '@ulik/ui/components/button';
-import { Input } from '@ulik/ui/components/input';
-import { Label } from '@ulik/ui/components/label';
-import { Textarea } from '@ulik/ui/components/textarea';
-import { cn } from '@ulik/ui/lib/utils';
+import { Button } from '@taksu/ui/components/button';
+import { Input } from '@taksu/ui/components/input';
+import { Label } from '@taksu/ui/components/label';
+import { Textarea } from '@taksu/ui/components/textarea';
+import { cn } from '@taksu/ui/lib/utils';
 import { CheckCircle2, Mail, MessageCircle } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { type FormEvent, useEffect, useId, useState } from 'react';

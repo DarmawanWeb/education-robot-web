@@ -27,7 +27,7 @@
     "help": "Bantuan",
     "faq": "Pertanyaan umum",
     "email": "Email",
-    "whatsappHello": "Halo ULIK, saya mau bertanya.",
+    "whatsappHello": "Halo Taksu, saya mau bertanya.",
     "copyright": "© {year} {brand}. Semua hak dilindungi."
   },
   "Price": {
@@ -42,11 +42,11 @@
   },
   "Drop": {
     "title": "Drop: robot baru dari meja R&D",
-    "intro": "Selain robot utama, kami merilis robot kecil hasil R&D satu per satu. Setiap Drop melanjutkan nomor seri ULIK.",
+    "intro": "Selain robot utama, kami merilis robot kecil hasil R&D satu per satu. Setiap Drop melanjutkan nomor seri Taksu.",
     "name": "Drop #{n}",
     "more": "Cara kerja Drop",
     "notify": "Kabari saya",
-    "notifyMessage": "Halo ULIK, kabari saya saat {name} dirilis.",
+    "notifyMessage": "Halo Taksu, kabari saya saat {name} dirilis.",
     "notifySubject": "Kabari saya: {name}"
   },
   "Home": {
@@ -55,7 +55,7 @@
       "body": "Setiap robot punya nama, nomor, dan jalur belajarnya sendiri. Pilih dari usia dan tujuanmu: mulai dari nol, latihan lomba, atau ngulik lebih dalam.",
       "pick": "Pilih robot",
       "simulator": "Coba simulator gratis",
-      "gridLabel": "Robot ULIK menurut nomor rilis",
+      "gridLabel": "Robot Taksu menurut nomor rilis",
       "number": "Nomor {n}",
       "dropName": "Drop #{n}",
       "dropBody": "Robot R&D berikutnya. Nama dan bentuknya masih rahasia.",
@@ -71,7 +71,7 @@
     },
     "comesWith": {
       "title": "Bukan cuma punya robot, tapi paham cara kerjanya",
-      "intro": "Setiap robot ULIK datang dengan cara memahaminya, gratis dan online. Bukan kelas: ikuti sendiri dari rumah, sesuai kecepatanmu.",
+      "intro": "Setiap robot Taksu datang dengan cara memahaminya, gratis dan online. Bukan kelas: ikuti sendiri dari rumah, sesuai kecepatanmu.",
       "path": {
         "title": "Jalur belajar per robot",
         "body": "Langkah demi langkah dari buka kotak sampai siap lomba, dengan video dan panduan.",
@@ -86,7 +86,7 @@
         "title": "Kode yang bisa dibawa",
         "body": "Setiap program blok punya versi Arduino C++. Saat siap, lanjutkan di Arduino IDE."
       },
-      "imageAlt": "Simulator ULIK: blok program di kiri, Ciko mengikuti garis di arena di kanan",
+      "imageAlt": "Simulator Taksu: blok program di kiri, Ciko mengikuti garis di arena di kanan",
       "caption": "Misi Ikuti garis untuk Ciko, langkah 9 di jalur belajarnya."
     },
     "addOns": {
@@ -121,7 +121,7 @@
       },
       "oem": {
         "title": "OEM: robot kami, merek Anda",
-        "body": "Pakai robot ULIK dengan nama, logo, dan kemasan Anda, atau kami rancang yang baru.",
+        "body": "Pakai robot Taksu dengan nama, logo, dan kemasan Anda, atau kami rancang yang baru.",
         "action": "Lihat pilihan OEM"
       }
     },
@@ -137,14 +137,14 @@
     "all": "Semua",
     "see": "Lihat {robot}",
     "notify": "Kabari saya",
-    "notifyMessage": "Halo ULIK, kabari saya saat {robot} bisa dipesan.",
+    "notifyMessage": "Halo Taksu, kabari saya saat {robot} bisa dipesan.",
     "notifySubject": "Kabari saya: {robot}"
   },
   "RobotPage": {
     "breadcrumb": "Jejak halaman",
     "allRobots": "Semua robot",
     "number": "Nomor {n}",
-    "notifyMessage": "Halo ULIK, kabari saya saat {robot} bisa dipesan.",
+    "notifyMessage": "Halo Taksu, kabari saya saat {robot} bisa dipesan.",
     "notifySubject": "Kabari saya: {robot}",
     "preorderNote": "Pre-order: robot dirakit dan diuji per batch. Perkiraan tanggal kirim kami sampaikan saat konfirmasi pesanan.",
     "soonNote": "Belum bisa dipesan. Tekan Kabari saya, dan kami hubungi saat harga dan jadwalnya sudah pasti.",
@@ -177,7 +177,7 @@
   "Buy": {
     "package": "Pilih paket",
     "whatsapp": "Pesan lewat WhatsApp",
-    "whatsappMessage": "Halo ULIK, saya mau pesan {item} ({price}).",
+    "whatsappMessage": "Halo Taksu, saya mau pesan {item} ({price}).",
     "notify": "Kabari saya",
     "alsoOn": "Juga di"
   },
@@ -185,7 +185,7 @@
     "add": "Masukkan keranjang",
     "added": "Masuk keranjang",
     "view": "Lihat keranjang",
-    "meta": "Keranjang belanja ULIK. Pesanan dikirim lewat WhatsApp atau email, lalu kami balas dengan total, ongkos kirim, dan cara bayar.",
+    "meta": "Keranjang belanja Taksu. Pesanan dikirim lewat WhatsApp atau email, lalu kami balas dengan total, ongkos kirim, dan cara bayar.",
     "title": "Keranjang",
     "loading": "Membuka keranjang",
     "items": "Barang di keranjang",
@@ -219,7 +219,7 @@
       "emailOnly": "Kirim pesanan lewat email"
     },
     "order": {
-      "greeting": "Halo ULIK, saya mau pesan:",
+      "greeting": "Halo Taksu, saya mau pesan:",
       "line": "{n}. {item} × {qty} = {total}",
       "subtotal": "Subtotal: {amount}",
       "name": "Nama: {value}",
@@ -228,7 +228,7 @@
       "address": "Alamat: {value}",
       "note": "Catatan: {value}",
       "closing": "Mohon info ongkos kirim dan cara bayarnya. Terima kasih.",
-      "subject": "Pesanan ULIK dari {name}"
+      "subject": "Pesanan Taksu dari {name}"
     },
     "sent": {
       "title": "Pesanan Anda sudah dibuka",
@@ -259,8 +259,8 @@
       "title": "Semua aksesori sedang disiapkan",
       "body": "Harga dan jadwalnya kami umumkan satu per satu. Mau dikabari lebih dulu?",
       "action": "Kabari saya",
-      "message": "Halo ULIK, kabari saya saat aksesori dan upgrade pack mulai dijual.",
-      "subject": "Kabari saya: aksesori ULIK"
+      "message": "Halo Taksu, kabari saya saat aksesori dan upgrade pack mulai dijual.",
+      "subject": "Kabari saya: aksesori Taksu"
     }
   },
   "Product": {
@@ -272,7 +272,7 @@
     "robots": "Robot yang cocok",
     "see": "Lihat {robot}",
     "related": "Lihat juga",
-    "notifyMessage": "Halo ULIK, kabari saya saat {item} bisa dipesan.",
+    "notifyMessage": "Halo Taksu, kabari saya saat {item} bisa dipesan.",
     "notifySubject": "Kabari saya: {item}",
     "preorderNote": "Pre-order: dibuat per batch. Perkiraan tanggal kirim kami sampaikan saat konfirmasi pesanan.",
     "soonNote": "Belum bisa dipesan. Tekan Kabari saya, dan kami hubungi saat harga dan jadwalnya sudah pasti.",
@@ -281,8 +281,8 @@
   },
   "Learn": {
     "title": "Pahami robotmu, langkah demi langkah",
-    "meta": "Jalur belajar gratis untuk setiap robot ULIK: video pendek, panduan, dan misi simulator yang bisa diikuti sendiri dari rumah.",
-    "intro": "Bukan kelas dan bukan kursus. Setiap robot ULIK punya jalur belajar gratis: video pendek, panduan, dan misi simulator yang bisa diikuti sendiri dari rumah, sesuai kecepatanmu.",
+    "meta": "Jalur belajar gratis untuk setiap robot Taksu: video pendek, panduan, dan misi simulator yang bisa diikuti sendiri dari rumah.",
+    "intro": "Bukan kelas dan bukan kursus. Setiap robot Taksu punya jalur belajar gratis: video pendek, panduan, dan misi simulator yang bisa diikuti sendiri dari rumah, sesuai kecepatanmu.",
     "parts": {
       "title": "Setiap langkah punya tiga bagian",
       "understand": {
@@ -306,7 +306,7 @@
       "title": "Belum punya robot? Mulai dari simulator",
       "body": "Simulator berjalan di browser, gratis, tanpa daftar akun. Misinya sama dengan langkah di jalur belajar, jadi tidak ada yang terbuang saat robotnya datang.",
       "action": "Buka simulator",
-      "imageAlt": "Simulator ULIK: blok program di kiri, arena dengan Ciko di kanan"
+      "imageAlt": "Simulator Taksu: blok program di kiri, arena dengan Ciko di kanan"
     },
     "guides": {
       "title": "Panduan",
@@ -315,7 +315,7 @@
       "instructor": "Untuk pengajar",
       "minutes": "{minutes} menit"
     },
-    "notService": "ULIK menjual robot, bukan kursus. Jalur belajar ini ikut bersama setiap robot dan terbuka gratis untuk siapa saja."
+    "notService": "Taksu menjual robot, bukan kursus. Jalur belajar ini ikut bersama setiap robot dan terbuka gratis untuk siapa saja."
   },
   "Path": {
     "title": "Jalur belajar {robot}",
@@ -362,9 +362,9 @@
   },
   "DropPage": {
     "title": "Drop: robot R&D, satu per satu",
-    "intro": "Selain robot utama, kami terus menguji ide baru di meja R&D. Yang lolos uji dirilis sebagai Drop: nomor berikutnya di seri ULIK, dibuat terbatas per batch.",
+    "intro": "Selain robot utama, kami terus menguji ide baru di meja R&D. Yang lolos uji dirilis sebagai Drop: nomor berikutnya di seri Taksu, dibuat terbatas per batch.",
     "series": {
-      "title": "Seri ULIK",
+      "title": "Seri Taksu",
       "intro": "Robot utama dan Drop berbagi satu urutan nomor. Nomor berikutnya selalu milik rilisan berikutnya.",
       "number": "Nomor {n}",
       "mystery": "Drop #{n}, belum dibuka",
@@ -428,7 +428,7 @@
       "sent": "Pesan Anda sudah dibuka. Kirim di aplikasi yang terbuka, dan kami balas dengan penawaran."
     },
     "quote": {
-      "greeting": "Halo ULIK, saya ingin minta penawaran.",
+      "greeting": "Halo Taksu, saya ingin minta penawaran.",
       "kind": "Kebutuhan: {value}",
       "org": "Lembaga: {value}",
       "name": "Nama: {value}",
@@ -450,8 +450,8 @@
       "body": "Lewat WhatsApp atau email. Kalau ada kendala, sertakan nama robot dan foto atau videonya.",
       "whatsapp": "Chat lewat WhatsApp",
       "email": "Kirim email",
-      "message": "Halo ULIK, saya mau bertanya.",
-      "subject": "Pertanyaan untuk ULIK",
+      "message": "Halo Taksu, saya mau bertanya.",
+      "subject": "Pertanyaan untuk Taksu",
       "from": "Dikirim dari {location}"
     },
     "guides": {
