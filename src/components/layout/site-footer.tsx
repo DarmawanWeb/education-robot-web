@@ -1,5 +1,5 @@
 import { brand, type Locale, marketplaceNames, pick } from '@taksu/catalog';
-import { Wordmark } from '@taksu/ui/brand/wordmark';
+import { Wordmark } from '@taksu/edu-ui/brand/wordmark';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { marketplaceLinks, simulatorUrl, whatsappUrl } from '@/lib/links';

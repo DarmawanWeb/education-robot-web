@@ -1,5 +1,5 @@
 import type { ProductIcon as Icon } from '@taksu/catalog';
-import { cn } from '@taksu/ui/lib/utils';
+import { cn } from '@taksu/edu-ui/lib/utils';
 import {
   BatteryCharging,
   Boxes,

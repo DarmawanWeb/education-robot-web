@@ -7,7 +7,7 @@ import {
   type Robot,
   startingPrice,
 } from '@taksu/catalog';
-import { cn } from '@taksu/ui/lib/utils';
+import { cn } from '@taksu/edu-ui/lib/utils';
 import { getTranslations } from 'next-intl/server';
 
 /** A robot's price: the unit price, "from" for packages, or "price soon". */

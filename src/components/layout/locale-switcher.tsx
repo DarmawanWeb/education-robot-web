@@ -1,7 +1,7 @@
 'use client';
 
 import { locales } from '@taksu/catalog';
-import { cn } from '@taksu/ui/lib/utils';
+import { cn } from '@taksu/edu-ui/lib/utils';
 import { useSearchParams } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import { useTransition } from 'react';

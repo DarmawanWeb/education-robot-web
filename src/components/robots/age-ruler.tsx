@@ -1,5 +1,5 @@
 import { type Locale, levelLabels, pick, type Robot, robots } from '@taksu/catalog';
-import { RaceNumber } from '@taksu/ui/brand/race-number';
+import { RaceNumber } from '@taksu/edu-ui/brand/race-number';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { Container } from '../ui/container';

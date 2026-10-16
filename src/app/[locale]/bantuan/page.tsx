@@ -1,5 +1,5 @@
 import { brand, faq, guides, pick } from '@taksu/catalog';
-import { Button } from '@taksu/ui/components/button';
+import { Button } from '@taksu/edu-ui/components/button';
 import { Mail, MapPin, MessageCircle } from 'lucide-react';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';

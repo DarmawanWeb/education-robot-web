@@ -1,4 +1,4 @@
-import { cn } from '@taksu/ui/lib/utils';
+import { cn } from '@taksu/edu-ui/lib/utils';
 import type { ReactNode } from 'react';
 
 /** A section's title, an optional intro, and an optional link on the right. */

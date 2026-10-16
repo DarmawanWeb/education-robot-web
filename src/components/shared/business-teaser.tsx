@@ -1,5 +1,5 @@
 import { bulkIncludes, type Locale, oemLevels, pick } from '@taksu/catalog';
-import { Button } from '@taksu/ui/components/button';
+import { Button } from '@taksu/edu-ui/components/button';
 import { Check } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';

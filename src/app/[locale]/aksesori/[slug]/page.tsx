@@ -9,8 +9,8 @@ import {
   products,
   type Robot,
 } from '@taksu/catalog';
-import { RaceNumber } from '@taksu/ui/brand/race-number';
-import { cn } from '@taksu/ui/lib/utils';
+import { RaceNumber } from '@taksu/edu-ui/brand/race-number';
+import { cn } from '@taksu/edu-ui/lib/utils';
 import { Check } from 'lucide-react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';

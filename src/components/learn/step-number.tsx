@@ -1,4 +1,4 @@
-import { cn } from '@taksu/ui/lib/utils';
+import { cn } from '@taksu/edu-ui/lib/utils';
 
 /** A step's place on a learning path: these steps are meant to be done in order. */
 export function StepNumber({ n, className }: { n: number; className?: string }) {

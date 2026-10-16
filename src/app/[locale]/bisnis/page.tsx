@@ -10,8 +10,8 @@ import {
   products,
   robots,
 } from '@taksu/catalog';
-import { Button } from '@taksu/ui/components/button';
-import { cn } from '@taksu/ui/lib/utils';
+import { Button } from '@taksu/edu-ui/components/button';
+import { cn } from '@taksu/edu-ui/lib/utils';
 import {
   BadgePercent,
   BookOpen,

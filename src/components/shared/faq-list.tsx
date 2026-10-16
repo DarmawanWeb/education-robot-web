@@ -5,7 +5,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@taksu/ui/components/accordion';
+} from '@taksu/edu-ui/components/accordion';
 
 /** Questions and answers, one open at a time. Strings arrive already localised. */
 export function FaqList({ items }: { items: { id: string; question: string; answer: string }[] }) {
