@@ -11,8 +11,8 @@ git clone --recursive https://github.com/DarmawanWeb/TaksuTech.git && cd TaksuTe
 corepack enable                 # pnpm 10, Node 22.12 or newer
 pnpm install                    # also points this submodule's git hooks at the workspace's
 cp apps/web/.env.example apps/web/.env.local
-pnpm dev:edu                    # http://localhost:3003/id
-pnpm dev:sim                    # http://localhost:3002/id, for the mission links
+pnpm dev:edu                    # http://localhost:3103/id
+pnpm dev:sim                    # http://localhost:3102/id, for the mission links
 ```
 
 Set `NEXT_PUBLIC_WHATSAPP_NUMBER` in `.env.local` to try the WhatsApp order and quote flows; with
@@ -24,7 +24,7 @@ Run from the workspace root (`pnpm --filter @taksu/edu <script>`) or from `apps/
 
 | Script | Does |
 |---|---|
-| `dev` | Next.js dev server on port 3003 |
+| `dev` | Next.js dev server on port 3103 |
 | `build`, `start` | Production build (standalone) and server |
 | `typecheck` | `next typegen`, then `tsc --noEmit` |
 | `test` | Vitest: messages, cart lines, order and quote messages |

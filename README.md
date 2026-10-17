@@ -92,7 +92,7 @@ colour.
 ```bash
 git clone --recursive https://github.com/DarmawanWeb/TaksuTech.git && cd TaksuTech
 pnpm install                    # the workspace, plus the commit hooks in each submodule
-pnpm dev:edu                    # http://localhost:3003/id
+pnpm dev:edu                    # http://localhost:3103/id
 pnpm --filter @taksu/edu test
 ```
 

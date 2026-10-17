@@ -11,7 +11,7 @@ const trimSlash = (url: string) => url.replace(/\/+$/, '');
  * addresses go to where the same things live now: SD is Ciko, SMP Momo, SMA Garu.
  */
 function firstSiteRedirects() {
-  const sim = trimSlash(process.env.NEXT_PUBLIC_SIM_URL || 'http://localhost:3002');
+  const sim = trimSlash(process.env.NEXT_PUBLIC_SIM_URL || 'http://localhost:3102');
   const locale = '/:locale(id|en)';
   const robots = { sd: 'ciko', smp: 'momo', sma: 'garu' } as const;
   const guides = {
