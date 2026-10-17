@@ -40,6 +40,13 @@ localized not-found page.
 | `/bantuan` | How to buy, questions, contact, guides |
 | `/sitemap.xml`, `/robots.txt` | Every public page in both languages; the cart is left out |
 
+The first education site (v1.0.0) ran on the same host. `next.config.ts` sends its addresses to
+their pages here with permanent redirects that keep the locale: the school levels become robots
+(`/kits/sd`, `smp`, `sma` go to `/robot/ciko`, `momo`, `garu`, and `/curriculum/<level>` to
+`/belajar/<robot>`), the curriculum and guides go to `/belajar` and the renamed guides,
+`/upgrades` to `/aksesori`, `/schools` to `/bisnis`, `/contact` to `/bantuan`, `/simulator` to the
+simulator, and the Lab, which is gone, to the home page.
+
 ## Data
 
 `@taksu/catalog` is the single source of truth. Pages pick the locale's string with `pick()`; no
