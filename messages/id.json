@@ -458,5 +458,13 @@
     "body": "{robot} masih kami kembangkan. Kami kabarkan di sini saat sudah siap.",
     "meta": "{robot} masih dalam pengembangan.",
     "back": "Lihat robot yang bisa dipesan"
+  },
+  "Seller": {
+    "badge": "Penjual eksklusif",
+    "soldBy": "Dijual eksklusif oleh {seller}",
+    "body": "Hak jual {robot} dipegang {seller} sebagai penjual eksklusif. Hubungi mereka untuk harga, stok, dan pemesanan. Jalur belajar dan simulatornya tetap gratis di sini.",
+    "contact": "Hubungi {seller}",
+    "message": "Halo {seller}, saya tertarik dengan robot {robot} dari DCTEdu.",
+    "subject": "Tentang {robot} dari DCTEdu"
   }
 }

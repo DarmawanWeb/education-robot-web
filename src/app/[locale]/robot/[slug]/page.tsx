@@ -24,6 +24,7 @@ import { StepNumber } from '@/components/learn/step-number';
 import { ProductCard } from '@/components/products/product-card';
 import { DevelopmentPage } from '@/components/robots/in-development';
 import { RobotChips } from '@/components/robots/robot-chips';
+import { SellerBadge, SellerBox, SellerContact } from '@/components/robots/seller';
 import { Container } from '@/components/ui/container';
 import { AvailabilityBadge, RobotPrice } from '@/components/ui/price';
 import { SectionHeading } from '@/components/ui/section-heading';
@@ -108,38 +109,48 @@ async function Hero({ robot, locale }: { robot: Robot; locale: Locale }) {
             <p className="mt-4 text-xl leading-snug font-bold">{pick(robot.tagline, locale)}</p>
             <div className="mt-4 flex flex-wrap items-center gap-1.5">
               <RobotChips robot={robot} locale={locale} />
-              <AvailabilityBadge availability={robot.availability} locale={locale} />
+              {robot.seller ? (
+                <SellerBadge seller={robot.seller} />
+              ) : (
+                <AvailabilityBadge availability={robot.availability} locale={locale} />
+              )}
             </div>
             <p className="text-muted-foreground mt-5 text-lg leading-relaxed">
               {pick(robot.summary, locale)}
             </p>
             <div className="mt-6 border-t pt-6">
-              <RobotPrice robot={robot} locale={locale} className="text-2xl" />
-              <div className="mt-5">
-                <BuyBox
-                  slug={robot.slug}
-                  name={robot.name}
-                  price={robot.price}
-                  options={robot.options?.map((option) => ({
-                    id: option.id,
-                    label: pick(option.label, locale),
-                    price: option.price,
-                  }))}
-                  orderable={orderable && robot.price !== null}
-                  stores={marketplaceLinks(robot.marketplace)}
-                  notifyHref={contactHref(
-                    t('notifyMessage', { robot: robot.name }),
-                    t('notifySubject', { robot: robot.name }),
-                  )}
-                  note={
-                    robot.availability === 'preorder'
-                      ? t('preorderNote')
-                      : robot.availability === 'soon'
-                        ? t('soonNote')
-                        : undefined
-                  }
-                />
-              </div>
+              {robot.seller ? (
+                <SellerBox robot={robot} seller={robot.seller} />
+              ) : (
+                <>
+                  <RobotPrice robot={robot} locale={locale} className="text-2xl" />
+                  <div className="mt-5">
+                    <BuyBox
+                      slug={robot.slug}
+                      name={robot.name}
+                      price={robot.price}
+                      options={robot.options?.map((option) => ({
+                        id: option.id,
+                        label: pick(option.label, locale),
+                        price: option.price,
+                      }))}
+                      orderable={orderable && robot.price !== null}
+                      stores={marketplaceLinks(robot.marketplace)}
+                      notifyHref={contactHref(
+                        t('notifyMessage', { robot: robot.name }),
+                        t('notifySubject', { robot: robot.name }),
+                      )}
+                      note={
+                        robot.availability === 'preorder'
+                          ? t('preorderNote')
+                          : robot.availability === 'soon'
+                            ? t('soonNote')
+                            : undefined
+                      }
+                    />
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -318,9 +329,14 @@ export default async function RobotPage({ params }: Props) {
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Button asChild variant="ink" size="lg">
-                <Link href="/business#bulk">{t('bulk.action')}</Link>
-              </Button>
+              {robot.seller ? (
+                // Bulk orders go to the exclusive seller too; OEM work stays with us.
+                <SellerContact robot={robot} seller={robot.seller} variant="ink" />
+              ) : (
+                <Button asChild variant="ink" size="lg">
+                  <Link href="/business#bulk">{t('bulk.action')}</Link>
+                </Button>
+              )}
               <Button asChild variant="outline" size="lg">
                 <Link href="/business#oem">{t('bulk.oem')}</Link>
               </Button>

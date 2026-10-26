@@ -57,7 +57,8 @@ page types a price, an age, or a robot name.
 | Catalogue file | Used for |
 |---|---|
 | `brand.ts` | Name, tagline, promise, story, contact email |
-| `robots.ts` | Robots on sale (numbers, ages, levels, goals, abilities, specs, prices, availability) and robots in development (number and name only) |
+| `robots.ts` | Robots on sale (numbers, ages, levels, goals, abilities, specs, prices, availability, exclusive seller) and robots in development (number and name only) |
+| `sellers.ts` | Companies that hold the exclusive right to sell some robots |
 | `shop.ts` | Accessories and upgrade packs, availability labels, rupiah formatting, marketplaces |
 | `drops.ts` | Drops and how they work; the next free number |
 | `learn.ts`, `guides.ts`, `sim-missions.ts` | Learning paths, guides, and the simulator missions they open |
@@ -65,6 +66,12 @@ page types a price, an age, or a robot name.
 
 A robot or product is orderable when its availability is not `soon` and it has a price; otherwise
 the page offers "let me know", which opens a prefilled WhatsApp message (or an email).
+
+A robot with a `seller` (`sellers.ts`) is sold only by that company. Ciko and Momo are sold
+exclusively by PT Ezra Robotics Teknologi: they carry no price, never go in the cart, and their
+pages, catalogue rows, and bulk calls to action show who sells them and a "Contact Ezra Robotics"
+button with the robot already named in the message. Everything without a seller is sold directly
+through the cart.
 
 ## Cart and ordering
 
@@ -122,3 +129,4 @@ Public settings are inlined at build time (`lib/site-config.ts`):
 | `NEXT_PUBLIC_WHATSAPP_NUMBER` | Where orders, quotes, and questions go; empty means email only |
 | `NEXT_PUBLIC_EMAIL` | Email orders; defaults to the address in `brand.ts` |
 | `NEXT_PUBLIC_TOKOPEDIA_URL`, `NEXT_PUBLIC_SHOPEE_URL` | Store pages; their buttons hide while empty |
+| `NEXT_PUBLIC_EZRA_WHATSAPP_NUMBER`, `NEXT_PUBLIC_EZRA_EMAIL`, `NEXT_PUBLIC_EZRA_URL` | How to reach PT Ezra Robotics Teknologi, the exclusive seller of Ciko and Momo: WhatsApp, then email, then the website; with none set, the question comes to us |

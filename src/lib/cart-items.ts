@@ -16,7 +16,8 @@ export interface CartItem {
 export function resolveLine(line: CartLine): CartItem | null {
   const robot = getRobot(line.slug);
   if (robot) {
-    if (robot.availability === 'soon') return null;
+    // Robots an exclusive seller sells never go in our cart.
+    if (robot.seller || robot.availability === 'soon') return null;
     const option = robot.options?.find((entry) => entry.id === line.option);
     const unitPrice = option?.price ?? robot.price;
     if (unitPrice === null) return null;

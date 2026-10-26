@@ -1,4 +1,4 @@
-import { brand } from '@dctedu/catalog';
+import { brand, type SellerId } from '@dctedu/catalog';
 
 /** Public configuration, inlined at build time from NEXT_PUBLIC_* variables. */
 export const siteConfig = {
@@ -12,4 +12,15 @@ export const siteConfig = {
     tokopedia: process.env.NEXT_PUBLIC_TOKOPEDIA_URL || '',
     shopee: process.env.NEXT_PUBLIC_SHOPEE_URL || '',
   },
+  /**
+   * How to reach each exclusive seller. The robot pages use WhatsApp when a number is set, then
+   * email, then the website; with none set, the question comes to us and we pass it on.
+   */
+  sellers: {
+    ezra: {
+      whatsappNumber: process.env.NEXT_PUBLIC_EZRA_WHATSAPP_NUMBER || '',
+      email: process.env.NEXT_PUBLIC_EZRA_EMAIL || '',
+      url: process.env.NEXT_PUBLIC_EZRA_URL || '',
+    },
+  } satisfies Record<SellerId, { whatsappNumber: string; email: string; url: string }>,
 } as const;

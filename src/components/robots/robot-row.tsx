@@ -12,6 +12,7 @@ import { robotStyle } from '@/lib/robot-style';
 import { AddToCart } from '../cart/add-to-cart';
 import { AvailabilityBadge, RobotPrice } from '../ui/price';
 import { RobotChips } from './robot-chips';
+import { SellerBadge, SellerContact } from './seller';
 
 /** One robot in the catalogue: picture, what it does, price, and how to get it. */
 export async function RobotRow({ robot, locale }: { robot: Robot; locale: Locale }) {
@@ -20,7 +21,11 @@ export async function RobotRow({ robot, locale }: { robot: Robot; locale: Locale
   const style = robotStyle[robot.slug];
   return (
     <article className="bg-surface grid overflow-hidden rounded-xl border md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
-      <Link href={`/robot/${robot.slug}`} className="relative block bg-white" tabIndex={-1}>
+      <Link
+        href={`/robot/${robot.slug}`}
+        className="relative block overflow-hidden bg-white"
+        tabIndex={-1}
+      >
         <div className="relative aspect-[4/3] h-full">
           <Image
             src={image.src}
@@ -44,7 +49,11 @@ export async function RobotRow({ robot, locale }: { robot: Robot; locale: Locale
               {robot.name}
             </Link>
           </h2>
-          <AvailabilityBadge availability={robot.availability} locale={locale} />
+          {robot.seller ? (
+            <SellerBadge seller={robot.seller} />
+          ) : (
+            <AvailabilityBadge availability={robot.availability} locale={locale} />
+          )}
         </div>
         <p className="mt-2 text-lg leading-snug font-bold">{pick(robot.tagline, locale)}</p>
         <RobotChips robot={robot} locale={locale} className="mt-3" />
@@ -57,12 +66,18 @@ export async function RobotRow({ robot, locale }: { robot: Robot; locale: Locale
           ))}
         </ul>
         <div className="mt-auto flex flex-wrap items-end justify-between gap-4 pt-7">
-          <RobotPrice robot={robot} locale={locale} className="text-xl" />
+          <RobotPrice
+            robot={robot}
+            locale={locale}
+            className={robot.seller ? undefined : 'text-xl'}
+          />
           <div className="flex flex-wrap items-center gap-2">
             <Button asChild variant="outline" size="lg">
               <Link href={`/robot/${robot.slug}`}>{t('see', { robot: robot.name })}</Link>
             </Button>
-            {robot.availability === 'soon' ? (
+            {robot.seller ? (
+              <SellerContact robot={robot} seller={robot.seller} variant="ink" />
+            ) : robot.availability === 'soon' ? (
               <Button asChild variant="ink" size="lg">
                 <a
                   href={contactHref(

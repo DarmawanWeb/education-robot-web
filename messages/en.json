@@ -458,5 +458,13 @@
     "body": "{robot} is still being built. We will share it here when it is ready.",
     "meta": "{robot} is still in development.",
     "back": "See the robots you can order"
+  },
+  "Seller": {
+    "badge": "Exclusive seller",
+    "soldBy": "Sold exclusively by {seller}",
+    "body": "{seller} holds the exclusive right to sell {robot}. Contact them for the price, stock, and ordering. The learning path and the simulator stay free here.",
+    "contact": "Contact {seller}",
+    "message": "Hello {seller}, I am interested in {robot} by DCTEdu.",
+    "subject": "About {robot} by DCTEdu"
   }
 }

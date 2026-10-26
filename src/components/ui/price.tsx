@@ -5,12 +5,16 @@ import {
   type Localized,
   pick,
   type Robot,
+  sellers,
   startingPrice,
 } from '@dctedu/catalog';
 import { cn } from '@dctedu/ui/lib/utils';
 import { getTranslations } from 'next-intl/server';
 
-/** A robot's price: the unit price, "from" for packages, or "price soon". */
+/**
+ * A robot's price: the unit price, "from" for packages, or "price soon". A robot an exclusive
+ * seller sells has no price here, only who sells it.
+ */
 export async function RobotPrice({
   robot,
   locale,
@@ -20,6 +24,14 @@ export async function RobotPrice({
   locale: Locale;
   className?: string;
 }) {
+  if (robot.seller) {
+    const seller = await getTranslations('Seller');
+    return (
+      <p className={cn('text-muted-foreground text-sm font-bold', className)}>
+        {seller('soldBy', { seller: sellers[robot.seller].name })}
+      </p>
+    );
+  }
   const t = await getTranslations('Price');
   const from = startingPrice(robot);
   if (from === null) return <p className={cn('font-bold', className)}>{t('soon')}</p>;
