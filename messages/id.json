@@ -143,10 +143,6 @@
     "abilities": "Yang bisa dilakukan {robot}",
     "programming": "Cara memprogram",
     "competition": "Untuk lomba",
-    "momo": {
-      "title": "Satu robot, empat bentuk",
-      "intro": "Modul Momo bisa dirakit ulang menjadi pengikut garis, penghindar rintangan, robot kendali suara, atau stasiun pemantau."
-    },
     "learn": {
       "title": "Jalur belajar {robot}",
       "path": "Buka jalur belajar",

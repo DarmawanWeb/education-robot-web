@@ -30,7 +30,7 @@ import { SectionHeading } from '@/components/ui/section-heading';
 import { TextLink } from '@/components/ui/text-link';
 import { Link } from '@/i18n/navigation';
 import { contactHref } from '@/lib/contact';
-import { imageFit, momoBoard, momoGallery, robotImages } from '@/lib/images';
+import { imageFit, robotImages } from '@/lib/images';
 import { marketplaceLinks, simulatorUrl } from '@/lib/links';
 import { localeFromParams, resolveLocale } from '@/lib/locale';
 import { pageMetadata } from '@/lib/metadata';
@@ -199,48 +199,6 @@ export default async function RobotPage({ params }: Props) {
           </ul>
         </Container>
       </section>
-
-      {robot.slug === 'momo' ? (
-        <section className="py-16 lg:py-24">
-          <Container>
-            <SectionHeading title={t('momo.title')} intro={t('momo.intro')} />
-            <ul className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
-              {momoGallery.map((view) => (
-                <li key={view.id}>
-                  <figure className="bg-surface overflow-hidden rounded-lg border">
-                    <Image
-                      src={view.src}
-                      alt=""
-                      placeholder="blur"
-                      sizes="(min-width: 1024px) 17rem, 50vw"
-                      className="aspect-square h-auto w-full bg-white object-contain p-2"
-                    />
-                    <figcaption className="border-t px-4 py-3 font-bold">
-                      {pick(view.caption, locale)}
-                    </figcaption>
-                  </figure>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-6 grid items-start gap-4 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
-              {[momoBoard.parts, momoBoard.pcb].map((item) => (
-                <figure key={item.alt.en} className="bg-surface overflow-hidden rounded-lg border">
-                  <Image
-                    src={item.src}
-                    alt={pick(item.alt, locale)}
-                    placeholder="blur"
-                    sizes="(min-width: 1024px) 36rem, 100vw"
-                    className="h-auto w-full bg-white"
-                  />
-                  <figcaption className="border-t px-4 py-3 font-bold">
-                    {pick(item.alt, locale)}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          </Container>
-        </section>
-      ) : null}
 
       <section className="asphalt py-16 lg:py-24">
         <Container className="grid gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">

@@ -51,8 +51,10 @@ ROBOTS = [
         'slug': 'momo',
         'number': 2,
         'name': 'Momo',
-        'image': 'momo-monitor.webp',
-        'colour': '#f2b705',
+        'image': 'momo.webp',
+        # A photo with its own backdrop: it fills the frame instead of sitting on white.
+        'scene': True,
+        'colour': '#22b3a3',
         'tagline': {
             'id': 'Robot modular yang bisa dirakit ulang jadi apa saja',
             'en': 'A modular robot you can rebuild into anything',
@@ -126,7 +128,7 @@ def site_card(locale: str) -> str:
         slots.append(f"""<div class="slot">
   <div class="plate" style="width:64px;height:64px;font-size:26px;position:absolute;top:-30px;left:16px;z-index:2"><span class="number">{robot['number']:02d}</span></div>
   <div class="card" style="border-bottom:8px solid {robot['colour']}">
-    <div style="height:132px;background:#fff url({image}) center/contain no-repeat"></div>
+    <div style="height:132px;background:#fff url({image}) center/{'cover' if robot.get('scene') else 'contain'} no-repeat"></div>
     <p class="number" style="color:#191b20;font-size:38px;padding:10px 14px 14px;border-top:1px solid #dadde3">{robot['name']}</p>
   </div></div>""")
     for robot in IN_DEVELOPMENT:
@@ -150,7 +152,7 @@ def site_card(locale: str) -> str:
 .ghost {{ background: transparent; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; padding: 18px 20px; }}
 </style></head><body>
 <div style="position:absolute;left:64px;top:56px">{wordmark('#ffffff')}</div>
-<h1 class="display" style="position:absolute;left:64px;top:152px;font-size:64px;white-space:nowrap">{text['tagline']}</h1>
+<h1 class="display" style="position:absolute;left:64px;top:152px;font-size:58px;white-space:nowrap">{text['tagline']}</h1>
 <p style="position:absolute;left:64px;top:232px;width:620px;font-size:28px;line-height:1.4;color:rgb(255 255 255 / .75)">{text['promise']}</p>
 <div class="grid">{''.join(slots)}</div>
 </body></html>"""
@@ -164,7 +166,7 @@ def robot_card(robot: dict, locale: str) -> str:
         for index, chip in enumerate(robot['chips'][locale])
     )
     return f"""<!doctype html><html><head>{head()}<style>.wordmark {{ height: 52px; }}</style></head><body>
-<div style="position:absolute;left:0;top:0;width:600px;height:630px;background:#fff url({image}) center/82% no-repeat;border-bottom:12px solid {robot['colour']}"></div>
+<div style="position:absolute;left:0;top:0;width:600px;height:630px;background:{'#cdd1d6' if robot.get('scene') else '#fff'} url({image}) center/{'contain' if robot.get('scene') else '82%'} no-repeat;border-bottom:12px solid {robot['colour']}"></div>
 <div style="position:absolute;left:660px;top:62px;display:flex;align-items:center;gap:24px">
   <div class="plate" style="width:92px;height:92px;font-size:38px;border-color:#fff"><span class="number">{robot['number']:02d}</span></div>
   <p class="number" style="font-size:84px">{robot['name']}</p>

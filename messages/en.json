@@ -143,10 +143,6 @@
     "abilities": "What {robot} can do",
     "programming": "How you program it",
     "competition": "For competitions",
-    "momo": {
-      "title": "One robot, four builds",
-      "intro": "Momo’s modules rebuild into a line follower, an obstacle avoider, a sound-controlled robot, or a monitoring station."
-    },
     "learn": {
       "title": "{robot}’s learning path",
       "path": "Open the learning path",
