@@ -13,6 +13,7 @@ import { RaceNumber } from '@dctedu/ui/brand/race-number';
 import { cn } from '@dctedu/ui/lib/utils';
 import { Check } from 'lucide-react';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
 import { BuyBox } from '@/components/cart/buy-box';
@@ -23,6 +24,7 @@ import { AvailabilityBadge, productPrice } from '@/components/ui/price';
 import { TextLink } from '@/components/ui/text-link';
 import { Link } from '@/i18n/navigation';
 import { contactHref } from '@/lib/contact';
+import { productImages } from '@/lib/images';
 import { marketplaceLinks } from '@/lib/links';
 import { localeFromParams, resolveLocale } from '@/lib/locale';
 import { pageMetadata } from '@/lib/metadata';
@@ -86,6 +88,7 @@ export default async function ProductPage({ params }: Props) {
   const [t, tp] = await Promise.all([getTranslations('Product'), getTranslations('Price')]);
   const name = pick(product.name, locale);
   const kind = pick(productKindLabels[product.kind], locale);
+  const image = productImages[product.slug];
   const fits = product.fits
     .map((slug) => getRobot(slug))
     .filter((robot): robot is Robot => !!robot);
@@ -108,9 +111,30 @@ export default async function ProductPage({ params }: Props) {
             </span>
           </nav>
           <div className="mt-6 grid gap-10 lg:grid-cols-[minmax(0,6fr)_minmax(0,6fr)] lg:gap-14">
-            <div className="asphalt relative grid aspect-[4/3] place-items-center self-start overflow-hidden rounded-xl">
-              <ProductIcon icon={product.icon} className="size-52 bg-transparent sm:size-72" />
-              <span className="absolute top-5 left-5 rounded-full bg-white/10 px-3 py-1 text-sm font-bold text-white">
+            <div
+              className={cn(
+                'relative grid aspect-[4/3] place-items-center self-start overflow-hidden rounded-xl',
+                image ? 'bg-surface-muted border' : 'asphalt',
+              )}
+            >
+              {image ? (
+                <Image
+                  src={image.src}
+                  alt={pick(image.alt, locale)}
+                  priority
+                  placeholder="blur"
+                  sizes="(min-width: 1024px) 36rem, 100vw"
+                  className="h-auto w-[88%] shadow-md"
+                />
+              ) : (
+                <ProductIcon icon={product.icon} className="size-52 bg-transparent sm:size-72" />
+              )}
+              <span
+                className={cn(
+                  'absolute top-5 left-5 rounded-full px-3 py-1 text-sm font-bold',
+                  image ? 'bg-ink text-ink-foreground' : 'bg-white/10 text-white',
+                )}
+              >
                 {kind}
               </span>
               <span aria-hidden className="absolute inset-x-0 bottom-0 flex h-2.5">

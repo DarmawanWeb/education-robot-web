@@ -112,7 +112,10 @@ typecheck and `src/messages.test.ts` fails when the two files differ.
 
 ## Images and social cards
 
-Robot photos are static imports with blur placeholders; `imageFit()` keeps product shots on white
+Products show their icon, or a picture when `productImages` in `lib/images.ts` has one: the arena
+banners use previews of their print files (`src/assets/products/`, rendered from the simulator's
+`print/*.pdf` with `pdftoppm -png -scale-to-x 1600`). Robot photos are static imports with blur
+placeholders; `imageFit()` keeps product shots on white
 and lets photos with their own backdrop (Momo's) fill the frame. `pageMetadata()` writes the
 canonical URL, hreflang alternates, and the social card `/og/<site|robot>-<locale>.jpg` from
 `public/og`. `scripts/social-cards.py` draws those cards with the app's own fonts,
