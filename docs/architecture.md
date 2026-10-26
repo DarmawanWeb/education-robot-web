@@ -1,9 +1,8 @@
-# Architecture
+# Store
 
-The web app is the store for Taksu's education robots and the home of every robot's learning
-path. It is a Next.js app that lives at `apps/edu` in the
-[TaksuTech](https://github.com/DarmawanWeb/TaksuTech) workspace and reads all of its
-product facts from `@dctedu/catalog`.
+The store sells DCTEdu's education robots and is the home of every robot's learning path. It is
+the Next.js app in `apps/store` and reads all of its product facts from `@dctedu/catalog`
+(`packages/catalog`).
 
 ## Stack
 
@@ -16,8 +15,8 @@ product facts from `@dctedu/catalog`.
 | Fonts | Anybody (headlines, race numbers) and Atkinson Hyperlegible Next (text), self-hosted |
 | Tests | Vitest for messages, cart lines, and order and quote messages |
 
-The build tracing root is the workspace root (`next.config.ts`), so the standalone output carries
-the shared packages and `docker/Dockerfile` in the workspace can copy it as is.
+The build tracing root is the repository root (`next.config.ts`), so the standalone output carries
+the shared packages and `docker/Dockerfile` can copy it as is.
 
 ## Routes
 
@@ -27,25 +26,28 @@ localized not-found page.
 
 | Path | Page |
 |---|---|
-| `/` | Home: starting grid, age ruler, what comes with a robot, Drop band, add-ons, how to buy, business teaser, questions |
-| `/robot` | Catalogue with the goal filter (client component over server-rendered rows) |
-| `/robot/<slug>` | Robot page: packages, buy box, abilities, Momo's four builds, learning path preview, box contents, specs, parts, add-ons, bulk call to action |
+| `/` | Home: the starting grid (robots, robots in development, the next Drop), what comes with a robot, add-ons, bulk and OEM, questions |
+| `/robot` | Catalogue with the goal filter (client component over server-rendered rows), then the robots in development |
+| `/robot/<slug>` | Robot page: packages, buy box, abilities, learning path preview, box contents, specs, parts, add-ons, bulk call to action. A robot in development gets only its number, its name, and "in development" |
 | `/drop` | The next Drop, how Drops work, the number series |
-| `/aksesori`, `/aksesori/<slug>` | Accessories by kind; a product page with what is in the pack and which robots it fits |
-| `/keranjang` | Cart and delivery details; not indexed |
-| `/belajar` | The three parts of a step, a path per robot, the simulator, the guides |
-| `/belajar/<robot>` | A robot's learning path: steps, simulator missions, guides, videos |
-| `/belajar/panduan/<slug>` | One guide, with where it sits on the learning paths |
-| `/bisnis` | Bulk orders, OEM at three depths, software under your brand, the process, a quote form, questions |
-| `/bantuan` | How to buy, questions, contact, guides |
+| `/accessories`, `/accessories/<slug>` | Accessories by kind; a product page with what is in the pack and which robots it fits |
+| `/cart` | Cart and delivery details; not indexed |
+| `/learn` | The three parts of a step, a path per robot, the simulator, the guides |
+| `/learn/<robot>` | A robot's learning path: steps, simulator missions, guides, videos |
+| `/learn/guides/<slug>` | One guide, with where it sits on the learning paths |
+| `/business` | Bulk orders, OEM at three depths, software under your brand, the process, a quote form, questions |
+| `/help` | How to buy, questions, contact, guides |
 | `/sitemap.xml`, `/robots.txt` | Every public page in both languages; the cart is left out |
 
-The first education site (v1.0.0) ran on the same host. `next.config.ts` sends its addresses to
-their pages here with permanent redirects that keep the locale: the school levels become robots
-(`/kits/sd`, `smp`, `sma` go to `/robot/ciko`, `momo`, `garu`, and `/curriculum/<level>` to
-`/belajar/<robot>`), the curriculum and guides go to `/belajar` and the renamed guides,
-`/upgrades` to `/aksesori`, `/schools` to `/bisnis`, `/contact` to `/bantuan`, `/simulator` to the
-simulator, and the Lab, which is gone, to the home page.
+Folder and path names are English; the page text stays in both languages. `next.config.ts` sends
+older addresses to their pages here with permanent redirects that keep the locale:
+
+- the Indonesian paths the store used before (`/belajar`, `/belajar/panduan/<slug>`,
+  `/aksesori`, `/bisnis`, `/bantuan`, `/keranjang`);
+- the first education site: the school levels become robots (`/kits/sd`, `smp`, `sma` go to
+  `/robot/ciko`, `momo`, `garu`, and `/curriculum/<level>` to the learning path), the curriculum
+  and guides go to `/learn` and the renamed guides, `/upgrades` to `/accessories`, `/schools` to
+  `/business`, `/contact` to `/help`, `/simulator` to the simulator, and the Lab to the home page.
 
 ## Data
 
@@ -54,8 +56,8 @@ page types a price, an age, or a robot name.
 
 | Catalogue file | Used for |
 |---|---|
-| `brand.ts` | Name, tagline, meaning, contact email |
-| `robots.ts` | Robots, numbers, ages, levels, goals, abilities, specs, prices, packages, availability |
+| `brand.ts` | Name, tagline, promise, story, contact email |
+| `robots.ts` | Robots on sale (numbers, ages, levels, goals, abilities, specs, prices, availability) and robots in development (number and name only) |
 | `shop.ts` | Accessories and upgrade packs, availability labels, rupiah formatting, marketplaces |
 | `drops.ts` | Drops and how they work; the next free number |
 | `learn.ts`, `guides.ts`, `sim-missions.ts` | Learning paths, guides, and the simulator missions they open |
@@ -68,7 +70,7 @@ the page offers "let me know", which opens a prefilled WhatsApp message (or an e
 
 ```mermaid
 flowchart LR
-    A[Add to cart] --> L[(localStorage<br/>taksu-cart)]
+    A[Add to cart] --> L[(localStorage<br/>dctedu-cart)]
     L --> V[Cart page]
     V -- resolveLine --> C[@dctedu/catalog<br/>names and prices]
     V -- buildOrder --> M[One message:<br/>items, subtotal, address]
@@ -92,7 +94,7 @@ Nothing a buyer types is stored by the site: it goes straight into the message t
 
 A step either opens a simulator mission or a guide. `simulatorUrl(locale, robot, mission)` builds
 `https://<simulator>/<locale>?robot=ciko&mission=ciko-garis`; the simulator links each mission back
-to `/belajar/<robot>#<step>` here. Videos (`components/learn/step-video.tsx`) show a thumbnail and
+to `/learn/<robot>#<step>` here. Videos (`components/learn/step-video.tsx`) show a thumbnail and
 load the youtube-nocookie.com player only after a click.
 
 ## Languages
@@ -104,8 +106,10 @@ typecheck and `src/messages.test.ts` fails when the two files differ.
 ## Images and social cards
 
 Robot photos are static imports with blur placeholders; `imageFit()` keeps product shots on white
-and lets scene renders (Garu) fill the frame. `pageMetadata()` writes the canonical URL, hreflang
-alternates, and the social card `/og/<site|robot>-<locale>.jpg` from `public/og`.
+and lets photos with their own backdrop (Momo's) fill the frame. `pageMetadata()` writes the
+canonical URL, hreflang alternates, and the social card `/og/<site|robot>-<locale>.jpg` from
+`public/og`. `scripts/social-cards.py` draws those cards with the app's own fonts,
+photos, and wordmark; run it again after a robot's name, tagline, or photo changes.
 
 ## Configuration
 
@@ -113,8 +117,8 @@ Public settings are inlined at build time (`lib/site-config.ts`):
 
 | Variable | Purpose |
 |---|---|
-| `NEXT_PUBLIC_WEB_URL` | This site's address: canonical links, sitemap, social cards |
-| `NEXT_PUBLIC_SIM_URL` | The simulator's address, for every mission link |
+| `NEXT_PUBLIC_STORE_URL` | This site's address: canonical links, sitemap, social cards |
+| `NEXT_PUBLIC_SIMULATOR_URL` | The simulator's address, for every mission link |
 | `NEXT_PUBLIC_WHATSAPP_NUMBER` | Where orders, quotes, and questions go; empty means email only |
 | `NEXT_PUBLIC_EMAIL` | Email orders; defaults to the address in `brand.ts` |
 | `NEXT_PUBLIC_TOKOPEDIA_URL`, `NEXT_PUBLIC_SHOPEE_URL` | Store pages; their buttons hide while empty |
