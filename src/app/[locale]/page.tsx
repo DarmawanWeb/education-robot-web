@@ -4,6 +4,7 @@ import { getTranslations } from 'next-intl/server';
 import { ProductCard } from '@/components/products/product-card';
 import { StartingGrid } from '@/components/robots/starting-grid';
 import { BusinessTeaser } from '@/components/shared/business-teaser';
+import { ClientList } from '@/components/shared/client-list';
 import { ComesWith } from '@/components/shared/comes-with';
 import { FaqList } from '@/components/shared/faq-list';
 import { Container } from '@/components/ui/container';
@@ -55,6 +56,16 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       <BusinessTeaser locale={locale} />
+
+      <section className="pb-20 lg:pb-28">
+        <Container>
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <h2 className="type-display text-[clamp(1.75rem,3vw,2.25rem)]">{t('clients.title')}</h2>
+            <TextLink href="/business#clients">{t('clients.more')}</TextLink>
+          </div>
+          <ClientList locale={locale} className="mt-6" />
+        </Container>
+      </section>
 
       <section className="py-20 lg:py-28">
         <Container className="grid gap-10 lg:grid-cols-[minmax(0,4fr)_minmax(0,7fr)] lg:gap-16">

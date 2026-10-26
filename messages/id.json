@@ -120,6 +120,10 @@
     "faq": {
       "title": "Yang sering ditanyakan",
       "all": "Semua pertanyaan"
+    },
+    "clients": {
+      "title": "Klien kami",
+      "more": "Lihat yang kami buat untuk mereka"
     }
   },
   "Catalog": {
@@ -427,7 +431,11 @@
       "message": "Pesan: {value}",
       "subject": "Permintaan penawaran dari {name}"
     },
-    "faq": "Pertanyaan bisnis"
+    "faq": "Pertanyaan bisnis",
+    "clients": {
+      "title": "Klien kami",
+      "intro": "Perusahaan yang robotnya kami rancang dan buat."
+    }
   },
   "Help": {
     "title": "Bantuan",

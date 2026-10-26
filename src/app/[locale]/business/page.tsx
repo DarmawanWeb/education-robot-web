@@ -26,6 +26,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { QuoteForm } from '@/components/business/quote-form';
 import { ProductCard } from '@/components/products/product-card';
+import { ClientList } from '@/components/shared/client-list';
 import { FaqList } from '@/components/shared/faq-list';
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
@@ -56,6 +57,7 @@ export default async function BusinessPage({ params }: Props) {
   const sections = [
     { id: 'bulk', label: t('bulk.title') },
     { id: 'oem', label: t('oem.nav') },
+    { id: 'clients', label: t('clients.title') },
     { id: 'inquiry', label: t('form.title') },
   ];
 
@@ -231,7 +233,14 @@ export default async function BusinessPage({ params }: Props) {
         </Container>
       </section>
 
-      <section id="inquiry" className="scroll-mt-16 py-16 lg:py-24">
+      <section id="clients" className="scroll-mt-16 py-16 lg:py-24">
+        <Container>
+          <SectionHeading title={t('clients.title')} intro={t('clients.intro')} />
+          <ClientList locale={locale} className="mt-10" />
+        </Container>
+      </section>
+
+      <section id="inquiry" className="scroll-mt-16 border-t py-16 lg:py-24">
         <Container className="grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
           <div>
             <SectionHeading title={t('form.title')} intro={t('form.intro')} />

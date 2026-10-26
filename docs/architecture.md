@@ -26,7 +26,7 @@ localized not-found page.
 
 | Path | Page |
 |---|---|
-| `/` | Home: the starting grid (robots, robots in development, the next Drop), what comes with a robot, add-ons, bulk and OEM, questions |
+| `/` | Home: the starting grid (robots, robots in development, the next Drop), what comes with a robot, add-ons, bulk and OEM, our clients, questions |
 | `/robot` | Catalogue with the goal filter (client component over server-rendered rows), then the robots in development |
 | `/robot/<slug>` | Robot page: packages, buy box, abilities, learning path preview, box contents, specs, parts, add-ons, bulk call to action. A robot in development gets only its number, its name, and "in development" |
 | `/drop` | The next Drop, how Drops work, the number series |
@@ -35,7 +35,7 @@ localized not-found page.
 | `/learn` | The three parts of a step, a path per robot, the simulator, the guides |
 | `/learn/<robot>` | A robot's learning path: steps, simulator missions, guides, videos |
 | `/learn/guides/<slug>` | One guide, with where it sits on the learning paths |
-| `/business` | Bulk orders, OEM at three depths, software under your brand, the process, a quote form, questions |
+| `/business` | Bulk orders, OEM at three depths, software under your brand, the process, our clients, a quote form, questions |
 | `/help` | How to buy, questions, contact, guides |
 | `/sitemap.xml`, `/robots.txt` | Every public page in both languages; the cart is left out |
 
@@ -59,6 +59,7 @@ page types a price, an age, or a robot name.
 | `brand.ts` | Name, tagline, promise, story, contact email |
 | `robots.ts` | Robots on sale (numbers, ages, levels, goals, abilities, specs, prices, availability, exclusive seller) and robots in development (number and name only) |
 | `sellers.ts` | Companies that hold the exclusive right to sell some robots |
+| `clients.ts` | Companies we design and build for, shown on the home and business pages |
 | `shop.ts` | Accessories and upgrade packs, availability labels, rupiah formatting, marketplaces |
 | `drops.ts` | Drops and how they work; the next free number |
 | `learn.ts`, `guides.ts`, `sim-missions.ts` | Learning paths, guides, and the simulator missions they open |

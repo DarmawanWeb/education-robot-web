@@ -120,6 +120,10 @@
     "faq": {
       "title": "Common questions",
       "all": "All questions"
+    },
+    "clients": {
+      "title": "Our clients",
+      "more": "See what we make for them"
     }
   },
   "Catalog": {
@@ -427,7 +431,11 @@
       "message": "Message: {value}",
       "subject": "Quote request from {name}"
     },
-    "faq": "Business questions"
+    "faq": "Business questions",
+    "clients": {
+      "title": "Our clients",
+      "intro": "Companies we design and build robots for."
+    }
   },
   "Help": {
     "title": "Help",
