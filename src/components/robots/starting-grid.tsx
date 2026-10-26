@@ -1,7 +1,7 @@
-import { drops, type Locale, pick, type Robot, robots } from '@taksu/catalog';
-import { RaceNumber } from '@taksu/edu-ui/brand/race-number';
-import { Button } from '@taksu/edu-ui/components/button';
-import { cn } from '@taksu/edu-ui/lib/utils';
+import { drops, type Locale, pick, type Robot, robots } from '@dctedu/catalog';
+import { RaceNumber } from '@dctedu/ui/brand/race-number';
+import { Button } from '@dctedu/ui/components/button';
+import { cn } from '@dctedu/ui/lib/utils';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';

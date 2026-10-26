@@ -1,5 +1,5 @@
-import { type Guide, getRobot, type Locale, pick } from '@taksu/catalog';
-import { cn } from '@taksu/edu-ui/lib/utils';
+import { type Guide, getRobot, type Locale, pick } from '@dctedu/catalog';
+import { cn } from '@dctedu/ui/lib/utils';
 import { Clock } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';

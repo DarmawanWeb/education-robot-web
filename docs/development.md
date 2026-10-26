@@ -3,8 +3,8 @@
 ## Setup
 
 The web app builds inside the [TaksuTech](https://github.com/DarmawanWeb/TaksuTech)
-workspace, which holds the lockfile and the shared packages (`@taksu/catalog`, `@taksu/edu-ui`,
-`@taksu/typescript-config`).
+workspace, which holds the lockfile and the shared packages (`@dctedu/catalog`, `@dctedu/ui`,
+`@dctedu/typescript-config`).
 
 ```bash
 git clone --recursive https://github.com/DarmawanWeb/TaksuTech.git && cd TaksuTech
@@ -20,7 +20,7 @@ it empty they fall back to email.
 
 ## Scripts
 
-Run from the workspace root (`pnpm --filter @taksu/edu <script>`) or from `apps/edu`.
+Run from the workspace root (`pnpm --filter @dctedu/store <script>`) or from `apps/edu`.
 
 | Script | Does |
 |---|---|
@@ -51,7 +51,7 @@ Indonesian first, then translate.
 
 **A robot or a product.** Change `packages/catalog` in the workspace, not this app. A new robot
 also needs its photo in `src/assets/robots/` with an entry in `src/lib/images.ts`, its colour in
-`src/lib/robot-style.ts` (and `taksu.css`), and social cards in `public/og/`.
+`src/lib/robot-style.ts` (and `theme.css`), and social cards in `public/og/`.
 
 **Something orderable.** It goes on sale when its availability is not `soon` and it has a price.
 The cart prices lines from the catalogue each time, so a price change needs no cart migration.
@@ -63,7 +63,7 @@ release.
 ## Design rules
 
 - Tokens, not hex codes: `bg-primary`, `bg-ink`, `asphalt`, `bg-robot-ciko`, `type-display`,
-  `type-number` from `@taksu/edu-ui/taksu.css`. Raw colours only inside illustrations.
+  `type-number` from `@dctedu/ui/theme.css`. Raw colours only inside illustrations.
 - Keyboard focus stays visible; motion respects `prefers-reduced-motion`; every image has an alt
   text in both languages or `alt=""` when it is decorative; check 360 px wide.
 - Honest copy: robots, not classes. Anything in development says so.
@@ -72,5 +72,5 @@ release.
 
 [ci.yml](../.github/workflows/ci.yml) checks out the TaksuTech workspace with its
 submodules, replaces `apps/edu` with the commit under test, installs, and runs Biome, the
-typecheck, the tests, and the build for `@taksu/edu`. On pull requests it also runs commitlint.
+typecheck, the tests, and the build for `@dctedu/store`. On pull requests it also runs commitlint.
 Images are published by the workspace repository.

@@ -3,16 +3,16 @@
 The web app is the store for Taksu's education robots and the home of every robot's learning
 path. It is a Next.js app that lives at `apps/edu` in the
 [TaksuTech](https://github.com/DarmawanWeb/TaksuTech) workspace and reads all of its
-product facts from `@taksu/catalog`.
+product facts from `@dctedu/catalog`.
 
 ## Stack
 
 | Part | Choice |
 |---|---|
 | Framework | Next.js 16, App Router, Turbopack, `output: 'standalone'` |
-| UI | React 19, Tailwind CSS 4, the theme and components from `@taksu/edu-ui` |
+| UI | React 19, Tailwind CSS 4, the theme and components from `@dctedu/ui` |
 | Languages | next-intl 4, `/id` (default) and `/en`, prefix always present |
-| Data | `@taksu/catalog`: TypeScript objects, no database and no API |
+| Data | `@dctedu/catalog`: TypeScript objects, no database and no API |
 | Fonts | Anybody (headlines, race numbers) and Atkinson Hyperlegible Next (text), self-hosted |
 | Tests | Vitest for messages, cart lines, and order and quote messages |
 
@@ -49,7 +49,7 @@ simulator, and the Lab, which is gone, to the home page.
 
 ## Data
 
-`@taksu/catalog` is the single source of truth. Pages pick the locale's string with `pick()`; no
+`@dctedu/catalog` is the single source of truth. Pages pick the locale's string with `pick()`; no
 page types a price, an age, or a robot name.
 
 | Catalogue file | Used for |
@@ -70,7 +70,7 @@ the page offers "let me know", which opens a prefilled WhatsApp message (or an e
 flowchart LR
     A[Add to cart] --> L[(localStorage<br/>taksu-cart)]
     L --> V[Cart page]
-    V -- resolveLine --> C[@taksu/catalog<br/>names and prices]
+    V -- resolveLine --> C[@dctedu/catalog<br/>names and prices]
     V -- buildOrder --> M[One message:<br/>items, subtotal, address]
     M --> W[wa.me]
     M --> E[mailto]

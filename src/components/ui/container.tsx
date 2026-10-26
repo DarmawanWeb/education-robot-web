@@ -1,4 +1,4 @@
-import { cn } from '@taksu/edu-ui/lib/utils';
+import { cn } from '@dctedu/ui/lib/utils';
 import type * as React from 'react';
 
 /** The page column: 76rem wide with a 16px gutter on phones. */

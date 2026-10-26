@@ -1,10 +1,10 @@
 'use client';
 
-import { Button } from '@taksu/edu-ui/components/button';
-import { Input } from '@taksu/edu-ui/components/input';
-import { Label } from '@taksu/edu-ui/components/label';
-import { Textarea } from '@taksu/edu-ui/components/textarea';
-import { cn } from '@taksu/edu-ui/lib/utils';
+import { Button } from '@dctedu/ui/components/button';
+import { Input } from '@dctedu/ui/components/input';
+import { Label } from '@dctedu/ui/components/label';
+import { Textarea } from '@dctedu/ui/components/textarea';
+import { cn } from '@dctedu/ui/lib/utils';
 import { CheckCircle2, Mail, MessageCircle } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { type FormEvent, useEffect, useId, useState } from 'react';

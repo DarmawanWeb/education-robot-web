@@ -1,5 +1,5 @@
-import { type Locale, levelLabels, pick, type Robot } from '@taksu/catalog';
-import { cn } from '@taksu/edu-ui/lib/utils';
+import { type Locale, levelLabels, pick, type Robot } from '@dctedu/catalog';
+import { cn } from '@dctedu/ui/lib/utils';
 import { getTranslations } from 'next-intl/server';
 
 /** Age and level, the two things a buyer checks first. */

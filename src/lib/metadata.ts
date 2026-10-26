@@ -1,4 +1,4 @@
-import type { Locale } from '@taksu/catalog';
+import type { Locale } from '@dctedu/catalog';
 import type { Metadata } from 'next';
 import { routing } from '@/i18n/routing';
 import { siteConfig } from './site-config';

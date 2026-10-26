@@ -1,6 +1,6 @@
 'use client';
 
-import { cn } from '@taksu/edu-ui/lib/utils';
+import { cn } from '@dctedu/ui/lib/utils';
 import { Children, type ReactNode, useState } from 'react';
 
 /**

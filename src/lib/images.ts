@@ -1,4 +1,4 @@
-import type { Localized, RobotSlug } from '@taksu/catalog';
+import type { Localized, RobotSlug } from '@dctedu/catalog';
 import type { StaticImageData } from 'next/image';
 import ciko from '@/assets/robots/ciko.webp';
 import garu from '@/assets/robots/garu.webp';

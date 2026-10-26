@@ -1,4 +1,4 @@
-import type { Locale } from '@taksu/catalog';
+import type { Locale } from '@dctedu/catalog';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import simEn from '@/assets/sim/sim-en.webp';

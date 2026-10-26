@@ -1,5 +1,5 @@
-import { getGuide, getRobot, guides, learnPaths, pick } from '@taksu/catalog';
-import { cn } from '@taksu/edu-ui/lib/utils';
+import { getGuide, getRobot, guides, learnPaths, pick } from '@dctedu/catalog';
+import { cn } from '@dctedu/ui/lib/utils';
 import { Clock } from 'lucide-react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';

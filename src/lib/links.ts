@@ -4,7 +4,7 @@ import {
   type MarketplaceLinks,
   marketplaces,
   type SimRobot,
-} from '@taksu/catalog';
+} from '@dctedu/catalog';
 import { siteConfig } from './site-config';
 
 const trimSlash = (url: string) => url.replace(/\/+$/, '');

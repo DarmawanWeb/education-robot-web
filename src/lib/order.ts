@@ -1,4 +1,4 @@
-import { formatRupiah, type Locale, pick } from '@taksu/catalog';
+import { formatRupiah, type Locale, pick } from '@dctedu/catalog';
 import { type CartItem, cartTotal } from './cart-items';
 
 /** What the buyer types on the cart page. Nothing here is stored; it only goes into the message. */

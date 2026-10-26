@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, type ButtonProps } from '@taksu/edu-ui/components/button';
+import { Button, type ButtonProps } from '@dctedu/ui/components/button';
 import { Check, ShoppingBag } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';

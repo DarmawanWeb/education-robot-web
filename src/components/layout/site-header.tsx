@@ -1,5 +1,5 @@
-import type { Locale } from '@taksu/catalog';
-import { Wordmark } from '@taksu/edu-ui/brand/wordmark';
+import type { Locale } from '@dctedu/catalog';
+import { Wordmark } from '@dctedu/ui/brand/wordmark';
 import { Gamepad2 } from 'lucide-react';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { Suspense } from 'react';

@@ -1,7 +1,7 @@
-import { getGuide, getRobot, learnPath, learnPaths, pick, robots, stepTitle } from '@taksu/catalog';
-import { RaceNumber } from '@taksu/edu-ui/brand/race-number';
-import { Button } from '@taksu/edu-ui/components/button';
-import { cn } from '@taksu/edu-ui/lib/utils';
+import { getGuide, getRobot, learnPath, learnPaths, pick, robots, stepTitle } from '@dctedu/catalog';
+import { RaceNumber } from '@dctedu/ui/brand/race-number';
+import { Button } from '@dctedu/ui/components/button';
+import { cn } from '@dctedu/ui/lib/utils';
 import { BookOpen, Gamepad2 } from 'lucide-react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';

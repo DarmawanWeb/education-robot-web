@@ -1,4 +1,4 @@
-import { cn } from '@taksu/edu-ui/lib/utils';
+import { cn } from '@dctedu/ui/lib/utils';
 import { ArrowRight } from 'lucide-react';
 import type { ComponentProps } from 'react';
 import { Link } from '@/i18n/navigation';

@@ -1,4 +1,4 @@
-import { brand } from '@taksu/catalog';
+import { brand } from '@dctedu/catalog';
 
 /** Public configuration, inlined at build time from NEXT_PUBLIC_* variables. */
 export const siteConfig = {

@@ -1,6 +1,6 @@
 'use client';
 
-import { cn } from '@taksu/edu-ui/lib/utils';
+import { cn } from '@dctedu/ui/lib/utils';
 import { Link, usePathname } from '@/i18n/navigation';
 
 export interface NavItem {

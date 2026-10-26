@@ -1,4 +1,4 @@
-import { faq, pick, products } from '@taksu/catalog';
+import { faq, pick, products } from '@dctedu/catalog';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { ProductCard } from '@/components/products/product-card';

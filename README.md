@@ -27,7 +27,7 @@ page for bulk orders and OEM, in Indonesian and English.**
 Part of [Taksu Tech](https://github.com/DarmawanWeb/TaksuTech), which deploys it as `edu`
  next to the [simulator](https://github.com/DarmawanWeb/education-robot-sim). Next.js 16
 (App Router), React 19, Tailwind 4 and next-intl. Every name, price, age, and learning step comes
-from `@taksu/catalog` in the workspace, so this repository builds inside it, as `apps/edu`.
+from `@dctedu/catalog` in the workspace, so this repository builds inside it, as `apps/edu`.
 
 There is no payment on the site. The cart turns an order into one WhatsApp message (or an email),
 and Taksu replies with the total, shipping, and how to pay.
@@ -76,7 +76,7 @@ messages/              id.json and en.json; a test keeps their keys equal
 public/og/             social cards, 1200 x 630
 ```
 
-Colours, type, and the wordmark come from `@taksu/edu-ui` (`taksu.css`): the page is chalk white, dark
+Colours, type, and the wordmark come from `@dctedu/ui` (`theme.css`): the page is chalk white, dark
 bands are asphalt, actions are red, Drops and "coming soon" are signal amber, and each robot owns a
 colour.
 
@@ -93,7 +93,7 @@ colour.
 git clone --recursive https://github.com/DarmawanWeb/TaksuTech.git && cd TaksuTech
 pnpm install                    # the workspace, plus the commit hooks in each submodule
 pnpm dev:edu                    # http://localhost:3003/id
-pnpm --filter @taksu/edu test
+pnpm --filter @dctedu/store test
 ```
 
 Copy `.env.example` to `.env.local` to order through a WhatsApp number. CI

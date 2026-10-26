@@ -1,8 +1,8 @@
 'use client';
 
-import { formatRupiah, type Locale, type Marketplace, marketplaceNames } from '@taksu/catalog';
-import { Button } from '@taksu/edu-ui/components/button';
-import { cn } from '@taksu/edu-ui/lib/utils';
+import { formatRupiah, type Locale, type Marketplace, marketplaceNames } from '@dctedu/catalog';
+import { Button } from '@dctedu/ui/components/button';
+import { cn } from '@dctedu/ui/lib/utils';
 import { MessageCircle } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { useState } from 'react';
