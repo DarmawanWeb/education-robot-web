@@ -99,7 +99,13 @@ export async function SiteFooter() {
         </div>
       </Container>
       <Container className="flex flex-wrap justify-between gap-x-6 gap-y-2 border-t border-white/12 py-6 text-sm text-white/60">
-        <p>{t('copyright', { year: new Date().getFullYear(), brand: brand.name })}</p>
+        <p>
+          {t('copyright', {
+            year: new Date().getFullYear(),
+            brand: brand.name,
+            company: brand.company,
+          })}
+        </p>
         <p>{pick(brand.location, locale)}</p>
       </Container>
     </footer>

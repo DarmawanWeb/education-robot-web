@@ -28,7 +28,7 @@
     "faq": "Questions",
     "email": "Email",
     "whatsappHello": "Hi DCTEdu, I have a question.",
-    "copyright": "© {year} {brand}. All rights reserved."
+    "copyright": "© {year} {company}. {brand} and all its robots. All rights reserved."
   },
   "Price": {
     "soon": "Price soon",

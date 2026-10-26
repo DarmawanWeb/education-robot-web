@@ -28,7 +28,7 @@
     "faq": "Pertanyaan umum",
     "email": "Email",
     "whatsappHello": "Halo DCTEdu, saya mau bertanya.",
-    "copyright": "© {year} {brand}. Semua hak dilindungi."
+    "copyright": "© {year} {company}. {brand} dan semua robotnya. Semua hak dilindungi."
   },
   "Price": {
     "soon": "Harga segera",
