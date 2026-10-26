@@ -46,7 +46,7 @@ const includeIcons = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const locale = await localeFromParams(params);
   const t = await getTranslations({ locale, namespace: 'Business' });
-  return pageMetadata({ locale, path: '/bisnis', title: t('title'), description: t('intro') });
+  return pageMetadata({ locale, path: '/business', title: t('title'), description: t('intro') });
 }
 
 export default async function BusinessPage({ params }: Props) {
@@ -54,9 +54,9 @@ export default async function BusinessPage({ params }: Props) {
   const t = await getTranslations('Business');
   const classroom = products.filter((product) => product.kind === 'sekolah');
   const sections = [
-    { id: 'beli-banyak', label: t('bulk.title') },
+    { id: 'bulk', label: t('bulk.title') },
     { id: 'oem', label: t('oem.nav') },
-    { id: 'tanya', label: t('form.title') },
+    { id: 'inquiry', label: t('form.title') },
   ];
 
   return (
@@ -86,14 +86,14 @@ export default async function BusinessPage({ params }: Props) {
         </Container>
       </section>
 
-      <section id="beli-banyak" className="bg-surface scroll-mt-16 border-y py-16 lg:py-24">
+      <section id="bulk" className="bg-surface scroll-mt-16 border-y py-16 lg:py-24">
         <Container>
           <SectionHeading
             title={t('bulk.title')}
             intro={t('bulk.intro')}
             action={
               <Button asChild size="lg" variant="ink">
-                <a href="#tanya-bulk">{t('bulk.action')}</a>
+                <a href="#inquiry-bulk">{t('bulk.action')}</a>
               </Button>
             }
           />
@@ -226,12 +226,12 @@ export default async function BusinessPage({ params }: Props) {
             </div>
           </div>
           <Button asChild size="lg" variant="light" className="mt-12">
-            <a href="#tanya-oem">{t('oem.action')}</a>
+            <a href="#inquiry-oem">{t('oem.action')}</a>
           </Button>
         </Container>
       </section>
 
-      <section id="tanya" className="scroll-mt-16 py-16 lg:py-24">
+      <section id="inquiry" className="scroll-mt-16 py-16 lg:py-24">
         <Container className="grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
           <div>
             <SectionHeading title={t('form.title')} intro={t('form.intro')} />

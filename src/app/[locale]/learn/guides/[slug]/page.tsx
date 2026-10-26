@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!guide) return {};
   return pageMetadata({
     locale,
-    path: `/belajar/panduan/${guide.slug}`,
+    path: `/learn/guides/${guide.slug}`,
     title: pick(guide.title, locale),
     description: pick(guide.summary, locale),
   });
@@ -51,13 +51,13 @@ export default async function GuidePage({ params }: Props) {
     <article className="pt-8 pb-20 lg:pt-12 lg:pb-28">
       <Container>
         <nav aria-label={t('breadcrumb')} className="text-muted-foreground text-sm font-semibold">
-          <Link href="/belajar" className="hover:text-foreground hover:underline">
+          <Link href="/learn" className="hover:text-foreground hover:underline">
             {t('learn')}
           </Link>
           <span aria-hidden className="mx-2">
             /
           </span>
-          <Link href="/belajar#panduan" className="hover:text-foreground hover:underline">
+          <Link href="/learn#guides" className="hover:text-foreground hover:underline">
             {t('guides')}
           </Link>
           <span aria-hidden className="mx-2">
@@ -134,7 +134,7 @@ export default async function GuidePage({ params }: Props) {
                 <ul className="mt-3 grid gap-2">
                   {placements.map((place) => (
                     <li key={`${place.robot}-${place.step}`}>
-                      <TextLink href={`/belajar/${place.robot}#${place.step}`}>
+                      <TextLink href={`/learn/${place.robot}#${place.step}`}>
                         {t('step', {
                           n: place.n,
                           robot: getRobot(place.robot)?.name ?? place.robot,
@@ -152,7 +152,7 @@ export default async function GuidePage({ params }: Props) {
                   {more.map((entry) => (
                     <li key={entry.slug}>
                       <Link
-                        href={`/belajar/panduan/${entry.slug}`}
+                        href={`/learn/guides/${entry.slug}`}
                         className="font-bold hover:underline hover:decoration-2 hover:underline-offset-4"
                       >
                         {pick(entry.title, locale)}

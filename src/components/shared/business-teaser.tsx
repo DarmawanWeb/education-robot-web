@@ -24,7 +24,7 @@ export async function BusinessTeaser({ locale }: { locale: Locale }) {
           </ul>
           <div className="mt-auto pt-8">
             <Button asChild variant="ink" size="lg">
-              <Link href="/bisnis#beli-banyak">{t('bulk.action')}</Link>
+              <Link href="/business#bulk">{t('bulk.action')}</Link>
             </Button>
           </div>
         </div>
@@ -43,7 +43,7 @@ export async function BusinessTeaser({ locale }: { locale: Locale }) {
             </ul>
             <div className="mt-auto pt-8">
               <Button asChild variant="light" size="lg">
-                <Link href="/bisnis#oem">{t('oem.action')}</Link>
+                <Link href="/business#oem">{t('oem.action')}</Link>
               </Button>
             </div>
           </div>

@@ -38,7 +38,7 @@ export function resolveLine(line: CartLine): CartItem | null {
     name: product.name,
     unitPrice: product.price,
     qty: line.qty,
-    href: `/aksesori/${product.slug}`,
+    href: `/accessories/${product.slug}`,
   };
 }
 

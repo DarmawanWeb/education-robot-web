@@ -94,7 +94,7 @@ function Empty() {
           <Link href="/robot">{t('robots')}</Link>
         </Button>
         <Button asChild size="lg" variant="outline">
-          <Link href="/aksesori">{t('accessories')}</Link>
+          <Link href="/accessories">{t('accessories')}</Link>
         </Button>
       </div>
     </div>
@@ -207,7 +207,7 @@ export function CartView({ stores }: { stores: { id: Marketplace; url: string }[
 
         <p className="mt-5">
           <span className="text-muted-foreground">{t('bulk')} </span>
-          <TextLink href="/bisnis#beli-banyak">{t('bulkLink')}</TextLink>
+          <TextLink href="/business#bulk">{t('bulkLink')}</TextLink>
         </p>
         {stores.length > 0 ? (
           <p className="mt-4 flex flex-wrap items-center gap-2">

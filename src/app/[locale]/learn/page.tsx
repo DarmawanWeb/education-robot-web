@@ -32,7 +32,7 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const locale = await localeFromParams(params);
   const t = await getTranslations({ locale, namespace: 'Learn' });
-  return pageMetadata({ locale, path: '/belajar', title: t('title'), description: t('meta') });
+  return pageMetadata({ locale, path: '/learn', title: t('title'), description: t('meta') });
 }
 
 const PARTS = [
@@ -77,7 +77,7 @@ export default async function LearnPage({ params }: Props) {
         </Container>
       </section>
 
-      <section id="jalur" className="bg-surface scroll-mt-16 border-y py-16 lg:py-24">
+      <section id="paths" className="bg-surface scroll-mt-16 border-y py-16 lg:py-24">
         <Container>
           <SectionHeading title={t('paths')} />
           <ul className="mt-10 grid gap-5 lg:grid-cols-3">
@@ -117,7 +117,7 @@ export default async function LearnPage({ params }: Props) {
                       )}
                       <div className="mt-auto pt-7">
                         <Button asChild size="lg" variant={full ? 'ink' : 'outline'}>
-                          <Link href={`/belajar/${robot.slug}`}>
+                          <Link href={`/learn/${robot.slug}`}>
                             {t('start', { robot: robot.name })}
                           </Link>
                         </Button>
@@ -155,7 +155,7 @@ export default async function LearnPage({ params }: Props) {
         </Container>
       </section>
 
-      <section id="panduan" className="scroll-mt-16 py-16 lg:py-24">
+      <section id="guides" className="scroll-mt-16 py-16 lg:py-24">
         <Container>
           <SectionHeading title={t('guides.title')} intro={t('guides.intro')} />
           {(['owner', 'instructor'] as const).map((audience) => {

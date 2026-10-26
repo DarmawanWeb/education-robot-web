@@ -1,5 +1,6 @@
 import {
   getRobot,
+  getRobotInDevelopment,
   guidesFor,
   type Locale,
   learnPath,
@@ -7,6 +8,7 @@ import {
   productsFor,
   type Robot,
   robots,
+  robotsInDevelopment,
   stepTitle,
 } from '@dctedu/catalog';
 import { RaceNumber } from '@dctedu/ui/brand/race-number';
@@ -20,6 +22,7 @@ import { getTranslations } from 'next-intl/server';
 import { BuyBox } from '@/components/cart/buy-box';
 import { StepNumber } from '@/components/learn/step-number';
 import { ProductCard } from '@/components/products/product-card';
+import { DevelopmentPage } from '@/components/robots/in-development';
 import { RobotChips } from '@/components/robots/robot-chips';
 import { Container } from '@/components/ui/container';
 import { AvailabilityBadge, RobotPrice } from '@/components/ui/price';
@@ -36,13 +39,24 @@ import { robotStyle } from '@/lib/robot-style';
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
 export function generateStaticParams() {
-  return robots.map((robot) => ({ slug: robot.slug }));
+  return [...robots, ...robotsInDevelopment].map((robot) => ({ slug: robot.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const locale = await localeFromParams(params);
-  const robot = getRobot((await params).slug);
-  if (!robot) return {};
+  const { slug } = await params;
+  const robot = getRobot(slug);
+  if (!robot) {
+    const upcoming = getRobotInDevelopment(slug);
+    if (!upcoming) return {};
+    const t = await getTranslations({ locale, namespace: 'InDevelopment' });
+    return pageMetadata({
+      locale,
+      path: `/robot/${upcoming.slug}`,
+      title: upcoming.name,
+      description: t('meta', { robot: upcoming.name }),
+    });
+  }
   return pageMetadata({
     locale,
     path: `/robot/${robot.slug}`,
@@ -136,8 +150,13 @@ async function Hero({ robot, locale }: { robot: Robot; locale: Locale }) {
 
 export default async function RobotPage({ params }: Props) {
   const locale = await resolveLocale(params);
-  const robot = getRobot((await params).slug);
-  if (!robot) notFound();
+  const { slug } = await params;
+  const robot = getRobot(slug);
+  if (!robot) {
+    const upcoming = getRobotInDevelopment(slug);
+    if (upcoming) return <DevelopmentPage robot={upcoming} />;
+    notFound();
+  }
   const t = await getTranslations('RobotPage');
   const path = learnPath(robot.slug);
   const steps = path?.steps ?? [];
@@ -233,7 +252,7 @@ export default async function RobotPage({ params }: Props) {
             />
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" variant="light">
-                <Link href={`/belajar/${robot.slug}`}>{t('learn.path')}</Link>
+                <Link href={`/learn/${robot.slug}`}>{t('learn.path')}</Link>
               </Button>
               {robot.sim ? (
                 <Button asChild size="lg" variant="lightOutline">
@@ -249,7 +268,7 @@ export default async function RobotPage({ params }: Props) {
             {steps.slice(0, 6).map((step, index) => (
               <li key={step.id}>
                 <Link
-                  href={`/belajar/${robot.slug}#${step.id}`}
+                  href={`/learn/${robot.slug}#${step.id}`}
                   className="flex items-center gap-4 rounded-lg border border-white/12 bg-white/[0.04] p-3 pr-5 text-white hover:bg-white/[0.08]"
                 >
                   <StepNumber n={index + 1} className="border-white/70" />
@@ -318,7 +337,7 @@ export default async function RobotPage({ params }: Props) {
           <Container>
             <SectionHeading
               title={t('addOns', { robot: robot.name })}
-              action={<TextLink href="/aksesori">{t('allAddOns')}</TextLink>}
+              action={<TextLink href="/accessories">{t('allAddOns')}</TextLink>}
             />
             <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {addOns.slice(0, 6).map((product) => (
@@ -342,10 +361,10 @@ export default async function RobotPage({ params }: Props) {
             </div>
             <div className="flex flex-wrap gap-3">
               <Button asChild variant="ink" size="lg">
-                <Link href="/bisnis#beli-banyak">{t('bulk.action')}</Link>
+                <Link href="/business#bulk">{t('bulk.action')}</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="/bisnis#oem">{t('bulk.oem')}</Link>
+                <Link href="/business#oem">{t('bulk.oem')}</Link>
               </Button>
             </div>
           </div>
@@ -356,7 +375,7 @@ export default async function RobotPage({ params }: Props) {
             <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
               {guides.map((guide) => (
                 <li key={guide.slug}>
-                  <TextLink href={`/belajar/panduan/${guide.slug}`}>
+                  <TextLink href={`/learn/guides/${guide.slug}`}>
                     {pick(guide.title, locale)}
                   </TextLink>
                 </li>

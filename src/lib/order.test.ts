@@ -15,30 +15,30 @@ const ciko: CartItem = {
   qty: 2,
   href: '/robot/ciko',
 };
-const garu: CartItem = {
-  key: 'garu:pi5',
-  slug: 'garu',
-  name: { id: 'Garu', en: 'Garu' },
+const momo: CartItem = {
+  key: 'momo:a',
+  slug: 'momo',
+  name: { id: 'Momo', en: 'Momo' },
   option: { id: 'Paket A', en: 'Package A' },
   unitPrice: 9_700_000,
   qty: 1,
-  href: '/robot/garu',
+  href: '/robot/momo',
 };
 
 describe('order message', () => {
   it('lists every item with its package and total, then the buyer details', () => {
     const { text, subject } = buildOrder(
-      [ciko, garu],
+      [ciko, momo],
       { ...emptyDetails, name: ' Ayu ', phone: '0812', city: 'Denpasar', address: 'Jl. Kenanga 1' },
       'id',
       t,
     );
     expect(text).toBe(
       [
-        'Halo Taksu, saya mau pesan:',
+        'Halo DCTEdu, saya mau pesan:',
         '',
         '1. Ciko × 2 = Rp3.500.000',
-        '2. Garu (Paket A) × 1 = Rp9.700.000',
+        '2. Momo (Paket A) × 1 = Rp9.700.000',
         '',
         'Subtotal: Rp13.200.000',
         '',
@@ -50,7 +50,7 @@ describe('order message', () => {
         'Mohon info ongkos kirim dan cara bayarnya. Terima kasih.',
       ].join('\n'),
     );
-    expect(subject).toBe('Pesanan Taksu dari Ayu');
+    expect(subject).toBe('Pesanan DCTEdu dari Ayu');
   });
 
   it('leaves out details that were not filled in', () => {

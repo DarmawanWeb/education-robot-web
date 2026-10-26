@@ -16,7 +16,7 @@ const KINDS = Object.keys(productKindLabels) as ProductKind[];
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const locale = await localeFromParams(params);
   const t = await getTranslations({ locale, namespace: 'Accessories' });
-  return pageMetadata({ locale, path: '/aksesori', title: t('title'), description: t('intro') });
+  return pageMetadata({ locale, path: '/accessories', title: t('title'), description: t('intro') });
 }
 
 export default async function AccessoriesPage({ params }: Props) {
@@ -86,7 +86,7 @@ export default async function AccessoriesPage({ params }: Props) {
                 </p>
               </div>
               {group.kind === 'sekolah' ? (
-                <TextLink href="/bisnis#beli-banyak">{t('school')}</TextLink>
+                <TextLink href="/business#bulk">{t('school')}</TextLink>
               ) : null}
             </div>
             <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

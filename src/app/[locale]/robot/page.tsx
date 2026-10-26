@@ -1,7 +1,8 @@
-import { goalLabels, pick, robots } from '@dctedu/catalog';
+import { goalLabels, pick, robots, robotsInDevelopment } from '@dctedu/catalog';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { GoalFilter } from '@/components/robots/goal-filter';
+import { DevelopmentRow } from '@/components/robots/in-development';
 import { RobotRow } from '@/components/robots/robot-row';
 import { DropBand } from '@/components/shared/drop-band';
 import { Container } from '@/components/ui/container';
@@ -43,6 +44,11 @@ export default async function RobotsPage({ params }: Props) {
                 <RobotRow key={robot.slug} robot={robot} locale={locale} />
               ))}
             </GoalFilter>
+            <div className="mt-6 grid gap-6">
+              {robotsInDevelopment.map((robot) => (
+                <DevelopmentRow key={robot.slug} robot={robot} />
+              ))}
+            </div>
           </div>
         </Container>
       </section>

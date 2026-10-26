@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!product) return {};
   return pageMetadata({
     locale,
-    path: `/aksesori/${product.slug}`,
+    path: `/accessories/${product.slug}`,
     title: `${pick(product.name, locale)}: ${pick(product.tagline, locale)}`,
     description: pick(product.body, locale),
   });
@@ -97,7 +97,7 @@ export default async function ProductPage({ params }: Props) {
       <section className="pt-8 pb-16 lg:pt-12 lg:pb-24">
         <Container>
           <nav aria-label={t('breadcrumb')} className="text-muted-foreground text-sm font-semibold">
-            <Link href="/aksesori" className="hover:text-foreground hover:underline">
+            <Link href="/accessories" className="hover:text-foreground hover:underline">
               {t('all')}
             </Link>
             <span aria-hidden className="mx-2">
@@ -169,7 +169,7 @@ export default async function ProductPage({ params }: Props) {
                 {product.kind === 'sekolah' ? (
                   <p className="mt-6 text-sm">
                     <span className="text-muted-foreground">{t('school')} </span>
-                    <TextLink href="/bisnis#beli-banyak">{t('schoolAction')}</TextLink>
+                    <TextLink href="/business#bulk">{t('schoolAction')}</TextLink>
                   </p>
                 ) : null}
               </div>
@@ -221,7 +221,7 @@ export default async function ProductPage({ params }: Props) {
         <Container>
           <div className="flex flex-wrap items-end justify-between gap-4">
             <h2 className="type-display text-[clamp(1.5rem,2.6vw,2rem)]">{t('related')}</h2>
-            <TextLink href="/aksesori">{t('all')}</TextLink>
+            <TextLink href="/accessories">{t('all')}</TextLink>
           </div>
           <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {related(product).map((entry) => (

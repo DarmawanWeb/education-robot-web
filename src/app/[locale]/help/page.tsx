@@ -18,7 +18,7 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const locale = await localeFromParams(params);
   const t = await getTranslations({ locale, namespace: 'Help' });
-  return pageMetadata({ locale, path: '/bantuan', title: t('title'), description: t('intro') });
+  return pageMetadata({ locale, path: '/help', title: t('title'), description: t('intro') });
 }
 
 export default async function HelpPage({ params }: Props) {
@@ -53,7 +53,7 @@ export default async function HelpPage({ params }: Props) {
         </Container>
       </section>
 
-      <section id="kontak" className="scroll-mt-16 py-16 lg:py-24">
+      <section id="contact" className="scroll-mt-16 py-16 lg:py-24">
         <Container className="grid gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
           <div className="asphalt self-start rounded-xl p-7 text-white sm:p-9">
             <h2 className="type-display text-[clamp(1.75rem,3.2vw,2.5rem)]">
@@ -84,7 +84,7 @@ export default async function HelpPage({ params }: Props) {
           <div>
             <div className="flex flex-wrap items-end justify-between gap-4">
               <h2 className="type-display text-[clamp(1.5rem,2.6vw,2rem)]">{t('guides.title')}</h2>
-              <TextLink href="/belajar#panduan">{t('guides.all')}</TextLink>
+              <TextLink href="/learn#guides">{t('guides.all')}</TextLink>
             </div>
             <GuideList guides={ownerGuides} locale={locale} className="mt-6" />
           </div>

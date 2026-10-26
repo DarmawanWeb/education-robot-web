@@ -17,9 +17,9 @@ export async function SiteHeader() {
   const items = [
     { href: '/robot', label: t('robots') },
     { href: '/drop', label: t('drop') },
-    { href: '/aksesori', label: t('accessories') },
-    { href: '/belajar', label: t('learn') },
-    { href: '/bisnis', label: t('business') },
+    { href: '/accessories', label: t('accessories') },
+    { href: '/learn', label: t('learn') },
+    { href: '/business', label: t('business') },
   ];
   const simulator = { href: simulatorUrl(locale as Locale), label: t('simulator') };
 

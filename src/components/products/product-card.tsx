@@ -13,7 +13,7 @@ export async function ProductCard({ product, locale }: { product: Product; local
   const price = productPrice(product.price, locale);
   return (
     <Link
-      href={`/aksesori/${product.slug}`}
+      href={`/accessories/${product.slug}`}
       className="group bg-surface hover:border-edge flex h-full flex-col rounded-lg border p-5 transition-colors"
     >
       <ProductIcon icon={product.icon} className="size-16" />

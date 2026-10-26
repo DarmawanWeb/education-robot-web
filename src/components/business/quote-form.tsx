@@ -28,7 +28,7 @@ const choice = (selected: boolean) =>
 
 /**
  * A quote request for bulk orders and OEM. It opens as a WhatsApp message or an email; nothing
- * is stored on the site. Links to #tanya-oem (or another kind) preselect what the buyer needs.
+ * is stored on the site. Links to #inquiry-oem (or another kind) preselect what the buyer needs.
  */
 export function QuoteForm({ robots }: { robots: { slug: string; name: string }[] }) {
   const t = useTranslations('Business.form');
@@ -44,7 +44,7 @@ export function QuoteForm({ robots }: { robots: { slug: string; name: string }[]
 
   useEffect(() => {
     const fromHash = () => {
-      const value = window.location.hash.replace('#tanya-', '');
+      const value = window.location.hash.replace('#inquiry-', '');
       if (isQuoteKind(value)) setKind(value);
     };
     fromHash();

@@ -21,31 +21,31 @@ export async function SiteFooter() {
       links: [
         { label: nav('robots'), href: '/robot' },
         { label: nav('drop'), href: '/drop' },
-        { label: nav('accessories'), href: '/aksesori' },
-        { label: nav('cart'), href: '/keranjang' },
+        { label: nav('accessories'), href: '/accessories' },
+        { label: nav('cart'), href: '/cart' },
       ],
     },
     {
       title: nav('learn'),
       links: [
-        { label: t('path', { robot: 'Ciko' }), href: '/belajar/ciko' },
-        { label: t('path', { robot: 'Momo' }), href: '/belajar/momo' },
-        { label: t('guides'), href: '/belajar#panduan' },
+        { label: t('path', { robot: 'Ciko' }), href: '/learn/ciko' },
+        { label: t('path', { robot: 'Momo' }), href: '/learn/momo' },
+        { label: t('guides'), href: '/learn#guides' },
         { label: nav('simulator'), href: simulatorUrl(locale), external: true },
       ],
     },
     {
       title: nav('business'),
       links: [
-        { label: t('bulk'), href: '/bisnis#beli-banyak' },
-        { label: t('oem'), href: '/bisnis#oem' },
-        { label: t('inquiry'), href: '/bisnis#tanya' },
+        { label: t('bulk'), href: '/business#bulk' },
+        { label: t('oem'), href: '/business#oem' },
+        { label: t('inquiry'), href: '/business#inquiry' },
       ],
     },
     {
       title: t('help'),
       links: [
-        { label: t('faq'), href: '/bantuan' },
+        { label: t('faq'), href: '/help' },
         { label: t('email'), href: `mailto:${siteConfig.email}`, external: true },
         ...(whatsapp ? [{ label: 'WhatsApp', href: whatsapp, external: true }] : []),
         ...marketplaceLinks().map((store) => ({
@@ -66,7 +66,7 @@ export async function SiteFooter() {
           </Link>
           <p className="type-display mt-5 text-2xl text-white">{pick(brand.tagline, locale)}</p>
           <p className="mt-3 max-w-[40ch] leading-relaxed text-white/70">
-            {pick(brand.meaning, locale)}
+            {pick(brand.promise, locale)}
           </p>
         </div>
         <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-4">

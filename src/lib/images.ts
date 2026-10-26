@@ -1,7 +1,6 @@
 import type { Localized, RobotSlug } from '@dctedu/catalog';
 import type { StaticImageData } from 'next/image';
 import ciko from '@/assets/robots/ciko.webp';
-import garu from '@/assets/robots/garu.webp';
 import momoLine from '@/assets/robots/momo-line.webp';
 import momoMonitor from '@/assets/robots/momo-monitor.webp';
 import momoObstacle from '@/assets/robots/momo-obstacle.webp';
@@ -23,7 +22,7 @@ export function imageFit(image: RobotImage, padding: string): string {
   return image.scene ? 'object-cover' : `object-contain ${padding}`;
 }
 
-/** The main picture of each robot, on a white background. Garu's is a concept render. */
+/** The main picture of each robot, on a white background. */
 export const robotImages: Record<RobotSlug, RobotImage> = {
   ciko: {
     src: ciko,
@@ -37,14 +36,6 @@ export const robotImages: Record<RobotSlug, RobotImage> = {
     alt: l(
       'Momo: robot modular berangka merah dengan roda kuning, mata OLED biru, dan sensor ultrasonik di atasnya',
       'Momo: a modular robot with a red frame, yellow wheels, blue OLED eyes, and an ultrasonic sensor on top',
-    ),
-  },
-  garu: {
-    src: garu,
-    scene: true,
-    alt: l(
-      'Render konsep Garu: rover beroda rantai dengan kamera, komputer onboard, dan lengan robot',
-      'Concept render of Garu: a tracked rover with a camera, an onboard computer, and a robotic arm',
     ),
   },
 };

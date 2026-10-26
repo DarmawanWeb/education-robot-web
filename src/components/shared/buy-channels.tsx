@@ -51,7 +51,7 @@ export async function BuyChannels() {
             <p className="text-muted-foreground mt-2 leading-relaxed">{t('bulk.body')}</p>
             <div className="mt-auto pt-6">
               <Button asChild variant="outline">
-                <Link href="/bisnis#beli-banyak">{t('bulk.action')}</Link>
+                <Link href="/business#bulk">{t('bulk.action')}</Link>
               </Button>
             </div>
           </li>

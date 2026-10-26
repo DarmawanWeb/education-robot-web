@@ -11,7 +11,7 @@ export function CartButton() {
   const count = useCartCount();
   return (
     <Link
-      href="/keranjang"
+      href="/cart"
       aria-label={count > 0 ? t('cartCount', { count }) : t('cart')}
       className="hover:bg-surface-muted relative flex size-11 items-center justify-center rounded-md"
     >

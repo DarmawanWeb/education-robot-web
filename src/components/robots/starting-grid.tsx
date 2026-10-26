@@ -1,4 +1,4 @@
-import { drops, type Locale, pick, type Robot, robots } from '@dctedu/catalog';
+import { drops, type Locale, pick, type Robot, robots, robotsInDevelopment } from '@dctedu/catalog';
 import { RaceNumber } from '@dctedu/ui/brand/race-number';
 import { Button } from '@dctedu/ui/components/button';
 import { cn } from '@dctedu/ui/lib/utils';
@@ -9,6 +9,7 @@ import { imageFit, robotImages } from '@/lib/images';
 import { simulatorUrl } from '@/lib/links';
 import { Container } from '../ui/container';
 import { AvailabilityBadge, RobotPrice } from '../ui/price';
+import { DevelopmentSlot } from './in-development';
 import { RobotChips } from './robot-chips';
 
 /** The painted box of a grid slot: a top line and two short sides, like on a race track. */
@@ -102,7 +103,7 @@ async function DropSlot({ locale }: { locale: Locale }) {
 
 /**
  * The home page opens on a starting grid: every robot parked in a painted slot with its race
- * number, and an empty slot waiting for the next Drop.
+ * number, the ones still being built in dashed slots, and an empty slot waiting for the next Drop.
  */
 export async function StartingGrid({ locale }: { locale: Locale }) {
   const t = await getTranslations('Home.hero');
@@ -131,6 +132,9 @@ export async function StartingGrid({ locale }: { locale: Locale }) {
         >
           {robots.map((robot) => (
             <RobotSlot key={robot.slug} robot={robot} locale={locale} />
+          ))}
+          {robotsInDevelopment.map((robot) => (
+            <DevelopmentSlot key={robot.slug} robot={robot} />
           ))}
           <DropSlot locale={locale} />
         </ol>

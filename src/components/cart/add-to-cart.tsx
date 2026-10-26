@@ -47,7 +47,7 @@ export function AddToCart({
       <span aria-live="polite" className="text-sm font-bold">
         {added ? (
           <Link
-            href="/keranjang"
+            href="/cart"
             className="decoration-primary underline decoration-2 underline-offset-4"
           >
             {t('view')}

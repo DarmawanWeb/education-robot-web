@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const locale = await localeFromParams(params);
   const t = await getTranslations({ locale, namespace: 'Cart' });
   return {
-    ...pageMetadata({ locale, path: '/keranjang', title: t('title'), description: t('meta') }),
+    ...pageMetadata({ locale, path: '/cart', title: t('title'), description: t('meta') }),
     // A cart is different for everyone, so there is nothing here for search engines.
     robots: { index: false },
   };

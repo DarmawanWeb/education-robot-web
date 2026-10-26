@@ -24,7 +24,8 @@ export function pageMetadata({
   );
   const card = `/og/${image ?? 'site'}-${locale}.jpg`;
   return {
-    title,
+    // Left out when absent, so the home page keeps the layout's default title.
+    ...(title ? { title } : {}),
     description,
     alternates: { canonical: `/${locale}${suffix}`, languages },
     openGraph: {

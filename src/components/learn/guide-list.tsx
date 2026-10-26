@@ -21,7 +21,7 @@ export async function GuideList({
       {guides.map((guide) => (
         <li key={guide.slug}>
           <Link
-            href={`/belajar/panduan/${guide.slug}`}
+            href={`/learn/guides/${guide.slug}`}
             className="group hover:bg-surface-muted/60 grid gap-2 p-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center sm:gap-6 sm:px-6"
           >
             <span className="min-w-0">

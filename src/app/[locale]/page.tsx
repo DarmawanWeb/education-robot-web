@@ -2,12 +2,9 @@ import { faq, pick, products } from '@dctedu/catalog';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { ProductCard } from '@/components/products/product-card';
-import { AgeRuler } from '@/components/robots/age-ruler';
 import { StartingGrid } from '@/components/robots/starting-grid';
 import { BusinessTeaser } from '@/components/shared/business-teaser';
-import { BuyChannels } from '@/components/shared/buy-channels';
 import { ComesWith } from '@/components/shared/comes-with';
-import { DropBand } from '@/components/shared/drop-band';
 import { FaqList } from '@/components/shared/faq-list';
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
@@ -38,16 +35,14 @@ export default async function HomePage({ params }: Props) {
   return (
     <>
       <StartingGrid locale={locale} />
-      <AgeRuler locale={locale} />
       <ComesWith locale={locale} />
-      <DropBand locale={locale} compact />
 
       <section className="py-20 lg:py-28">
         <Container>
           <SectionHeading
             title={t('addOns.title')}
             intro={t('addOns.intro')}
-            action={<TextLink href="/aksesori">{t('addOns.all')}</TextLink>}
+            action={<TextLink href="/accessories">{t('addOns.all')}</TextLink>}
           />
           <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {addOns.map((product) => (
@@ -59,16 +54,13 @@ export default async function HomePage({ params }: Props) {
         </Container>
       </section>
 
-      <div className="bg-surface border-t">
-        <BuyChannels />
-        <BusinessTeaser locale={locale} />
-      </div>
+      <BusinessTeaser locale={locale} />
 
       <section className="py-20 lg:py-28">
         <Container className="grid gap-10 lg:grid-cols-[minmax(0,4fr)_minmax(0,7fr)] lg:gap-16">
           <div>
             <h2 className="type-display text-[clamp(2rem,3.4vw,2.75rem)]">{t('faq.title')}</h2>
-            <TextLink href="/bantuan" className="mt-6">
+            <TextLink href="/help" className="mt-6">
               {t('faq.all')}
             </TextLink>
           </div>

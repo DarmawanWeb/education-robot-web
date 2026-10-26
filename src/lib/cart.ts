@@ -2,7 +2,7 @@
 
 import { useSyncExternalStore } from 'react';
 
-/** One row in the cart: an item, an optional package (such as Garu's compute), and a count. */
+/** One row in the cart: an item, an optional package (a robot's compute option), and a count. */
 export interface CartLine {
   key: string;
   slug: string;
@@ -10,7 +10,7 @@ export interface CartLine {
   qty: number;
 }
 
-const KEY = 'taksu-cart';
+const KEY = 'dctedu-cart';
 export const MAX_QTY = 50;
 const EMPTY: CartLine[] = [];
 

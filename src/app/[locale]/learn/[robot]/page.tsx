@@ -1,4 +1,12 @@
-import { getGuide, getRobot, learnPath, learnPaths, pick, robots, stepTitle } from '@dctedu/catalog';
+import {
+  getGuide,
+  getRobot,
+  learnPath,
+  learnPaths,
+  pick,
+  robots,
+  stepTitle,
+} from '@dctedu/catalog';
 import { RaceNumber } from '@dctedu/ui/brand/race-number';
 import { Button } from '@dctedu/ui/components/button';
 import { cn } from '@dctedu/ui/lib/utils';
@@ -36,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { robot, path } = found;
   return pageMetadata({
     locale,
-    path: `/belajar/${robot.slug}`,
+    path: `/learn/${robot.slug}`,
     title: t('title', { robot: robot.name }),
     description: t('meta', { count: path.steps.length, robot: robot.name }),
     image: robot.slug,
@@ -57,7 +65,7 @@ export default async function PathPage({ params }: Props) {
       <section className="relative pt-8 pb-14 lg:pt-12 lg:pb-16">
         <Container>
           <nav aria-label={t('breadcrumb')} className="text-muted-foreground text-sm font-semibold">
-            <Link href="/belajar" className="hover:text-foreground hover:underline">
+            <Link href="/learn" className="hover:text-foreground hover:underline">
               {t('learn')}
             </Link>
             <span aria-hidden className="mx-2">
@@ -162,7 +170,7 @@ export default async function PathPage({ params }: Props) {
                           ) : null}
                           {guide ? (
                             <Link
-                              href={`/belajar/panduan/${guide.slug}`}
+                              href={`/learn/guides/${guide.slug}`}
                               className="decoration-primary inline-flex items-center gap-2 font-bold underline decoration-2 underline-offset-[6px] hover:decoration-[3px]"
                             >
                               <BookOpen className="size-4" aria-hidden />
@@ -209,7 +217,7 @@ export default async function PathPage({ params }: Props) {
           </div>
           <div className="flex flex-wrap gap-3">
             <Button asChild size="lg" variant="light">
-              <Link href="/aksesori#upgrade">{t('end.addOns', { robot: robot.name })}</Link>
+              <Link href="/accessories#upgrade">{t('end.addOns', { robot: robot.name })}</Link>
             </Button>
             {next ? (
               <Button asChild size="lg" variant="lightOutline">

@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: routing.locales.map((locale) => `/${locale}/keranjang`),
+      disallow: routing.locales.map((locale) => `/${locale}/cart`),
     },
     sitemap: `${siteConfig.url}/sitemap.xml`,
   };

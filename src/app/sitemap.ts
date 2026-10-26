@@ -10,13 +10,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/robot',
     ...robots.map((robot) => `/robot/${robot.slug}`),
     '/drop',
-    '/aksesori',
-    ...products.map((product) => `/aksesori/${product.slug}`),
-    '/belajar',
-    ...learnPaths.map((path) => `/belajar/${path.robot}`),
-    ...guides.map((guide) => `/belajar/panduan/${guide.slug}`),
-    '/bisnis',
-    '/bantuan',
+    '/accessories',
+    ...products.map((product) => `/accessories/${product.slug}`),
+    '/learn',
+    ...learnPaths.map((path) => `/learn/${path.robot}`),
+    ...guides.map((guide) => `/learn/guides/${guide.slug}`),
+    '/business',
+    '/help',
   ];
   return paths.flatMap((path) =>
     routing.locales.map((locale) => ({

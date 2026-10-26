@@ -27,7 +27,7 @@ type OrderKey =
 /** The Cart.order messages, passed in so the wording stays in the message files. */
 export type OrderTranslate = (key: OrderKey, values?: Record<string, string | number>) => string;
 
-/** An item's name with its package, e.g. "Garu (Paket A: Raspberry Pi 5)". */
+/** An item's name with its package, e.g. "Momo (Paket A)". */
 export function itemLabel(item: CartItem, locale: Locale): string {
   const name = pick(item.name, locale);
   return item.option ? `${name} (${pick(item.option, locale)})` : name;

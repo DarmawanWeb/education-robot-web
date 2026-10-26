@@ -43,7 +43,7 @@ export async function ComesWith({ locale }: { locale: Locale }) {
               <dt className="text-lg font-bold">{t('path.title')}</dt>
               <dd className="text-muted-foreground mt-1 leading-relaxed">{t('path.body')}</dd>
               <dd className="mt-3">
-                <TextLink href="/belajar">{t('path.link')}</TextLink>
+                <TextLink href="/learn">{t('path.link')}</TextLink>
               </dd>
             </div>
             <div className="py-5">
