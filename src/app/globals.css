@@ -2,3 +2,32 @@
 @import '@dctedu/ui/theme.css';
 
 @source '../../../../packages/ui/src';
+
+/*
+ * The starting grid: each robot drives up into its painted slot, one after another, once, when the
+ * page opens. Nothing else on the site moves on its own.
+ */
+@keyframes park {
+  from {
+    transform: translateY(2.5rem);
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.park {
+  animation: park 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: calc(var(--slot, 0) * 140ms + 120ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .park {
+    animation: none;
+  }
+}
