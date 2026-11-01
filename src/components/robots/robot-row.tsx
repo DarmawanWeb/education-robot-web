@@ -66,11 +66,12 @@ export async function RobotRow({ robot, locale }: { robot: Robot; locale: Locale
           ))}
         </ul>
         <div className="mt-auto flex flex-wrap items-end justify-between gap-4 pt-7">
-          <RobotPrice
-            robot={robot}
-            locale={locale}
-            className={robot.seller ? undefined : 'text-xl'}
-          />
+          {/* A seller's robot already says who sells it in its badge and its button. */}
+          {robot.seller ? (
+            <span />
+          ) : (
+            <RobotPrice robot={robot} locale={locale} className="text-xl" />
+          )}
           <div className="flex flex-wrap items-center gap-2">
             <Button asChild variant="outline" size="lg">
               <Link href={`/robot/${robot.slug}`}>{t('see', { robot: robot.name })}</Link>

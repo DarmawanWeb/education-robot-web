@@ -25,11 +25,11 @@ import {
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { QuoteForm } from '@/components/business/quote-form';
-import { ProductCard } from '@/components/products/product-card';
 import { ClientList } from '@/components/shared/client-list';
 import { FaqList } from '@/components/shared/faq-list';
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
+import { TextLink } from '@/components/ui/text-link';
 import { localeFromParams, resolveLocale } from '@/lib/locale';
 import { pageMetadata } from '@/lib/metadata';
 import { siteConfig } from '@/lib/site-config';
@@ -140,16 +140,10 @@ export default async function BusinessPage({ params }: Props) {
           </p>
 
           {classroom.length > 0 ? (
-            <>
-              <h3 className="mt-14 text-xl font-bold">{t('bulk.products')}</h3>
-              <ul className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {classroom.map((product) => (
-                  <li key={product.slug}>
-                    <ProductCard product={product} locale={locale} />
-                  </li>
-                ))}
-              </ul>
-            </>
+            <p className="mt-10 flex flex-wrap items-center gap-x-4 gap-y-2 leading-relaxed">
+              <span className="text-muted-foreground">{t('bulk.classroom')}</span>
+              <TextLink href="/accessories#sekolah">{t('bulk.classroomLink')}</TextLink>
+            </p>
           ) : null}
         </Container>
       </section>

@@ -16,7 +16,6 @@ export async function SiteHeader() {
   const [t, locale] = await Promise.all([getTranslations('Nav'), getLocale()]);
   const items = [
     { href: '/robot', label: t('robots') },
-    { href: '/drop', label: t('drop') },
     { href: '/accessories', label: t('accessories') },
     { href: '/learn', label: t('learn') },
     { href: '/business', label: t('business') },

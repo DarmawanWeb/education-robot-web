@@ -1,4 +1,6 @@
 import {
+  brand,
+  canOrder,
   getRobot,
   getRobotInDevelopment,
   guidesFor,
@@ -24,7 +26,8 @@ import { StepNumber } from '@/components/learn/step-number';
 import { ProductCard } from '@/components/products/product-card';
 import { DevelopmentPage } from '@/components/robots/in-development';
 import { RobotChips } from '@/components/robots/robot-chips';
-import { SellerBadge, SellerBox, SellerContact } from '@/components/robots/seller';
+import { SellerBox } from '@/components/robots/seller';
+import { JsonLd } from '@/components/seo/json-ld';
 import { Container } from '@/components/ui/container';
 import { AvailabilityBadge, RobotPrice } from '@/components/ui/price';
 import { SectionHeading } from '@/components/ui/section-heading';
@@ -36,6 +39,7 @@ import { marketplaceLinks, simulatorUrl } from '@/lib/links';
 import { localeFromParams, resolveLocale } from '@/lib/locale';
 import { pageMetadata } from '@/lib/metadata';
 import { robotStyle } from '@/lib/robot-style';
+import { breadcrumbs, robotProduct } from '@/lib/structured-data';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -109,9 +113,7 @@ async function Hero({ robot, locale }: { robot: Robot; locale: Locale }) {
             <p className="mt-4 text-xl leading-snug font-bold">{pick(robot.tagline, locale)}</p>
             <div className="mt-4 flex flex-wrap items-center gap-1.5">
               <RobotChips robot={robot} locale={locale} />
-              {robot.seller ? (
-                <SellerBadge seller={robot.seller} />
-              ) : (
+              {robot.seller ? null : (
                 <AvailabilityBadge availability={robot.availability} locale={locale} />
               )}
             </div>
@@ -172,10 +174,26 @@ export default async function RobotPage({ params }: Props) {
   const path = learnPath(robot.slug);
   const steps = path?.steps ?? [];
   const addOns = productsFor(robot.slug);
+  const readyAddOns = addOns.filter(
+    (product) => canOrder(product.availability) && product.price !== null,
+  );
+  const soonAddOns = addOns.length - readyAddOns.length;
   const guides = guidesFor(robot.slug).filter((guide) => guide.audience === 'owner');
+
+  const nav = await getTranslations('Nav');
 
   return (
     <>
+      <JsonLd
+        data={[
+          robotProduct(robot, locale),
+          breadcrumbs(locale, [
+            [brand.name, ''],
+            [nav('robots'), '/robot'],
+            [robot.name, `/robot/${robot.slug}`],
+          ]),
+        ]}
+      />
       <Hero robot={robot} locale={locale} />
 
       <section className="bg-surface border-y py-16 lg:py-24">
@@ -308,13 +326,20 @@ export default async function RobotPage({ params }: Props) {
               title={t('addOns', { robot: robot.name })}
               action={<TextLink href="/accessories">{t('allAddOns')}</TextLink>}
             />
-            <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {addOns.slice(0, 6).map((product) => (
-                <li key={product.slug}>
-                  <ProductCard product={product} locale={locale} />
-                </li>
-              ))}
-            </ul>
+            {readyAddOns.length > 0 ? (
+              <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {readyAddOns.slice(0, 3).map((product) => (
+                  <li key={product.slug}>
+                    <ProductCard product={product} locale={locale} />
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+            {soonAddOns > 0 ? (
+              <p className="text-muted-foreground mt-6 font-semibold">
+                {t('addOnsSoon', { count: soonAddOns, robot: robot.name })}
+              </p>
+            ) : null}
           </Container>
         </section>
       ) : null}
@@ -328,19 +353,9 @@ export default async function RobotPage({ params }: Props) {
                 {t('bulk.body', { robot: robot.name })}
               </p>
             </div>
-            <div className="flex flex-wrap gap-3">
-              {robot.seller ? (
-                // Bulk orders go to the exclusive seller too; OEM work stays with us.
-                <SellerContact robot={robot} seller={robot.seller} variant="ink" />
-              ) : (
-                <Button asChild variant="ink" size="lg">
-                  <Link href="/business#bulk">{t('bulk.action')}</Link>
-                </Button>
-              )}
-              <Button asChild variant="outline" size="lg">
-                <Link href="/business#oem">{t('bulk.oem')}</Link>
-              </Button>
-            </div>
+            <Button asChild variant="ink" size="lg">
+              <Link href="/business">{t('bulk.action')}</Link>
+            </Button>
           </div>
         </Container>
         {guides.length > 0 ? (

@@ -2,12 +2,11 @@ import { type Drop, dropSteps, drops, type Locale, pick } from '@dctedu/catalog'
 import { RaceNumber } from '@dctedu/ui/brand/race-number';
 import { Button } from '@dctedu/ui/components/button';
 import { cn } from '@dctedu/ui/lib/utils';
+import { ArrowRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import { contactHref } from '@/lib/contact';
-import { Container } from '../ui/container';
 import { AvailabilityBadge } from '../ui/price';
-import { SectionHeading } from '../ui/section-heading';
-import { TextLink } from '../ui/text-link';
 
 /** The Drop still to be revealed, if there is one. */
 export function nextDrop(): Drop | undefined {
@@ -73,25 +72,27 @@ export async function NextDropCard({
   );
 }
 
-/** The Drop programme on asphalt: how it works, and the next number waiting to be revealed. */
-export async function DropBand({ locale, compact = false }: { locale: Locale; compact?: boolean }) {
-  const t = await getTranslations('Drop');
+/** One line pointing at the Drop page, for pages where the robots are the subject. */
+export async function DropTeaser({ className }: { className?: string }) {
+  const [t, catalog] = await Promise.all([getTranslations('Drop'), getTranslations('Catalog')]);
   const drop = nextDrop();
   if (!drop) return null;
   return (
-    <section className="asphalt py-20 lg:py-28">
-      <Container className="grid gap-12 lg:grid-cols-[minmax(0,6fr)_minmax(0,5fr)] lg:items-center lg:gap-16">
-        <div>
-          <SectionHeading title={t('title')} intro={t('intro')} tone="onDark" />
-          <DropSteps locale={locale} className="mt-10" />
-          {compact ? (
-            <TextLink href="/drop" tone="onDark" className="mt-10">
-              {t('more')}
-            </TextLink>
-          ) : null}
-        </div>
-        <NextDropCard drop={drop} locale={locale} />
-      </Container>
-    </section>
+    <Link
+      href="/drop"
+      className={cn(
+        'group flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border-2 border-dashed border-[#ffb020] bg-[#fff8ea] px-5 py-4',
+        className,
+      )}
+    >
+      <span className="type-number grid size-11 shrink-0 place-items-center rounded-full border-[3px] border-[#191b20] text-lg">
+        ??
+      </span>
+      <span className="font-bold">{catalog('drop', { n: padNumber(drop.number) })}</span>
+      <span className="ml-auto inline-flex items-center gap-1.5 font-bold underline decoration-[#ffb020] decoration-2 underline-offset-4 group-hover:decoration-[3px]">
+        {t('more')}
+        <ArrowRight className="size-4" aria-hidden />
+      </span>
+    </Link>
   );
 }
