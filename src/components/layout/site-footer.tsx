@@ -58,7 +58,7 @@ export async function SiteFooter() {
   ];
 
   return (
-    <footer className="asphalt mt-auto">
+    <footer className="asphalt mt-auto border-t border-white/10">
       <Container className="grid gap-12 py-16 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,2fr)] lg:gap-16">
         <div>
           <Link href="/" className="group inline-block rounded-sm" aria-label={siteConfig.name}>
@@ -66,7 +66,7 @@ export async function SiteFooter() {
           </Link>
           <p className="type-display mt-5 text-2xl text-white">{pick(brand.tagline, locale)}</p>
           <p className="mt-3 max-w-[40ch] leading-relaxed text-white/70">
-            {pick(brand.promise, locale)}
+            {t('about', { brand: brand.name, company: brand.company })}
           </p>
         </div>
         <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-4">

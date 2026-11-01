@@ -1,6 +1,6 @@
 # Store
 
-The store sells DCTEdu's education robots and is the home of every robot's learning path. It is
+The store sells DCT Edu's education robots and is the home of every robot's learning path. It is
 the Next.js app in `apps/store` and reads all of its product facts from `@dctedu/catalog`
 (`packages/catalog`).
 
@@ -26,17 +26,17 @@ localized not-found page.
 
 | Path | Page |
 |---|---|
-| `/` | Home: the starting grid (robots, robots in development, the next Drop), what comes with a robot, add-ons, bulk and OEM, our clients, questions |
-| `/robot` | Catalogue with the goal filter (client component over server-rendered rows), then the robots in development |
-| `/robot/<slug>` | Robot page: packages, buy box, abilities, learning path preview, box contents, specs, parts, add-ons, bulk call to action. A robot in development gets only its number, its name, and "in development" |
-| `/drop` | The next Drop, how Drops work, the number series |
+| `/` | Home: the starting grid (robots, robots in development, the next Drop), what comes with a robot, the add-ons that can be ordered today, one band for schools and OEM with our clients' names, and who is behind DCT Edu. Each topic is said once; its details live on its own page |
+| `/robot` | Catalogue with the goal filter (client component over server-rendered rows), then the robots in development and a one-line link to the next Drop |
+| `/robot/<slug>` | Robot page: packages, buy box, abilities, learning path preview, box contents, specs, parts, the add-ons that can be ordered (and how many more are coming), one line to the business page. A robot in development gets only its number, its name, and "in development" |
+| `/drop` | The next Drop and how Drops work (the number series is the home page's starting grid) |
 | `/accessories`, `/accessories/<slug>` | Accessories by kind; a product page with what is in the pack and which robots it fits |
 | `/cart` | Cart and delivery details; not indexed |
 | `/learn` | The three parts of a step, a path per robot, the simulator, the guides |
 | `/learn/<robot>` | A robot's learning path: steps, simulator missions, guides, videos |
 | `/learn/guides/<slug>` | One guide, with where it sits on the learning paths |
 | `/business` | Bulk orders, OEM at three depths, software under your brand, the process, our clients, a quote form, questions |
-| `/help` | How to buy, questions, contact, guides |
+| `/help` | How to buy, questions, contact (the guides themselves are on `/learn`) |
 | `/sitemap.xml`, `/robots.txt` | Every public page in both languages; the cart is left out |
 
 Folder and path names are English; the page text stays in both languages. `next.config.ts` sends
@@ -110,6 +110,16 @@ load the youtube-nocookie.com player only after a click.
 `src/i18n/routing.ts` takes the locales from the catalogue. UI strings live in
 `messages/{id,en}.json`, typed through `src/types/next-intl.d.ts`, so a missing key fails the
 typecheck and `src/messages.test.ts` fails when the two files differ.
+
+## Search
+
+Every page has a title, a description, a canonical URL and hreflang alternates. The layout adds
+schema.org data ([structured-data.ts](../src/lib/structured-data.ts)): PT Dharma Cipta Teknologi as
+the `Organization`, with DCT Edu as its `Brand` and its other names (`Dharma Cipta Teknologi`, `DCT`)
+as `alternateName`, and the `WebSite`. Robot and accessory pages add a `Product` (with an `Offer`
+when we set the price) and a `BreadcrumbList`; the help page adds an `FAQPage`. The logo for search
+results is `public/brand/logo-512.png`. Set `NEXT_PUBLIC_STORE_URL` to the public address, or every
+canonical link points at localhost.
 
 ## Images and social cards
 

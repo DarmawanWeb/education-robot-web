@@ -1,7 +1,7 @@
 {
   "Meta": {
-    "title": "{brand}: robots made for tinkering",
-    "description": "Named robots for children, teenagers, and competition teams: Ciko and Momo. Each comes with a free online learning path, a browser simulator, upgrade packs, and arenas. We sell single units, school bulk orders, and OEM."
+    "title": "{brand} by {company}: learn robotics from an early age",
+    "description": "DCT Edu by PT Dharma Cipta Teknologi: education robots for learning robotics from an early age. Ciko for ages 7+, Momo for competitions and IoT, with free online learning paths, a browser simulator, and packages for schools and OEM."
   },
   "Nav": {
     "robots": "Robots",
@@ -27,8 +27,9 @@
     "help": "Help",
     "faq": "Questions",
     "email": "Email",
-    "whatsappHello": "Hi DCTEdu, I have a question.",
-    "copyright": "© {year} {company}. {brand} and all its robots. All rights reserved."
+    "whatsappHello": "Hi DCT Edu, I have a question.",
+    "copyright": "© {year} {company}. {brand} and all its robots. All rights reserved.",
+    "about": "{brand} is the education robot line of {company}, designed and built in Bali."
   },
   "Price": {
     "soon": "Price soon",
@@ -41,29 +42,32 @@
     "fits": "For {fits}"
   },
   "Drop": {
-    "title": "Drops: new robots from our R&D bench",
-    "intro": "Besides the main robots, we release small robots from our R&D bench one at a time. Each Drop continues the DCTEdu number series.",
     "name": "Drop #{n}",
     "more": "How Drops work",
     "notify": "Let me know",
-    "notifyMessage": "Hi DCTEdu, let me know when {name} comes out.",
+    "notifyMessage": "Hi DCT Edu, let me know when {name} comes out.",
     "notifySubject": "Let me know: {name}"
   },
   "Home": {
     "hero": {
-      "title": "Robots made for tinkering.",
-      "body": "Every robot has a name, a number, and its own learning path. Start from zero with Ciko, then build your way to contests and IoT with Momo.",
+      "title": "Learn robotics from an early age.",
+      "body": "Start from zero with Ciko at age 7, then move up to competitions and IoT with Momo. Every robot has a name, a number, and a free learning path, from opening the box to Arduino code.",
       "pick": "Choose a robot",
       "simulator": "Try the free simulator",
-      "gridLabel": "DCTEdu robots by release number",
+      "gridLabel": "DCT Edu robots by release number",
       "number": "Number {n}",
       "dropName": "Drop #{n}",
       "dropBody": "The next R&D robot. Its name and shape are still under wraps.",
-      "dropLink": "See how Drops work"
+      "dropLink": "See how Drops work",
+      "eyebrow": "Education robots by {company}",
+      "statsLabel": "What comes with every robot",
+      "steps": "{count} free learning steps",
+      "missions": "{count} simulator missions",
+      "code": "From blocks to Arduino C++"
     },
     "comesWith": {
       "title": "Not just owning a robot, but understanding it",
-      "intro": "Every DCTEdu robot comes with a way to understand it, free and online. No classes: follow it at home, at your own pace.",
+      "intro": "Every DCT Edu robot comes with a way to understand it, free and online. No classes: follow it at home, at your own pace.",
       "path": {
         "title": "A learning path for each robot",
         "body": "Step by step from unboxing to contest-ready, with videos and guides.",
@@ -78,13 +82,26 @@
         "title": "Code you can take with you",
         "body": "Every block program has an Arduino C++ version. When you are ready, carry on in the Arduino IDE."
       },
-      "imageAlt": "The DCTEdu simulator: program blocks on the left, Ciko following a line in the arena on the right",
+      "imageAlt": "The DCT Edu simulator: program blocks on the left, Ciko following a line in the arena on the right",
       "caption": "Ciko’s Follow the line mission, step 9 on its learning path."
     },
     "addOns": {
-      "title": "Add abilities",
-      "intro": "Upgrade packs add sensors and new projects to the robot you have. Arenas use the same tracks as the simulator.",
-      "all": "All accessories"
+      "title": "Ready to order",
+      "intro": "Arenas and accessories you can order today. Upgrade packs are on the way.",
+      "all": "All accessories",
+      "soon": "{count} more upgrades and accessories coming soon"
+    },
+    "business": {
+      "title": "For schools, courses, and your brand",
+      "body": "Tiered pricing and instructor training for a whole class, or our robots under your name and logo (OEM).",
+      "bulk": "Buy for a class",
+      "oem": "OEM under your brand",
+      "trust": "Trusted by"
+    },
+    "about": {
+      "title": "About DCT Edu",
+      "company": "A line by {company}",
+      "more": "Get in touch"
     },
     "buy": {
       "title": "How to buy",
@@ -104,26 +121,6 @@
         "body": "For schools, courses, and competition teams: tiered pricing and training for instructors.",
         "action": "See the offer"
       }
-    },
-    "business": {
-      "bulk": {
-        "title": "Schools, courses, and competition teams",
-        "body": "The same robot for every student, with tiered pricing and support.",
-        "action": "Ask for a quote"
-      },
-      "oem": {
-        "title": "OEM: our robots, your brand",
-        "body": "Use DCTEdu robots with your name, logo, and packaging, or have us design a new one.",
-        "action": "See OEM options"
-      }
-    },
-    "faq": {
-      "title": "Common questions",
-      "all": "All questions"
-    },
-    "clients": {
-      "title": "Our clients",
-      "more": "See what we make for them"
     }
   },
   "Catalog": {
@@ -133,14 +130,15 @@
     "all": "All",
     "see": "See {robot}",
     "notify": "Let me know",
-    "notifyMessage": "Hi DCTEdu, let me know when {robot} can be ordered.",
-    "notifySubject": "Let me know: {robot}"
+    "notifyMessage": "Hi DCT Edu, let me know when {robot} can be ordered.",
+    "notifySubject": "Let me know: {robot}",
+    "drop": "Robot #{n} is being tested on our R&D bench."
   },
   "RobotPage": {
     "breadcrumb": "Breadcrumb",
     "allRobots": "All robots",
     "number": "Number {n}",
-    "notifyMessage": "Hi DCTEdu, let me know when {robot} can be ordered.",
+    "notifyMessage": "Hi DCT Edu, let me know when {robot} can be ordered.",
     "notifySubject": "Let me know: {robot}",
     "preorderNote": "Pre-order: robots are built and tested in batches. We tell you the expected shipping date when we confirm your order.",
     "soonNote": "Not on sale yet. Tap Let me know, and we will get in touch once the price and dates are set.",
@@ -159,17 +157,17 @@
     "addOns": "Add-ons for {robot}",
     "allAddOns": "All accessories",
     "bulk": {
-      "title": "Need several units?",
-      "body": "For schools, courses, and competition teams, {robot} comes with tiered pricing and training for instructors. Want it under your own brand? We do OEM too.",
-      "action": "Ask for a quote",
-      "oem": "OEM options"
+      "title": "For a whole class or your brand",
+      "body": "Need {robot} for a school, a course, or a competition team, or under your own brand? We do tiered pricing, instructor training, and OEM.",
+      "action": "See business options"
     },
-    "guides": "Related guides"
+    "guides": "Related guides",
+    "addOnsSoon": "{count} more upgrades for {robot} coming soon"
   },
   "Buy": {
     "package": "Choose a package",
     "whatsapp": "Order on WhatsApp",
-    "whatsappMessage": "Hi DCTEdu, I would like to order {item} ({price}).",
+    "whatsappMessage": "Hi DCT Edu, I would like to order {item} ({price}).",
     "notify": "Let me know",
     "alsoOn": "Also on"
   },
@@ -177,7 +175,7 @@
     "add": "Add to cart",
     "added": "Added to cart",
     "view": "View cart",
-    "meta": "Your DCTEdu cart. Orders go out over WhatsApp or email, and we reply with the total, shipping, and how to pay.",
+    "meta": "Your DCT Edu cart. Orders go out over WhatsApp or email, and we reply with the total, shipping, and how to pay.",
     "title": "Cart",
     "loading": "Opening your cart",
     "items": "Items in your cart",
@@ -211,7 +209,7 @@
       "emailOnly": "Send the order by email"
     },
     "order": {
-      "greeting": "Hi DCTEdu, I would like to order:",
+      "greeting": "Hi DCT Edu, I would like to order:",
       "line": "{n}. {item} × {qty} = {total}",
       "subtotal": "Subtotal: {amount}",
       "name": "Name: {value}",
@@ -220,7 +218,7 @@
       "address": "Address: {value}",
       "note": "Note: {value}",
       "closing": "Please let me know the shipping cost and how to pay. Thank you.",
-      "subject": "DCTEdu order from {name}"
+      "subject": "DCT Edu order from {name}"
     },
     "sent": {
       "title": "Your order is open",
@@ -251,8 +249,8 @@
       "title": "Every accessory is on its way",
       "body": "We announce prices and dates one at a time. Want to hear first?",
       "action": "Let me know",
-      "message": "Hi DCTEdu, let me know when the accessories and upgrade packs go on sale.",
-      "subject": "Let me know: DCTEdu accessories"
+      "message": "Hi DCT Edu, let me know when the accessories and upgrade packs go on sale.",
+      "subject": "Let me know: DCT Edu accessories"
     }
   },
   "Product": {
@@ -264,7 +262,7 @@
     "robots": "Robots it works with",
     "see": "See {robot}",
     "related": "See also",
-    "notifyMessage": "Hi DCTEdu, let me know when {item} can be ordered.",
+    "notifyMessage": "Hi DCT Edu, let me know when {item} can be ordered.",
     "notifySubject": "Let me know: {item}",
     "preorderNote": "Pre-order: made in batches. We tell you the expected shipping date when we confirm your order.",
     "soonNote": "Not on sale yet. Tap Let me know, and we will get in touch once the price and dates are set.",
@@ -273,8 +271,8 @@
   },
   "Learn": {
     "title": "Understand your robot, one step at a time",
-    "meta": "A free learning path for every DCTEdu robot: short videos, guides, and simulator missions you can follow at home.",
-    "intro": "Not a class and not a course. Every DCTEdu robot has a free learning path: short videos, guides, and simulator missions you can follow at home, at your own pace.",
+    "meta": "A free learning path for every DCT Edu robot: short videos, guides, and simulator missions you can follow at home.",
+    "intro": "Not a class and not a course. Every DCT Edu robot has a free learning path: short videos, guides, and simulator missions you can follow at home, at your own pace.",
     "parts": {
       "title": "Every step has three parts",
       "understand": {
@@ -298,7 +296,7 @@
       "title": "No robot yet? Start in the simulator",
       "body": "The simulator runs in the browser, free, with no account. Its missions are the steps on the learning paths, so nothing is wasted when the robot arrives.",
       "action": "Open the simulator",
-      "imageAlt": "The DCTEdu simulator: program blocks on the left, the arena with Ciko on the right"
+      "imageAlt": "The DCT Edu simulator: program blocks on the left, the arena with Ciko on the right"
     },
     "guides": {
       "title": "Guides",
@@ -307,7 +305,7 @@
       "instructor": "For instructors",
       "minutes": "{minutes} min"
     },
-    "notService": "DCTEdu sells robots, not courses. These learning paths come with every robot and are free for anyone."
+    "notService": "DCT Edu sells robots, not courses. These learning paths come with every robot and are free for anyone."
   },
   "Path": {
     "title": "{robot}’s learning path",
@@ -354,14 +352,7 @@
   },
   "DropPage": {
     "title": "Drops: R&D robots, one at a time",
-    "intro": "Besides the main robots, we keep testing new ideas on our R&D bench. The ones that pass are released as Drops: the next number in the DCTEdu series, made in limited batches.",
-    "series": {
-      "title": "The DCTEdu series",
-      "intro": "Main robots and Drops share one run of numbers. The next number always goes to the next release.",
-      "number": "Number {n}",
-      "mystery": "Drop #{n}, not revealed yet",
-      "open": "Number {n} waits for the release after that"
-    },
+    "intro": "Besides the main robots, we keep testing new ideas on our R&D bench. The ones that pass are released as Drops: the next number in the DCT Edu series, made in limited batches.",
     "how": "How Drops work",
     "notify": {
       "title": "Want to hear first?",
@@ -377,9 +368,10 @@
       "intro": "The same robot for everyone, with a unit price that drops as the quantity rises.",
       "who": "Who it is for",
       "includes": "What you get",
-      "products": "For the classroom",
       "notService": "We provide the robots, the materials, and training for your instructors. The classes stay yours: we are not a course provider.",
-      "action": "Ask for a quote"
+      "action": "Ask for a quote",
+      "classroom": "Charging stations, storage boxes, and instructor kits are on the accessories page.",
+      "classroomLink": "See classroom gear"
     },
     "oem": {
       "title": "OEM: our robots, your brand",
@@ -420,7 +412,7 @@
       "sent": "Your message is open. Send it in the app that opened, and we will reply with a quote."
     },
     "quote": {
-      "greeting": "Hi DCTEdu, I would like a quote.",
+      "greeting": "Hi DCT Edu, I would like a quote.",
       "kind": "Need: {value}",
       "org": "Organisation: {value}",
       "name": "Name: {value}",
@@ -446,13 +438,10 @@
       "body": "Over WhatsApp or email. If something is wrong, include the robot’s name and a photo or video.",
       "whatsapp": "Chat on WhatsApp",
       "email": "Send an email",
-      "message": "Hi DCTEdu, I have a question.",
-      "subject": "A question for DCTEdu",
-      "from": "Shipped from {location}"
-    },
-    "guides": {
-      "title": "Guides",
-      "all": "All guides"
+      "message": "Hi DCT Edu, I have a question.",
+      "subject": "A question for DCT Edu",
+      "from": "Shipped from {location}",
+      "guides": "Looking for how-tos? See the guides"
     }
   },
   "NotFound": {
@@ -472,7 +461,7 @@
     "soldBy": "Sold exclusively by {seller}",
     "body": "{seller} holds the exclusive right to sell {robot}. Contact them for the price, stock, and ordering. The learning path and the simulator stay free here.",
     "contact": "Contact {seller}",
-    "message": "Hello {seller}, I am interested in {robot} by DCTEdu.",
-    "subject": "About {robot} by DCTEdu"
+    "message": "Hello {seller}, I am interested in {robot} by DCT Edu.",
+    "subject": "About {robot} by DCT Edu"
   }
 }

@@ -1,7 +1,18 @@
-import { drops, type Locale, pick, type Robot, robots, robotsInDevelopment } from '@dctedu/catalog';
+import {
+  brand,
+  drops,
+  type Locale,
+  learnPaths,
+  pick,
+  type Robot,
+  robots,
+  robotsInDevelopment,
+  simMissions,
+} from '@dctedu/catalog';
 import { RaceNumber } from '@dctedu/ui/brand/race-number';
 import { Button } from '@dctedu/ui/components/button';
 import { cn } from '@dctedu/ui/lib/utils';
+import { BookOpenCheck, Code2, Gamepad2 } from 'lucide-react';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
@@ -107,14 +118,18 @@ async function DropSlot({ locale }: { locale: Locale }) {
  */
 export async function StartingGrid({ locale }: { locale: Locale }) {
   const t = await getTranslations('Home.hero');
+  const steps = learnPaths.reduce((sum, path) => sum + path.steps.length, 0);
   return (
     <section className="asphalt relative overflow-hidden">
       <Container className="relative pt-14 pb-20 sm:pt-20 lg:pb-28">
         <div>
-          <h1 className="type-display max-w-[15ch] text-[clamp(3rem,8vw,6.5rem)] text-white">
+          <p className="font-bold tracking-wide text-[#ffb020]">
+            {t('eyebrow', { company: brand.company })}
+          </p>
+          <h1 className="type-display mt-4 max-w-[16ch] text-[clamp(2.75rem,7.4vw,6rem)] text-white">
             {t('title')}
           </h1>
-          <p className="mt-6 max-w-[54ch] text-lg leading-relaxed text-white/80 sm:text-xl">
+          <p className="mt-6 max-w-[56ch] text-lg leading-relaxed text-white/80 sm:text-xl">
             {t('body')}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -125,6 +140,23 @@ export async function StartingGrid({ locale }: { locale: Locale }) {
               <a href={simulatorUrl(locale)}>{t('simulator')}</a>
             </Button>
           </div>
+          <ul
+            aria-label={t('statsLabel')}
+            className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-[0.95rem] font-bold text-white/85"
+          >
+            <li className="flex items-center gap-2">
+              <BookOpenCheck className="size-5 text-[#ffb020]" aria-hidden />
+              {t('steps', { count: steps })}
+            </li>
+            <li className="flex items-center gap-2">
+              <Gamepad2 className="size-5 text-[#ffb020]" aria-hidden />
+              {t('missions', { count: simMissions.length })}
+            </li>
+            <li className="flex items-center gap-2">
+              <Code2 className="size-5 text-[#ffb020]" aria-hidden />
+              {t('code')}
+            </li>
+          </ul>
         </div>
         <ol
           aria-label={t('gridLabel')}

@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="docs/logo.svg" width="96" alt="DCTEdu logo">
+<img src="docs/logo.svg" width="96" alt="DCT Edu logo">
 
-# DCTEdu Store
+# DCT Edu Store
 
-**The store for DCTEdu's education robots: named robots on a starting grid by number, accessories,
+**The store for DCT Edu's education robots: named robots on a starting grid by number, accessories,
 numbered Drops, a cart that orders over WhatsApp or email, free learning paths and guides, and a
 page for bulk orders and OEM, in Indonesian and English.**
 
@@ -73,6 +73,6 @@ pnpm dev:store                  # http://localhost:3000/id
 pnpm --filter @dctedu/store test
 ```
 
-DCTEdu is the education robot line of PT Dharma Cipta Teknologi.
+DCT Edu is the education robot line of PT Dharma Cipta Teknologi.
 
 Proprietary. Copyright (c) 2026 PT Dharma Cipta Teknologi. All rights reserved.

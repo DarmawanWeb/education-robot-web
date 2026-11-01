@@ -11,8 +11,10 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { ReactNode } from 'react';
 import { SiteFooter } from '@/components/layout/site-footer';
 import { SiteHeader } from '@/components/layout/site-header';
+import { JsonLd } from '@/components/seo/json-ld';
 import { routing } from '@/i18n/routing';
 import { siteConfig } from '@/lib/site-config';
+import { organization, website } from '@/lib/structured-data';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -28,8 +30,16 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'Meta' });
   return {
     metadataBase: new URL(siteConfig.url),
-    title: { default: t('title', { brand: brand.name }), template: `%s | ${brand.name}` },
+    title: {
+      default: t('title', { brand: brand.name, company: brand.company }),
+      template: `%s | ${brand.name}`,
+    },
     description: t('description'),
+    applicationName: brand.name,
+    authors: [{ name: brand.company, url: siteConfig.url }],
+    creator: brand.company,
+    publisher: brand.company,
+    formatDetection: { telephone: false },
   };
 }
 
@@ -58,6 +68,7 @@ export default async function LocaleLayout({
         >
           {t('skip')}
         </a>
+        <JsonLd data={[organization(locale), website(locale)]} />
         <NextIntlClientProvider>
           <SiteHeader />
           <main id="main" className="flex-1">

@@ -1,4 +1,5 @@
 import {
+  brand,
   canOrder,
   getProduct,
   getRobot,
@@ -19,6 +20,7 @@ import { getTranslations } from 'next-intl/server';
 import { BuyBox } from '@/components/cart/buy-box';
 import { ProductCard } from '@/components/products/product-card';
 import { ProductIcon } from '@/components/products/product-icon';
+import { JsonLd } from '@/components/seo/json-ld';
 import { Container } from '@/components/ui/container';
 import { AvailabilityBadge, productPrice } from '@/components/ui/price';
 import { TextLink } from '@/components/ui/text-link';
@@ -29,6 +31,7 @@ import { marketplaceLinks } from '@/lib/links';
 import { localeFromParams, resolveLocale } from '@/lib/locale';
 import { pageMetadata } from '@/lib/metadata';
 import { robotStyle } from '@/lib/robot-style';
+import { accessoryProduct, breadcrumbs } from '@/lib/structured-data';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -95,8 +98,20 @@ export default async function ProductPage({ params }: Props) {
   const price = productPrice(product.price, locale);
   const orderable = canOrder(product.availability) && product.price !== null;
 
+  const nav = await getTranslations('Nav');
+
   return (
     <>
+      <JsonLd
+        data={[
+          accessoryProduct(product, locale),
+          breadcrumbs(locale, [
+            [brand.name, ''],
+            [nav('accessories'), '/accessories'],
+            [pick(product.name, locale), `/accessories/${product.slug}`],
+          ]),
+        ]}
+      />
       <section className="pt-8 pb-16 lg:pt-12 lg:pb-24">
         <Container>
           <nav aria-label={t('breadcrumb')} className="text-muted-foreground text-sm font-semibold">

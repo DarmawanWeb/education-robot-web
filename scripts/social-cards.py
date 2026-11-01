@@ -21,14 +21,14 @@ OUT = os.path.join(APP, 'public', 'og')
 
 SITE = {
     'id': {
-        'tagline': 'Robot untuk diulik.',
-        'promise': 'Robot bernama dan bernomor, lengkap dengan jalur belajar online gratis.',
+        'tagline': 'Belajar robotika sejak dini.',
+        'promise': 'Robot edukasi untuk anak, remaja, dan tim lomba, lengkap dengan jalur belajar online gratis.',
         'development': 'Sedang dikembangkan',
         'soon': 'Segera hadir',
     },
     'en': {
-        'tagline': 'Robots made for tinkering.',
-        'promise': 'Named, numbered robots, each with a free online learning path.',
+        'tagline': 'Learn robotics from an early age.',
+        'promise': 'Education robots for kids, teens, and competition teams, each with a free online learning path.',
         'development': 'In development',
         'soon': 'Coming soon',
     },
@@ -152,6 +152,7 @@ def site_card(locale: str) -> str:
 .ghost {{ background: transparent; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; padding: 18px 20px; }}
 </style></head><body>
 <div style="position:absolute;left:64px;top:56px">{wordmark('#ffffff')}</div>
+<p style="position:absolute;right:64px;top:74px;font-size:24px;font-weight:700;color:rgb(255 255 255 / .7)">PT Dharma Cipta Teknologi</p>
 <h1 class="display" style="position:absolute;left:64px;top:152px;font-size:58px;white-space:nowrap">{text['tagline']}</h1>
 <p style="position:absolute;left:64px;top:232px;width:620px;font-size:28px;line-height:1.4;color:rgb(255 255 255 / .75)">{text['promise']}</p>
 <div class="grid">{''.join(slots)}</div>

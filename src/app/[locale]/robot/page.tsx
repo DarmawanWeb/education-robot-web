@@ -4,7 +4,7 @@ import { getTranslations } from 'next-intl/server';
 import { GoalFilter } from '@/components/robots/goal-filter';
 import { DevelopmentRow } from '@/components/robots/in-development';
 import { RobotRow } from '@/components/robots/robot-row';
-import { DropBand } from '@/components/shared/drop-band';
+import { DropTeaser } from '@/components/shared/drop-band';
 import { Container } from '@/components/ui/container';
 import { localeFromParams, resolveLocale } from '@/lib/locale';
 import { pageMetadata } from '@/lib/metadata';
@@ -48,11 +48,11 @@ export default async function RobotsPage({ params }: Props) {
               {robotsInDevelopment.map((robot) => (
                 <DevelopmentRow key={robot.slug} robot={robot} />
               ))}
+              <DropTeaser />
             </div>
           </div>
         </Container>
       </section>
-      <DropBand locale={locale} compact />
     </>
   );
 }

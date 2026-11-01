@@ -35,7 +35,7 @@ describe('order message', () => {
     );
     expect(text).toBe(
       [
-        'Halo DCTEdu, saya mau pesan:',
+        'Halo DCT Edu, saya mau pesan:',
         '',
         '1. Ciko × 2 = Rp3.500.000',
         '2. Momo (Paket A) × 1 = Rp9.700.000',
@@ -50,7 +50,7 @@ describe('order message', () => {
         'Mohon info ongkos kirim dan cara bayarnya. Terima kasih.',
       ].join('\n'),
     );
-    expect(subject).toBe('Pesanan DCTEdu dari Ayu');
+    expect(subject).toBe('Pesanan DCT Edu dari Ayu');
   });
 
   it('leaves out details that were not filled in', () => {
