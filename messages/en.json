@@ -29,7 +29,7 @@
     "email": "Email",
     "whatsappHello": "Hi DCT Edu, I have a question.",
     "copyright": "© {year} {company}. {brand} and all its robots. All rights reserved.",
-    "about": "{brand} is the education robot line of {company}, designed and built in Bali."
+    "about": "{brand} is the education robot line of {company}, designed and built in Tangerang."
   },
   "Price": {
     "soon": "Price soon",
@@ -51,7 +51,7 @@
   "Home": {
     "hero": {
       "title": "Learn robotics from an early age.",
-      "body": "Start from zero with Ciko at age 7, then move up to competitions and IoT with Momo. Every robot has a name, a number, and a free learning path, from opening the box to Arduino code.",
+      "body": "Education robots made by {company}. Start from zero with Ciko at age 7, then move up to competitions and IoT with Momo, with a free learning path from opening the box to Arduino code.",
       "pick": "Choose a robot",
       "simulator": "Try the free simulator",
       "gridLabel": "DCT Edu robots by release number",
@@ -59,7 +59,6 @@
       "dropName": "Drop #{n}",
       "dropBody": "The next R&D robot. Its name and shape are still under wraps.",
       "dropLink": "See how Drops work",
-      "eyebrow": "Education robots by {company}",
       "statsLabel": "What comes with every robot",
       "steps": "{count} free learning steps",
       "missions": "{count} simulator missions",
@@ -251,7 +250,8 @@
       "action": "Let me know",
       "message": "Hi DCT Edu, let me know when the accessories and upgrade packs go on sale.",
       "subject": "Let me know: DCT Edu accessories"
-    }
+    },
+    "soonList": "Coming soon"
   },
   "Product": {
     "breadcrumb": "Breadcrumb",

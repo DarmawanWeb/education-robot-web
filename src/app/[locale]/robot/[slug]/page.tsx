@@ -65,7 +65,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return pageMetadata({
     locale,
     path: `/robot/${robot.slug}`,
-    title: `${robot.name}: ${pick(robot.tagline, locale)}`,
+    title: `${robot.name} – ${pick(robot.tagline, locale)}`,
     description: pick(robot.summary, locale),
     image: robot.slug,
   });

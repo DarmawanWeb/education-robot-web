@@ -1,8 +1,8 @@
-import { type ProductKind, pick, productKindLabels, products } from '@dctedu/catalog';
+import { canOrder, type ProductKind, pick, productKindLabels, products } from '@dctedu/catalog';
 import { Button } from '@dctedu/ui/components/button';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import { ProductCard } from '@/components/products/product-card';
+import { ProductCard, ProductRow } from '@/components/products/product-card';
 import { Container } from '@/components/ui/container';
 import { TextLink } from '@/components/ui/text-link';
 import { contactHref } from '@/lib/contact';
@@ -22,10 +22,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function AccessoriesPage({ params }: Props) {
   const locale = await resolveLocale(params);
   const t = await getTranslations('Accessories');
-  const groups = KINDS.map((kind) => ({
-    kind,
-    items: products.filter((product) => product.kind === kind),
-  })).filter((group) => group.items.length > 0);
+  const groups = KINDS.map((kind) => {
+    const items = products.filter((product) => product.kind === kind);
+    const orderable = (product: (typeof items)[number]) =>
+      canOrder(product.availability) && product.price !== null;
+    return {
+      kind,
+      items,
+      ready: items.filter(orderable),
+      soon: items.filter((product) => !orderable(product)),
+    };
+  }).filter((group) => group.items.length > 0);
   const allSoon = products.every((product) => product.availability === 'soon');
 
   return (
@@ -89,13 +96,29 @@ export default async function AccessoriesPage({ params }: Props) {
                 <TextLink href="/business#bulk">{t('school')}</TextLink>
               ) : null}
             </div>
-            <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {group.items.map((product) => (
-                <li key={product.slug}>
-                  <ProductCard product={product} locale={locale} />
-                </li>
-              ))}
-            </ul>
+            {group.ready.length > 0 ? (
+              <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {group.ready.map((product) => (
+                  <li key={product.slug}>
+                    <ProductCard product={product} locale={locale} />
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+            {group.soon.length > 0 ? (
+              <div className={group.ready.length > 0 ? 'mt-10' : 'mt-8'}>
+                {group.ready.length > 0 ? (
+                  <h3 className="mb-3 font-bold">{t('soonList')}</h3>
+                ) : null}
+                <ul className="bg-surface divide-y overflow-hidden rounded-lg border">
+                  {group.soon.map((product) => (
+                    <li key={product.slug}>
+                      <ProductRow product={product} locale={locale} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
           </Container>
         </section>
       ))}

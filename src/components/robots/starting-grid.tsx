@@ -15,6 +15,7 @@ import { cn } from '@dctedu/ui/lib/utils';
 import { BookOpenCheck, Code2, Gamepad2 } from 'lucide-react';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+import type { CSSProperties } from 'react';
 import { Link } from '@/i18n/navigation';
 import { imageFit, robotImages } from '@/lib/images';
 import { simulatorUrl } from '@/lib/links';
@@ -36,47 +37,58 @@ function SlotMarking({ tone = 'white' }: { tone?: 'white' | 'signal' }) {
   );
 }
 
-async function RobotSlot({ robot, locale }: { robot: Robot; locale: Locale }) {
+async function RobotSlot({
+  robot,
+  locale,
+  order,
+}: {
+  robot: Robot;
+  locale: Locale;
+  order: number;
+}) {
   const t = await getTranslations('Home.hero');
   const image = robotImages[robot.slug];
   return (
-    <li className="relative pt-8 lg:even:mt-16">
+    <li className="relative lg:even:mt-16">
       <SlotMarking />
-      <RaceNumber
-        value={robot.number}
-        size="lg"
-        label={t('number', { n: robot.number })}
-        className="absolute -top-7 left-6 z-10"
-      />
-      <Link
-        href={`/robot/${robot.slug}`}
-        className="group relative mx-3 block overflow-hidden rounded-lg bg-white text-[#191b20] transition-transform hover:-translate-y-1 motion-reduce:transition-none"
-      >
-        <div className="relative aspect-[4/3]">
-          <Image
-            src={image.src}
-            alt={pick(image.alt, locale)}
-            fill
-            placeholder="blur"
-            sizes="(min-width: 1024px) 16rem, (min-width: 640px) 45vw, 90vw"
-            className={imageFit(image, 'p-3')}
-          />
-          {robot.availability === 'soon' ? (
-            <AvailabilityBadge
-              availability="soon"
-              locale={locale}
-              className="absolute top-3 right-3"
+      {/* The robot drives into its painted slot: the one moment of motion on the page. */}
+      <div className="park relative pt-8" style={{ '--slot': order } as CSSProperties}>
+        <RaceNumber
+          value={robot.number}
+          size="lg"
+          label={t('number', { n: robot.number })}
+          className="absolute -top-7 left-6 z-10"
+        />
+        <Link
+          href={`/robot/${robot.slug}`}
+          className="group relative mx-3 block overflow-hidden rounded-lg bg-white text-[#191b20] transition-transform hover:-translate-y-1 motion-reduce:transition-none"
+        >
+          <div className="relative aspect-[4/3]">
+            <Image
+              src={image.src}
+              alt={pick(image.alt, locale)}
+              fill
+              placeholder="blur"
+              sizes="(min-width: 1024px) 16rem, (min-width: 640px) 45vw, 90vw"
+              className={imageFit(image, 'p-3')}
             />
-          ) : null}
-        </div>
-        <div className="border-t border-[#dadde3] px-4 pt-3 pb-4">
-          <p className="type-number text-[1.875rem] group-hover:underline group-hover:decoration-[3px] group-hover:underline-offset-4">
-            {robot.name}
-          </p>
-          <RobotChips robot={robot} locale={locale} className="mt-2" />
-          <RobotPrice robot={robot} locale={locale} className="mt-3" />
-        </div>
-      </Link>
+            {robot.availability === 'soon' ? (
+              <AvailabilityBadge
+                availability="soon"
+                locale={locale}
+                className="absolute top-3 right-3"
+              />
+            ) : null}
+          </div>
+          <div className="border-t border-[#dadde3] px-4 pt-3 pb-4">
+            <p className="type-number text-[1.875rem] group-hover:underline group-hover:decoration-[3px] group-hover:underline-offset-4">
+              {robot.name}
+            </p>
+            <RobotChips robot={robot} locale={locale} className="mt-2" />
+            <RobotPrice robot={robot} locale={locale} className="mt-3" />
+          </div>
+        </Link>
+      </div>
     </li>
   );
 }
@@ -123,14 +135,11 @@ export async function StartingGrid({ locale }: { locale: Locale }) {
     <section className="asphalt relative overflow-hidden">
       <Container className="relative pt-14 pb-20 sm:pt-20 lg:pb-28">
         <div>
-          <p className="font-bold tracking-wide text-[#ffb020]">
-            {t('eyebrow', { company: brand.company })}
-          </p>
-          <h1 className="type-display mt-4 max-w-[16ch] text-[clamp(2.75rem,7.4vw,6rem)] text-white">
+          <h1 className="type-display max-w-[16ch] text-[clamp(2.75rem,7.4vw,6rem)] text-white">
             {t('title')}
           </h1>
           <p className="mt-6 max-w-[56ch] text-lg leading-relaxed text-white/80 sm:text-xl">
-            {t('body')}
+            {t('body', { company: brand.company })}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg">
@@ -162,8 +171,8 @@ export async function StartingGrid({ locale }: { locale: Locale }) {
           aria-label={t('gridLabel')}
           className="mt-20 grid gap-x-5 gap-y-16 sm:grid-cols-2 lg:grid-cols-4"
         >
-          {robots.map((robot) => (
-            <RobotSlot key={robot.slug} robot={robot} locale={locale} />
+          {robots.map((robot, index) => (
+            <RobotSlot key={robot.slug} robot={robot} locale={locale} order={index} />
           ))}
           {robotsInDevelopment.map((robot) => (
             <DevelopmentSlot key={robot.slug} robot={robot} />

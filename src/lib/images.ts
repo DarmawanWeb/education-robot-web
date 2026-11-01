@@ -46,15 +46,15 @@ export const productImages: Record<string, { src: StaticImageData; alt: Localize
   'banner-arena-ciko': {
     src: bannerCiko,
     alt: l(
-      'Banner Arena Ciko: lintasan oval hitam di atas kotak 10 cm, dengan start, titik cek 1, 2, 3, dan finis',
-      'Ciko Arena Banner: a black oval track on 10 cm squares, with the start, checkpoints 1, 2, 3, and the finish',
+      'Banner Arena Ciko: lintasan angka delapan dengan persimpangan, kantong sempit, dan chicane di atas kotak 10 cm, dengan start, titik cek 1, 2, 3, dan finis',
+      'Ciko Arena Banner: a figure-eight track with a crossing, a tight pocket, and a chicane on 10 cm squares, with the start, checkpoints 1, 2, 3, and the finish',
     ),
   },
   'banner-arena-momo': {
     src: bannerMomo,
     alt: l(
-      'Banner Arena Momo: lintasan bertikungan hitam di atas kotak 10 cm, dengan start, titik cek 1, 2, 3, dan finis',
-      'Momo Arena Banner: a black track with bends on 10 cm squares, with the start, checkpoints 1, 2, 3, and the finish',
+      'Banner Arena Momo: lintasan dengan hairpin, zigzag, tangga, sudut tajam, dan persimpangan di atas kotak 10 cm, dengan start, titik cek 1, 2, 3, dan finis',
+      'Momo Arena Banner: a track with a hairpin, a zigzag, steps, sharp corners, and a crossing on 10 cm squares, with the start, checkpoints 1, 2, 3, and the finish',
     ),
   },
 };

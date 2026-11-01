@@ -30,7 +30,7 @@ localized not-found page.
 | `/robot` | Catalogue with the goal filter (client component over server-rendered rows), then the robots in development and a one-line link to the next Drop |
 | `/robot/<slug>` | Robot page: packages, buy box, abilities, learning path preview, box contents, specs, parts, the add-ons that can be ordered (and how many more are coming), one line to the business page. A robot in development gets only its number, its name, and "in development" |
 | `/drop` | The next Drop and how Drops work (the number series is the home page's starting grid) |
-| `/accessories`, `/accessories/<slug>` | Accessories by kind; a product page with what is in the pack and which robots it fits |
+| `/accessories`, `/accessories/<slug>` | Accessories by kind: what can be ordered as cards with their picture, what is still coming as a compact list; a product page with what is in the pack and which robots it fits |
 | `/cart` | Cart and delivery details; not indexed |
 | `/learn` | The three parts of a step, a path per robot, the simulator, the guides |
 | `/learn/<robot>` | A robot's learning path: steps, simulator missions, guides, videos |
@@ -110,6 +110,13 @@ load the youtube-nocookie.com player only after a click.
 `src/i18n/routing.ts` takes the locales from the catalogue. UI strings live in
 `messages/{id,en}.json`, typed through `src/types/next-intl.d.ts`, so a missing key fails the
 typecheck and `src/messages.test.ts` fails when the two files differ.
+
+## Motion
+
+The only motion that starts on its own is the starting grid on the home page: each robot drives up
+into its painted slot, once, when the page opens (`.park` in `globals.css`). It is switched off for
+`prefers-reduced-motion`. Everything else moves only in answer to the visitor (menus, accordions,
+the wordmark's signal on hover).
 
 ## Search
 

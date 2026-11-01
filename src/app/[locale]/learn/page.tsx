@@ -80,7 +80,7 @@ export default async function LearnPage({ params }: Props) {
       <section id="paths" className="bg-surface scroll-mt-16 border-y py-16 lg:py-24">
         <Container>
           <SectionHeading title={t('paths')} />
-          <ul className="mt-10 grid gap-5 lg:grid-cols-3">
+          <ul className="mt-10 grid gap-5 md:grid-cols-2">
             {paths.map(({ path, robot }) => {
               const full = path.steps.length > 1;
               return (

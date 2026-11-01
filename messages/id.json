@@ -29,7 +29,7 @@
     "email": "Email",
     "whatsappHello": "Halo DCT Edu, saya mau bertanya.",
     "copyright": "© {year} {company}. {brand} dan semua robotnya. Semua hak dilindungi.",
-    "about": "{brand} adalah lini robot edukasi {company}, dirancang dan dirakit di Bali."
+    "about": "{brand} adalah lini robot edukasi {company}, dirancang dan dirakit di Tangerang."
   },
   "Price": {
     "soon": "Harga segera",
@@ -51,7 +51,7 @@
   "Home": {
     "hero": {
       "title": "Belajar robotika sejak dini.",
-      "body": "Mulai dari nol bersama Ciko di usia 7 tahun, lalu naik ke lomba dan IoT bersama Momo. Setiap robot punya nama, nomor, dan jalur belajar gratis, dari buka kotak sampai kode Arduino.",
+      "body": "Robot edukasi buatan {company}. Mulai dari nol bersama Ciko di usia 7 tahun, lalu naik ke lomba dan IoT bersama Momo, dengan jalur belajar gratis dari buka kotak sampai kode Arduino.",
       "pick": "Pilih robot",
       "simulator": "Coba simulator gratis",
       "gridLabel": "Robot DCT Edu menurut nomor rilis",
@@ -59,7 +59,6 @@
       "dropName": "Drop #{n}",
       "dropBody": "Robot R&D berikutnya. Nama dan bentuknya masih rahasia.",
       "dropLink": "Lihat cara kerja Drop",
-      "eyebrow": "Robot edukasi dari {company}",
       "statsLabel": "Yang ikut bersama setiap robot",
       "steps": "{count} langkah belajar gratis",
       "missions": "{count} misi simulator",
@@ -251,7 +250,8 @@
       "action": "Kabari saya",
       "message": "Halo DCT Edu, kabari saya saat aksesori dan upgrade pack mulai dijual.",
       "subject": "Kabari saya: aksesori DCT Edu"
-    }
+    },
+    "soonList": "Segera hadir"
   },
   "Product": {
     "breadcrumb": "Jejak halaman",
