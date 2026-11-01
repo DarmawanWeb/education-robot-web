@@ -38,6 +38,7 @@ export function organization(locale: Locale) {
     email: siteConfig.email,
     address: {
       '@type': 'PostalAddress',
+      addressLocality: brand.locality,
       addressRegion: brand.region,
       addressCountry: brand.country,
     },
