@@ -74,7 +74,8 @@ export default async function LocaleLayout({
           {t('skip')}
         </a>
         <JsonLd data={[organization(locale), website(locale)]} />
-        <ThemeProvider>
+        {/* The store opens in light mode; the header's sun and moon button switches to dark. */}
+        <ThemeProvider defaultTheme="light">
           <NextIntlClientProvider>
             <SiteHeader />
             <main id="main" className="flex-1">

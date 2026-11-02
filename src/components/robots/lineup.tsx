@@ -17,7 +17,7 @@ export function UnrevealedSlot({
     <div
       className={cn(
         'grid aspect-[4/3] place-items-center rounded-lg border border-dashed',
-        tone === 'white' ? 'border-white/20' : 'border-[#ffb020]/60',
+        tone === 'white' ? 'border-band-fg/20' : 'border-[#ffb020]/60',
       )}
     >
       {children}

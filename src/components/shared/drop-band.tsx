@@ -15,18 +15,18 @@ export function nextDrop(): Drop | undefined {
 
 export const padNumber = (n: number) => String(n).padStart(2, '0');
 
-/** How a Drop works, in the order a buyer meets it, on asphalt. */
+/** How a Drop works, in the order a buyer meets it, on a track band. */
 export function DropSteps({ locale, className }: { locale: Locale; className?: string }) {
   return (
     <ol className={cn('grid gap-6', className)}>
       {dropSteps.map((step, index) => (
         <li key={step.id} className="grid grid-cols-[2.75rem_minmax(0,1fr)] gap-4">
-          <span className="type-number grid size-11 place-items-center rounded-full border-2 border-[#ffb020] text-lg text-[#ffb020]">
+          <span className="type-number grid size-11 place-items-center rounded-full border-2 border-[#ffb020] text-lg text-band-accent">
             {index + 1}
           </span>
           <div>
-            <h3 className="text-lg font-bold text-white">{pick(step.title, locale)}</h3>
-            <p className="mt-1 leading-relaxed text-white/70">{pick(step.body, locale)}</p>
+            <h3 className="text-lg font-bold text-band-fg">{pick(step.title, locale)}</h3>
+            <p className="mt-1 leading-relaxed text-band-fg/70">{pick(step.body, locale)}</p>
           </div>
         </li>
       ))}
@@ -49,21 +49,23 @@ export async function NextDropCard({
   return (
     <div
       className={cn(
-        'relative rounded-xl border-2 border-dashed border-[#ffb020] p-6 text-white sm:p-8',
+        'relative rounded-xl border-2 border-dashed border-[#ffb020] p-6 text-band-fg sm:p-8',
         className,
       )}
     >
       <span
         aria-hidden
-        className="type-number pointer-events-none absolute top-4 right-6 hidden text-[7rem] leading-none text-white/[0.07] sm:block"
+        className="type-number pointer-events-none absolute top-4 right-6 hidden text-[7rem] leading-none text-band-fg/[0.07] sm:block"
       >
         #{padNumber(drop.number)}
       </span>
       <RaceNumber value={null} size="xl" />
       <p className="type-number mt-6 text-[2.5rem]">{name}</p>
       <AvailabilityBadge availability="soon" locale={locale} className="mt-3" />
-      <p className="mt-4 max-w-[40ch] leading-relaxed text-white/75">{pick(drop.teaser, locale)}</p>
-      <Button asChild size="lg" variant="light" className="mt-8">
+      <p className="mt-4 max-w-[40ch] leading-relaxed text-band-fg/75">
+        {pick(drop.teaser, locale)}
+      </p>
+      <Button asChild size="lg" variant="track" className="mt-8">
         <a href={contactHref(t('notifyMessage', { name }), t('notifySubject', { name }))}>
           {t('notify')}
         </a>

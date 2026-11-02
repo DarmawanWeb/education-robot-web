@@ -24,7 +24,7 @@ export function SectionHeading({
           id={id}
           className={cn(
             'type-display text-[clamp(1.875rem,3.6vw,2.75rem)]',
-            tone === 'onDark' && 'text-white',
+            tone === 'onDark' && 'text-band-fg',
           )}
         >
           {title}
@@ -33,7 +33,7 @@ export function SectionHeading({
           <p
             className={cn(
               'mt-4 text-lg leading-relaxed',
-              tone === 'onDark' ? 'text-white/75' : 'text-muted-foreground',
+              tone === 'onDark' ? 'text-band-fg/75' : 'text-muted-foreground',
             )}
           >
             {intro}

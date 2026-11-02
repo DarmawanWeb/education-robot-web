@@ -148,14 +148,14 @@ export default async function BusinessPage({ params }: Props) {
         </Container>
       </section>
 
-      <section id="oem" className="asphalt scroll-mt-16 py-16 lg:py-24">
+      <section id="oem" className="track scroll-mt-16 py-16 lg:py-24">
         <Container>
           <SectionHeading title={t('oem.title')} intro={t('oem.intro')} tone="onDark" />
           <ol className="mt-12 grid gap-4 lg:grid-cols-3">
             {oemLevels.map((level, index) => (
               <li
                 key={level.id}
-                className="flex flex-col rounded-xl border border-white/12 bg-white/[0.04] p-6 text-white"
+                className="flex flex-col rounded-xl border border-band-fg/12 bg-band-fg/[0.04] p-6 text-band-fg"
               >
                 <div
                   role="img"
@@ -167,7 +167,7 @@ export default async function BusinessPage({ params }: Props) {
                       key={segment}
                       className={cn(
                         'h-2 flex-1 rounded-full',
-                        segment <= index ? 'bg-primary' : 'bg-white/15',
+                        segment <= index ? 'bg-primary' : 'bg-band-fg/15',
                       )}
                     />
                   ))}
@@ -176,14 +176,14 @@ export default async function BusinessPage({ params }: Props) {
                 <p className="mt-2 text-lg leading-snug font-bold">{pick(level.summary, locale)}</p>
                 <ul className="mt-5 grid gap-2">
                   {level.changes.map((change) => (
-                    <li key={change.en} className="flex gap-2.5 text-white/80">
-                      <Check className="mt-1 size-4 shrink-0 text-[#ffb020]" aria-hidden />
+                    <li key={change.en} className="flex gap-2.5 text-band-fg/80">
+                      <Check className="mt-1 size-4 shrink-0 text-band-accent" aria-hidden />
                       {pick(change, locale)}
                     </li>
                   ))}
                 </ul>
-                <p className="mt-auto pt-6 text-sm text-white/65">
-                  <span className="font-bold text-white">{t('oem.fits')}: </span>
+                <p className="mt-auto pt-6 text-sm text-band-fg/65">
+                  <span className="font-bold text-band-fg">{t('oem.fits')}: </span>
                   {pick(level.fits, locale)}
                 </p>
               </li>
@@ -192,27 +192,29 @@ export default async function BusinessPage({ params }: Props) {
 
           <div className="mt-14 grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
-              <h3 className="text-xl font-bold text-white">{t('oem.software')}</h3>
+              <h3 className="text-xl font-bold text-band-fg">{t('oem.software')}</h3>
               <ul className="mt-5 grid gap-5">
                 {oemSoftware.map((item) => (
                   <li key={item.id}>
-                    <h4 className="font-bold text-white">{pick(item.title, locale)}</h4>
-                    <p className="mt-1 leading-relaxed text-white/70">{pick(item.body, locale)}</p>
+                    <h4 className="font-bold text-band-fg">{pick(item.title, locale)}</h4>
+                    <p className="mt-1 leading-relaxed text-band-fg/70">
+                      {pick(item.body, locale)}
+                    </p>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-white">{t('oem.process')}</h3>
+              <h3 className="text-xl font-bold text-band-fg">{t('oem.process')}</h3>
               <ol className="mt-5 grid gap-5">
                 {oemProcess.map((step, index) => (
                   <li key={step.id} className="grid grid-cols-[2.5rem_minmax(0,1fr)] gap-4">
-                    <span className="type-number grid size-10 place-items-center rounded-full border-2 border-[#ffb020] text-[#ffb020]">
+                    <span className="type-number grid size-10 place-items-center rounded-full border-2 border-[#ffb020] text-band-accent">
                       {index + 1}
                     </span>
                     <div>
-                      <h4 className="font-bold text-white">{pick(step.title, locale)}</h4>
-                      <p className="mt-1 leading-relaxed text-white/70">
+                      <h4 className="font-bold text-band-fg">{pick(step.title, locale)}</h4>
+                      <p className="mt-1 leading-relaxed text-band-fg/70">
                         {pick(step.body, locale)}
                       </p>
                     </div>
@@ -221,7 +223,7 @@ export default async function BusinessPage({ params }: Props) {
               </ol>
             </div>
           </div>
-          <Button asChild size="lg" variant="light" className="mt-12">
+          <Button asChild size="lg" variant="track" className="mt-12">
             <a href="#inquiry-oem">{t('oem.action')}</a>
           </Button>
         </Container>
