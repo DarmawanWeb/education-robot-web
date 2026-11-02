@@ -81,7 +81,7 @@ export async function DropTeaser({ className }: { className?: string }) {
     <Link
       href="/drop"
       className={cn(
-        'group flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border-2 border-dashed border-[#ffb020] bg-[#fff8ea] px-5 py-4',
+        'group flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border-2 border-dashed border-[#ffb020] bg-accent-soft px-5 py-4',
         className,
       )}
     >

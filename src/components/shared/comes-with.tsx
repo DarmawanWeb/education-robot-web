@@ -62,7 +62,7 @@ export async function ComesWith({ locale }: { locale: Locale }) {
               <dt className="text-lg font-bold">{t('code.title')}</dt>
               <dd className="text-muted-foreground mt-1 leading-relaxed">{t('code.body')}</dd>
               <dd className="mt-3">
-                <pre className="bg-ink overflow-x-auto rounded-lg p-4 text-[0.8125rem] leading-relaxed text-white">
+                <pre className="overflow-x-auto rounded-lg bg-[#191b20] p-4 text-[0.8125rem] leading-relaxed text-white dark:bg-[#0f1115] dark:ring-1 dark:ring-white/10">
                   <code>{SNIPPET}</code>
                 </pre>
               </dd>

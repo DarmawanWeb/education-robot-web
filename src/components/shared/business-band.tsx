@@ -14,7 +14,7 @@ export async function BusinessBand() {
   return (
     <section className="pb-20 lg:pb-28">
       <Container>
-        <div className="bg-primary rounded-2xl p-7 text-white sm:p-10 lg:p-12">
+        <div className="rounded-2xl bg-[#e3262d] p-7 text-white sm:p-10 lg:p-12">
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
             <div className="max-w-[46rem]">
               <h2 className="type-display text-[clamp(1.75rem,3.4vw,2.75rem)]">{t('title')}</h2>

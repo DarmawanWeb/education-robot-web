@@ -9,7 +9,7 @@ the Next.js app in `apps/store` and reads all of its product facts from `@dctedu
 | Part | Choice |
 |---|---|
 | Framework | Next.js 16, App Router, Turbopack, `output: 'standalone'` |
-| UI | React 19, Tailwind CSS 4, the theme and components from `@dctedu/ui` |
+| UI | React 19, Tailwind CSS 4, the theme and components from `@dctedu/ui`; light and dark mode with `next-themes`, following the system until the visitor picks one in the header |
 | Languages | next-intl 4, `/id` (default) and `/en`, prefix always present |
 | Data | `@dctedu/catalog`: TypeScript objects, no database and no API |
 | Fonts | Anybody (headlines, race numbers) and Atkinson Hyperlegible Next (text), self-hosted |

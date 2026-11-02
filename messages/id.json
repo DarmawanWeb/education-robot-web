@@ -13,6 +13,8 @@
     "cart": "Keranjang",
     "cartCount": "Keranjang, {count} barang",
     "language": "Bahasa",
+    "theme": "Ganti tema terang atau gelap",
+    "themeName": "Tema",
     "menu": "Buka menu",
     "close": "Tutup menu",
     "skip": "Langsung ke isi"
@@ -74,7 +76,7 @@
       },
       "sim": {
         "title": "Simulator di browser",
-        "body": "Susun program dengan blok dan uji di arena virtual sebelum robotnya datang.",
+        "body": "Susun program dengan blok dan uji di arena virtual sebelum robotnya datang, plus latihan algoritma untuk SMP.",
         "link": "Buka simulator"
       },
       "code": {
