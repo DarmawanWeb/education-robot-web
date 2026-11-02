@@ -8,6 +8,7 @@ import { simulatorUrl } from '@/lib/links';
 import { siteConfig } from '@/lib/site-config';
 import { Container } from '../ui/container';
 import { CartButton } from './cart-button';
+import { HeaderShell } from './header-shell';
 import { LocaleSwitcher } from './locale-switcher';
 import { MobileNav } from './mobile-nav';
 import { NavLinks } from './nav-links';
@@ -23,8 +24,8 @@ export async function SiteHeader() {
   const simulator = { href: simulatorUrl(locale as Locale), label: t('simulator') };
 
   return (
-    <header className="bg-surface/95 sticky top-0 z-40 border-b backdrop-blur">
-      <Container className="flex h-16 items-center gap-4 lg:gap-8">
+    <HeaderShell>
+      <Container className="flex h-16 items-center gap-4 transition-[height] duration-300 group-data-[docked]/header:h-14 lg:gap-8 motion-reduce:transition-none">
         <Link href="/" className="group shrink-0 rounded-sm" aria-label={siteConfig.name}>
           <Wordmark title="" className="h-7" />
         </Link>
@@ -50,6 +51,6 @@ export async function SiteHeader() {
           </Suspense>
         </div>
       </Container>
-    </header>
+    </HeaderShell>
   );
 }
