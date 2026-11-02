@@ -1,7 +1,7 @@
 import { canOrder, products } from '@dctedu/catalog';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import { ProductCard } from '@/components/products/product-card';
+import { MoreSoonCard, ProductCard } from '@/components/products/product-card';
 import { StartingGrid } from '@/components/robots/starting-grid';
 import { AboutBand } from '@/components/shared/about-band';
 import { BusinessBand } from '@/components/shared/business-band';
@@ -51,8 +51,16 @@ export default async function HomePage({ params }: Props) {
                   <ProductCard product={product} locale={locale} />
                 </li>
               ))}
+              {upcoming > 0 && ready.length < 3 ? (
+                <li>
+                  <MoreSoonCard
+                    text={t('addOns.soon', { count: upcoming })}
+                    action={t('addOns.all')}
+                  />
+                </li>
+              ) : null}
             </ul>
-            {upcoming > 0 ? (
+            {upcoming > 0 && ready.length >= 3 ? (
               <p className="text-muted-foreground mt-6 font-semibold">
                 {t('addOns.soon', { count: upcoming })}
               </p>
