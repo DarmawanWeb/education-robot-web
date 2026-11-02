@@ -4,6 +4,7 @@ import '@fontsource-variable/atkinson-hyperlegible-next';
 import '../globals.css';
 
 import { brand } from '@dctedu/catalog';
+import { ThemeProvider } from '@dctedu/ui/brand/theme-provider';
 import type { Metadata, Viewport } from 'next';
 import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
@@ -44,7 +45,10 @@ export async function generateMetadata({
 }
 
 export const viewport: Viewport = {
-  themeColor: '#ffffff',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#1d2026' },
+  ],
 };
 
 export default async function LocaleLayout({
@@ -60,7 +64,8 @@ export default async function LocaleLayout({
   const t = await getTranslations('Nav');
 
   return (
-    <html lang={locale}>
+    // next-themes sets the theme class before the first paint, so the server markup differs.
+    <html lang={locale} suppressHydrationWarning>
       <body className="flex min-h-dvh flex-col">
         <a
           href="#main"
@@ -69,13 +74,15 @@ export default async function LocaleLayout({
           {t('skip')}
         </a>
         <JsonLd data={[organization(locale), website(locale)]} />
-        <NextIntlClientProvider>
-          <SiteHeader />
-          <main id="main" className="flex-1">
-            {children}
-          </main>
-          <SiteFooter />
-        </NextIntlClientProvider>
+        <ThemeProvider>
+          <NextIntlClientProvider>
+            <SiteHeader />
+            <main id="main" className="flex-1">
+              {children}
+            </main>
+            <SiteFooter />
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

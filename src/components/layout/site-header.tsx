@@ -1,4 +1,5 @@
 import type { Locale } from '@dctedu/catalog';
+import { ThemeToggle } from '@dctedu/ui/brand/theme-toggle';
 import { Wordmark } from '@dctedu/ui/brand/wordmark';
 import { Gamepad2 } from 'lucide-react';
 import { getLocale, getTranslations } from 'next-intl/server';
@@ -41,12 +42,19 @@ export async function SiteHeader() {
           <Suspense>
             <LocaleSwitcher label={t('language')} className="hidden sm:flex" />
           </Suspense>
+          <ThemeToggle label={t('theme')} className="hidden sm:inline-flex" />
           <CartButton />
           <Suspense>
             <MobileNav
               items={items}
               simulator={simulator}
-              labels={{ menu: t('menu'), close: t('close'), language: t('language') }}
+              labels={{
+                menu: t('menu'),
+                close: t('close'),
+                language: t('language'),
+                theme: t('theme'),
+                themeName: t('themeName'),
+              }}
             />
           </Suspense>
         </div>

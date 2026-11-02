@@ -13,6 +13,8 @@
     "cart": "Cart",
     "cartCount": "Cart, {count, plural, one {# item} other {# items}}",
     "language": "Language",
+    "theme": "Switch light or dark theme",
+    "themeName": "Theme",
     "menu": "Open menu",
     "close": "Close menu",
     "skip": "Skip to content"
@@ -74,7 +76,7 @@
       },
       "sim": {
         "title": "A simulator in the browser",
-        "body": "Build programs with blocks and test them in a virtual arena before the robot arrives.",
+        "body": "Build programs with blocks and test them in a virtual arena before the robot arrives, plus algorithm practice for junior high.",
         "link": "Open the simulator"
       },
       "code": {
