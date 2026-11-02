@@ -26,10 +26,10 @@ localized not-found page.
 
 | Path | Page |
 |---|---|
-| `/` | Home: the starting grid (robots, robots in development, the next Drop), what comes with a robot, the add-ons that can be ordered today, one band for schools and OEM with our clients' names, and who is behind DCT Edu. Each topic is said once; its details live on its own page |
+| `/` | Home: the line-up by release number (robots, robots in development, the next Drop; a sideways scroll on phones), what comes with a robot, the add-ons that can be ordered today, one band for schools and OEM with our clients' names, and who is behind DCT Edu. Each topic is said once; its details live on its own page |
 | `/robot` | Catalogue with the goal filter (client component over server-rendered rows), then the robots in development and a one-line link to the next Drop |
 | `/robot/<slug>` | Robot page: packages, buy box, abilities, learning path preview, box contents, specs, parts, the add-ons that can be ordered (and how many more are coming), one line to the business page. A robot in development gets only its number, its name, and "in development" |
-| `/drop` | The next Drop and how Drops work (the number series is the home page's starting grid) |
+| `/drop` | The next Drop and how Drops work (the number series is the home page's line-up) |
 | `/accessories`, `/accessories/<slug>` | Accessories by kind: what can be ordered as cards with their picture, what is still coming as a compact list; a product page with what is in the pack and which robots it fits |
 | `/cart` | Cart and delivery details; not indexed |
 | `/learn` | The three parts of a step, a path per robot, the simulator, the guides |
@@ -113,8 +113,8 @@ typecheck and `src/messages.test.ts` fails when the two files differ.
 
 ## Motion
 
-The only motion that starts on its own is the starting grid on the home page: each robot drives up
-into its painted slot, once, when the page opens (`.park` in `globals.css`). It is switched off for
+The only motion that starts on its own is the line-up on the home page: the cards roll in one after
+another, once, when the page opens (`.park` in `globals.css`). It is switched off for
 `prefers-reduced-motion`. Everything else moves only in answer to the visitor: menus, accordions,
 the wordmark's signal on hover, and the header, which docks into a floating pill once the page
 scrolls (`header-shell.tsx`; it moves with a transform, so the page never shifts).

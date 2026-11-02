@@ -23,7 +23,7 @@ export function SectionHeading({
         <h2
           id={id}
           className={cn(
-            'type-display text-[clamp(2rem,4.2vw,3.25rem)]',
+            'type-display text-[clamp(1.875rem,3.6vw,2.75rem)]',
             tone === 'onDark' && 'text-white',
           )}
         >

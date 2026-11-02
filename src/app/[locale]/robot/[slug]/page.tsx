@@ -23,7 +23,7 @@ import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
 import { BuyBox } from '@/components/cart/buy-box';
 import { StepNumber } from '@/components/learn/step-number';
-import { ProductCard } from '@/components/products/product-card';
+import { MoreSoonCard, ProductCard } from '@/components/products/product-card';
 import { DevelopmentPage } from '@/components/robots/in-development';
 import { RobotChips } from '@/components/robots/robot-chips';
 import { SellerBox } from '@/components/robots/seller';
@@ -199,7 +199,7 @@ export default async function RobotPage({ params }: Props) {
       <section className="bg-surface border-y py-16 lg:py-24">
         <Container className="grid gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
           <div>
-            <h2 className="type-display text-[clamp(2rem,4vw,3rem)]">
+            <h2 className="type-display text-[clamp(1.875rem,3.6vw,2.75rem)]">
               {t('abilities', { robot: robot.name })}
             </h2>
             <p className="mt-5 text-lg font-bold">{pick(robot.build.label, locale)}</p>
@@ -326,16 +326,22 @@ export default async function RobotPage({ params }: Props) {
               title={t('addOns', { robot: robot.name })}
               action={<TextLink href="/accessories">{t('allAddOns')}</TextLink>}
             />
-            {readyAddOns.length > 0 ? (
-              <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {readyAddOns.slice(0, 3).map((product) => (
-                  <li key={product.slug}>
-                    <ProductCard product={product} locale={locale} />
-                  </li>
-                ))}
-              </ul>
-            ) : null}
-            {soonAddOns > 0 ? (
+            <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {readyAddOns.slice(0, 3).map((product) => (
+                <li key={product.slug}>
+                  <ProductCard product={product} locale={locale} />
+                </li>
+              ))}
+              {soonAddOns > 0 && readyAddOns.length < 3 ? (
+                <li>
+                  <MoreSoonCard
+                    text={t('addOnsSoon', { count: soonAddOns, robot: robot.name })}
+                    action={t('allAddOns')}
+                  />
+                </li>
+              ) : null}
+            </ul>
+            {soonAddOns > 0 && readyAddOns.length >= 3 ? (
               <p className="text-muted-foreground mt-6 font-semibold">
                 {t('addOnsSoon', { count: soonAddOns, robot: robot.name })}
               </p>

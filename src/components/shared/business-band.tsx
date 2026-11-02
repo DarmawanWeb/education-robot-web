@@ -14,9 +14,8 @@ export async function BusinessBand() {
   return (
     <section className="pb-20 lg:pb-28">
       <Container>
-        <div className="bg-primary relative overflow-hidden rounded-xl p-7 text-white sm:p-10 lg:p-12">
-          <span aria-hidden className="absolute inset-y-0 right-8 w-9 bg-white/90 sm:right-14" />
-          <div className="relative grid gap-8 pr-14 sm:pr-24 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
+        <div className="bg-primary rounded-2xl p-7 text-white sm:p-10 lg:p-12">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
             <div className="max-w-[46rem]">
               <h2 className="type-display text-[clamp(1.75rem,3.4vw,2.75rem)]">{t('title')}</h2>
               <p className="mt-3 text-lg leading-relaxed text-white/90">{t('body')}</p>

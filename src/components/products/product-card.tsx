@@ -1,5 +1,6 @@
 import { getRobot, type Locale, type Product, pick } from '@dctedu/catalog';
 import { cn } from '@dctedu/ui/lib/utils';
+import { PackagePlus } from 'lucide-react';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
@@ -81,6 +82,22 @@ export async function ProductRow({ product, locale }: { product: Product; locale
         locale={locale}
         className="col-start-2 justify-self-start sm:col-start-4 sm:row-start-1 sm:justify-self-end"
       />
+    </Link>
+  );
+}
+
+/** The last tile of a short product grid: how many more are on the way, and where to see them. */
+export function MoreSoonCard({ text, action }: { text: string; action: string }) {
+  return (
+    <Link
+      href="/accessories"
+      className="group text-muted-foreground hover:border-edge hover:text-foreground flex h-full min-h-56 flex-col items-start justify-end gap-3 rounded-lg border border-dashed p-5 transition-colors"
+    >
+      <PackagePlus className="size-8" strokeWidth={1.75} aria-hidden />
+      <span className="text-foreground text-lg leading-snug font-bold">{text}</span>
+      <span className="decoration-primary font-semibold underline decoration-2 underline-offset-4">
+        {action}
+      </span>
     </Link>
   );
 }
