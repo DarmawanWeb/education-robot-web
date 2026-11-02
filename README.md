@@ -4,7 +4,7 @@
 
 # DCT Edu Store
 
-**The store for DCT Edu's education robots: named robots on a starting grid by number, accessories,
+**The store for DCT Edu's education robots: named robots in a line-up by number, accessories,
 numbered Drops, a cart that orders over WhatsApp or email, free learning paths and guides, and a
 page for bulk orders and OEM, in Indonesian and English.**
 
@@ -28,8 +28,8 @@ and the reply carries the total, shipping, and how to pay.
 
 ## Features
 
-- **Home** (`/`): the robots on a starting grid by release number, with robots in development
-  and the next Drop in their own slots; what comes with every robot; add-ons; bulk and OEM;
+- **Home** (`/`): the robots in a line-up by release number, with robots in development
+  and the next Drop beside them; what comes with every robot; add-ons; bulk and OEM;
   questions.
 - **Robots** (`/robot`): the catalogue with a goal filter, and a page per robot with abilities,
   what is in the box, specs, parts, add-ons, and the first steps of its learning path. A robot in

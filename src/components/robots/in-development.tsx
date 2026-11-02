@@ -3,8 +3,10 @@ import { RaceNumber } from '@dctedu/ui/brand/race-number';
 import { Button } from '@dctedu/ui/components/button';
 import { Wrench } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
+import type { CSSProperties } from 'react';
 import { Link } from '@/i18n/navigation';
 import { Container } from '../ui/container';
+import { lineupItemClass, UnrevealedSlot } from './lineup';
 
 /** The plain "in development" tag, the only thing said about a robot that is still being built. */
 async function DevelopmentTag({ className = '' }: { className?: string }) {
@@ -19,35 +21,30 @@ async function DevelopmentTag({ className = '' }: { className?: string }) {
   );
 }
 
-/** A robot that is still being built, parked in its numbered slot on the home page grid. */
-export async function DevelopmentSlot({ robot }: { robot: RobotInDevelopment }) {
+/** A robot that is still being built, in its place in the home page line-up. */
+export async function DevelopmentSlot({
+  robot,
+  order,
+}: {
+  robot: RobotInDevelopment;
+  order: number;
+}) {
   const t = await getTranslations('Home.hero');
   return (
-    <li className="relative pt-8 lg:even:mt-16">
-      <span
-        aria-hidden
-        className="absolute inset-x-0 top-0 h-28 rounded-t-md border-x-[3px] border-t-[3px] border-dashed border-white/40"
-      />
-      <RaceNumber
-        value={robot.number}
-        size="lg"
-        label={t('number', { n: robot.number })}
-        className="absolute -top-7 left-6 z-10"
-      />
+    <li className={lineupItemClass} style={{ '--slot': order } as CSSProperties}>
       <Link
         href={`/robot/${robot.slug}`}
-        className="group relative mx-3 flex aspect-[4/3] flex-col justify-end overflow-hidden rounded-lg border border-white/15 bg-white/[0.04] p-5 text-white transition-transform hover:-translate-y-1 motion-reduce:transition-none sm:aspect-auto sm:h-full sm:min-h-[22rem]"
+        className="group flex flex-col rounded-xl border border-white/12 bg-white/[0.03] p-3 text-white transition-[transform,background-color] hover:-translate-y-1 hover:bg-white/[0.06] motion-reduce:transition-none"
       >
-        <span
-          aria-hidden
-          className="type-number absolute top-6 right-5 text-[5.5rem] leading-none text-white/10"
-        >
-          #{String(robot.number).padStart(2, '0')}
-        </span>
-        <DevelopmentTag className="self-start" />
-        <p className="type-number mt-3 text-[1.875rem] group-hover:underline group-hover:decoration-[3px] group-hover:underline-offset-4">
-          {robot.name}
-        </p>
+        <UnrevealedSlot>
+          <RaceNumber value={robot.number} size="lg" label={t('number', { n: robot.number })} />
+        </UnrevealedSlot>
+        <div className="px-2 pt-3 pb-2">
+          <DevelopmentTag />
+          <p className="type-number mt-3 text-[1.75rem] group-hover:underline group-hover:decoration-[3px] group-hover:underline-offset-4">
+            {robot.name}
+          </p>
+        </div>
       </Link>
     </li>
   );

@@ -11,7 +11,6 @@ import {
 } from '@dctedu/catalog';
 import { RaceNumber } from '@dctedu/ui/brand/race-number';
 import { Button } from '@dctedu/ui/components/button';
-import { cn } from '@dctedu/ui/lib/utils';
 import { BookOpenCheck, Code2, Gamepad2 } from 'lucide-react';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
@@ -22,20 +21,8 @@ import { simulatorUrl } from '@/lib/links';
 import { Container } from '../ui/container';
 import { AvailabilityBadge, RobotPrice } from '../ui/price';
 import { DevelopmentSlot } from './in-development';
+import { lineupItemClass, UnrevealedSlot } from './lineup';
 import { RobotChips } from './robot-chips';
-
-/** The painted box of a grid slot: a top line and two short sides, like on a race track. */
-function SlotMarking({ tone = 'white' }: { tone?: 'white' | 'signal' }) {
-  return (
-    <span
-      aria-hidden
-      className={cn(
-        'absolute inset-x-0 top-0 h-28 rounded-t-md border-x-[3px] border-t-[3px]',
-        tone === 'white' ? 'border-white/65' : 'border-dashed border-[#ffb020]',
-      )}
-    />
-  );
-}
 
 async function RobotSlot({
   robot,
@@ -49,84 +36,75 @@ async function RobotSlot({
   const t = await getTranslations('Home.hero');
   const image = robotImages[robot.slug];
   return (
-    <li className="relative lg:even:mt-16">
-      <SlotMarking />
-      {/* The robot drives into its painted slot: the one moment of motion on the page. */}
-      <div className="park relative pt-8" style={{ '--slot': order } as CSSProperties}>
-        <RaceNumber
-          value={robot.number}
-          size="lg"
-          label={t('number', { n: robot.number })}
-          className="absolute -top-7 left-6 z-10"
-        />
-        <Link
-          href={`/robot/${robot.slug}`}
-          className="group relative mx-3 block overflow-hidden rounded-lg bg-white text-[#191b20] transition-transform hover:-translate-y-1 motion-reduce:transition-none"
-        >
-          <div className="relative aspect-[4/3]">
-            <Image
-              src={image.src}
-              alt={pick(image.alt, locale)}
-              fill
-              placeholder="blur"
-              sizes="(min-width: 1024px) 16rem, (min-width: 640px) 45vw, 90vw"
-              className={imageFit(image, 'p-3')}
+    // The robots roll in one after another: the one moment of motion on the page.
+    <li className={lineupItemClass} style={{ '--slot': order } as CSSProperties}>
+      <Link
+        href={`/robot/${robot.slug}`}
+        className="group flex flex-col overflow-hidden rounded-xl bg-white text-[#191b20] ring-1 ring-white/10 transition-transform hover:-translate-y-1 motion-reduce:transition-none"
+      >
+        <div className="relative aspect-[4/3]">
+          <Image
+            src={image.src}
+            alt={pick(image.alt, locale)}
+            fill
+            placeholder="blur"
+            sizes="(min-width: 1024px) 16rem, (min-width: 640px) 45vw, 78vw"
+            className={imageFit(image, 'p-3')}
+          />
+          {robot.availability === 'soon' ? (
+            <AvailabilityBadge
+              availability="soon"
+              locale={locale}
+              className="absolute top-3 right-3"
             />
-            {robot.availability === 'soon' ? (
-              <AvailabilityBadge
-                availability="soon"
-                locale={locale}
-                className="absolute top-3 right-3"
-              />
-            ) : null}
-          </div>
-          <div className="border-t border-[#dadde3] px-4 pt-3 pb-4">
-            <p className="type-number text-[1.875rem] group-hover:underline group-hover:decoration-[3px] group-hover:underline-offset-4">
+          ) : null}
+        </div>
+        <div className="flex flex-1 flex-col border-t border-[#e6e8ec] px-4 pt-3 pb-4">
+          <div className="flex items-center justify-between gap-3">
+            <p className="type-number text-[1.75rem] group-hover:underline group-hover:decoration-[3px] group-hover:underline-offset-4">
               {robot.name}
             </p>
-            <RobotChips robot={robot} locale={locale} className="mt-2" />
-            <RobotPrice robot={robot} locale={locale} className="mt-3" />
+            <RaceNumber value={robot.number} size="sm" label={t('number', { n: robot.number })} />
           </div>
-        </Link>
-      </div>
+          <RobotChips robot={robot} locale={locale} className="mt-2" />
+          <RobotPrice robot={robot} locale={locale} className="mt-auto pt-3" />
+        </div>
+      </Link>
     </li>
   );
 }
 
-async function DropSlot({ locale }: { locale: Locale }) {
+async function DropSlot({ locale, order }: { locale: Locale; order: number }) {
   const t = await getTranslations('Home.hero');
   const drop = drops.find((entry) => entry.status === 'soon');
   if (!drop) return null;
   return (
-    <li className="relative pt-8 lg:even:mt-16">
-      <SlotMarking tone="signal" />
-      <RaceNumber value={null} size="lg" className="absolute -top-7 left-6 z-10" />
+    <li className={lineupItemClass} style={{ '--slot': order } as CSSProperties}>
       <Link
         href="/drop"
-        className="group relative mx-3 flex aspect-[4/3] flex-col justify-end overflow-hidden rounded-lg border border-white/15 bg-white/[0.04] p-5 text-white transition-transform hover:-translate-y-1 motion-reduce:transition-none sm:aspect-auto sm:h-full sm:min-h-[22rem]"
+        className="group flex flex-col rounded-xl border border-white/12 bg-white/[0.03] p-3 text-white transition-[transform,background-color] hover:-translate-y-1 hover:bg-white/[0.06] motion-reduce:transition-none"
       >
-        <span
-          aria-hidden
-          className="type-number absolute top-6 right-5 text-[5.5rem] leading-none text-white/10"
-        >
-          #{String(drop.number).padStart(2, '0')}
-        </span>
-        <AvailabilityBadge availability="soon" locale={locale} className="self-start" />
-        <p className="type-number mt-3 text-[1.875rem]">
-          {t('dropName', { n: String(drop.number).padStart(2, '0') })}
-        </p>
-        <p className="mt-2 text-white/75">{t('dropBody')}</p>
-        <p className="mt-4 font-bold text-[#ffb020] group-hover:underline group-hover:underline-offset-4">
-          {t('dropLink')}
-        </p>
+        <UnrevealedSlot tone="signal">
+          <RaceNumber value={null} size="lg" />
+        </UnrevealedSlot>
+        <div className="px-2 pt-3 pb-2">
+          <AvailabilityBadge availability="soon" locale={locale} />
+          <p className="type-number mt-3 text-[1.75rem]">
+            {t('dropName', { n: String(drop.number).padStart(2, '0') })}
+          </p>
+          <p className="mt-1.5 text-white/70">{t('dropBody')}</p>
+          <p className="mt-4 font-bold text-[#ffb020] group-hover:underline group-hover:underline-offset-4">
+            {t('dropLink')}
+          </p>
+        </div>
       </Link>
     </li>
   );
 }
 
 /**
- * The home page opens on a starting grid: every robot parked in a painted slot with its race
- * number, the ones still being built in dashed slots, and an empty slot waiting for the next Drop.
+ * The home page opens on the line-up: every robot with its race number, the ones still being
+ * built, and the next Drop, in release order.
  */
 export async function StartingGrid({ locale }: { locale: Locale }) {
   const t = await getTranslations('Home.hero');
@@ -169,15 +147,15 @@ export async function StartingGrid({ locale }: { locale: Locale }) {
         </div>
         <ol
           aria-label={t('gridLabel')}
-          className="mt-20 grid gap-x-5 gap-y-16 sm:grid-cols-2 lg:grid-cols-4"
+          className="-mx-4 mt-14 flex snap-x snap-mandatory scroll-px-4 gap-4 overflow-x-auto px-4 pb-2 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 lg:mt-16 lg:grid-cols-4 [&::-webkit-scrollbar]:hidden"
         >
           {robots.map((robot, index) => (
             <RobotSlot key={robot.slug} robot={robot} locale={locale} order={index} />
           ))}
-          {robotsInDevelopment.map((robot) => (
-            <DevelopmentSlot key={robot.slug} robot={robot} />
+          {robotsInDevelopment.map((robot, index) => (
+            <DevelopmentSlot key={robot.slug} robot={robot} order={robots.length + index} />
           ))}
-          <DropSlot locale={locale} />
+          <DropSlot locale={locale} order={robots.length + robotsInDevelopment.length} />
         </ol>
       </Container>
     </section>
