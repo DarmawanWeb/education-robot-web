@@ -229,7 +229,7 @@ export default async function RobotPage({ params }: Props) {
         </Container>
       </section>
 
-      <section className="asphalt py-16 lg:py-24">
+      <section className="track py-16 lg:py-24">
         <Container className="grid gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
           <div>
             <SectionHeading
@@ -238,11 +238,11 @@ export default async function RobotPage({ params }: Props) {
               tone="onDark"
             />
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild size="lg" variant="light">
+              <Button asChild size="lg" variant="track">
                 <Link href={`/learn/${robot.slug}`}>{t('learn.path')}</Link>
               </Button>
               {robot.sim ? (
-                <Button asChild size="lg" variant="lightOutline">
+                <Button asChild size="lg" variant="trackOutline">
                   <a href={simulatorUrl(locale, robot.sim)}>
                     <Gamepad2 aria-hidden />
                     {t('learn.simulator')}
@@ -256,15 +256,15 @@ export default async function RobotPage({ params }: Props) {
               <li key={step.id}>
                 <Link
                   href={`/learn/${robot.slug}#${step.id}`}
-                  className="flex items-center gap-4 rounded-lg border border-white/12 bg-white/[0.04] p-3 pr-5 text-white hover:bg-white/[0.08]"
+                  className="flex items-center gap-4 rounded-lg border border-band-fg/12 bg-band-fg/[0.04] p-3 pr-5 text-band-fg hover:bg-band-fg/[0.08]"
                 >
-                  <StepNumber n={index + 1} className="border-white/70" />
+                  <StepNumber n={index + 1} className="border-band-fg/70" />
                   <span className="font-bold">{pick(stepTitle(step), locale)}</span>
                 </Link>
               </li>
             ))}
             {steps.length > 6 ? (
-              <li className="pl-14 text-white/70">
+              <li className="pl-14 text-band-fg/70">
                 {t('learn.more', { count: steps.length - 6 })}
               </li>
             ) : null}

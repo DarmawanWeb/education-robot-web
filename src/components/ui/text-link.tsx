@@ -14,7 +14,7 @@ export function TextLink({
     <Link
       className={cn(
         'group/link inline-flex items-center gap-1.5 font-bold underline decoration-2 underline-offset-[6px] hover:decoration-[3px]',
-        tone === 'onDark' ? 'text-white decoration-[#ffb020]' : 'decoration-primary',
+        tone === 'onDark' ? 'text-band-fg decoration-[#ffb020]' : 'decoration-primary',
         className,
       )}
       {...props}

@@ -55,14 +55,14 @@ export default async function HelpPage({ params }: Props) {
 
       <section id="contact" className="scroll-mt-16 py-16 lg:py-24">
         <Container className="max-w-4xl">
-          <div className="asphalt rounded-xl p-7 text-white sm:p-10">
+          <div className="track rounded-xl p-7 text-band-fg sm:p-10">
             <h2 className="type-display text-[clamp(1.75rem,3.2vw,2.5rem)]">
               {t('contact.title')}
             </h2>
-            <p className="mt-4 leading-relaxed text-white/75">{t('contact.body')}</p>
+            <p className="mt-4 leading-relaxed text-band-fg/75">{t('contact.body')}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               {whatsapp ? (
-                <Button asChild size="lg" variant="light">
+                <Button asChild size="lg" variant="track">
                   <a href={whatsapp}>
                     <MessageCircle aria-hidden />
                     {t('contact.whatsapp')}
@@ -79,7 +79,7 @@ export default async function HelpPage({ params }: Props) {
             <TextLink href="/learn#guides" tone="onDark" className="mt-8">
               {t('contact.guides')}
             </TextLink>
-            <p className="mt-6 flex items-center gap-2 text-sm text-white/65">
+            <p className="mt-6 flex items-center gap-2 text-sm text-band-fg/65">
               <MapPin className="size-4" aria-hidden />
               {t('contact.from', { location: pick(brand.location, locale) })}
             </p>

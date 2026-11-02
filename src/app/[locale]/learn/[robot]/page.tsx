@@ -207,20 +207,20 @@ export default async function PathPage({ params }: Props) {
         </Container>
       </section>
 
-      <section className="asphalt py-16 lg:py-20">
+      <section className="track py-16 lg:py-20">
         <Container className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-[46rem]">
-            <h2 className="type-display text-[clamp(1.75rem,3.4vw,2.75rem)] text-white">
+            <h2 className="type-display text-[clamp(1.75rem,3.4vw,2.75rem)] text-band-fg">
               {t('end.title')}
             </h2>
-            <p className="mt-3 text-lg leading-relaxed text-white/75">{t('end.body')}</p>
+            <p className="mt-3 text-lg leading-relaxed text-band-fg/75">{t('end.body')}</p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <Button asChild size="lg" variant="light">
+            <Button asChild size="lg" variant="track">
               <Link href="/accessories#upgrade">{t('end.addOns', { robot: robot.name })}</Link>
             </Button>
             {next ? (
-              <Button asChild size="lg" variant="lightOutline">
+              <Button asChild size="lg" variant="trackOutline">
                 <Link href={`/robot/${next.slug}`}>{t('end.next', { robot: next.name })}</Link>
               </Button>
             ) : null}

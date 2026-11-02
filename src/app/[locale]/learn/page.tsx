@@ -132,18 +132,18 @@ export default async function LearnPage({ params }: Props) {
         </Container>
       </section>
 
-      <section className="asphalt py-16 lg:py-24">
+      <section className="track py-16 lg:py-24">
         <Container className="grid gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:items-center lg:gap-16">
           <div>
             <SectionHeading title={t('sim.title')} intro={t('sim.body')} tone="onDark" />
-            <Button asChild size="lg" variant="light" className="mt-8">
+            <Button asChild size="lg" variant="track" className="mt-8">
               <a href={simulatorUrl(locale)}>
                 <Gamepad2 aria-hidden />
                 {t('sim.action')}
               </a>
             </Button>
           </div>
-          <div className="overflow-hidden rounded-xl border border-white/15">
+          <div className="overflow-hidden rounded-xl border border-band-fg/15">
             <Image
               src={locale === 'en' ? simEn : simId}
               alt={t('sim.imageAlt')}

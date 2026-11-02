@@ -34,7 +34,7 @@ export async function DevelopmentSlot({
     <li className={lineupItemClass} style={{ '--slot': order } as CSSProperties}>
       <Link
         href={`/robot/${robot.slug}`}
-        className="group flex flex-col rounded-xl border border-white/12 bg-white/[0.03] p-3 text-white transition-[transform,background-color] hover:-translate-y-1 hover:bg-white/[0.06] motion-reduce:transition-none"
+        className="group flex flex-col rounded-xl border border-band-fg/12 bg-band-fg/[0.03] p-3 text-band-fg transition-[transform,background-color] hover:-translate-y-1 hover:bg-band-fg/[0.06] motion-reduce:transition-none"
       >
         <UnrevealedSlot>
           <RaceNumber value={robot.number} size="lg" label={t('number', { n: robot.number })} />
