@@ -115,8 +115,9 @@ typecheck and `src/messages.test.ts` fails when the two files differ.
 
 The only motion that starts on its own is the starting grid on the home page: each robot drives up
 into its painted slot, once, when the page opens (`.park` in `globals.css`). It is switched off for
-`prefers-reduced-motion`. Everything else moves only in answer to the visitor (menus, accordions,
-the wordmark's signal on hover).
+`prefers-reduced-motion`. Everything else moves only in answer to the visitor: menus, accordions,
+the wordmark's signal on hover, and the header, which docks into a floating pill once the page
+scrolls (`header-shell.tsx`; it moves with a transform, so the page never shifts).
 
 ## Search
 

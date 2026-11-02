@@ -51,13 +51,13 @@
   "Home": {
     "hero": {
       "title": "Belajar robotika sejak dini.",
-      "body": "Robot edukasi buatan {company}. Mulai dari nol bersama Ciko di usia 7 tahun, lalu naik ke lomba dan IoT bersama Momo, dengan jalur belajar gratis dari buka kotak sampai kode Arduino.",
+      "body": "Robot edukasi buatan {company}. Ciko untuk mulai dari usia 7 tahun, Momo untuk lomba dan IoT. Setiap robot punya jalur belajar gratis, dari buka kotak sampai kode Arduino.",
       "pick": "Pilih robot",
       "simulator": "Coba simulator gratis",
       "gridLabel": "Robot DCT Edu menurut nomor rilis",
       "number": "Nomor {n}",
       "dropName": "Drop #{n}",
-      "dropBody": "Robot R&D berikutnya. Nama dan bentuknya masih rahasia.",
+      "dropBody": "Robot berikutnya dari meja R&D. Belum diumumkan.",
       "dropLink": "Lihat cara kerja Drop",
       "statsLabel": "Yang ikut bersama setiap robot",
       "steps": "{count} langkah belajar gratis",
@@ -65,8 +65,8 @@
       "code": "Dari blok ke Arduino C++"
     },
     "comesWith": {
-      "title": "Bukan cuma punya robot, tapi paham cara kerjanya",
-      "intro": "Setiap robot DCT Edu datang dengan cara memahaminya, gratis dan online. Bukan kelas: ikuti sendiri dari rumah, sesuai kecepatanmu.",
+      "title": "Yang ikut bersama setiap robot",
+      "intro": "Jalur belajar, simulator, dan kode Arduino. Semuanya gratis dan bisa dibuka dari rumah.",
       "path": {
         "title": "Jalur belajar per robot",
         "body": "Langkah demi langkah dari buka kotak sampai siap lomba, dengan video dan panduan.",
@@ -78,15 +78,15 @@
         "link": "Buka simulator"
       },
       "code": {
-        "title": "Kode yang bisa dibawa",
-        "body": "Setiap program blok punya versi Arduino C++. Saat siap, lanjutkan di Arduino IDE."
+        "title": "Kode Arduino C++",
+        "body": "Setiap program blok juga ditampilkan dalam C++, siap dibuka di Arduino IDE."
       },
       "imageAlt": "Simulator DCT Edu: blok program di kiri, Ciko mengikuti garis di arena di kanan",
       "caption": "Misi Ikuti garis untuk Ciko, langkah 9 di jalur belajarnya."
     },
     "addOns": {
       "title": "Siap dipesan",
-      "intro": "Arena dan aksesori yang bisa langsung dipesan hari ini. Upgrade pack menyusul.",
+      "intro": "Bisa dipesan sekarang. Upgrade pack menyusul.",
       "all": "Semua aksesori",
       "soon": "{count} upgrade dan aksesori lain segera hadir"
     },
@@ -272,7 +272,7 @@
   "Learn": {
     "title": "Pahami robotmu, langkah demi langkah",
     "meta": "Jalur belajar gratis untuk setiap robot DCT Edu: video pendek, panduan, dan misi simulator yang bisa diikuti sendiri dari rumah.",
-    "intro": "Bukan kelas dan bukan kursus. Setiap robot DCT Edu punya jalur belajar gratis: video pendek, panduan, dan misi simulator yang bisa diikuti sendiri dari rumah, sesuai kecepatanmu.",
+    "intro": "Setiap robot DCT Edu punya jalur belajar gratis: video pendek, panduan, dan misi simulator. Ikuti dari rumah, sesuai kecepatan masing-masing.",
     "parts": {
       "title": "Setiap langkah punya tiga bagian",
       "understand": {
@@ -294,7 +294,7 @@
     "soon": "Jalur lengkap terbit bersama robotnya.",
     "sim": {
       "title": "Belum punya robot? Mulai dari simulator",
-      "body": "Simulator berjalan di browser, gratis, tanpa daftar akun. Misinya sama dengan langkah di jalur belajar, jadi tidak ada yang terbuang saat robotnya datang.",
+      "body": "Simulator berjalan di browser, gratis, tanpa daftar akun. Misinya sama dengan langkah di jalur belajar, jadi latihannya langsung terpakai saat robotnya datang.",
       "action": "Buka simulator",
       "imageAlt": "Simulator DCT Edu: blok program di kiri, arena dengan Ciko di kanan"
     },
@@ -376,7 +376,7 @@
     "oem": {
       "title": "OEM: robot kami, merek Anda",
       "nav": "OEM dan merek sendiri",
-      "intro": "Dari sekadar logo sampai robot yang dirancang ulang. Pilih seberapa banyak yang berubah, dan kami yang membuatnya.",
+      "intro": "Dari ganti logo sampai robot yang dirancang ulang. Pilih seberapa banyak yang berubah.",
       "depth": "Seberapa banyak yang berubah: {n} dari 3",
       "fits": "Cocok untuk",
       "software": "Perangkat lunaknya juga bisa memakai merek Anda",
